@@ -1,5 +1,8 @@
 # Gliederung für die Diplomarbeit
 
+- Autor in Footnote
+- Keine Relationale Datenbanken vergleichen
+
 ---
 
 ## I. Formaler Rahmen (Pre-Content)
