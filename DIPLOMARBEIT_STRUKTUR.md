@@ -15,7 +15,6 @@
 ---
 
 ## 1. Einleitung
-*Hier wird der Leser abgeholt und das Ziel definiert.*
 
 *   **1.1 Motivation:** Warum wird dieses System benötigt? (z.B. Automatisierung von Zufahrtskontrollen, statistische Erhebung)
 *   **1.2 Aufgabenstellung:** Klare Definition, was im Rahmen der Arbeit zu tun war (Pflichtenheft)
