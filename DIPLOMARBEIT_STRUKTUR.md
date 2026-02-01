@@ -21,12 +21,14 @@
 *   **1.3 Zielsetzung:** Abgrenzung (Was soll das System können, was nicht?)
 *   **1.4 Aufbau der Arbeit:** Kurzer Wegweiser durch die Kapitel
 
+
 ## 2. Theoretische Grundlagen
 *Kurzer Abriss der Technologien, um das Verständnis für die späteren Entscheidungen zu schaffen.*
 
-*   **2.1 Microservices Architektur:** Prinzipien und Abgrenzung zum Monolithen
+*   **2.1 Microservices Architektur:** Prinzipien und Abgrenzung zum Monolithen (Warum?)
 *   **2.2 Containerisierung (Docker):** Vorteile für Deployment und Isolation
 *   **2.3 ALPR (Automatic License Plate Recognition):** Grundfunktionsweise der Kennzeichenerkennung (Technologie, nicht Code)
+
 
 ## 3. Hardwareauswahl und Systemumgebung
 
@@ -41,6 +43,7 @@
     *   Detaillierte Darlegung, warum genau diese Hardware gewählt wurde (Kosten-Nutzen-Analyse, technische Notwendigkeit)
 *   **3.4 Netzwerkinfrastruktur:** Wie sind Kamera und Server verbunden
 
+
 ## 4. Systementwurf und Architektur
 *Das Konzept VOR der Programmierung.*
 
@@ -53,6 +56,8 @@
 *   **4.3 Sicherheitskonzept:**
     *   Authentifizierung (JWT, User-Rollen) -> Olivia
     *   Datenschutz (Umgang mit Kennzeichen-Daten)
+    *   Data Lifecycle
+
 
 ## 5. Implementierung
 
@@ -62,8 +67,13 @@
     *   Verarbeitung von "Municipalities" (Bezirkserkennung).
 *   **5.2 Notification Service:**
     *   Trigger-Logik für Benachrichtigungen (wann wird eine Mail gesendet?).
-*   **5.3 Wichtige Algorithmen/Lösungen:**
+*   **5.2 Datenbank-Management:**
+    *   Einsatz von ORM (SQLAlchemy) und Migrationen (Alembic) zur Schema-Verwaltung.
+*   **5.3 Grafana:**
+    *   Aufbau, Darstellungen
+*   **5.4 Wichtige Algorithmen/Lösungen:**
     *   Herausragende Code-Teile
+
 
 ## 6. Infrastruktur, Deployment und Betrieb
 
@@ -75,10 +85,14 @@
     *   Einsatz von Grafana zur Überwachung der "Vehicle Observations".
 *   **6.4 Backup-Strategie:**
     *   Erklärung der Backup-Skripte und des Wiederherstellungsprozesses (Disaster Recovery).
+*   **6.5 Documentation as Code:**
+    *   MkDocs, Dokumentation im Repo
+
 
 ## 7. Qualitätssicherung und Tests
-*   **7.1 Teststrategie:** Unit-Tests (Pytest) vs. Integrationstests.
-*   **7.2 Validierung:** Überprüfung der Hardware/Software-Kombination in der Praxis (Erkennungsraten).
+*   **7.1 Teststrategie:** Unit-Tests (Pytest) und Integrationstests. (Test Coverage).
+*   **7.2 Validierung:** Überprüfung der Hardware/Software-Kombination in der Praxis (Erkennungsrate bei Regen/Nacht, Falsch-Positiv-Rate).
+
 
 ## 8. Fazit und Ausblick
 *   **8.1 Zusammenfassung der Ergebnisse.**
@@ -90,8 +104,9 @@
 ## II. Verzeichnisse (Post-Content)
 *   **Abbildungsverzeichnis**
 *   **Quellcodeverzeichnis** (falls Listings im Text referenziert sind)
-*   **Glossar** (Erklärung von Begriffen wie ANPR, JWT, Docker Container)
+*   **Glossar** (Erklärung von Begriffen wie ALPR, JWT, Docker Container)
 *   **Literaturverzeichnis**
+
 
 ## III. Anhang
 *   Große Diagramme
