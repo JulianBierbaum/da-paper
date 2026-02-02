@@ -67,11 +67,11 @@
     *   Verarbeitung von "Municipalities" (Bezirkserkennung).
 *   **5.2 Notification Service:**
     *   Trigger-Logik für Benachrichtigungen (wann wird eine Mail gesendet?).
-*   **5.2 Datenbank-Management:**
+*   **5.3 Datenbank-Management:**
     *   Einsatz von ORM (SQLAlchemy) und Migrationen (Alembic) zur Schema-Verwaltung.
-*   **5.3 Grafana:**
+*   **5.4 Grafana:**
     *   Aufbau, Darstellungen
-*   **5.4 Wichtige Algorithmen/Lösungen:**
+*   **5.5 Wichtige Algorithmen/Lösungen:**
     *   Herausragende Code-Teile
 
 
@@ -96,7 +96,9 @@
 
 ## 8. Fazit und Ausblick
 *   **8.1 Zusammenfassung der Ergebnisse.**
-*   **8.2 Kritische Reflexion:** Was lief gut, was würde man heute anders machen (Hardware oder Software)?
+*   **8.2 Kritische Reflexion:** 
+    *   Was lief gut, was würde man heute anders machen (Hardware oder Software)? 
+    *   Wurden alle Ziele (Funktional und Nicht-Funktional umgesetzt)
 *   **8.3 Ausblick:** Erweiterungsmöglichkeiten (z.B. KI-Modelle direkt auf der Hardware, App-Anbindung)
 
 ---

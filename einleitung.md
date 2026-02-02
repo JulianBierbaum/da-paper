@@ -1,7 +1,8 @@
 # Einleitung
 
-# Motivation 
-Die Zotter Schokoladenmanufaktur und Erlebniswelt zählt mit ihren über 300.000 jährlichen Besuchern (Stand 2025) zu den Top-3 der steirischen Sehenswürdigkeiten mit Bezahl-Eintritt. (https://www.steiermark.com/de/Magazin/Die-meistbesuchten-Ausflugsziele-der-Steiermark_mad_45932860).
+# Motivation
+
+Die Erlebniswelt von Zotter Schokolade zählt mit ihren über 300.000 jährlichen Besuchern (Stand 2025) zu den Top-3 der steirischen Sehenswürdigkeiten mit Bezahl-Eintritt. (https://www.steiermark.com/de/Magazin/Die-meistbesuchten-Ausflugsziele-der-Steiermark_mad_45932860).
 Diese enormen Besucherströme stellen eine nicht unbedeutende organisatorische Herausforderung für Mitarbeiter und Management dar.
 Trotz der hohen Frequenz an Besuchern gleichte der Parkplatz aus datentechnischer Sicht einer "Black Box", da keine automatisierte Erfassung oder Auswertung von Fahrzeugbewegungen existierte. 
 Informationen über die tatsächliche Auslastung, Stoßzeiten oder die Verweildauer basierten auf subjektiven Beobachtungen statt auf Daten.
@@ -13,13 +14,46 @@ Ziel ist es, mit diesen Möglichkeiten der Datensammlung und Analyse die strateg
 
 # Aufgabenstellung
 
-Klare Definition, was im Rahmen der Arbeit zu tun war (Pflichtenheft)
+Im Rahmen dieser Diplomarbeit sollen folgende Aufgaben erfüllt werden:
+
+- Installation bzw. Montage und Konfiguration der erforderlichen Hardware 
+
+- Implementierung eines ALPR-Systems (Automatic License Plate Recognition) zur Kennzeichenerkennung
+
+- Erkennung von Ein- und Ausfahrten mit Zeitstempeln
+
+- Auswertung der Kennzeichen nach Herkunftsland und Region mit der Erkennung von Fahrzeugtypen (PKW, LKW, etc.)
+
+- DSGVO-konforme Anonymisierung und Speicherung der erfassten Daten
+
+- Erstellung eines Scripts für die automatische Datenbank-Initialisierung
+
+- Entwicklung einer automatisierten Backup- und Wiederherstellungslösung
+
+- Implementierung eines Dashboards zur Visualisierung der Daten
+
+- Integration eines E-Mail-Benachrichtigungssystems
+
 
 # Zielsetzung
 
-Abgrenzung (Was soll das System können, was nicht?)
+Das Ziel dieser Diplomarbeit ist es, mit Daten des Besucherparkplatzes der Zotter Schokolade GmbH Analysen und Visualisierungen zu bieten, mit deren Hilfe bessere Entscheidungen in den Bereichen Betriebsführung, Marketing und Ressourcenplanung ermöglicht werden.
+
+Das entwickelte System soll:
+- Transparenz durch Echtzeit-Einblicke in Parkplatzauslastung, Besucherfrequenz und Stoßzeiten liefern
+- Die Ressourcenplanung durch eine Datengrundlagen für strategische Planung unterstützen
+- Verbesserung des zielgerichteten Marketings durch die Bereitstellung von Herkunftsanalysen 
+- Datenschutz und DSGVO-Konformität durch Anonymisierung aller personenbezogenen Daten gewährleisten
+
+Das System soll nicht:
+
+- Individuelle Besucher identifizieren oder tracken
+- Bewegungsprofile einzelner Fahrzeuge über den Parkplatzkontext hinaus erstellen
+- Personenbezogene Daten dauerhaft speichern
+
+Durch die Abgrenzung dieser Ziele wird sichergestellt, dass das System nur als Werkzeug für betriebliche Optimierung dient, ohne dabei die Privatsphäre der Besucher zu gefährden.
 
 
 # Aufbau der Arbeit
 
-Kurzer Wegweiser durch die Kapitel
+TO-DO
