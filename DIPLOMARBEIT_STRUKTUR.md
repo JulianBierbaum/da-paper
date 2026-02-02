@@ -33,7 +33,7 @@
 ## 3. Hardwareauswahl und Systemumgebung
 
 *   **3.1 Anforderungsanalyse an die Hardware:**
-    *   Umgebungsbedingungen (Außenbereich, Wetter, Lichtverhältnisse)
+    *   Umgebungsbedingungen (Außenbereich (Luftbild), Wetter, Lichtverhältnisse)
     *   Leistungsanforderungen (Verarbeitungsgeschwindigkeit, Netzwerk)
 *   **3.2 Evaluierung der Komponenten:**
     *   **Kamera:** Vergleich verschiedener Modelle (z.B. Synology vs. andere IP-Cams)
