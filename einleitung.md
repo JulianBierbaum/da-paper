@@ -43,6 +43,7 @@ Das entwickelte System soll:
 - Transparenz durch Echtzeit-Einblicke in Parkplatzauslastung, Besucherfrequenz und Stoßzeiten liefern
 - Die Ressourcenplanung durch eine Datengrundlagen für strategische Planung unterstützen
 - Verbesserung des zielgerichteten Marketings durch die Bereitstellung von Herkunftsanalysen 
+- Basis für die GHG (Greenhouse Gas Protocol) Scope 3 Emissionsberechnung des Besucheraufkommens liefern (https://ghgprotocol.org/corporate-value-chain-scope-3-standard)
 - Datenschutz und DSGVO-Konformität durch Anonymisierung aller personenbezogenen Daten gewährleisten
 
 Das System soll nicht:
