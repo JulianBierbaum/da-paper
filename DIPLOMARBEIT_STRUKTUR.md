@@ -17,8 +17,8 @@
 ## 1. Einleitung
 
 *   **1.1 Motivation:** Warum wird dieses System benötigt? (z.B. Automatisierung von Zufahrtskontrollen, statistische Erhebung)
-*   **1.2 Aufgabenstellung:** Klare Definition, was im Rahmen der Arbeit zu tun war (Pflichtenheft)
-*   **1.3 Zielsetzung:** Abgrenzung (Was soll das System können, was nicht?)
+*   **1.2 Zielsetzung:** Abgrenzung (Was soll das System können, was nicht?)
+*   **1.3 Aufgabenstellung:** Klare Definition, was im Rahmen der Arbeit zu tun war (Pflichtenheft)
 *   **1.4 Aufbau der Arbeit:** Kurzer Wegweiser durch die Kapitel
 
 

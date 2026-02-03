@@ -12,29 +12,6 @@ Auf diese Daten aufbauend, können Analysen, grafische Dashboards mit den wichti
 Ziel ist es, mit diesen Möglichkeiten der Datensammlung und Analyse die strategische Planung, das Marketing und die Parkplatz-Logistik zu unterstützen.
 
 
-# Aufgabenstellung
-
-Im Rahmen dieser Diplomarbeit sollen folgende Aufgaben erfüllt werden:
-
-- Installation bzw. Montage und Konfiguration der erforderlichen Hardware 
-
-- Implementierung eines ALPR-Systems (Automatic License Plate Recognition) zur Kennzeichenerkennung
-
-- Erkennung von Ein- und Ausfahrten mit Zeitstempeln
-
-- Auswertung der Kennzeichen nach Herkunftsland und Region mit der Erkennung von Fahrzeugtypen (PKW, LKW, etc.)
-
-- DSGVO-konforme Anonymisierung und Speicherung der erfassten Daten
-
-- Erstellung eines Scripts für die automatische Datenbank-Initialisierung
-
-- Entwicklung einer automatisierten Backup- und Wiederherstellungslösung
-
-- Implementierung eines Dashboards zur Visualisierung der Daten
-
-- Integration eines E-Mail-Benachrichtigungssystems
-
-
 # Zielsetzung
 
 Das Ziel dieser Diplomarbeit ist es, mit Daten des Besucherparkplatzes der Zotter Schokolade GmbH Analysen und Visualisierungen zu bieten, mit deren Hilfe bessere Entscheidungen in den Bereichen Betriebsführung, Marketing und Ressourcenplanung ermöglicht werden.
@@ -55,6 +32,29 @@ Das System soll nicht:
 Durch die Abgrenzung dieser Ziele wird sichergestellt, dass das System nur als Werkzeug für betriebliche Optimierung dient, ohne dabei die Privatsphäre der Besucher zu gefährden.
 
 
-# Aufbau der Arbeit
+# Aufgabenstellung
 
+Um diesen Anforderungen gerecht zu werden wurden diese in folgende Teilaufgaben aufgeteilt:
+
+- Installation bzw. Montage und Konfiguration der erforderlichen Hardware 
+
+- Implementierung eines ALPR-Systems (Automatic License Plate Recognition) zur Kennzeichenerkennung
+
+- Erkennung von Ein- und Ausfahrten mit Zeitstempeln
+
+- Auswertung der Kennzeichen nach Herkunftsland und Region mit der Erkennung von Fahrzeugtypen (PKW, LKW, etc.)
+
+- DSGVO-konforme Anonymisierung und Speicherung der erfassten Daten
+
+- Erstellung eines Scripts für die automatische Datenbank-Initialisierung
+
+- Entwicklung einer automatisierten Backup- und Wiederherstellungslösung
+
+- Implementierung eines Dashboards zur Visualisierung der Daten
+
+- Integration eines E-Mail-Benachrichtigungssystems
+
+
+# Aufbau der Arbeit
+Umschreibung des aufbaus
 TO-DO
