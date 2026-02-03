@@ -27,7 +27,7 @@
 
 *   **2.1 Microservices Architektur:** Prinzipien und Abgrenzung zum Monolithen (Warum?)
 *   **2.2 Containerisierung (Docker):** Vorteile für Deployment und Isolation
-*   **2.3 ALPR (Automatic License Plate Recognition):** Grundfunktionsweise der Kennzeichenerkennung (Technologie, nicht Code)
+*   **2.3 ALPR (Automatic License Plate Recognition):** Grundfunktionsweise der Kennzeichenerkennung (Technologie, OCR, Anbieter)
 
 
 ## 3. Hardwareauswahl und Systemumgebung
@@ -54,7 +54,7 @@
     *   ER-Diagramm (Entity Relationship)
     *   Erklärung der wichtigsten Entitäten (`VehicleObservation`, `User`, `Preferences`)
 *   **4.3 Sicherheitskonzept:**
-    *   Authentifizierung (JWT, User-Rollen) -> Olivia
+    *   Authentifizierung (Entpoint-Sicherheit)
     *   Datenschutz (Umgang mit Kennzeichen-Daten)
     *   Data Lifecycle
 
