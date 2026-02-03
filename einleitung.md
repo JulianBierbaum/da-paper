@@ -56,5 +56,20 @@ Um diesen Anforderungen gerecht zu werden wurden diese in folgende Teilaufgaben 
 
 
 # Aufbau der Arbeit
-Umschreibung des aufbaus
-TO-DO
+
+Diese Diplomarbeit gliedert sich in Hauptkapitel, die den Entwicklungsprozess des Systems von den theoretischen Grundlagen bis zur Implementierung nachvollziehbar machen sollen.
+
+Das nächste Kapitel befasst sich mit den theoretischen Grundlagen. Die eingesetzten Technologien: Microservices-Architektur, Containerisierung und die ALPR-Technologie werden nächer beleuchtet und deren Relevanz für das Projekt begründet.
+
+In Kapitel 3 werden der Prozess der Hardwareauswahl, die eingesetzte Systemumgebung sowie die lokalen Standortgegebenheiten beschrieben. 
+Es werden die spezifischen Anforderungen an Kamera und Server unter Berücksichtigung von Umgebungsbedingungen und Vorgaben der Betreuerfirma evaluiert und die getroffenen Entscheidungen werden argumentiert.
+
+Kapitel 4 präsentiert Systementwurf und Architektur. Das Gesamtkonzept dieser sowie der Aufbau und Verantwortlichkeiten der Teilkomponenten werden dargelegt. Ebenfalls wird das Datenbankdesign und das allgemeine Sicherheits- bzw. Datenschutzkonzept beleuchtet.
+
+Das darauffolgende Kapitel dokumentiert die Implementierung der einzelnen Services. Besonderes Augenmerk hier liegt auf der Integration der externen Komponenten wie Kamera-Daten oder der Verarbeitung der Bilddaten und des Datenflusses bei der Datenbeschaffung und -verarbeitung.
+
+Das 6. Kapitel behandelt Infrastruktur, Deployment und Betrieb. Es wird auf die Container-Orchestrierung, CI/CD-Pipelines mit Deployment, Monitoring-Strategien sowie die Backup- und Restore-Strategie eingegangen. Auch wird kurz die MkDocs basierte Entwicklerdokumentation erwähnt.
+
+Kapitel 7 widmet sich der Qualitätssicherung durch Tests und der Validierung des Systems unter realen Bedingungen.
+
+Das letzte Kapitel schließt mit einer Zusammenfassung und Evaluierung der Ergebnisse, der kritischen Reflexion des Projektverlaufs und einem Ausblick auf mögliche Erweiterungen.

@@ -80,9 +80,9 @@
 *   **6.1 Container-Orchestrierung:**
     *   Erläuterung der `docker-compose` Strategie (Dev vs. Prod).
 *   **6.2 CI/CD Pipelines:**
-    *   Automatisierung mit GitHub Actions (Build & Test).
+    *   Automatisierung mit GitHub Actions (Build & Test), Deployment
 *   **6.3 Monitoring & Logging:**
-    *   Einsatz von Grafana zur Überwachung der "Vehicle Observations".
+    *   Strategien beim Monitoring und Logging
 *   **6.4 Backup-Strategie:**
     *   Erklärung der Backup-Skripte und des Wiederherstellungsprozesses (Disaster Recovery).
 *   **6.5 Documentation as Code:**
@@ -91,11 +91,11 @@
 
 ## 7. Qualitätssicherung und Tests
 *   **7.1 Teststrategie:** Unit-Tests (Pytest) und Integrationstests. (Test Coverage).
-*   **7.2 Validierung:** Überprüfung der Hardware/Software-Kombination in der Praxis (Erkennungsrate bei Regen/Nacht, Falsch-Positiv-Rate).
+*   **7.2 Validierung:** Überprüfung der Hardware/Software-Kombination in der Praxis (Erkennungsrate bei Regen/Nacht, Strategien gegen Falscherkennungen).
 
 
 ## 8. Fazit und Ausblick
-*   **8.1 Zusammenfassung der Ergebnisse.**
+*   **8.1 Zusammenfassung der Ergebnisse.** Überblick, Trefferrate, Reflexion
 *   **8.2 Kritische Reflexion:** 
     *   Was lief gut, was würde man heute anders machen (Hardware oder Software)? 
     *   Wurden alle Ziele (Funktional und Nicht-Funktional umgesetzt)
