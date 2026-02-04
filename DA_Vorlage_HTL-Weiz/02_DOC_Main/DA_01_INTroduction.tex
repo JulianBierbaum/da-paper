@@ -1,0 +1,163 @@
+%
+%****************************************************************************************************
+%================================ B E G I N  1.   P A G E =============================
+%****************************************************************************************************
+%
+%\begin{figure}[h]
+%	\begin{minipage}{0.2\textwidth}
+%		\raggedright
+%		\includegraphics[width=\linewidth]{../../03_AUX/01_PICT/HTL-Weiz-Logo.pdf}						% HTL-Weiz-Logo
+%	\end{minipage}
+%	\hfill
+%	\begin{minipage}{0.1\textwidth}
+%		\raggedleft
+%		\includegraphics[width=\linewidth]{../../03_AUX/01_PICT/HTL-Weiz-IT-Logo.png}					% HTL-Weiz-ET-Logo
+%	\end{minipage}
+%	\hfill
+%	\begin{center}
+%		\vspace{-1.5cm}
+%		\centering
+%		\large \textbf{Höhere Technische\\ Bundeslehranstalt Weiz\\}		
+%		\small{\textbf{Höhere Abteilung für Elektrotechnik}\\	
+%		Ausbildungsschwerpunkt Informationstechnologie}
+%	\end{center}
+%\end{figure}
+
+%\setlength{\footskip}{1cm}  % Kleinerer Wert = Fußzeile höher
+
+\thispagestyle{ErsteSeite}
+$~$
+\vspace{0.5cm}
+
+\begin{center}
+\textcolor{itblue} {\resizebox{10cm}{1.0cm}{\textbf{DIPLOMARBEIT}}}
+\vspace{1.0cm}
+
+\begin{tabular}{p{15.0cm}} 
+\begin{center}\textcolor{black!}{\LARGE\textbf{\DAName}}   \\ \end{center}
+\end{tabular}
+\end{center}
+
+%\vspace{1.0cm}
+\begin{center}
+\includegraphics[width=3cm]{../../03_AUX/01_PICT/LogoDerDA.png}
+\end{center}
+\vfill
+
+%\changefont{pag}{m}{n}
+
+\begin{tabular}{p{6cm} p{4cm} p{5cm}}
+\textbf{Ausgeführt von:} & \textbf{Jahrgang/Klasse:} & \textbf{Betreuer:} \\ 
+\DPLNameOne & \SYear/\SClass & \BNameOne \\ 
+\DPLNameTwo&  \SYear/\SClass &   \\ 
+&&\\
+\textbf{Projektpartner:} &&\\
+FF Reichendorf & Andreas Reiter& Hauptbrandinspektor\\
+& Philipp Ecker& Oberbrandinspektor\\
+&&\\
+&&\\ \hline
+\textbf{Abgabevermerk:} & &\\ 
+&&\\
+Datum: & Unterschrift:& \\ 
+&&\\
+\end{tabular}
+
+\newpage
+%
+%****************************************************************************************************
+%============================= B E G I N   2.    P A G E ==============================
+%****************************************************************************************************
+%
+\setlength{\headsep }{2.4cm}
+\thispagestyle{ErsteSeite}
+\addsec{Eidesstattliche Erklärung}
+
+\begin{quote}
+Ich erkläre an Eides statt, dass ich die vorliegende Diplomarbeit selbst\-ständig und ohne fremde Hilfe verfasst, andere als die angegebenen Quellen und
+Hilfsmittel nicht benutzt und die den benutzten Quellen wörtlich und inhaltlich entnommenen Stellen als solche erkenntlich gemacht habe.
+\\[4\baselineskip]
+\end{quote}
+
+\begin{center}
+\begin{tabular}{p{10cm} p{4cm}}
+Weiz, am \ADatum$~$\DPLNameOne:  & \dotfill \\ 
+ &  \\ 
+ & \\
+Weiz, am \ADatum$~$\DPLNameTwo:& \dotfill \\ 
+\end{tabular} 
+\end{center}
+\newpage
+
+%
+%****************************************************************************************************
+%=============================== B E G I N   3.   P A G E ============================
+%****************************************************************************************************
+%
+\thispagestyle{ErsteSeite}
+\addsec{Kurzbeschreibung}
+	Die Bewirtung beim alljährlichen Feuerwehrfest der Freiwilligen Feuerwehr Reichendorf erfolgt derzeit durch Servicepersonal. Der aktuelle Prozess ist aber zeitintensiv und ineffizient: Die Bestellaufnahme, das Anstellen und Bezahlen an den einzelnen Theken erfolgen sequentiell. Zudem führen große Bestellungen dazu, dass sich der Laufweg wiederholt. Dies hat zur Folge, dass sich die Wartezeit erhöht und der Bezahlvorgang, welcher am Ende stattfindet, verzögert.
+	
+	Diese Diplomarbeit dient dazu das Problem zu Lösen. Durch das Microservice-basierte Bestellsystem wird die Bestellzeit des Kunden verkürzt. Der Bestellvorgang sieht wie folgt aus: Die Bestellung wird direkt beim Kunden über ein Mobiles Endgerät erfasst. Das System liefert  Bestelldaten an die entsprechenden Theken, wo dann ein Bestellbeleg gedruckt wird. Anschließend werden die Produkte mittels Austräger zu den Tischen geliefert.
+	
+	Im Rahmen der Diplomarbeit wird das Gesamtsystem entwickelt, welches zwei grafische Bedienoberflächen umfasst: Eine Bestellanwendung für das Servicepersonal und eine separate Oberfläche für die Konfiguration der Inhalte beziehungsweise das Einsehen der aktuellen Bestellungen. Das Userinterface kommuniziert mit den Geschäftslogik über eine zentrale Schnittstelle mittels API-Aufrufe. Die Logik wird in mehrere kleine Microservices unterteilt, welche jeweils nur einen  Zuständigkeitsbereich haben, wie zum Beispiel das Verwalten und Authentifizieren von Benutzern.
+\vspace{3.0cm}
+
+\textbf{Das entwickelte System soll folgende Funktionen aufweisen:}
+\begin{itemize}
+	\item Microservice Architektur
+
+\end{itemize}
+\newpage
+
+%
+%****************************************************************************************************
+%=============================== B E G I N   4.   P A G E ============================
+%****************************************************************************************************
+%
+\thispagestyle{ErsteSeite}
+\addsec{Abstract}
+Das Abstract ist die Kurzbeschreibung der Arbeit  in Englisch verfasst. Ein Abstract ist eine Inhaltsangabe, die sehr prägnant verfasst ist. Der Umfang sollte \textbf{eine Seite} nicht überschreiten!
+\vspace{3.0cm}
+
+\textbf{The developed device will feature the following items:}
+\begin{itemize}
+	\item Specification 1 
+	\item Minimal protection class of IP44
+\end{itemize}
+\newpage
+
+%
+%****************************************************************************************************
+%=============================== B E G I N   5.   P A G E ============================
+%****************************************************************************************************
+%
+\thispagestyle{ErsteSeite}
+\addsec{Vorwort}
+Im Vorwort soll eine kurze Beschreibung des schulischen Umfeldes stehen; per\-sön\-liche Vorstellungen können ebenfalls enthalten sein. Im Vorwort können auch Gründe für die Wahl des Themas, Angaben zu einem persönlichen Bezug und ähnliches aufgeführt werden. Das Vorwort ist auch der Platz für Danksagungen.
+Das Vorwort endet mit dem Datum und dem Namen des Autors bzw. der Autorin.\\
+Um die Diplomarbeit möglichst reibungsfrei und effektiv bearbeiten zu können, sollten Sie die nachfolgenden Punkte schon zu Beginn beachten.
+\vspace{2.0cm}
+
+\begin{center}
+\begin{tabular}{p{10cm} p{6.5cm}}
+Ort, am \ADatum$~$\DPLNameOne\\ 
+ &  \\ 
+Ort, am \ADatum$~$\DPLNameTwo\\ 
+\end{tabular} 
+\end{center}
+
+\newpage
+\newpage
+%
+%
+%****************************************************************************************************
+%=============================== B E G I N   6.   P A G E ============================
+%****************************************************************************************************
+%
+%
+\setlength{\headsep }{1.2cm}
+\setlength{\voffset}{1.0cm}
+
+\tableofcontents
+
+
