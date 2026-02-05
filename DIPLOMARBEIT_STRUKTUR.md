@@ -25,8 +25,8 @@
 ## 2. Theoretische Grundlagen
 *Kurzer Abriss der Technologien, um das Verständnis für die späteren Entscheidungen zu schaffen.*
 
-*   **2.1 Microservices Architektur:** Prinzipien und Abgrenzung zum Monolithen (Warum?)
-*   **2.2 Containerisierung (Docker):** Vorteile für Deployment und Isolation
+*   **2.1 Containerisierung (Docker):** Vorteile für Deployment und Isolation
+*   **2.2 Microservice Architektur:** Prinzipien und Abgrenzung zum Monolithen (Warum?)
 *   **2.3 ALPR (Automatic License Plate Recognition):** Grundfunktionsweise der Kennzeichenerkennung (Technologie, OCR, Anbieter)
 
 
@@ -39,8 +39,8 @@
     *   **Kamera:** Vergleich verschiedener Modelle (z.B. Synology vs. andere IP-Cams)
         *   *Kriterien:* Auflösung, Nachtsicht, API-Verfügbarkeit, Kosten
     *   **Server/Recheneinheit:** (z.B. Raspberry Pi vs. Mini-PC vs. Cloud vs. NAS)
-*   **3.3 Begründung der Entscheidung:**
-    *   Detaillierte Darlegung, warum genau diese Hardware gewählt wurde (Kosten-Nutzen-Analyse, technische Notwendigkeit)
+*   **3.3 Technologieauswahl für die Kennzeichenerkennung:**
+    *   Warum Plate Recognizer und nicht open source oder intern.
 *   **3.4 Netzwerkinfrastruktur:** Wie sind Kamera und Server verbunden
 
 

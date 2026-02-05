@@ -1,6 +1,6 @@
 # Einleitung
 
-# Motivation
+## Motivation
 
 Die Erlebniswelt von Zotter Schokolade zählt mit ihren über 300.000 jährlichen Besuchern (Stand 2025) zu den Top-3 der steirischen Sehenswürdigkeiten mit Bezahl-Eintritt. (https://www.steiermark.com/de/Magazin/Die-meistbesuchten-Ausflugsziele-der-Steiermark_mad_45932860).
 Diese enormen Besucherströme stellen eine nicht unbedeutende organisatorische Herausforderung für Mitarbeiter und Management dar.
@@ -12,7 +12,7 @@ Auf diese Daten aufbauend, können Analysen, grafische Dashboards mit den wichti
 Ziel ist es, mit diesen Möglichkeiten der Datensammlung und Analyse die strategische Planung, das Marketing und die Parkplatz-Logistik zu unterstützen.
 
 
-# Zielsetzung
+## Zielsetzung
 
 Das Ziel dieser Diplomarbeit ist es, mit Daten des Besucherparkplatzes der Zotter Schokolade GmbH Analysen und Visualisierungen zu bieten, mit deren Hilfe bessere Entscheidungen in den Bereichen Betriebsführung, Marketing und Ressourcenplanung ermöglicht werden.
 
@@ -32,7 +32,7 @@ Das System soll nicht:
 Durch die Abgrenzung dieser Ziele wird sichergestellt, dass das System nur als Werkzeug für betriebliche Optimierung dient, ohne dabei die Privatsphäre der Besucher zu gefährden.
 
 
-# Aufgabenstellung
+## Aufgabenstellung
 
 Um diesen Anforderungen gerecht zu werden wurden diese in folgende Teilaufgaben aufgeteilt:
 
@@ -55,7 +55,7 @@ Um diesen Anforderungen gerecht zu werden wurden diese in folgende Teilaufgaben 
 - Integration eines E-Mail-Benachrichtigungssystems
 
 
-# Aufbau der Arbeit
+## Aufbau der Arbeit
 
 Diese Diplomarbeit gliedert sich in Hauptkapitel, die den Entwicklungsprozess des Systems von den theoretischen Grundlagen bis zur Implementierung nachvollziehbar machen sollen.
 
