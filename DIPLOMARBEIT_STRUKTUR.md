@@ -44,8 +44,6 @@
         Alternativen auflisten und Entscheidung argumentieren.
 *   **3.3 Technologieauswahl für die Kennzeichenerkennung:**
     *   Warum Plate Recognizer und nicht open source oder intern.
-*   **3.4 Netzwerkinfrastruktur:** Wie sind Kamera und Server verbunden
-
 
 ## 4. Systementwurf und Architektur
 *Das Konzept VOR der Programmierung.*
