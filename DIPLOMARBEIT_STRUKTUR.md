@@ -38,7 +38,10 @@
 *   **3.2 Evaluierung der Komponenten:**
     *   **Kamera:** Vergleich verschiedener Modelle (z.B. Synology vs. andere IP-Cams)
         *   *Kriterien:* Auflösung, Nachtsicht, API-Verfügbarkeit, Kosten
-    *   **Server/Recheneinheit:** (z.B. Raspberry Pi vs. Mini-PC vs. Cloud vs. NAS)
+    *   **Server/Recheneinheit:** (z.B. Raspberry Pi vs. Mini-PC vs. Cloud vs. NAS), Deployment und Hosting
+*   **3.3 Argumentation für Software-Technologien**
+    *   Container, Docker, Microservices
+        Alternativen auflisten und Entscheidung argumentieren.
 *   **3.3 Technologieauswahl für die Kennzeichenerkennung:**
     *   Warum Plate Recognizer und nicht open source oder intern.
 *   **3.4 Netzwerkinfrastruktur:** Wie sind Kamera und Server verbunden

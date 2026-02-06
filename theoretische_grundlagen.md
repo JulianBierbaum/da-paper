@@ -53,6 +53,11 @@ Durch die Containerisierung kann das gesamte System der Diplomarbeit mit einem e
 Die Infrastruktur wird als Code (Infrastructure as Code) definiert, was Versionierung und Nachvollziehbarkeit von Umgebungsänderungen ermöglicht.
 
 
+Mögliche alternativen aber nicht nicht argumentieren
+
+!!!!! es bietet sich für die diplomarbeit an, weil
+
+
 ## Microservice Architektur
 
 Die Microservice-Architektur ist ein Designansatz, bei dem eine Anwendung als Sammlung kleiner, lose gekoppelter Dienste aufgebaut wird.
@@ -97,6 +102,9 @@ Diese beziehen sich primär die erhöhte Komplexität, welche die Verteilung der
 
 Im Fazit ist die Microservice-Architektur ein mächtiger Ansatz für komplexe Systeme, der Flexibilität, Fehlertoleranz und Skalierbarkeit bietet. 
 
+Mögliche alternativen aber nicht nicht argumentieren
+
+!!!!! es bietet sich für die diplomarbeit an, weil
 
 ## ALPR (Automatic License Plate Recognition)
 
@@ -141,3 +149,7 @@ Vorteile der lokalen Ausführung:
 Der größte Vorteil in der Offline-Verarbeitung der Bilddaten liegt darin, dass die potenziell personenbezogene Informationen niemals das lokale Netzwerk des Unternehmens verlassen. 
 Dies ist besonders relevant für europäische Datenschutzanforderungen wie die DSGVO (Datenschutzgrundverordnung), die strenge Regeln für die Verarbeitung solcher Daten vorsehen.
 Außerdem funktioniert das System unabhängig von einer Internetverbindung, was Zuverlässigkeit auch mit eingeschränkter Konnektivität garantiert.
+
+Mögliche alternativen aber nicht nicht argumentieren
+
+!!!!! es bietet sich für die diplomarbeit an, weil
