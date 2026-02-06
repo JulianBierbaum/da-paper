@@ -61,7 +61,7 @@ Diese Diplomarbeit gliedert sich in Hauptkapitel, die den Entwicklungsprozess de
 
 Das nächste Kapitel befasst sich mit den theoretischen Grundlagen. Die eingesetzten Technologien: Microservices-Architektur, Containerisierung und die ALPR-Technologie werden nächer beleuchtet und deren Relevanz für das Projekt begründet.
 
-In Kapitel 3 werden der Prozess der Hardwareauswahl, die eingesetzte Systemumgebung sowie die lokalen Standortgegebenheiten beschrieben. 
+In Kapitel 3 werden der Prozess der Hardwareauswahl, die eingesetzte Systemumgebung inklusive den getroffenen Entscheidungen im Technologie-Stack sowie die lokalen Standortgegebenheiten beschrieben. 
 Es werden die spezifischen Anforderungen an Kamera und Server unter Berücksichtigung von Umgebungsbedingungen und Vorgaben der Betreuerfirma evaluiert und die getroffenen Entscheidungen werden argumentiert.
 
 Kapitel 4 präsentiert Systementwurf und Architektur. Das Gesamtkonzept dieser sowie der Aufbau und Verantwortlichkeiten der Teilkomponenten werden dargelegt. Ebenfalls wird das Datenbankdesign und das allgemeine Sicherheits- bzw. Datenschutzkonzept beleuchtet.

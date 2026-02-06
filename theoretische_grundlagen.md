@@ -117,7 +117,7 @@ Diese nutzen Deep Learning-basierte Ansätze, die einzelne Zeichen nicht nur iso
 Jedes erkannte Zeichen wird mit einem Konfidenzwert versehen, der die Erkennungssicherheit quantifiziert.
 
 4. Post-Processing (Validierung): 
-Die Rohergebnisse werden gegen bekannte Muster und Regeln validiert wie etwa länderspezifische Kennzeichensyntaxen (etwa die österreichische Struktur aus Bezirk und Erkennungsnummer) dient als Prüfung der Plausibilität der erkannten Nummerntafel. 
+Die Rohergebnisse werden gegen bekannte Muster und Regeln validiert, wie etwa länderspezifische Kennzeichensyntaxen (etwa die österreichische Struktur aus Bezirk und Erkennungsnummer), diese dienen als Prüfung der Plausibilität der erkannten Nummerntafel. 
 Auch werden typische OCR-Verwechslungen wie "0" versus "O" oder "1" versus "I" kontextbasiert korrigiert.
 
 Technologie und Anbieter

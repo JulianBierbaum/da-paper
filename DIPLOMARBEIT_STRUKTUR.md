@@ -30,7 +30,7 @@
 *   **2.3 ALPR (Automatic License Plate Recognition):** Grundfunktionsweise der Kennzeichenerkennung (Technologie, OCR, Anbieter)
 
 
-## 3. Hardwareauswahl und Systemumgebung
+## 3. Hardware- und Technologieauswahl 
 
 *   **3.1 Anforderungsanalyse an die Hardware:**
     *   Umgebungsbedingungen (Außenbereich (Luftbild), Wetter, Lichtverhältnisse)
@@ -44,6 +44,7 @@
         Alternativen auflisten und Entscheidung argumentieren.
 *   **3.3 Technologieauswahl für die Kennzeichenerkennung:**
     *   Warum Plate Recognizer und nicht open source oder intern.
+
 
 ## 4. Systementwurf und Architektur
 *Das Konzept VOR der Programmierung.*
