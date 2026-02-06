@@ -36,9 +36,9 @@
     *   Umgebungsbedingungen (Außenbereich (Luftbild), Wetter, Lichtverhältnisse)
     *   Leistungsanforderungen (Verarbeitungsgeschwindigkeit, Netzwerk)
 *   **3.2 Evaluierung der Komponenten:**
-    *   **Kamera:** Vergleich verschiedener Modelle (z.B. Synology vs. andere IP-Cams)
-        *   *Kriterien:* Auflösung, Nachtsicht, API-Verfügbarkeit, Kosten
-    *   **Server/Recheneinheit:** (z.B. Raspberry Pi vs. Mini-PC vs. Cloud vs. NAS), Deployment und Hosting
+    *   Kamera: Vergleich verschiedener Modelle (z.B. Synology vs. andere IP-Cams)
+        *   Kriterien: Auflösung, Nachtsicht, API-Verfügbarkeit, Kosten
+    *   Server/Recheneinheit: (z.B. Raspberry Pi vs. Mini-PC vs. Cloud vs. NAS), Deployment und Hosting
 *   **3.3 Argumentation für Software-Technologien**
     *   Container, Docker, Microservices
         Alternativen auflisten und Entscheidung argumentieren.
