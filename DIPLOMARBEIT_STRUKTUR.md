@@ -82,7 +82,7 @@
 *   **6.1 Container-Orchestrierung:**
     *   Erläuterung der `docker-compose` Strategie (Dev vs. Prod).
 *   **6.2 CI/CD Pipelines:**
-    *   Automatisierung mit GitHub Actions (Build & Test), Deployment
+    *   Automatisierung mit GitHub Actions (Build & Test), Deployment (Portainer)
 *   **6.3 Monitoring & Logging:**
     *   Strategien beim Monitoring und Logging
 *   **6.4 Backup-Strategie:**
