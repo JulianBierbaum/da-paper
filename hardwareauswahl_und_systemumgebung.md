@@ -128,7 +128,10 @@ Im Vergleich zu Flask, dem vermutlich bekanntesten Python-Framework, bietet Fast
 Gegenüber dem schwergewichtigeren Django bringt FastAPI deutlich weniger Overhead mit und ist damit besser für kleine Microservices geeignet, bei denen schlanke, spezialisierte Services bevorzugt werden.
 
 Für die Datenhaltung wurde PostgreSQL als relationale Datenbank gewählt. 
-Während NoSQL-Datenbanken wie MongoDB für hochskalierbare, dokumentenbasierte Anwendungen Vorteile bieten, sprechen im vorliegenden Fall die strukturierten Datenbeziehungen (Fahrzeuge, Erkennungen, Benutzer, Berechtigungen) klar für eine relationale Datenbank. 
+Während NoSQL-Datenbanken wie MongoDB für hochskalierbare, dokumentenbasierte Anwendungen Vorteile bieten, sprechen im vorliegenden Fall die strukturierten Datenbeziehungen (Erkennungen, Benutzer etc.) klar für eine relationale Datenbank. 
+
+Um Datenbank-Schema Änderungen versioniert und reproduzierbar zu gestalten, wurde Alembic als Migrations-Framework gewählt. 
+Im Gegensatz zu manuellen SQL-Skripten ermöglicht dies rückverfolgbare Datenbankänderungen, die automatisiert über alle Umgebungen ausgerollt werden können.
 
 Das Gesamtsystem basiert auf Docker und einer Microservice-Architektur. 
 Wie zuvor detailiert erklärt läuft jeder Dienst (Data Collection, Notification, Grafana) in seinem eigenen Container mit klar definierten Schnittstellen. 
