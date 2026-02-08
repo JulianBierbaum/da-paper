@@ -102,16 +102,35 @@ Die Kombination aus relevanten Features, umfassender API und nativer Kamera-Unte
 
 ### Technologieauswahl Kennzeichenerkennung
 
-Warum Plate Recognizer?
-Anstatt eine eigene Lösung auf Basis von Open-Source-Bibliotheken (wie Tesseract oder EasyOCR) zu entwickeln, wurde Plate Recognizer gewählt:
-* Genauigkeit: Hochoptimierte Machine-Learning-Modelle, die auch bei schlechten Winkeln, Verschmutzung oder schwieriger Beleuchtung extrem hohe Erkennungsraten erzielen.
-* Internationale Unterstützung: Unterstützung für Kennzeichen aus über 90 Ländern, inklusive Fahrzeugtyp- und Farberkennung.
-* Lokaler Container: Durch den Einsatz des platerecognizer/alpr Docker-Images bleiben die Bilddaten im lokalen Netzwerk (Datenschutz), und die Latenzzeiten der Cloud-Kommunikation entfallen.
+Für die eigentliche Kennzeichenerkennung stand die Entscheidung zwischen der Entwicklung einer eigenen Lösung auf Basis von Open-Source-OCR-Bibliotheken (wie Tesseract OCR oder EasyOCR) und der Verwendung einer kommerziellen Lösung im Raum.
+
+Bei der Evaluation von Tesseract und EasyOCR zeigte sich, dass diese generischen OCR-Engines zwar für Texterkennungsaufgaben gut geeignet sind, bei der spezifischen Herausforderung der Kennzeichenerkennung jedoch erhebliche Nachteile aufweisen. 
+Kennzeichen stellen besondere Anforderungen an ein Erkennungssystem, wie im Kapitel ALPR (!! Cross Reverence) bereits erwähnt: 
+Sie müssen aus verschiedenen Winkeln, bei unterschiedlichen Lichtverhältnissen, mit Verschmutzungen und in Bewegung zuverlässig erkannt werden. 
+Zudem variieren Kennzeichenformate international stark in Schriftart, Layout und Zeichenabständen.
+
+Die Entwicklung eines eigenen trainierten Modells auf Basis dieser Bibliotheken hätte einen erheblichen Aufwand für das Sammeln und Annotieren von Trainingsdaten bedeutet, wobei die resultierende Genauigkeit dennoch fraglich geblieben wäre. 
+In diese Richtung wurden im Zuge der Diplomarbeit-Entwicklung Prototypen erstellt, diese blieben aber in ihrer Qualität unzureichend oder waren in ihrem Realisierungssaufwand unrealistisch. 
+Aus diesem Grund fiel die Entscheidung auf Plate Recognizer, eine spezialisierte kommerzielle Lösung für Kennzeichenerkennung.
+
+Plate Recognizer bietet hochoptimierte Machine-Learning-Modelle, die bereits auf Millionen von Kennzeichenbildern aus über 90 Ländern trainiert wurden. 
+Dies gewährleistet eine deutlich höhere Erkennungsrate auch unter erschwerten Bedingungen. 
+Zusätzlich zur reinen Texterkennung bietet die Lösung erweiterte Funktionen wie Fahrzeugtyp- und Farberkennung, die für zukünftige Erweiterungen des Systems nützlich sein können.
+
+Wie zuvor erwähnt, ist ein weiterer entscheidender Vorteil die Verfügbarkeit als Docker-Container (Plate Recognizer SDK), der vollständig lokal auf dem DVA1622 NAS betrieben werden kann. 
+Im Gegensatz zu Cloud-basierten API-Lösungen bleiben damit alle Bilddaten im lokalen Netzwerk, was sowohl Datenschutzanforderungen erfüllt als auch Latenzzeiten minimiert. 
 
 
 ### Argumentation der Software-Technologien Entscheidungen
 
-Das System basiert konsequent auf Docker und Microservices.
-* Isolierung: Jeder Dienst (Analytics, Auth, Data Collection, Notification) läuft in seinem eigenen Container, was Abhängigkeitskonflikte verhindert.
-* Skalierbarkeit: Einzelne Komponenten (z.B. der Data-Collection-Service für mehrere Standorte) können unabhängig voneinander skaliert werden.
-* Wartbarkeit: Durch die Containerisierung ist das System plattformunabhängig und kann einfach gesichert oder migriert werden (manual_backup.sh).
+Als Web-Framework wurde FastAPI auf Python gewählt, welches moderne asynchrone Request-Verarbeitung unterstützt und automatische API-Dokumentation via OpenAPI/Swagger generiert. 
+Im Vergleich zu Flask, dem vermutlich bekanntesten Python-Framework, bietet FastAPI native Type-Hints-Unterstützung und automatische Validierung von Request-/Response-Daten durch Pydantic. 
+Gegenüber dem schwergewichtigeren Django bringt FastAPI deutlich weniger Overhead mit und ist damit besser für kleine Microservices geeignet, bei denen schlanke, spezialisierte Services bevorzugt werden.
+
+Für die Datenhaltung wurde PostgreSQL als relationale Datenbank gewählt. 
+Während NoSQL-Datenbanken wie MongoDB für hochskalierbare, dokumentenbasierte Anwendungen Vorteile bieten, sprechen im vorliegenden Fall die strukturierten Datenbeziehungen (Fahrzeuge, Erkennungen, Benutzer, Berechtigungen) klar für eine relationale Datenbank. 
+
+Das Gesamtsystem basiert auf Docker und einer Microservice-Architektur. 
+Wie zuvor detailiert erklärt läuft jeder Dienst (Data Collection, Notification, Grafana) in seinem eigenen Container mit klar definierten Schnittstellen. 
+Dies verhindert wie in den Thoretischen Grundlagen erklärt nicht nur Abhängigkeitskonflikte zwischen verschiedenen Services, sondern ermöglicht auch die unabhängige Skalierung einzelner Komponenten. 
+Die Containerisierung gewährleistet zudem Plattformunabhängigkeit, da das System problemlos von der Synology-Plattform auf andere migriert werden kann, ohne dass Anpassungen am Code notwendig sind. 
