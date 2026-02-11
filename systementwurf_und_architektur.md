@@ -267,22 +267,22 @@ Das Konzept ist so gestaltet, dass personenbezogene Daten so früh wie möglich 
 
 Der Lebenszyklus gliedert sich in sechs Phasen:
 
-1. Erfassung (Capture)
+1. Erfassung
 Eine Fahrzeugbewegung im Erkennungsbereich löst ein Event aus, welches das System über einen Webhook benachrichtigt.
 
-2. Extraktion (Extract)
+2. Extraktion
 Das System ruft einen aktuellen Kamera-Snapshot ab und sendet diesen an die lokale ALPR-Komponente zur Kennzeichenerkennung. Die Bilddaten werden dabei nicht persistent gespeichert.
 
-3. Anreicherung (Enrich)
+3. Anreicherung
 Die Erkennungsergebnisse werden angereichert: Ländercodes werden normalisiert und, wo möglich, wird die regionale Herkunft auf Bezirksebene ermittelt.
 
-4. Anonymisierung (Anonymize)
+4. Anonymisierung
 Das Klartext-Kennzeichen wird mittels eines kryptografischen Einweg-Hash-Verfahrens irreversibel anonymisiert. Ab diesem Punkt existiert das originale Kennzeichen in keinem Teil des Systems mehr.
 
-5. Speicherung (Persistence)
+5. Speicherung
 Der anonymisierte und angereicherte Datensatz wird in der Datenbank gespeichert.
 
-6. Sicherung (Backup)
+6. Sicherung
 Die Datenbank wird regelmäßig automatisiert gesichert. Details zur Backup-Strategie werden im Kapitel Infrastruktur, Deployment und Betrieb behandelt.
 
 Durch diesen Lebenszyklus ist sichergestellt, dass personenbezogene Daten, wie oben erwähnt, zu keinem Zeitpunkt persistent gespeichert werden und die gespeicherten, anonymisierten Daten eine Rückverfolgung auf individuelle Fahrzeuge nicht ermöglichen.
