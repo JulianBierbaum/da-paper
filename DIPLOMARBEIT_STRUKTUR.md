@@ -69,25 +69,23 @@
     *   Verarbeitung von "Municipalities" (Bezirkserkennung).
 *   **5.2 Notification Service:**
     *   Trigger-Logik für Benachrichtigungen (wann wird eine Mail gesendet?).
-*   **5.3 Datenbank-Management:**
-    *   Einsatz von ORM (SQLAlchemy) und Migrationen (Alembic) zur Schema-Verwaltung.
-*   **5.4 Grafana:**
+*   **5.3 Grafana:**
     *   Aufbau, Darstellungen
-*   **5.5 Wichtige Algorithmen/Lösungen:**
-    *   Herausragende Code-Teile
 
 
 ## 6. Infrastruktur, Deployment und Betrieb
 
 *   **6.1 Container-Orchestrierung:**
-    *   Erläuterung der `docker-compose` Strategie (Dev vs. Prod).
+    *   docker-compose Strategie (Dev vs. Prod).
 *   **6.2 CI/CD Pipelines, Deployment + Betrieb:**
     *   Automatisierung mit GitHub Actions (Build & Test), Deployment (Portainer)
 *   **6.3 Monitoring & Logging:**
     *   Strategien beim Monitoring und Logging
-*   **6.4 Backup-Strategie:**
-    *   Erklärung der Backup-Skripte und des Wiederherstellungsprozesses (Disaster Recovery).
-*   **6.5 Documentation as Code:**
+*   **6.4 Datenbank-Management:**
+    *   Tabellenerzeugung, Init-Script, Migrationen (Alembic) zur Schema-Verwaltung.
+*   **6.5 Backup-Strategie:**
+    *   Erklärung der Backup-Skripte und des Wiederherstellungsprozesses (Disaster Recovery, RPO, RTO).
+*   **6.6 Documentation as Code:**
     *   MkDocs, Dokumentation im Repo
 
 
