@@ -6,8 +6,8 @@ Das System wurde als hybride Microservice-Architektur konzipiert, in der jeder f
 Hybrid meint in diesem Kontext primär, dass die einzelnen Services nicht ganzheitlich isoliert und entkoppelt sind, da nicht jeder dieser über eine eigene Datenhaltung verfügt.
 Stattdessen nutzen alle Komponenten einen gemeinsamen PostgreSQL Service, welcher auf Schema-Ebene isoliert ist.
 Auf dieses Konzept wird im Kapitel (!! CROSS REFERENCE) näher eingegangen.
-Die Gesamtarchitektur wurde so entworfen, dass sie die in der Aufgabenstellung definierten Anforderungen abbildet.
-Im Zuge der Entwicklung wurden nicht alle im folgenden Kapitel erwähnten Komponenten implementiert, die bereits konzipierten Services werden aber in diesem Kapitel der Vollständigkeit halber erwähnt.
+Die Gesamtarchitektur wurde so entworfen, dass diese die in der Aufgabenstellung definierten Anforderungen abbildet.
+Im Zuge der Entwicklung wurden nicht alle der im folgenden Kapitel erwähnten Komponenten implementiert, die bereits konzipierten Services werden dennoch in diesem Kapitel aus Gründen der Vollständigkeit erwähnt.
 
 (ARCHITEKTUR-DIAGRAMM)
 
@@ -144,24 +144,89 @@ Statt etwa country_code, vehicle_type, make, model und color in eigene Lookup-Ta
 Diese Entscheidung beruht auf mehreren Gründen:
 
 1. Datenherkunft aus externer API
+
 Die Daten werden direkt aus der JSON-Antwort der Plate-Recognizer-API übernommen. 
 Die API gibt eine flache Struktur zurück, in welcher das Erkennungsresultat alle Attribute bereits als einfache Zeichenketten oder Werte enthält.
 Das Erstellen und die Wartung eines normalisierten Schemas mit Lookup-Tabellen für dynamische, von einer externen API stammende Werte, würde unnötige Komplexität hinzufügen und einen laufenden Wartungsaufwand bedeuten, da neue Werte (z.B. neue Fahrzeugmodelle) oder etwa Bennenungsanpassungen kontinuierlich eingepflegt werden müssten.
 
 2. Lesedominanz
+
 Die Daten werden primär lesend konsumiert, sowohl von Grafana für Dashboard-Visualisierungen als auch vom konzipierten Analytics-Service.
 Bei leselastigen Workloads sind Verknüpfungen über mehrere Tabellen teurer als direkte Abfragen auf einer einzelnen, denormalisierten Tabelle.
 
 3. Einfachheit der Abfragen
+
 Die Grafana-Dashboards verwenden direkte SQL-Abfragen. Eine einfache, flache Tabellenstruktur macht diese Abfragen nicht nur lesbarer, sondern eliminiert auch die Fehleranfälligkeit, die durch komplexe JOIN-Befehle entstehen könnte.
 
 4. Unveränderlichkeit der Daten
+
 Fahrzeugerkennungen sind unveränderliche Ereignisse, im Gegensatz zu beispielsweise einem Produktkatalog, wo sich der Name eines Herstellers ändern kann, sind gespeicherte Erkennung statisch.
 Die Hauptvorteile einer Normalisierung, etwa die konsistente Aktualisierung gemeinsamer Daten, sind daher nicht wirklich relevant.
 
-5. Speicherplatz ist unkritisch
+5. Speicherplatz als unkritische Ressource
+
 Die durch die Denormalisierung entstehende Datenredundanz, etwa wiederholt gespeicherte Herstellernamen, führt zu einem geringfügig höheren Speicherbedarf.
-Dieser ist im vorliegenden Anwendungsfall jedoch vernachlässigbar, da das System auf einer NAS-Plattform mit erweiterbarem Speicher betrieben wird und die Datensatzgröße pro Erkennung minimal ist. (FOOTNOTE: Zum Stand der Dokumentation dieser Arbeit beträgt ein volles Backup der gesamten Datenbank (Über 60.000 Erkennungen) knapp unter 3.5 MB.)
+Dieser ist im vorliegenden Anwendungsfall jedoch vernachlässigbar, da das System auf einer NAS-Plattform mit erweiterbarem Speicher betrieben wird und die Datensatzgröße pro Erkennung minimal ist. 
+Zum Stand der Dokumentation dieser Arbeit beträgt ein volles Backup der gesamten Datenbank (Über 60.000 Erkennungen) ca. 3.4 MB. 
+Um diesen Punkt zu verdeutlichen wurde die Zeit, welche benötigt werden würde um einen Speicher in Größe des NAS-Systems mit Erkennungsdaten zu befüllen wurde durch die folgende Formel ermittelt.
+
+Formel zur Berechnung der Speicherauffüllungdauer anhand der Größe eines Full-Backups:
+
+$$T = \frac{S_{\max} D_t}{G_t}$$
+
+wobei $T$ Tagen der Dauer bis zum vollständigen Befüllen eines Speicherplatzes $S_{\max}$ in Bytes entspricht, $G_t$ die Größe eines Full-Backups in Bytes und $D_t$ die vergangenen Tage seit Beginn der Kennzeichenerfassungen zum Zeitpunkt $t$ darstellen.
+
+Als verfügbarer Speicherplatz $S_{\max}$ wurde 1TB ($10^{12}$ Bytes) angenommen, da dies dem Halben derzeit im NAS-System verbauten Speicher entspricht.
+$G_t$ betrug (Stand 12. Februar 2026) wie bereits oben erwähnt rund 3,4MB ($3,4 \cdot 10^{6}$ Bytes) und zu diesem Stand sind 188 Tage ($D_t$) seit Beginn der Aufzeichnungen vergangen.
+
+Es gilt dementsprechend:
+
+$$T = \frac{10^{12} \cdot 188}{3{,}4 \cdot 10^6} \approx 5.53 \cdot 10^{7} \text{ Tage} / 365,25 \approx 151387 \text{ Jahre}$$
+
+Das 1TB-NAS würde daraus folgend bei gleichbleibendem Wachstum also erst in rund 151 Tausend Jahren voll sein. 
+Die Speicherkapazität ist damit für den praktischen Betrieb als unbegrenzt zu betrachten, selbst wenn der verfügbare Speicher als erheblich kleiner angenommen wird.
+
+
+FOOTNOTE:
+(Es ist anzumerken, dass die Größe eines Full-Backups zwar in einem linearen Zusammenhang mit der tatsächlichen Datenbankgröße steht, diese aber zum Beispiel durch komprimierung nicht vollständig widerspiegelt. 
+(https://stackoverflow.com/questions/35480650/is-database-back-up-size-is-same-as-database-size, https://www.sqlskills.com/blogs/erin/trending-database-growth-from-backups/)
+Auch nehmen die Erkennungs-Enträge nicht den gesamten Platz des Backups ein, da andere Daten wie etwa die anderer Services ebenfalls in diesem enthalten sind.
+Das oben genannte Ergebnis ist aus diesen Gründen nur als Annäherung zu betrachten, wobei die Kernaussage ohne Zweifel bestehen bleibt.)
+
+Die Herleitung dieser Formel ist dem Anhang zu entnehmen.
+
+
+---
+
+Herleitung der Formel zur Berechnung der Speicherauffüllungdauer anhand der Größe eines Full-Backups:
+
+Die durchschnittliche Größe eines Datensatzes ($s$) ergibt sich aus:
+
+$$s = \frac{G_t}{E_t}$$
+
+wobei $G_t$ die Größe eines Backups und $E_t$ die Gesamtanzahl der Erkennungen zu diesem Zeitpunkt $t$ bezeichnen.
+Die tägliche Erkennungsrate $r$ berechnet sich folgendermaßen:
+
+$$r = \frac{E_t}{D_t}$$
+
+wobei $D_t$ die Anzahl der bisherigen Aufzeichnungstage darstellt. 
+Daraus lässt sich die Anzahl der Tage $T$ bestimmen, bis eine gegebene Speicherkapazität $S_{\max}$ erreicht ist:
+
+$$T = \frac{S_{\max}}{s r}$$
+
+Ausgehend von den oben aufgelisteten Formeln ergibt sich durch Einsetzen von \( s \) und \( r \) in \( T \):
+
+
+$$T = \frac{S_{\max}}{\left(\frac{G_t}{E_t}\right)\left(\frac{E_t}{D_t}\right)}$$
+
+Nach Kürzen von \( E_t \) folgt:
+
+$$T = \frac{S_{\max}}{\frac{G_t}{D_t}}$$
+
+wobei $\frac{G_t}{D_t}$ die durchschnittliche Speicherzunahme pro Tag beschreibt.
+Damit ergibt sich die oben genannte vereinfachte Formel.
+
+---
 
 
 ## Sicherheitskonzept
