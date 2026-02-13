@@ -224,7 +224,9 @@ Nach Kürzen von \( E_t \) folgt:
 $$T = \frac{S_{\max}}{\frac{G_t}{D_t}}$$
 
 wobei $\frac{G_t}{D_t}$ die durchschnittliche Speicherzunahme pro Tag beschreibt.
-Damit ergibt sich die oben genannte vereinfachte Formel.
+Damit ergibt sich die vereinfachte Formel:
+
+$$T = \frac{S_{\max} D_t}{G_t}$$
 
 ---
 
