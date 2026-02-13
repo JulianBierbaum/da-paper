@@ -11,8 +11,10 @@ Im Zuge der Entwicklung wurden nicht alle der im folgenden Kapitel erwähnten Ko
 
 (ARCHITEKTUR-DIAGRAMM)
 
-Die Architektur folgt bewusst keinem API-Gateway Ansatz, da die Services primär intern kommunizieren und nur wenige Endpunkte nach außenhin offen sind. 
-Diese Entscheidung reduziert die Komplexität und den Overhead, ist aber bei einer möglichen zukünftigen Vergrößerung des Systems vielleicht notwendig.
+Wie in der Abbildung erkenntlich basiert diese Diplomarbeit aus Komponenten, welche sich in drei primäre Kategorien einteilen lassen: Backend-, Frontend- und  Infrastruktur-Services.
+Darüber hinaus bestehen Anbindungen an externe Services (wie etwa die Plate Recognizer SDK). 
+Sofern diese Implementiert wurden, werden sie im Kapitel Implementierung (!! Reference) beim jeweiligen Dienst im Detail erläutert.
+Die Architektur folgt bewusst keinem API-Gateway Ansatz, wie es oft bei Microservice-Ansätzen typisch ist, da die Services primär intern kommunizieren und nur wenige Endpunkte nach außenhin offen zugänglich sind. 
 
 
 #### Backend-Services
@@ -261,7 +263,8 @@ Für diesen Zweck bietet ein Token ein angemessenes Sicherheitsniveau bei gering
 
 #### Auth Service / Web Service (Active Directory Integration)
 
-Für die Authentifizierung von Benutzern der Web-Oberfläche wurde die Integration mit dem bestehenden Active Directory der Firma Zotter konzipiert.
+Für die Authentifizierung von Benutzern der Web-Oberfläche wurde die Integration mit dem bestehenden Active Directory (AD) der Firma Zotter konzipiert.
+Dieser sollte mittels LDAP (Lightweight Directory Access Protocol)-Anbindung Nutzerdaten aus dem firmeninternen Microsoft-AD Server beziehen und diese für den Login-Prozess nutzen.
 Dies bietet den Vorteil, dass keine separate Benutzerverwaltung implementiert und gewartet werden muss und die bestehende Unternehmensinfrastruktur zur Zugangskontrolle genutzt werden kann.
 
 

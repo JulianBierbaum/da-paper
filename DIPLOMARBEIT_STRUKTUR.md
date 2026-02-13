@@ -23,7 +23,6 @@
 
 
 ## 2. Theoretische Grundlagen
-*Kurzer Abriss der Technologien, um das Verständnis für die späteren Entscheidungen zu schaffen.*
 
 *   **2.1 Containerisierung (Docker):** Vorteile für Deployment und Isolation
 *   **2.2 Microservice Architektur:** Prinzipien und Abgrenzung zum Monolithen (Warum?)
@@ -47,14 +46,13 @@
 
 
 ## 4. Systementwurf und Architektur
-*Das Konzept VOR der Programmierung.*
 
 *   **4.1 Gesamtarchitektur:**
     *   Diagramm der Microservices (Auth, Data Collection, Analytics, Notification, Web)
     *   Kommunikationswege (REST API, interne Kommunikation)
 *   **4.2 Datenbankdesign:**
     *   ER-Diagramm (Entity Relationship)
-    *   Erklärung der wichtigsten Entitäten (`VehicleObservation`, `User`, `Preferences`)
+    *   Erklärung der wichtigsten Entitäten (`VehicleObservation`, `Preferences`)
 *   **4.3 Sicherheitskonzept:**
     *   Authentifizierung (Entpoint-Sicherheit)
     *   Datenschutz (Umgang mit Kennzeichen-Daten)
@@ -114,3 +112,4 @@
 *   Formeln
 *   Große Diagramme
 *   Konfigurationsdateien (Auszüge)
+*   Arbeitszeitnachweis
