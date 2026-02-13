@@ -61,6 +61,10 @@
 
 ## 5. Implementierung
 
+*   **5.1 Konfiguration Synology Surveillance Station:**
+    *   IP Camera config
+    *   Deep Video Analytics Config (Bereich etc)
+    *   Action Rule config
 *   **5.1 Data Collection Service:**
     *   Ablaufdiagramm: Von der Kamera-Triggerung bis zum Speichern in der DB.
     *   Besonderheit: Integration der Kamera-API (Code-Snippet: Wichtige Logik aus `camera_handler.py`).
@@ -88,8 +92,8 @@
 
 
 ## 7. Qualitätssicherung und Tests
-*   **7.1 Teststrategie:** Unit-Tests (Pytest) und Integrationstests. (Test Coverage).
-*   **7.2 Validierung:** Überprüfung der Hardware/Software-Kombination in der Praxis (Erkennungsrate bei Regen/Nacht, Strategien gegen Falscherkennungen).
+*   **7.1 Teststrategie:** Unit-Tests (Pytest) und Integrationstests (FastAPI), Test Coverage
+*   **7.2 Validierung:** Überprüfung der Hardware/Software-Kombination in der Praxis (Erkennungsrate bei Regen/Nacht, Strategien gegen Falscherkennungen (Auflistung doppelter Kennzeichen etc)).
 
 
 ## 8. Fazit und Ausblick

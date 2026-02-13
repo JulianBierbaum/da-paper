@@ -54,6 +54,8 @@ Um diesen Anforderungen gerecht zu werden wurden diese in folgende Teilaufgaben 
 
 - Integration eines E-Mail-Benachrichtigungssystems
 
+- Bereitstellung einer Entwickler-Dokumentation für zukünftige Wartung und Erweiterungen
+
 
 ## Aufbau der Arbeit
 
