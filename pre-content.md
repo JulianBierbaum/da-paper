@@ -5,7 +5,7 @@
 Diese Diplomarbeit befasst sich mit der Konzeption und Implementierung eines automatisierten Systems zur Erfassung und Analyse von Fahrzeugkennzeichen für die Zotter Schokolade GmbH.
 Ziel war die Entwicklung einer Softwarelösung, um Videostreams von Überwachungskameras zu verarbeiten, Kennzeichen und Fahrzeugdaten aus den Bildern zu extrahieren und diese auszuwerten, um einen fundierten Überblick über Besucherstatistiken zu bieten.
 Dabei ermöglicht das System beispielsweise eine Herkunftsanalyse auf Länderebene, welche für österreichische und slowenische Fahrzeuge bis auf die Bezirksebene verfeinert wird.
-Die implementierten Kernkomponenten umfassen Backend-Services zur Datenerfassung und Benachrichtigung per E-Mail (realisiert mit Python und FastAPI) sowie der Integration eines Grafana-Dashboards zur Visualisierung der gesammelten und analysierten Daten.
+Die implementierten Kernkomponenten umfassen Backend-Services zur Datenerfassung und Benachrichtigung per E-Mail (realisiert mit Python und FastAPI) sowie die Integration eines Grafana-Dashboards zur Visualisierung der gesammelten und analysierten Daten.
 Ein besonderes Augenmerk galt der Gewährleistung von Datenschutzkonformität (DSGVO) und hoher Ausfallsicherheit durch ein Backup- sowie Disaster-Recovery-Konzept für die PostgreSQL-Datenbank.
 Um die Wartbarkeit und Softwarequalität sicherzustellen, wurde der Entwicklungsprozess durch CI/CD-Pipelines automatisiert.
 Das realisierte System basiert auf einer hybriden Microservice-Architektur unter Verwendung von Docker-Containern, welche durch ihre starke Kapselung im Live-System einfach auszurollen sind.

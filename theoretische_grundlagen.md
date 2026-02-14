@@ -12,24 +12,24 @@ Die Docker-Plattform besteht aus der Docker Engine (Daemon, REST API und CLI), D
 Architektur und Funktionsweise
 Docker basiert auf einer Client-Server-Architektur (https://docs.docker.com/get-started/docker-overview/).
 Der Docker-Daemon verwaltet Container, Images, Netzwerke und Volumes (persistenter Speicher), während der Docker-Client (CLI) die Schnittstelle für Benutzerinteraktionen bereitstellt. 
-Images, also Abbilder der Anwendung und ihrer Umgebung werden als unveränderliche Vorlagen aus sogenannten Dockerfiles erstellt und in Layern organisiert, wobei jede Instruktion im Dockerfile einen neuen Layer erzeugt. 
+Images, also Abbilder der Anwendung und ihrer Umgebung, werden als unveränderliche Vorlagen aus sogenannten Dockerfiles erstellt und in Layern organisiert, wobei jede Instruktion im Dockerfile einen neuen Layer erzeugt. 
 Dieses Layer-System ermöglicht effizientes Caching: Wenn ein Image neu gebaut werden muss, müssen nur die Layer neu erstellt werden, an denen tatsächlich Änderungen vorgenommen wurden.
 
 Container werden aus diesen Images instanziiert und stellen isolierte Prozesse und deren Umgebung dar. 
 Im Gegensatz zu virtuellen Maschinen, die jeweils ein vollständiges Gastbetriebssystem benötigen, teilen sich Container den Host-Kernel, was sie deutlich ressourcenschonender macht.
 
 Vorteile von Containerisierung und Docker
-Der wohl größte Punkt der für Containerisierung spricht ist die Eliminierung des klassischen "Works on my machine"-Problems. 
+Der wohl größte Punkt, welcher für Containerisierung spricht, ist die Eliminierung des klassischen "Works on my machine"-Problems. 
 Der Container läuft in der Entwicklung identisch zur Produktion, da das gesamte Betriebssystem, einschließlich Konfigurationen, Bibliotheken und Abhängigkeiten, im Image verpackt sind. 
 Dies reduziert Deployment-Fehler erheblich und erleichtert das Debugging, da Entwickler exakt dieselbe Umgebung lokal reproduzieren können.
 
 Ohne Nutzung von Containerisierung müssten die einzelnen Services entweder als Programme verpackt werden (zum Beispiel als Windows .exe-File) 
-oder der gesammte Programmcode muss auf dem Ziel-System ausgerollt und gestartet werden, was das oben genannten "Works on my machine"-Problem mit sich bringt.
+oder der gesamte Programmcode muss auf dem Ziel-System ausgerollt und gestartet werden, was das oben genannte "Works on my machine"-Problem mit sich bringt.
 
 Wie zuvor erwähnt läuft jeder Service (Grafana, PostgreSQL, Python-Services etc.) in einer vollständig isolierten Umgebung. 
 Abhängigkeiten oder Python-Pakete (etwa definiert in einem uv.lock-File) eines Services können nicht mit denen eines anderen kollidieren. 
 Die Dateisystem-Isolation stellt sicher, dass jeder Container sein eigenes Root-Dateisystem hat, wodurch versehentliche Überschreibungen oder unbeabsichtigte Datenzugriffe verhindert werden. 
-Auch sind Container auf Netzwerk-Ebene isoliert, heißt Kommunikation zwischen Container und mit der "Außenwelt" kann nur über definierte Schnittstellen stattfinden.
+Auch sind Container auf Netzwerk-Ebene isoliert, bedeutet also, dass die Kommunikation zwischen Containern und der "Außenwelt" nur über definierte Schnittstellen stattfinden kann.
 
 Ein weiterer Vorteil ist die Versionskontrolle und Rollback-Fähigkeit, welche Docker-Images bieten. 
 Diese können mit Tags versehen werden, wodurch spezifische Versionen einer Anwendung eindeutig identifizierbar sind. 
@@ -49,7 +49,7 @@ Statt mehrere Services manuell zu starten, orchestriert eine einzige Datei das k
 Docker Hub
 Docker Hub ist die zentrale, cloudbasierte Registry für Docker-Images und fungiert als öffentliches Repository, ähnlich wie GitHub für Code. 
 Es enthält eine Vielzahl an vorgefertigten Images, darunter offizielle Images für gängige Software und Technologien wie PostgreSQL, Redis oder Python, welche von den jeweiligen Maintainern verifiziert werden.
-Beim starten einen Stacks onder Containers lädt Docker automatisch benötigte Images von Docker Hub herunter, falls sie nicht lokal vorhanden sind. 
+Beim Starten eines Stacks oder Containers lädt Docker automatisch benötigte Images von Docker Hub herunter, falls sie nicht lokal vorhanden sind. 
 In dieser Diplomarbeit werden beispielsweise offizielle Images für PostgreSQL und Grafana verwendet, während selbsterstellte Images für die Python-Services verwendet werden, welche in einem eigenen Docker-Registry gespeichert sind.
 
 Für diese Diplomarbeit bietet sich Containerisierung sehr gut an, da das gesamte System mit einem einzigen Befehl auf jedem System orchestriert gestartet, gestoppt oder neu gebaut werden kann, unabhängig vom Host-Betriebssystem. 
@@ -121,7 +121,7 @@ Die Rohergebnisse werden gegen bekannte Muster und Regeln validiert, wie etwa l�
 Auch werden typische OCR-Verwechslungen wie "0" versus "O" oder "1" versus "I" kontextbasiert korrigiert.
 
 Technologie und Anbieter
-In diesem System wird der Dienst Plate Recognizer eingesetzt, der moderne Deep Learning-Ansätze nutzt und im Vergleich zu anderen Optionen wie etwa eine offline OCR-Modell über klassische Texterkennung hinausgeht.
+In diesem System wird der Dienst Plate Recognizer eingesetzt, der moderne Deep Learning-Ansätze nutzt und im Vergleich zu anderen Optionen wie etwa ein offline OCR-Modell über klassische Texterkennung hinausgeht.
 
 MMC-Erkennung (Make, Model, Color)
 Neben der im Vergleich sehr zuverlässigen Kennzeichenerkennung identifiziert Plate Recognizer zusätzliche Fahrzeugattribute (https://platerecognizer.com/vehicle-make-model-recognition-with-color/) ein Ansatz, der MMC-Erkennung genannt wird: 
@@ -131,7 +131,7 @@ Color (Farbe): Bestimmung der Primärfarbe unter Kompensation von Lichtverhältn
 
 On-Premise SDK
 Plate Recognizer bietet sowohl Cloud-basierte APIs als auch ein On-Premise SDK an. 
-Die On-Premise-Variante ermöglicht vollständige lokale Ausführung ohne externe Netzwerkabhängigkeit (https://guides.platerecognizer.com/docs/snapshot/getting-started), eine Anforderung, welche Zotter Schokoladen sehr wichtig war.
+Die On-Premise-Variante ermöglicht vollständige lokale Ausführung ohne externe Netzwerkabhängigkeit (https://guides.platerecognizer.com/docs/snapshot/getting-started), eine Anforderung, welche Zotter Schokolade sehr wichtig war.
 
 Vorteile der lokalen Ausführung:
 Der größte Vorteil in der Offline-Verarbeitung der Bilddaten liegt darin, dass die potenziell personenbezogene Informationen niemals das lokale Netzwerk des Unternehmens verlassen. 

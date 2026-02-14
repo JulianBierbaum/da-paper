@@ -5,10 +5,10 @@
 Die Auswahl der Hardware ist entscheidend für die Zuverlässigkeit und Präzision der Kennzeichenerkennung und des Gesamtsystems. 
 Diese beschränkt sich für diese Diplomarbeit auf zwei primäre Komponenten: 
 1. Eine Kamera, welche Live-Daten von der Parkplatz Ein- und Ausfahrt erfasst und diese senden kann.
-2. Ein Server oder ähnliches, auf welchen die Services der Diplomarbeit deployed werden können.
+2. Ein Server oder ähnliches, auf dem die Services der Diplomarbeit deployed werden können.
 
 Das folgende Kapitel soll einen Einblick in den Entscheidungsprozess bieten, nach dem die benötigte Hardware ausgewählt wurde.
-Hierfür werden zunächst die Grundanforderungen an das Gesamtsystem aus der Aufgabenstellung (!! Cross Reference) abgeleitet, aufbauend werden dann die spezifischen Anforderungen an die Hardwarekomponenten dargelegt.
+Hierfür werden zunächst die Grundanforderungen an das Gesamtsystem aus der Aufgabenstellung (!! Cross Reference) abgeleitet, darauf aufbauend werden dann die spezifischen Anforderungen an die Hardwarekomponenten dargelegt.
 Danach werden die einzelnen, im Auswahlprozess evaluierten Optionen gegenübergestellt und hinsichtlich ihrer Eignung analysiert. 
 
 
@@ -17,14 +17,13 @@ Danach werden die einzelnen, im Auswahlprozess evaluierten Optionen gegenüberge
 1. Grundanforderungen
 
 Wie oben kurz erwähnt, gibt es einige Anforderungen, die für die Funktionsfähigkeit des Systems unausweichlich sind. 
-Zunächst gilt es, die Lokalitäten vor Ort zu betrachten, also Lage und Aufbau des Bereiches, in dem der Fahrzeugverkehr erkannt werden soll.
+Zunächst galt es, die Gegebenheiten vor Ort zu betrachten, also Lage und Aufbau des Bereiches, in dem der Fahrzeugverkehr erkannt werden sollte.
 
 (LUFTBILD)
 
-Wie das Luftbild zeigt, verfügt der Parkplatz über eine kombinierte Ein- und Ausfahrt. 
-Dies reduziert zwar den Installationsaufwand der Hardware, erhöht jedoch die Software-Komplexität, da die Bewegungsrichtung der Fahrzeuge softwareseitig erkannt werden muss.
-Im Bezug auf die Frequenz, in welcher die Fahrzeuge erkannt werden müssen, wurde aufgrund der Breite der Einfahrt approximiert, dass mit einer Frequenz von maximal einem Fahrzeug alle 2-3 Sekunden auszugehen ist.
-Das System muss folglich in der Lage sein, 20-30 Bilder pro Minute zu analysieren und die daraus gewonnenen Daten zu speichern. 
+Wie das Luftbild zeigt, verfügt der Parkplatz über eine kombinierte Ein- und Ausfahrt. Dies reduziert zwar den Installationsaufwand der Hardware, erhöht jedoch die Software-Komplexität, da die Bewegungsrichtung der Fahrzeuge softwareseitig erkannt werden muss. Das Kamerasystem wurde so montiert, dass es in Richtung des Parkplatzes zeigt. Dies erwies sich als die optimale Wahl, da so der mögliche Erkennungsbereich maximiert wurde und die Montage an dieser Position einfacher realisierbar war. 
+Das Zeitintervall zwischen zwei aufeinanderfolgenden Fahrzeugen wurde aufgrund der Breite der Einfahrt auf zwei bis drei Sekunden geschätzt. 
+Das System sollte folglich in der Lage sein, 20 bis 30 Bilder pro Minute zu analysieren und die daraus gewonnenen Daten persistent zu speichern. 
 
 2. Anforderungen Kamera
 Da die Kamera im Außenbereich eingesetzt wird, ist eine gewisse Witterungsbeständigkeit zwingend erforderlich. 
@@ -69,7 +68,7 @@ Aufgrund der oben angesprochenen sofortigen Verfügbarkeit und des wegfallenden 
 #### Server
 
 Die gewählte Microservice-Architektur im Zusammenspiel mit der angewandten Containerisierung erlaubt eine hohe Flexibilität für die Art der benötigten Hardware.
-Desweiteren war aus einem früheren Praktikum bei Zotter Schokolade bekannt, dass die hausinternen Server-Kapazitäten für Container-Deployment besitzen. 
+Des Weiteren war aus einem früheren Praktikum bei Zotter Schokolade bekannt, dass die hausinternen Server-Kapazitäten für Container-Deployment besitzen. 
 
 Als zweite Option wurde das Einrichten eines kleinen Servers auf der Hardware eines Office-Mini-PCs erwogen. 
 Dieser wäre aus reiner Implementierungs- und Funktionssicht mit der ersten Option gleichwertig, mit dem Vorteil, dass dieser Ansatz eine gewisse Unabhängigkeit zum internen Netzwerk und zur zentralen Infrastruktur ermöglicht.
@@ -79,7 +78,7 @@ An diesem Punkt wurde im Kamera-Entscheidungsprozess auf die bestehenden Synolog
 Nicht nur wurden NAS-Systeme von Synology bereits im Unternehmen eingesetzt, diese sind in den meisten Bereichen gleichwertig mit den vorherigen beiden diskutierten Ansätzen und bieten in manchen Bereichen klare Vorteile:
 1. Die Vorteile der zweiten Option bleiben bestehen, es gibt weiterhin eine gesteigerte Unabhängigkeit zur Unternehmensinfrastruktur und damit hergehend mehr Entwicklungsfreiheit.
 2. Da es sich um ein NAS-System handelt, also ein Gerät, welches primär für die Speicherung von Daten konzipiert ist, stellt der benötigte Speicherplatz kein Problem mehr dar, da einfach neue Disks verbaut werden können (standardmäßig 2× 2TB Disks, RAID 1).
-3. Diese NAS-Systeme besitzen bereits recht leistungsstarke Komponenten, welche im Bezug auf Rechenleistung meist gleichwertig zu einem durchschnittlichen Mini-PC sind. 
+3. Diese NAS-Systeme besitzen bereits leistungsstarke Komponenten, welche im Bezug auf Rechenleistung meist gleichwertig zu einem durchschnittlichen Mini-PC sind. 
 Auch sind die meisten NAS-Geräte mit einem vollwertigen Betriebssystem ausgestattet, welches Methoden bereitstellt, um Container mittels Docker reibungslos laufen zu lassen.
 
 Der größte Vorteil kommt aber mit der Kombination mit den oben beschriebenen Kameras des gleichnamigen Herstellers.
@@ -89,11 +88,11 @@ Diese laufen unter einem Gesamtsystem mit der Bezeichnung "Surveillance Station"
 Innerhalb des Surveillance Station-Ökosystems bietet Synology mit der DVA-Serie (Deep Video Analytics) spezialisierte NVR-Geräte (Network Video Recorder) an, welche über GPU-beschleunigte KI-Funktionen verfügen.
 Im besonderen das Modell DVA1622 (zur Zeit des Projekts das einzige verfügbare Modell der DVA-Serie) bietet für diese Diplomarbeit in Kombination mit der Kamera BC500 viele Vorteile:
 
-Zunächst bietet die Surveillance Station API direkten Zugriff auf Live-Streams, Snapshots und Ereignis-Metadaten, was die Integration in eigene Microservices im Vergleich zum direkten auslesen aus Kameras erheblich vereinfacht.
+Zunächst bietet die Surveillance Station API Zugriff auf Live-Streams, Snapshots und Ereignis-Metadaten, was die Integration in eigene Microservices im Vergleich zum direkten Auslesen aus Kameras erheblich vereinfacht.
 Die DVA-Serie unterstützt nativ viele Features aus dem Security- und Surveillance-Bereich. 
 So können etwa mittels Erkennungszonen bereits auf Surveillance Station-Ebene relevante Bildbereiche wie der Einfahrtsbereich definiert werden.
 Dies ist besonders für das Erstellen von "Triggers" relevant, also das Anlegen eines Bereiches, in dem im Falle einer Fahrzeugdurchfahrt die Kennzeichenerkennung stattfinden soll.
-Desweiteren können alle Kamera-Einstellungen, Aufzeichnungen und Analysen über eine einheitliche Oberfläche auf dem NAS-Gerät verwaltet werden.
+Des Weiteren können alle Kamera-Einstellungen, Aufzeichnungen und Analysen über eine einheitliche Oberfläche auf dem NAS-Gerät verwaltet werden.
 
 Die Kombination aus relevanten Features, umfassender API und nativer Kamera-Unterstützung machte das Synology DVA1622-NAS zur optimalen Wahl für die Realisierung des Kennzeichenerkennungssystems.
 
@@ -110,7 +109,7 @@ Sie müssen aus verschiedenen Winkeln, bei unterschiedlichen Lichtverhältnissen
 Zudem variieren Kennzeichenformate international stark in Schriftart, Layout und Zeichenabständen.
 
 Die Entwicklung eines eigenen trainierten Modells auf Basis dieser Bibliotheken hätte einen erheblichen Aufwand für das Sammeln und Annotieren von Trainingsdaten bedeutet, wobei die resultierende Genauigkeit dennoch fraglich geblieben wäre. 
-In diese Richtung wurden im Zuge der Diplomarbeit-Entwicklung Prototypen erstellt, diese blieben aber in ihrer Qualität unzureichend oder waren in ihrem Realisierungssaufwand unrealistisch. 
+In diese Richtung wurden im Zuge der Diplomarbeit-Entwicklung Prototypen erstellt, diese blieben aber in ihrer Qualität unzureichend oder waren in ihrem Realisierungsaufwand unrealistisch. 
 Aus diesem Grund fiel die Entscheidung auf Plate Recognizer, eine spezialisierte kommerzielle Lösung für Kennzeichenerkennung.
 
 Plate Recognizer bietet hochoptimierte Machine-Learning-Modelle, die bereits auf Millionen von Kennzeichenbildern aus über 90 Ländern trainiert wurden. 
@@ -135,5 +134,5 @@ Im Gegensatz zu manuellen SQL-Skripten ermöglicht dies rückverfolgbare Datenba
 
 Das Gesamtsystem basiert auf Docker und einer Microservice-Architektur. 
 Wie zuvor detailiert erklärt läuft jeder Dienst (Data Collection, Notification, Grafana) in seinem eigenen Container mit klar definierten Schnittstellen. 
-Dies verhindert wie in den Thoretischen Grundlagen erklärt nicht nur Abhängigkeitskonflikte zwischen verschiedenen Services, sondern ermöglicht auch die unabhängige Skalierung einzelner Komponenten. 
+Dies verhindert wie in den Theoretischen Grundlagen erklärt nicht nur Abhängigkeitskonflikte zwischen verschiedenen Services, sondern ermöglicht auch die unabhängige Skalierung einzelner Komponenten. 
 Die Containerisierung gewährleistet zudem Plattformunabhängigkeit, da das System problemlos von der Synology-Plattform auf andere migriert werden kann, ohne dass Anpassungen am Code notwendig sind. 

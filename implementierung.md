@@ -2,7 +2,7 @@
 
 Dieses Kapitel dokumentiert die technische Umsetzung der in der Architektur beschriebenen Komponenten.
 Zunächst wird auf die Konfiguration der Synology Surveillance Station eingegangen, welche für einen korrekten Betrieb des Systems notwendig ist.
-Für jeden Service werden die zentralen Abläufe, Designentscheidungen und relevante Code-Auszüge dargestellt, wobei der Fokus dieses Kapitels auf der Kernkompente, dem Data Collection Service liegt.
+Für jeden Service werden die zentralen Abläufe, Designentscheidungen und relevante Code-Auszüge dargestellt, wobei der Fokus dieses Kapitels auf der Kernkomponente, dem Data Collection Service liegt.
 
 
 ## Konfiguration Synology Surveillance Station
@@ -15,7 +15,7 @@ Für diese Diplomarbeit sind jene Bereiche relevant, welche sich mit der Konfigu
 
 Mit dem IP Camera-Tool können Synology-Kameras im Netzwerk automatisch erkannt und konfiguriert werden.
 Zunächst wurde die installierte Kamera mit Hilfe dieses Tools erkannt und zum System hinzugefügt, dies funktionierte schnell ohne jegliche Komplikationen.
-In den Einstellungen der hinzugefügten IP-Kamera wurden Optionen wie die Bildrate oder Auflösung der Kamera maximiert, um die bestmöglichen Gründvoraussetzungen für eine erfolgreiche Erkennung zu bieten.
+In den Einstellungen der hinzugefügten IP-Kamera wurden Optionen wie die Bildrate oder Auflösung der Kamera maximiert, um die bestmöglichen Grundvoraussetzungen für eine erfolgreiche Erkennung zu bieten.
 
 (FOOTNOTE: Der in der Abbildung (X) ersichtliche schwarze Balken in der rechten, oberen Ecke dient dem Datenschutz der auf anderen Straßenseite befindlichen Familienhäuser und schränkt die Funktion des Systems in keiner Weise ein.)
 
@@ -27,7 +27,7 @@ In den Einstellungen der hinzugefügten IP-Kamera wurden Optionen wie die Bildra
 Da wie bereits im Kapitel Hardwareauswahl (!! CROSS REFERENCE) erwähnt die Synology DVA-Serie als NAS-System gewählt wurde, standen für die Umsetzung dieses Projects die erweiterten KI-Funktionen dieser Reihe zur Verfügung, diese werden von Synology als Deep Video Analytics (DVA) bezeichnet
 Eine dieser Funktionalitäten ist eine präzise und schnelle Durchfahrtskontrolle mittels Erkennungsbereichen. 
 Diese wurde genutzt, um den unten in der Abbildung (X) erkenntlichen Bereich zu markieren, in welchen ein Trigger ausgelöst wird, sobald ein Fahrzeug diesen durchfährt.
-Hierbei ist wichtig zu Erwähnen, dass dieser DVA-Task so konfiguriert wurde, dass Fußgänger und stehende Fahrzeuge nicht erkannt werden.
+Hierbei ist wichtig zu erwähnen, dass dieser DVA-Task so konfiguriert wurde, dass Fußgänger und stehende Fahrzeuge nicht erkannt werden.
 Diese Einschränkungen sind wichtig, um das ALPR-System zu entlasten und Mehrfacherkennungen durch im Bereich befindliche, stationäre Fahrzeuge zu eliminieren.
 
 ![Erkennungsbereich im Deep Video Analytics Tool](erkennungsbereich_config.png)
@@ -36,8 +36,8 @@ Diese Einschränkungen sind wichtig, um das ALPR-System zu entlasten und Mehrfac
 
 Innerhalb der Surveillance Station können sogenannte Action-Rules definieren werden, welche bei Erkennung einer Fahrzeugbewegung im konfigurierten Erkennungsbereich eine zuvor definierte Aktion ausführen.
 Dieses System wird genutzt, um im Falle einer Erkennung dem Data Collection Service zu Signalisieren, dass eine Fahrzeugerkennung stattgefunden hat. 
-Diese Aktionsregel wird aufgerufen, nachdem der zuvor konfigurierte DVA-Task ein Fahrzeug erkennug und ist damit der Startpunkt, für die im Backend stattfindende Verarbeitung der Bilddaten.
-Wie in Abbildung (X) erkenntlich ruft diese eine Webhook des Data Collection Service auf, diese wird im Kapitel (!! CROSS REFERNCE) näher beleuchtet.
+Diese Aktionsregel wird aufgerufen, nachdem der zuvor konfigurierte DVA-Task ein Fahrzeug erkennt und ist damit der Startpunkt, für die im Backend stattfindende Verarbeitung der Bilddaten.
+Wie in Abbildung (X) erkenntlich ruft diese eine Webhook des Data Collection Service auf, diese wird im Kapitel (!! CROSS REFERENCE) näher beleuchtet.
 
 ![Action-Rule für die Erkennung von Fahrzeugen](action_rule.png)
 
@@ -45,14 +45,14 @@ Wie in Abbildung (X) erkenntlich ruft diese eine Webhook des Data Collection Ser
 ## Data Collection Service
 
 Der Data Collection Service bildet das funktionale Herzstück des gesamten Systems.
-Er ist für die Entgegennahme von Fahrzeugerkennungsereignissen, die Beschaffung von Kamera-Snapshots, die Weiterleitung an die ALPR-Komponente zur Erkennung, sowie die Verarbeitung, Anonymisierung und persistente Speicherung der Ergebnisse verantwortlich.
+Dieser ist für die Entgegennahme von Fahrzeugerkennungsereignissen, die Beschaffung von Kamera-Snapshots, die Weiterleitung an die ALPR-Komponente zur Erkennung, sowie die Verarbeitung, Anonymisierung und persistente Speicherung der Ergebnisse verantwortlich.
 
 
 ### Konzept und Aufbau
 
-Der Service ist als FastAPI-Applikation implementiert und folgt einer modularen Architektur, wobei jeder funktionale Bereich in eine eigene Klasse (Handler) ausgelagert ist, was eine klare Trennung der Verantwortlichkeiten (Separation of Concerns) ermöglicht:
+Der Service ist als FastAPI-Applikation implementiert und folgt einer modularen Architektur, wobei jeder funktionale Bereich in eigene Klassen, einen so genannten Handler, ausgelagert ist, was eine klare Trennung der Verantwortlichkeiten (Separation of Concerns) ermöglicht:
 
-- CameraHandler: Dieser Kapselt die gesamte Kommunikation mit der Synology Surveillance Station API (Authentifizierung, Kamera-Verwaltung, Snapshot-Abruf).
+- CameraHandler: Dieser kapselt die gesamte Kommunikation mit der Synology Surveillance Station API (Authentifizierung, Kamera-Verwaltung, Snapshot-Abruf).
 - PlateRecognizerHandler: Verwaltet die HTTP-Kommunikation mit dem Plate Recognizer SDK-Container.
 - CountryHandler: Übernimmt die Anreicherung der Erkennungsdaten um regionale Herkunftsinformationen (Bezirkserkennung).
 - DatabaseHandler: Verantwortlich für die Datenaufbereitung, Anonymisierung und die Speicherung der Erkennungen in der Datenbank.
@@ -69,8 +69,8 @@ Der Webhook-Endpunkt `POST /api/vehicle_detected` erwartet im Request-Body den N
 Bei eingehenden Requests wird zunächst die Authentifizierung gegen die konfigurierten Synology-Credentials geprüft.
 Nach erfolgreicher Validierung wird die Verarbeitung als Hintergrundaufgabe (Background Task) gestartet, während der Endpunkt sofort mit dem HTTP-Statuscode `202 Accepted` antwortet.
 
-Dieses asynchrone Verarbeitungsmuster ist eine bewusste Designentscheidung:
-Da die vollständige Verarbeitungskette, bestehend aus Snapshot-Abruf, ALPR-Analyse und Datenbankspeicherung, mehrere Sekunden in Anspruch nehmen kann, würde eine synchrone Verarbeitung die Surveillance Station blockieren und potenzielle Folge-Events verzögern.
+Dieses asynchrone Muster ist essenziell, um die Reaktionsfähigkeit des Systems zu gewährleisten und Blockaden während der Bildverarbeitung zu vermeiden.
+Da die vollständige Verarbeitungskette, bestehend aus Snapshot-Abruf, ALPR-Analyse und Datenbankspeicherung, mehrere Sekunden in Anspruch nehmen kann, würde eine synchrone Verarbeitung die Surveillance Station blocken und potenzielle Folge-Events verzögern.
 Durch die Entkopplung mittels Background Tasks wird sichergestellt, dass der Webhook-Endpunkt jederzeit mit minimaler Latenz erreichbar bleibt, und auch bei hoher Fahrzeugfrequenz keine Events aufgrund von Timeouts von der Surveillance Station verworfen werden.
 
 Der Detektionszeitpunkt wird dabei bereits im HTTP-Endpoint erfasst und nicht erst im Background Task.
@@ -158,7 +158,7 @@ sequenceDiagram
     deactivate DCS
 ```
 
-Wie dem Diagramm zu entnehmen ist, durchläuft jede Erkennung nach dem Webhook-Eingang die folgenden Phasen, welche in den nächsten Unterkapitel im Detail erläutert werden:
+Wie dem Diagramm zu entnehmen ist, durchläuft jede Erkennung nach dem Webhook-Eingang die folgenden Phasen, welche in den nächsten Unterkapiteln im Detail erläutert werden:
 Kamera-Anbindung, ALPR-Aufruf, Datenanreicherung, Anonymisierung und Speicherung mit Duplikatprüfung.
 
 
@@ -184,8 +184,8 @@ Jeder der drei Schritte ist durch spezifische Exceptions (AuthenticationError, C
 
 ### Plate Recognizer Integration (PlateRecognizerHandler)
 
-Die Bilddaten des Kamera-Snapshots werden an den lokal betriebenen Plate Recognizer SDK-Container zur Kennzeichenerkennung gesendet.
-Der PlateRecognizerHandler-Klasse implementiert diesen HTTP-Aufruf mit einer Retry-Strategie mittels der tenacity-Bibliothek:
+Die Bilddaten des Kamera-Snapshots werden, zur Kennzeichenerkennung, an den lokal betriebenen Plate Recognizer SDK-Container gesendet.
+Die PlateRecognizerHandler-Klasse implementiert diesen HTTP-Aufruf mit einer Retry-Strategie mittels der tenacity-Bibliothek:
 
 ```python
 class PlateRecognizerHandler:
@@ -215,8 +215,8 @@ class PlateRecognizerHandler:
         return response.json()
 ```
 
-Der @retry-Dekorator sorgt dafür, dass bei HTTP-Fehlern (etwa temporäre Überlastung des ALPR-Containers) bis zu fünf Wiederholungsversuche im Abstand von einer Sekunde unternommen werden.
-Dies erhöht die Robustheit des Systems erheblich, da kurzzeitige Ausfälle der ALPR-Komponente nicht zum Verlust von Erkennungen führen.
+Der @retry-Dekorator sorgt dafür, dass bei HTTP-Fehlern (etwa bei temporären Überlastungen oder Blockaden des ALPR-Containers) bis zu fünf Wiederholungsversuche im Abstand von einer Sekunde unternommen werden.
+Dies erhöht die Robustheit des Systems, da kurzzeitige Ausfälle der ALPR-Komponente nicht zum Verlust von Erkennungen führen.
 
 Der Parameter regions schränkt die Erkennung auf die relevanten Regionen ein, für diese Diplomarbeit wurden aufgrund der Lage der Zotter Schokolade GmbH, Österreich, Ungarn, Slowenien und Deutschland gewählt.
 Dies verbessert die Erkennungsgenauigkeit, da das Modell die länderspezifischen Kennzeichenformate dieser Regionen priorisiert.
@@ -226,13 +226,13 @@ Die Bilddaten werden als `BytesIO`-Objekt übergeben, also als im Arbeitsspeiche
 
 ### Datenverarbeitung und Enrichment-Schleife
 
-Nach dem Empfang der JSON-Antwort von Plate Recognizer durchlaufen die Erkennungsdaten eine mehrstufige Verarbeitungs- und Anreicherungsschleife.
-Die Plate-Recognizer-API kann in einem einzelnen Bild mehrere Kennzeichen erkennen, weshalb die Antwort eine Liste von Ergebnissen enthält, welche jeweils einzeln verarbeitet werden.
+Nach dem Empfang der JSON-Antwort von Plate Recognizer durchlaufen die Erkennungsdaten einen mehrstufiger Verarbeitungs- und Anreicherungsprozess bis diese final und persistent in der Datenbank gespeichert werden.
+Die Plate-Recognizer-API kann in einem einzelnen Bild mehrere Kennzeichen erkennen, weshalb die Antwort eine Liste von Ergebnissen enthält, welche jeweils einzeln in einer Schleife verarbeitet werden.
 
 Datenextraktion
-Im ersten Schritt werden die relevanten Felder aus der JSON-Antwort der Plate-Recognizer-API extrahiert und in ein Pytantic-Schema überführt.
-Die API liefert den Konfidenzwert der Erkennung als Float-Zahl zwischen 0 und 1 zurück, welcher für die Speicherung mit 1000 multipliziert und als ganzzahliger Wert abgelegt wird.
-Die Fahrzeugorientierung wird aus der API-Antwort als Enum (`FRONT` oder `REAR`) abgebildet, wobei `FRONT` einer Einfahrt und `REAR` einer Ausfahrt entspricht.
+Im ersten Schritt werden die relevanten Felder aus der Antwort der Plate-Recognizer-API extrahiert und in ein Pytantic-Schema überführt.
+Die API liefert den Konfidenzwert jeder Erkennung als Float-Zahl zwischen 0 und 1 zurück, welcher für die Speicherung mit 1000 multipliziert und als ganzzahliger Wert abgelegt wird.
+Die Fahrzeugorientierung wird aus der API-Antwort als Enum (`FRONT` oder `REAR`) abgebildet, wobei `FRONT` einer Ausfahrt und `REAR` einer Einfahrt entspricht, da die Kamera in Richtung des Parkplatzes filmt.
 
 Bezirkserkennung (CountryHandler)
 Die Bezirkserkennung ist ein zentraler Bestandteil der Datenanreicherung und ermöglicht es, das Herkunftsbundesland bzw. den Herkunftsbezirk eines Fahrzeugs aus dem Kennzeichen abzuleiten.
@@ -255,8 +255,8 @@ Der resultierende 32-Byte-Hash wird in Binärdaten in der Datenbank gespeichert.
 
 ### Duplikatprüfung und Speicherung
 
-Da die Surveillance Station bei kontinuierlicher Fahrzeugbewegung im Erkennungsbereich mehrere Events in kurzem Abstand auslösen kann, implementiert der Service einen zeitbasierten Duplikatfilter.
-Vor dem Einfügen einer neuen Erkennung prüft die Methode `check_for_duplicates`, ob in der Datenbank bereits eine Erkennung mit dem gleichen Kennzeichen-Hash innerhalb eines konfigurierbaren Zeitintervalls existiert.
+Da die Surveillance Station bei kontinuierlicher Fahrzeugbewegung im Erkennungsbereich mehrere Webhooks in kurzem Abstand auslösen kann, implementiert der Service einen zeitbasierten Duplikatsfilter.
+Vor dem Einfügen einer neuen Erkennung prüft die unten angeführte Methode `check_for_duplicates`, ob in der Datenbank bereits eine Erkennung mit dem gleichen Kennzeichen-Hash innerhalb eines konfigurierbaren Zeitintervalls existiert.
 
 ```python
 def check_for_duplicates(self, db: Session, observation: VehicleObservationCreate,
@@ -274,7 +274,7 @@ def check_for_duplicates(self, db: Session, observation: VehicleObservationCreat
 ```
 
 Das Intervall ist über die Umgebungsvariable `INTERVAL_SECONDS` (Standardwert: 60 Sekunden) konfigurierbar.
-Im Praxisbetrieb hat sich dieser Wert als geeignet erwiesen, um einerseits Mehrfacherkennungen desselben Fahrzeugs bei langsamer Durchfahrt zu eliminieren und andererseits aber Fahrzeuge, welche innerhalb kurzer Zeit tatsächlich ein- und ausfahren, korrekt als separate Ereignisse zu erfassen.
+Im Praxisbetrieb hat sich dieser Wert als geeignet erwiesen, um einerseits Mehrfacherkennungen desselben Fahrzeugs bei langsamer Durchfahrt zu eliminieren, andererseits aber Fahrzeuge, welche innerhalb kurzer Zeit tatsächlich ein- und ausfahren, korrekt als separate Ereignisse zu erfassen.
 Nur wenn kein Duplikat gefunden wird, wird der anonymisierte und angereicherte Datensatz in die Datenbank eingefügt.
 
 Die volle Methode für die Hintergrundverarbeitung von Erkennungen ist im Anhang einsehbar.
@@ -282,17 +282,6 @@ Die volle Methode für die Hintergrundverarbeitung von Erkennungen ist im Anhang
 ---
 
 ```python
-@app.exception_handler(HTTPException)
-async def http_exception_handler(request: Request, exc: HTTPException):
-    """Custom exception handler to log all HTTPExceptions before returning the response"""
-    logger.error(f'HTTP Exception: {exc.status_code} - {exc.detail} for url: {request.url}')
-
-    return JSONResponse(
-        status_code=exc.status_code,
-        content={'detail': exc.detail},
-    )
-
-
 @app.post('/api/vehicle_detected')
 async def handle_vehicle_detection(
     request: VehicleDetectionRequest,
@@ -394,7 +383,7 @@ def process_vehicle_detection(camera_name: str, detection_time: datetime):
 
 ## Notification Service
 
-Der Notification Service ist ein eigenständiger FastAPI-Microservice, der die Verwaltung von Benutzerpräferenzen und den Versand von E-Mail-Benachrichtigungen übernimmt.
+Der Notification Service ist ein FastAPI-Microservice, der die Verwaltung von Benutzerpräferenzen und den Versand von E-Mail-Benachrichtigungen übernimmt.
 
 ### Architektur und API-Design
 
@@ -417,7 +406,7 @@ Die interne Logik bestimmt die Empfänger auf folgende Weise:
 ### E-Mail-Versand (EmailHandler)
 
 Der eigentliche E-Mail-Versand erfolgt über den `EmailHandler`, welcher E-Mails über einen SMTP-Relay-Server versendet.
-Der SMTP-Server des Unternehmens wird als Relay für den internen Versand SMTP (Simple Mail Transfer Protocol) genutzt um zu Verhindern, dass die versendeten Mails aufgrund von Spam-Verdacht nicht korrekt zugestellt werden.
+Der SMTP-Server des Unternehmens wird als Relay für den internen Versand SMTP (Simple Mail Transfer Protocol) genutzt, um zu verhindern, dass die versendeten Mails aufgrund von Spam-Verdacht nicht korrekt zugestellt werden.
 
 Die Implementierung unterstützt sowohl Plaintext- als auch HTML-formatierte E-Mails.
 Der Versand an mehrere Empfänger erfolgt über die `send_bulk_email`-Methode, welche für jeden Empfänger eine eigene SMTP-Verbindung aufbaut.
@@ -432,8 +421,8 @@ Grafana wird als eigener Container im Docker-Compose-Stack betrieben und verbind
 
 ### Architektur und Provisioning
 
-Die Grafana-Konfiguration folgt dem Provisioning-Ansatz, bei dem Datenquellen und Dashboards nicht manuell über die Benutzeroberfläche, sondern deklarativ über Konfigurationsdateien definiert werden.
-Dies hat den Vorteil, dass die gesamte Dashboard-Konfiguration im Repository liegt und beim Neustart des Containers automatisch wiederhergestellt wird.
+Die Grafana-Konfiguration folgt einem Provisioning-Ansatz, bei dem Datenquellen und Dashboards nicht manuell über die Benutzeroberfläche, sondern deklarativ über Konfigurationsdateien definiert werden.
+Dies hat den Vorteil, dass die gesamte Dashboard-Konfiguration im Repository passiert und beim Neustart des Containers automatisch wiederhergestellt wird.
 
 Die Konfiguration gliedert sich in drei Bereiche:
 1. grafana.ini: 
@@ -445,7 +434,7 @@ Grafana verbindet sich über den `analytics_user`, der wie im Sicherheitskonzept
 Die Verbindungsparameter (Host, Datenbankname, Credentials) werden über Umgebungsvariablen gesetzt.
 
 3. Dashboard-Provisioning (`dashboard-provider.yaml` und Dashboard-JSON): 
-Das Dashboard wird als JSON-Datei bereitgestellt und beim Start automatisch von Grafana geladen. 
+Das Dashboard wird als JSON-Datei bereitgestellt und beim Start, wie oben erwähnt, automatisch geladen. 
 Änderungen am Dashboard werden direkt in der JSON-Datei vorgenommen.
 
 
@@ -461,7 +450,7 @@ Das Dashboard umfasst folgende Darstellungen:
 - Fahrzeugtypverteilung: Horizontales Balkendiagramm der erkannten Fahrzeugkategorien.
 - Verkehrsdichte nach Tageszeit: Balkendiagramm mit stündlicher Aggregation zur Identifikation von Stoßzeiten.
 - Fahrzeugdetails: Tabellen der häufigsten Fahrzeugmarken und -modelle sowie ein Balkendiagramm der Fahrzeugfarben, basierend auf der MMC-Erkennung von Plate Recognizer.
-- Regionale Herkunft: Tabelle der österreichischen Bezirkskürzel mit zur schnellen visuellen Einordnung der häufigsten Herkunftsregionen.
+- Regionale Herkunft: Tabelle der österreichischen Bezirkskürzel mit zur visuellen Einordnung der häufigsten Herkunftsregionen.
 
 
 ![Grafana Dashboard](grafana_dashboard.png)

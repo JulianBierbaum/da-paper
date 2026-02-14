@@ -3,7 +3,7 @@
 ## Gesamtarchitektur
 
 Das System wurde als hybride Microservice-Architektur konzipiert, in der jeder funktionale Bereich als eigenständiger, containerisierter Service realisiert wird.
-Hybrid meint in diesem Kontext primär, dass die einzelnen Services nicht ganzheitlich isoliert und entkoppelt sind, da nicht jeder dieser über eine eigene Datenhaltung verfügt.
+Hybrid bedeutet in diesem Kontext primär, dass die einzelnen Services nicht ganzheitlich isoliert und entkoppelt sind, da nicht jeder dieser über eine eigene Datenhaltung verfügt.
 Stattdessen nutzen alle Komponenten einen gemeinsamen PostgreSQL Service, welcher auf Schema-Ebene isoliert ist.
 Auf dieses Konzept wird im Kapitel (!! CROSS REFERENCE) näher eingegangen.
 Die Gesamtarchitektur wurde so entworfen, dass diese die in der Aufgabenstellung definierten Anforderungen abbildet.
@@ -13,8 +13,8 @@ Im Zuge der Entwicklung wurden nicht alle der im folgenden Kapitel erwähnten Ko
 
 Wie in der Abbildung erkenntlich basiert diese Diplomarbeit aus Komponenten, welche sich in drei primäre Kategorien einteilen lassen: Backend-, Frontend- und  Infrastruktur-Services.
 Darüber hinaus bestehen Anbindungen an externe Services (wie etwa die Plate Recognizer SDK). 
-Sofern diese Implementiert wurden, werden sie im Kapitel Implementierung (!! Reference) beim jeweiligen Dienst im Detail erläutert.
-Die Architektur folgt bewusst keinem API-Gateway Ansatz, wie es oft bei Microservice-Ansätzen typisch ist, da die Services primär intern kommunizieren und nur wenige Endpunkte nach außenhin offen zugänglich sind. 
+Sofern diese implementiert wurden, werden sie im Kapitel Implementierung (!! Reference) beim jeweiligen Dienst im Detail erläutert.
+Die Architektur folgt bewusst keinem API-Gateway Ansatz, wie es oft bei Microservice-Ansätzen typisch ist, da die Services primär intern kommunizieren und nur wenige Endpunkte nach außen hin offen zugänglich sind. 
 
 
 #### Backend-Services
@@ -170,7 +170,7 @@ Die Hauptvorteile einer Normalisierung, etwa die konsistente Aktualisierung geme
 Die durch die Denormalisierung entstehende Datenredundanz, etwa wiederholt gespeicherte Herstellernamen, führt zu einem geringfügig höheren Speicherbedarf.
 Dieser ist im vorliegenden Anwendungsfall jedoch vernachlässigbar, da das System auf einer NAS-Plattform mit erweiterbarem Speicher betrieben wird und die Datensatzgröße pro Erkennung minimal ist. 
 Zum Stand der Dokumentation dieser Arbeit beträgt ein volles Backup der gesamten Datenbank (Über 60.000 Erkennungen) ca. 3.4 MB. 
-Um diesen Punkt zu verdeutlichen wurde die Zeit, welche benötigt werden würde um einen Speicher in Größe des NAS-Systems mit Erkennungsdaten zu befüllen wurde durch die folgende Formel ermittelt.
+Um diesen Punkt zu verdeutlichen, wurde die theoretische Dauer bis zur vollständigen Kapazitätsauslastung des verbauten NAS-Systems ermittelt.
 
 Formel zur Berechnung der Speicherauffüllungdauer anhand der Größe eines Full-Backups:
 
@@ -190,9 +190,9 @@ Die Speicherkapazität ist damit für den praktischen Betrieb als unbegrenzt zu 
 
 
 FOOTNOTE:
-(Es ist anzumerken, dass die Größe eines Full-Backups zwar in einem linearen Zusammenhang mit der tatsächlichen Datenbankgröße steht, diese aber zum Beispiel durch komprimierung nicht vollständig widerspiegelt. 
+(Es ist anzumerken, dass die Größe eines Full-Backups zwar in einem linearen Zusammenhang mit der tatsächlichen Datenbankgröße steht, diese aber zum Beispiel durch Komprimierung nicht vollständig widerspiegelt. 
 (https://stackoverflow.com/questions/35480650/is-database-back-up-size-is-same-as-database-size, https://www.sqlskills.com/blogs/erin/trending-database-growth-from-backups/)
-Auch nehmen die Erkennungs-Enträge nicht den gesamten Platz des Backups ein, da andere Daten wie etwa die anderer Services ebenfalls in diesem enthalten sind.
+Auch nehmen die Erkennungs-Einträge nicht den gesamten Platz des Backups ein, da andere Daten wie etwa die anderer Services ebenfalls in diesem enthalten sind.
 Das oben genannte Ergebnis ist aus diesen Gründen nur als Annäherung zu betrachten, wobei die Kernaussage ohne Zweifel bestehen bleibt.)
 
 Die Herleitung dieser Formel ist dem Anhang zu entnehmen.
