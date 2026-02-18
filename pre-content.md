@@ -25,6 +25,7 @@ The resulting system is based on a hybrid microservice architecture using Docker
 ## Vorwort
 
 
+
 Im Vorwort soll eine kurze Beschreibung des schulischen Umfeldes stehen; persönliche Vorstellungen können ebenfalls enthalten sein. 
 Im Vorwort können auch Gründe für die Wahl des Themas, Angaben zu einem persönlichen Bezug und ähnliches aufgeführt werden. 
 Das Vorwort ist auch der Platz für Danksagungen. Das Vorwort endet mit dem Datum und dem Namen des Autors bzw. der Autorin.

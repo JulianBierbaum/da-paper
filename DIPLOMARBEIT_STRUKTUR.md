@@ -92,7 +92,7 @@
 
 
 ## 7. Qualitätssicherung und Tests
-*   **7.1 Teststrategie:** Unit-Tests (Pytest) und Integrationstests (FastAPI), Test Coverage
+*   **7.1 Teststrategie:** Unit-Tests (Pytest) und Integrationstests (FastAPI), Test Coverage, Test in Container
 *   **7.2 Validierung:** Überprüfung der Hardware/Software-Kombination in der Praxis (Erkennungsrate bei Regen/Nacht, Strategien gegen Falscherkennungen (Auflistung doppelter Kennzeichen etc)).
 
 

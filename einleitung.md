@@ -36,7 +36,8 @@ Durch die Abgrenzung dieser Ziele wird sichergestellt, dass das System nur als W
 
 Um diesen Anforderungen gerecht zu werden, wurden diese in folgende Teilaufgaben aufgeteilt:
 
-- Installation bzw. Montage und Konfiguration der erforderlichen Hardware 
+- Installation bzw. Montage und Konfiguration der erforderlichen Hardware
+
 - Implementierung eines ALPR-Systems (Automatic License Plate Recognition) zur Kennzeichenerkennung
 
 - Erkennung von Ein- und Ausfahrten mit Zeitstempeln

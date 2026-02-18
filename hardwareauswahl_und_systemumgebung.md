@@ -3,9 +3,9 @@
 ## Hardwareauswahl
 
 Die Auswahl der Hardware ist entscheidend für die Zuverlässigkeit und Präzision der Kennzeichenerkennung und des Gesamtsystems. 
-Diese beschränkt sich für diese Diplomarbeit auf zwei primäre Komponenten: 
-1. Eine Kamera, welche Live-Daten von der Parkplatz Ein- und Ausfahrt erfasst und diese senden kann.
-2. Ein Server oder ähnliches, auf dem die Services der Diplomarbeit deployed werden können.
+Diese beschränkt sich für diese Diplomarbeit auf zwei primäre Komponenten:
+Einerseits wird eine Kamera benötigt, welche Live-Daten von der Ein- und Ausfahrt des Parkplatzes erfasst und diese weitersenden kann.
+Zudem ein Server oder ähnliches, auf dem die Services der Diplomarbeit deployed werden können, und welcher für die rechenintensiven Aufgaben zuständig ist.
 
 Das folgende Kapitel soll einen Einblick in den Entscheidungsprozess bieten, nach dem die benötigte Hardware ausgewählt wurde.
 Hierfür werden zunächst die Grundanforderungen an das Gesamtsystem aus der Aufgabenstellung (!! Cross Reference) abgeleitet, darauf aufbauend werden dann die spezifischen Anforderungen an die Hardwarekomponenten dargelegt.
@@ -14,8 +14,7 @@ Danach werden die einzelnen, im Auswahlprozess evaluierten Optionen gegenüberge
 
 ### Anforderungsanalyse an die Hardware
 
-1. Grundanforderungen
-
+Grundanforderungen
 Wie oben kurz erwähnt, gibt es einige Anforderungen, die für die Funktionsfähigkeit des Systems unausweichlich sind. 
 Zunächst galt es, die Gegebenheiten vor Ort zu betrachten, also Lage und Aufbau des Bereiches, in dem der Fahrzeugverkehr erkannt werden sollte.
 
@@ -25,7 +24,7 @@ Wie das Luftbild zeigt, verfügt der Parkplatz über eine kombinierte Ein- und A
 Das Zeitintervall zwischen zwei aufeinanderfolgenden Fahrzeugen wurde aufgrund der Breite der Einfahrt auf zwei bis drei Sekunden geschätzt. 
 Das System sollte folglich in der Lage sein, 20 bis 30 Bilder pro Minute zu analysieren und die daraus gewonnenen Daten persistent zu speichern. 
 
-2. Anforderungen Kamera
+Anforderungen Kamera
 Da die Kamera im Außenbereich eingesetzt wird, ist eine gewisse Witterungsbeständigkeit zwingend erforderlich. 
 Aufgrund der notwendigen Positionierung der Kamera sollte diese mindestens die Schutzklasse IP66 (Ingress Protection) erfüllen, 
 was einem Schutz vor starken Wasserstrahlen aus allen Richtungen entspricht. (https://security.baseus.com/en-eu/blogs/content/a-guide-to-ip65-ip66-and-ip67-ratings-for-outdoor-security-cameras)
@@ -34,7 +33,7 @@ Da das Kennzeichenerkennungssystem primär für die Erfassung von Kunden-Kennzei
 Diese betragen: Mo–Fr: 9–18 Uhr, Sa: 9–18:30 Uhr
 Aufgrund dessen lag im Entscheidungsprozess kein großes Augenmerk auf den Nachtsichtfähigkeiten des Kamerasystems.
 
-3. Anforderungen Server
+Anforderungen Server
 Die notwendige Rechenleistung des Servers hängt sehr stark von der Komplexität und Art der Prozesse ab, welche auf diesem ausgerollt und aktiv sind.
 Deshalb wurde diese anfangs absichtlich nicht genau definiert.
 Festgelegt wurde jedoch der Einsatz eines Linux-Betriebssystems, da dieses dem internen Unternehmensstandard entspricht, einen geringen OS-Overhead aufweist und eine breite Kompatibilität bietet.
@@ -48,8 +47,8 @@ Auch wurde seitens Zotter vorausgesetzt, dass sämtliche Daten nicht nur aus Dat
 
 Im Bezug auf die Kamera wurden von Anfang an nur IP-Kameras in Betracht gezogen, also Kameras, bei denen Video-Streams und Kommunikation per Ethernet stattfinden.
 Dies hat zwei Hauptgründe:
-1. Daten können in den meisten Fällen direkt per API-Requests ausgelesen werden, entweder über HTTP/REST-APIs oder im Fall von Video-Streams über RTSP (Real Time Streaming Protocol).
-2. Viele IP-Kameras nutzen PoE (Power over Ethernet) für ihre Spannungsversorgung, was die Aufbaukomplexität weiter minimiert, da nur ein Kabel, welches Strom und Daten überträgt, verlegt werden muss.
+Daten können zunächst in den meisten Fällen direkt per API-Requests ausgelesen werden, entweder über HTTP/REST-APIs oder im Fall von Video-Streams über RTSP (Real Time Streaming Protocol).
+Zudem nutzen viele IP-Kameras PoE (Power over Ethernet) für ihre Spannungsversorgung, was die Aufbaukomplexität weiter minimiert, da nur ein Kabel, welches Strom und Daten überträgt, verlegt werden muss.
 
 Vor dem offiziellen Start der Diplomarbeit wurden hierzu schon einige Überlegungen angestellt und mögliche Produkt-Kandidaten vorgemerkt.
 Im Zuge von Gesprächen mit Michael Zotter wurde darauf aufmerksam gemacht, dass bereits einige IP-Kameras des Herstellers Synology für frühere Testversuche angeschafft wurden.

@@ -335,25 +335,20 @@ Sämtliche Bilddaten und Erkennungsergebnisse verlassen zu keinem Zeitpunkt das 
 Der Lebenszyklus der Fahrzeugerkennung beschreibt den logischen Weg der Daten von der Erfassung bis zur langfristigen Sicherung.
 Das Konzept ist so gestaltet, dass personenbezogene Daten so früh wie möglich eliminiert werden und nur anonymisierte, für die Analyse relevante Informationen persistent gespeichert werden.
 
-Der Lebenszyklus gliedert sich in sechs Phasen:
+```mermaid
+flowchart LR
+    A["1. Erfassung<br/>(Webhook-Event)"] --> B["2. Extraktion<br/>(Snapshot + ALPR)"]
+    B --> C["3. Anreicherung<br/>(Land, Bezirk)"]
+    C --> D["4. Anonymisierung<br/>(SHA-256 Hash)"]
+    D --> E["5. Speicherung<br/>(PostgreSQL)"]
+    E --> F["6. Sicherung<br/>(Backup)"]
+```
 
-1. Erfassung
-Eine Fahrzeugbewegung im Erkennungsbereich löst ein Event aus, welches das System über einen Webhook benachrichtigt.
+Eine Fahrzeugbewegung im Erkennungsbereich löst ein Event aus (Erfassung), woraufhin ein Kamera-Snapshot angefordert und an die ALPR-Komponente gesendet wird (Extraktion), hierbei werden die Bilddaten werden nicht persistent gespeichert. 
+Die Erkennungsergebnisse werden anschließend, falls möglich, um regionale Herkunft auf Bezirksebene angereichert. 
+Darauf folgt die Anonymisierung, wobei das erkannte Kennzeichen mittels SHA-256 irreversibel gehasht wird. 
+Ab diesem Punkt existiert das originale Kennzeichen in keinem Teil des Systems mehr. 
+Der anonymisierte Datensatz wird in der PostgreSQL-Datenbank gespeichert und regelmäßig automatisiert gesichert (Details im Kapitel Infrastruktur, Deployment und Betrieb (!! Cross Reference)).
 
-2. Extraktion
-Das System ruft einen aktuellen Kamera-Snapshot ab und sendet diesen an die lokale ALPR-Komponente zur Kennzeichenerkennung. Die Bilddaten werden dabei nicht persistent gespeichert.
-
-3. Anreicherung
-Die Erkennungsergebnisse werden angereichert: Ländercodes werden normalisiert und, wo möglich, wird die regionale Herkunft auf Bezirksebene ermittelt.
-
-4. Anonymisierung
-Das Klartext-Kennzeichen wird mittels eines kryptografischen Einweg-Hash-Verfahrens irreversibel anonymisiert. Ab diesem Punkt existiert das originale Kennzeichen in keinem Teil des Systems mehr.
-
-5. Speicherung
-Der anonymisierte und angereicherte Datensatz wird in der Datenbank gespeichert.
-
-6. Sicherung
-Die Datenbank wird regelmäßig automatisiert gesichert. Details zur Backup-Strategie werden im Kapitel Infrastruktur, Deployment und Betrieb behandelt.
-
-Durch diesen Lebenszyklus ist sichergestellt, dass personenbezogene Daten, wie oben erwähnt, zu keinem Zeitpunkt persistent gespeichert werden und die gespeicherten, anonymisierten Daten eine Rückverfolgung auf individuelle Fahrzeuge nicht ermöglichen.
-Die konkrete technische Umsetzung der einzelnen Phasen wird im Kapitel Implementierung genauer beschrieben.
+Durch diesen Lebenszyklus ist sichergestellt, dass personenbezogene Daten zu keinem Zeitpunkt persistent gespeichert werden und die gespeicherten, anonymisierten Daten eine Rückverfolgung auf individuelle Fahrzeuge nicht ermöglichen. 
+Die konkrete technische Umsetzung der einzelnen Phasen wird im Kapitel Implementierung (!! Cross Reference) genauer beschrieben.

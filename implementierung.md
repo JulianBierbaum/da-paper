@@ -397,10 +397,8 @@ Jeder Benutzer verfügt über zwei unabhängige Flags: `receive_alerts` für Ech
 
 Benachrichtigungsversand (`/api/notifications`)
 Der Benachrichtigungsendpunkt `POST /api/notifications/send` nimmt einen Request mit dem Benachrichtigungstyp (`alert` oder `update`), Betreff, Inhalt und optionaler Empfängerliste mit Email-Adressen entgegen.
-Die interne Logik bestimmt die Empfänger auf folgende Weise:
-
-1. Wenn der Request eine explizite Empfängerliste enthält, werden ausschließlich diese Adressen verwendet.
-2. Andernfalls werden alle Benutzer aus der Datenbank anhand des jeweiligen Präferenz-Flags (`receive_alerts` bzw. `receive_updates`) gefiltert.
+Wenn der Request eine explizite Empfängerliste enthält, werden ausschließlich diese Adressen verwendet.
+Andernfalls werden alle Benutzer aus der Datenbank anhand des jeweiligen Präferenz-Flags (`receive_alerts` bzw. `receive_updates`) gefiltert.
 
 
 ### E-Mail-Versand (EmailHandler)
