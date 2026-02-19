@@ -24,8 +24,18 @@ The resulting system is based on a hybrid microservice architecture using Docker
 
 ## Vorwort
 
+Eine Diplomarbeit in Zusammenarbeit mit Zotter war von Anfang an mein Ziel. 
+Nicht nur, weil mich persönlich vieles mit diesem Unternehmen verbindet, sondern auch, weil ich die Dynamik des Unternehmens sehr einzigartig finde.
+Es entsteht ständig etwas Neues oder etwas Bestehendes wird verändert, gerade das macht das Arbeiten im IT-Bereich bei Zotter so spannend. 
+Die Wahl des Themas ergab sich aus einer Brainsorming-Session: Wie lässt sich das Besucheraufkommen erfassen und analysieren? Kameras bei den Eingangstüren mit Zählfunktion? Freiwillige Umfragen?
+Nach einiger Zeit sind wir auf die Idee gekommen, die Kennzeichen der Besucherfahrzeuge zu analysieren. Und an dieser Idee hielten wir fest.
 
+Ich möchte mich bei allen bedanken, die mich im Laufe dieser Diplomarbeit unterstützt haben.
+Ein besonderer Dank gilt Michael Zotter, ohne dessen Hilfe und Vertrauen dieses Projekt nie zustande gekommen wäre. 
+Er hat mir nicht nur die Möglichkeit gegeben, diese Arbeit umzusetzen, sondern mir auch den nötigen Freiraum und Zugang zur Infrastruktur gewährt.
 
-Im Vorwort soll eine kurze Beschreibung des schulischen Umfeldes stehen; persönliche Vorstellungen können ebenfalls enthalten sein. 
-Im Vorwort können auch Gründe für die Wahl des Themas, Angaben zu einem persönlichen Bezug und ähnliches aufgeführt werden. 
-Das Vorwort ist auch der Platz für Danksagungen. Das Vorwort endet mit dem Datum und dem Namen des Autors bzw. der Autorin.
+Ebenso danke ich Herrn DI (FH) Ing. Gerald Ebner, der mich über den gesamten Verlauf dieser Arbeit fachlich begleitet und unterstützt hat.
+Meinen Klassenkameraden danke für die Motivation, und entschuldige mich gleichermaßen für mein viel zu häufiges Nachfragen und Vergleichen bei anderen Arbeiten, welches zu großen Teilen zu meiner Motivation beigetragen hat.
+Abschließend möchte ich meiner Familie danken, die mich während meiner gesammten HTL Laufbahn, eigentlich muss man sagen mein ganzes Leben lang, bedingungslos unterstützt hat.
+
+Danke!
