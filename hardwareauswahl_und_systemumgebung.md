@@ -18,9 +18,10 @@ Grundanforderungen
 Wie oben kurz erwähnt, gibt es einige Anforderungen, die für die Funktionsfähigkeit des Systems unausweichlich sind. 
 Zunächst galt es, die Gegebenheiten vor Ort zu betrachten, also Lage und Aufbau des Bereiches, in dem der Fahrzeugverkehr erkannt werden sollte.
 
-(LUFTBILD)
+![Luftbild des Hauptgebäudes + Parkplatz der Zotter Schokolade GmbH](zotter.png)
 
-Wie das Luftbild zeigt, verfügt der Parkplatz über eine kombinierte Ein- und Ausfahrt. Dies reduziert zwar den Installationsaufwand der Hardware, erhöht jedoch die Software-Komplexität, da die Bewegungsrichtung der Fahrzeuge softwareseitig erkannt werden muss. Das Kamerasystem wurde so montiert, dass es in Richtung des Parkplatzes zeigt. Dies erwies sich als die optimale Wahl, da so der mögliche Erkennungsbereich maximiert wurde und die Montage an dieser Position einfacher realisierbar war. 
+Wie das Luftbild zeigt, verfügt der Parkplatz über eine kombinierte Ein- und Ausfahrt. 
+Dies reduziert zwar den Installationsaufwand der Hardware, erhöht jedoch die Software-Komplexität, da die Bewegungsrichtung der Fahrzeuge softwareseitig erkannt werden muss. 
 Das Zeitintervall zwischen zwei aufeinanderfolgenden Fahrzeugen wurde aufgrund der Breite der Einfahrt auf zwei bis drei Sekunden geschätzt. 
 Das System sollte folglich in der Lage sein, 20 bis 30 Bilder pro Minute zu analysieren und die daraus gewonnenen Daten persistent zu speichern. 
 
@@ -45,6 +46,8 @@ Auch wurde seitens Zotter vorausgesetzt, dass sämtliche Daten nicht nur aus Dat
 
 #### Kamera
 
+##### Auswahl
+
 Im Bezug auf die Kamera wurden von Anfang an nur IP-Kameras in Betracht gezogen, also Kameras, bei denen Video-Streams und Kommunikation per Ethernet stattfinden.
 Dies hat zwei Hauptgründe:
 Daten können zunächst in den meisten Fällen direkt per API-Requests ausgelesen werden, entweder über HTTP/REST-APIs oder im Fall von Video-Streams über RTSP (Real Time Streaming Protocol).
@@ -64,7 +67,21 @@ Zusätzlich schien die BC500 über eine robuste API für das Auslesen von Daten 
 Aufgrund der oben angesprochenen sofortigen Verfügbarkeit und des wegfallenden Mehraufwands für diese Kamera, verbunden mit den genannten Spezifikationen, fiel die Entscheidung nach Absprache mit unserer Kontaktperson auf das Synology-Modell.
 
 
+##### Montage
+
+![Markup der Kamerapositionierung und ](zotter-markup.png)
+
+Das Kamerasystem wurde, wie oben erkenntlich, so montiert, dass es in Richtung des Parkplatzes zeigt. 
+Dies erwies sich als die optimale Wahl, da so der mögliche Erkennungsbereich maximiert wird und die Montage an dieser Position einfacher realisierbar war.
+Bei der genauen Positionierung und Ausrichtung der Kamera wurde versucht, sich so gut wie möglich am Kamera-Setup-Guide von Plate Recognizer zu orientieren. (https://platerecognizer.com/camera-setup-for-best-anpr/) 
+
+Die erforderliche Netzwerkverkabelung wurde, wie oben im Bild ersichtlich, über den bereits vorhandenen Kabelkanal der Sicherheitsschranke geführt. 
+Dieser verläuft bis in den Netzwerkschrank im angrenzenden Bürogebäude, wo die Anbindung an das Firmennetzwerk erfolgt.
+
+
 #### Server
+
+##### Auswahl
 
 Die gewählte Microservice-Architektur im Zusammenspiel mit der angewandten Containerisierung erlaubt eine hohe Flexibilität für die Art der benötigten Hardware.
 Des Weiteren war aus einem früheren Praktikum bei Zotter Schokolade bekannt, dass die hausinternen Server-Kapazitäten für Container-Deployment besitzen. 
@@ -94,6 +111,12 @@ Dies ist besonders für das Erstellen von "Triggers" relevant, also das Anlegen 
 Des Weiteren können alle Kamera-Einstellungen, Aufzeichnungen und Analysen über eine einheitliche Oberfläche auf dem NAS-Gerät verwaltet werden.
 
 Die Kombination aus relevanten Features, umfassender API und nativer Kamera-Unterstützung machte das Synology DVA1622-NAS zur optimalen Wahl für die Realisierung des Kennzeichenerkennungssystems.
+
+
+##### Montage
+
+Das NAS-System durch seine Kompaktheit und Kapselung auf keine besonderen Anforderungen an den Montage- bzw. Betriebsort angewiesen.
+Aus diesem Grund wurde dieses innerhalb des Bürogebäudes installiert, in welchem auch die Kamera an das Firmennetzwerk angeschlossen ist.
 
 
 ## Technik-Stack und Technologieauswahl der Kennzeichenerkennung

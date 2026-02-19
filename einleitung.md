@@ -72,6 +72,6 @@ Das darauffolgende Kapitel dokumentiert die Implementierung der einzelnen Servic
 
 Das 6. Kapitel behandelt Infrastruktur, Deployment und Betrieb. Es wird auf die Container-Orchestrierung, CI/CD-Pipelines mit Deployment, Monitoring-Strategien sowie die Backup- und Restore-Strategie eingegangen. Auch wird kurz die MkDocs basierte Entwicklerdokumentation erwähnt.
 
-Kapitel 7 widmet sich der Qualitätssicherung durch Tests und der Validierung des Systems unter realen Bedingungen.
+Kapitel 7 widmet sich der Qualitätssicherung durch Tests und der Funktionsweise der Kennzeichenerkennung unter realen Bedingungen.
 
 Das letzte Kapitel schließt mit einer Zusammenfassung und Evaluierung der Ergebnisse, der kritischen Reflexion des Projektverlaufs und einem Ausblick auf mögliche Erweiterungen.
