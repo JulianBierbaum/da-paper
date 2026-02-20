@@ -2,11 +2,11 @@
 
 ## Zusammenfassung der Ergebnisse
 
-Im Rahmen dieser Diplomarbeit wurde ein vollständiges System zur automatisierten Kennzeichenerkennung und Verkehrsanalyse für die Zotter Schokoladen Manufaktur konzipiert, implementiert und in den Produktivbetrieb überführt. 
+Im Rahmen dieser Diplomarbeit wurde ein vollständiges System zur automatisierten Kennzeichenerkennung und Verkehrsanalyse für die Zotter Schokolade GmbH konzipiert, implementiert und in den Produktivbetrieb überführt. 
 Dieses erfasst durchfahrende Fahrzeuge an der Betriebszufahrt mittels einer IP-Kamera, erkennt deren Kennzeichen über eine lokal betriebene ALPR-Lösung und speichert die anonymisierten Daten in einer PostgreSQL-Datenbank. 
 Die gesammelten Daten werden über ein Grafana-Dashboard visualisiert.
 
-Das System läuft seit 8. August 2025 mit der Ausnahme von kleineren Ausfällen durchgehend im Produktivbetrieb.
+Das System läuft seit dem 8. August 2025, mit Ausnahme von kleineren Ausfällen, durchgehend im Produktivbetrieb.
 Bis zur Verfassung dieser Dokumentation (Februar 2026) wurden über 60.000 Fahrzeugkennzeichen erfasst. 
 Die dabei erzielten Erkennungsdaten sind als Richtwerte zu verstehen und nicht als absolute Kennzahlen, da eine vollständige Referenzmessung, also der Abgleich jeder einzelnen Durchfahrt mit der entsprechenden Erkennung, im Rahmen dieser Arbeit nicht durchgeführt wurde. 
 Wie im Kapitel Qualitätssicherung (!! Cross Reference) erläutert, ist die Dunkelziffer nicht erfasster Fahrzeuge nicht exakt bezifferbar.

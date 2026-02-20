@@ -26,7 +26,7 @@ In den Einstellungen der hinzugefügten IP-Kamera wurden Optionen wie die Bildra
 
 Da wie bereits im Kapitel Hardwareauswahl (!! CROSS REFERENCE) erwähnt die Synology DVA-Serie als NAS-System gewählt wurde, standen für die Umsetzung dieses Projects die erweiterten KI-Funktionen dieser Reihe zur Verfügung, diese werden von Synology als Deep Video Analytics (DVA) bezeichnet
 Eine dieser Funktionalitäten ist eine präzise und schnelle Durchfahrtskontrolle mittels Erkennungsbereichen. 
-Diese wurde genutzt, um den unten in der Abbildung (X) erkenntlichen Bereich zu markieren, in welchen ein Trigger ausgelöst wird, sobald ein Fahrzeug diesen durchfährt.
+Diese wurde genutzt, um den unten in der Abbildung (X) erkenntlichen Bereich zu markieren, in welchem ein Trigger ausgelöst wird, sobald ein Fahrzeug diesen durchfährt.
 Hierbei ist wichtig zu erwähnen, dass dieser DVA-Task so konfiguriert wurde, dass Fußgänger und stehende Fahrzeuge nicht erkannt werden.
 Diese Einschränkungen sind wichtig, um das ALPR-System zu entlasten und Mehrfacherkennungen durch im Bereich befindliche, stationäre Fahrzeuge zu eliminieren.
 
@@ -34,10 +34,10 @@ Diese Einschränkungen sind wichtig, um das ALPR-System zu entlasten und Mehrfac
 
 ### Action Rule Konfiguration
 
-Innerhalb der Surveillance Station können sogenannte Action-Rules definieren werden, welche bei Erkennung einer Fahrzeugbewegung im konfigurierten Erkennungsbereich eine zuvor definierte Aktion ausführen.
+Innerhalb der Surveillance Station können sogenannte Action-Rules definiert werden, welche bei Erkennung einer Fahrzeugbewegung im konfigurierten Erkennungsbereich eine zuvor definierte Aktion ausführen.
 Dieses System wird genutzt, um im Falle einer Erkennung dem Data Collection Service zu Signalisieren, dass eine Fahrzeugerkennung stattgefunden hat. 
 Diese Aktionsregel wird aufgerufen, nachdem der zuvor konfigurierte DVA-Task ein Fahrzeug erkennt und ist damit der Startpunkt, für die im Backend stattfindende Verarbeitung der Bilddaten.
-Wie in Abbildung (X) erkenntlich ruft diese eine Webhook des Data Collection Service auf, diese wird im Kapitel (!! CROSS REFERENCE) näher beleuchtet.
+Wie in Abbildung (X) erkenntlich, ruft diese einen Webhook des Data Collection Service auf; dieser wird im Kapitel (!! CROSS REFERENCE) näher beleuchtet.
 
 ![Action-Rule für die Erkennung von Fahrzeugen](action_rule.png)
 
@@ -226,11 +226,11 @@ Die Bilddaten werden als `BytesIO`-Objekt übergeben, also als im Arbeitsspeiche
 
 ### Datenverarbeitung und Enrichment-Schleife
 
-Nach dem Empfang der JSON-Antwort von Plate Recognizer durchlaufen die Erkennungsdaten einen mehrstufiger Verarbeitungs- und Anreicherungsprozess bis diese final und persistent in der Datenbank gespeichert werden.
+Nach dem Empfang der JSON-Antwort von Plate Recognizer durchlaufen die Erkennungsdaten einen mehrstufigen Verarbeitungs- und Anreicherungsprozess, bis diese final und persistent in der Datenbank gespeichert werden.
 Die Plate-Recognizer-API kann in einem einzelnen Bild mehrere Kennzeichen erkennen, weshalb die Antwort eine Liste von Ergebnissen enthält, welche jeweils einzeln in einer Schleife verarbeitet werden.
 
 Datenextraktion
-Im ersten Schritt werden die relevanten Felder aus der Antwort der Plate-Recognizer-API extrahiert und in ein Pytantic-Schema überführt.
+Im ersten Schritt werden die relevanten Felder aus der Antwort der Plate-Recognizer-API extrahiert und in ein Pydantic-Schema überführt.
 Die API liefert den Konfidenzwert jeder Erkennung als Float-Zahl zwischen 0 und 1 zurück, welcher für die Speicherung mit 1000 multipliziert und als ganzzahliger Wert abgelegt wird.
 Die Fahrzeugorientierung wird aus der API-Antwort als Enum (`FRONT` oder `REAR`) abgebildet, wobei `FRONT` einer Ausfahrt und `REAR` einer Einfahrt entspricht, da die Kamera in Richtung des Parkplatzes filmt.
 
@@ -448,7 +448,7 @@ Das Dashboard umfasst folgende Darstellungen:
 - Fahrzeugtypverteilung: Horizontales Balkendiagramm der erkannten Fahrzeugkategorien.
 - Verkehrsdichte nach Tageszeit: Balkendiagramm mit stündlicher Aggregation zur Identifikation von Stoßzeiten.
 - Fahrzeugdetails: Tabellen der häufigsten Fahrzeugmarken und -modelle sowie ein Balkendiagramm der Fahrzeugfarben, basierend auf der MMC-Erkennung von Plate Recognizer.
-- Regionale Herkunft: Tabelle der österreichischen Bezirkskürzel mit zur visuellen Einordnung der häufigsten Herkunftsregionen.
+- Regionale Herkunft: Tabelle der österreichischen Bezirkskürzel zur visuellen Einordnung der häufigsten Herkunftsregionen.
 
 
 ![Grafana Dashboard](grafana_dashboard.png)

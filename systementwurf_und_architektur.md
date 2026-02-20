@@ -51,7 +51,7 @@ Die Details zu diesen Infrastruktur-Komponenten werden im Kapitel Infrastruktur,
 ### Kommunikationswege
 
 Die Kommunikation zwischen den Services erfolgt ausschließlich über RESTful HTTP-APIs.
-Der primäre Kommunikationsweg im System, also welcher für die Datenerfassung erfolgt, lässt sich wie folgt zusammenfassen:
+Der primäre Kommunikationsweg im System, welcher für die Datenerfassung erfolgt, lässt sich wie folgt zusammenfassen:
 
 1. Externer Trigger durch Erkennung eines Fahrzeugs -> Data Collection Service
 Die Synology Surveillance Station ruft bei Erkennung einer Fahrzeugbewegung einen REST-Webhook des Data Collection Service auf..
@@ -149,7 +149,7 @@ Diese Entscheidung beruht auf mehreren Gründen:
 
 Die Daten werden direkt aus der JSON-Antwort der Plate-Recognizer-API übernommen. 
 Die API gibt eine flache Struktur zurück, in welcher das Erkennungsresultat alle Attribute bereits als einfache Zeichenketten oder Werte enthält.
-Das Erstellen und die Wartung eines normalisierten Schemas mit Lookup-Tabellen für dynamische, von einer externen API stammende Werte, würde unnötige Komplexität hinzufügen und einen laufenden Wartungsaufwand bedeuten, da neue Werte (z.B. neue Fahrzeugmodelle) oder etwa Bennenungsanpassungen kontinuierlich eingepflegt werden müssten.
+Das Erstellen und die Wartung eines normalisierten Schemas mit Lookup-Tabellen für dynamische, von einer externen API stammende Werte, würde unnötige Komplexität hinzufügen und einen laufenden Wartungsaufwand bedeuten, da neue Werte (z.B. neue Fahrzeugmodelle) oder etwa Benennungsanpassungen kontinuierlich eingepflegt werden müssten.
 
 2. Lesedominanz
 
@@ -162,7 +162,7 @@ Die Grafana-Dashboards verwenden direkte SQL-Abfragen. Eine einfache, flache Tab
 
 4. Unveränderlichkeit der Daten
 
-Fahrzeugerkennungen sind unveränderliche Ereignisse, im Gegensatz zu beispielsweise einem Produktkatalog, wo sich der Name eines Herstellers ändern kann, sind gespeicherte Erkennung statisch.
+Fahrzeugerkennungen sind unveränderliche Ereignisse, im Gegensatz zu beispielsweise einem Produktkatalog, wo sich der Name eines Herstellers ändern kann, sind gespeicherte Erkennungen statisch.
 Die Hauptvorteile einer Normalisierung, etwa die konsistente Aktualisierung gemeinsamer Daten, sind daher nicht wirklich relevant.
 
 5. Speicherplatz als unkritische Ressource
@@ -344,7 +344,7 @@ flowchart LR
     E --> F["6. Sicherung<br/>(Backup)"]
 ```
 
-Eine Fahrzeugbewegung im Erkennungsbereich löst ein Event aus (Erfassung), woraufhin ein Kamera-Snapshot angefordert und an die ALPR-Komponente gesendet wird (Extraktion), hierbei werden die Bilddaten werden nicht persistent gespeichert. 
+Eine Fahrzeugbewegung im Erkennungsbereich löst ein Event aus (Erfassung), woraufhin ein Kamera-Snapshot angefordert und an die ALPR-Komponente gesendet wird (Extraktion), hierbei werden die Bilddaten nicht persistent gespeichert. 
 Die Erkennungsergebnisse werden anschließend, falls möglich, um regionale Herkunft auf Bezirksebene angereichert. 
 Darauf folgt die Anonymisierung, wobei das erkannte Kennzeichen mittels SHA-256 irreversibel gehasht wird. 
 Ab diesem Punkt existiert das originale Kennzeichen in keinem Teil des Systems mehr. 

@@ -33,9 +33,9 @@ Auch sind Container auf Netzwerk-Ebene isoliert, bedeutet also, dass die Kommuni
 
 Ein weiterer Vorteil ist die Versionskontrolle und Rollback-Fähigkeit, welche Docker-Images bieten. 
 Diese können mit Tags versehen werden, wodurch spezifische Versionen einer Anwendung eindeutig identifizierbar sind. 
-Bei Problemen, etwa nach einem Update kann somit schnell zu einer vorherigen, stabilen Version zurückgerollt werden.
+Bei Problemen, etwa nach einem Update, kann somit schnell zu einer vorherigen, stabilen Version zurückgerollt werden.
 
-Zudem bieten Container eine hohe Skalierbarkeit, so können Anwendungen sehr leicht horizontal skaliert werden, indem mehrere Instanzen derselben Services gestartet werden. 
+Zudem bieten Container eine hohe Skalierbarkeit. So können Anwendungen sehr leicht horizontal skaliert werden, indem mehrere Instanzen derselben Services gestartet werden. 
 In Verbindung mit Orchestrierungstools wie Kubernetes können Services dynamisch basierend auf der aktuellen Last skaliert werden.
 
 Docker Compose
@@ -50,7 +50,7 @@ Docker Hub
 Docker Hub ist die zentrale, cloudbasierte Registry für Docker-Images und fungiert als öffentliches Repository, ähnlich wie GitHub für Code. 
 Es enthält eine Vielzahl an vorgefertigten Images, darunter offizielle Images für gängige Software und Technologien wie PostgreSQL, Redis oder Python, welche von den jeweiligen Maintainern verifiziert werden.
 Beim Starten eines Stacks oder Containers lädt Docker automatisch benötigte Images von Docker Hub herunter, falls sie nicht lokal vorhanden sind. 
-In dieser Diplomarbeit werden beispielsweise offizielle Images für PostgreSQL und Grafana verwendet, während selbsterstellte Images für die Python-Services verwendet werden, welche in einem eigenen Docker-Registry gespeichert sind.
+In dieser Diplomarbeit werden beispielsweise offizielle Images für PostgreSQL und Grafana verwendet, während selbsterstellte Images für die Python-Services verwendet werden, welche in einer eigenen Docker-Registry gespeichert sind.
 
 Für diese Diplomarbeit bietet sich Containerisierung sehr gut an, da das gesamte System mit einem einzigen Befehl auf jedem System orchestriert gestartet, gestoppt oder neu gebaut werden kann, unabhängig vom Host-Betriebssystem. 
 
@@ -73,10 +73,10 @@ Dieses Prinzip profitiert stark von der Containerisierung, welche im letzten Kap
 
 Ein weiterer Vorteil von Microservices ist die Technologiefreiheit, welche sie bieten.
 Jeder Service kann in der für seine Anforderungen am besten geeigneten Programmiersprache und mit dem optimalen Framework entwickelt werden. 
-Während die Python-Services in diesem Projekt etwa FastAPI für die API-Entwicklung nutzen, könnte ein zukünftiger Service für in Go geschrieben werden, oder ein Frontend-Service könnte Next.js verwenden.
+Während die Python-Services in diesem Projekt etwa FastAPI für die API-Entwicklung nutzen, könnte ein zukünftiger Service in Go geschrieben werden, oder ein Frontend-Service könnte Next.js verwenden.
 
-Auch wird durch die Isolation der Services wird die Fehlerausbreitung begrenzt. 
-Etwa kann, wenn ein ganzer Service (wie der für Benachrichtigungen) abstürzten sollte oder nicht erreichbar ist, die Kernfunktion des Systems, also die Kennzeichenerfassung ohne Unterbrechungen weiterarbeiten. 
+Auch wird durch die Isolation der Services die Fehlerausbreitung begrenzt. 
+Etwa kann, wenn ein ganzer Service (wie der für Benachrichtigungen) abstürzen sollte oder nicht erreichbar ist, die Kernfunktion des Systems, also die Kennzeichenerfassung ohne Unterbrechungen weiterarbeiten. 
 Das System kann mit degradierter Funktionalität weiterlaufen, anstatt vollständig auszufallen, was zu höherer Fehlertoleranz und Resilience führt.
 
 Wartbarkeit und Verständlichkeit
@@ -88,8 +88,8 @@ Auch Refactorings oder große Änderungen sind risikoärmer, da Änderungen auf 
 Die Kombination von Microservices mit Docker-Containerisierung verstärkt diese Vorteile noch: Jeder Service läuft in seiner eigenen isolierten Umgebung, Dependencies sind klar definiert, 
 und die gesamte Infrastruktur kann als Code versioniert und reproduzierbar deployed werden (!!!!Cross Reference Docker-Compose Kapitel).
 
-Die Implementierung einer Microservice Architekur bring auch einige Herausforderungen und Trade-offs mit sich.
-Diese beziehen sich primär die erhöhte Komplexität, welche die Verteilung der Funktionalität unausweichlich mit sich bringt und ein gewisser Overhead, der entsteht, da jeder Service in einer separaten Instanz (Container) gestartet werden muss.
+Die Implementierung einer Microservice Architektur bringt auch einige Herausforderungen und Trade-offs mit sich.
+Diese beziehen sich primär auf die erhöhte Komplexität, welche die Verteilung der Funktionalität unausweichlich mit sich bringt und ein gewisser Overhead, der entsteht, da jeder Service in einer separaten Instanz (Container) gestartet werden muss.
 
 Im Fazit ist die Microservice-Architektur ein mächtiger Ansatz für komplexe Systeme, der Flexibilität, Fehlertoleranz und Skalierbarkeit bietet und in dieser Diplomarbeit vor allem in Bezug auf Fehlertoleranz, wie es oben beschrieben wurde, einen großen Vorteil mit sich bringt.
 
@@ -121,10 +121,10 @@ Die Rohergebnisse werden gegen bekannte Muster und Regeln validiert, wie etwa l�
 Auch werden typische OCR-Verwechslungen wie "0" versus "O" oder "1" versus "I" kontextbasiert korrigiert.
 
 Technologie und Anbieter
-In diesem System wird der Dienst Plate Recognizer eingesetzt, der moderne Deep Learning-Ansätze nutzt und im Vergleich zu anderen Optionen wie etwa ein offline OCR-Modell über klassische Texterkennung hinausgeht.
+In diesem System wird der Dienst Plate Recognizer eingesetzt, der moderne Deep Learning-Ansätze nutzt und im Vergleich zu anderen Optionen wie etwa einem Offline-OCR-Modell über klassische Texterkennung hinausgeht.
 
 MMC-Erkennung (Make, Model, Color)
-Neben der im Vergleich sehr zuverlässigen Kennzeichenerkennung identifiziert Plate Recognizer zusätzliche Fahrzeugattribute (https://platerecognizer.com/vehicle-make-model-recognition-with-color/) ein Ansatz, der MMC-Erkennung genannt wird: 
+Neben der im Vergleich sehr zuverlässigen Kennzeichenerkennung identifiziert Plate Recognizer zusätzliche Fahrzeugattribute (https://platerecognizer.com/vehicle-make-model-recognition-with-color/), ein Ansatz, der MMC-Erkennung genannt wird: 
 Make (Marke): Identifikation des Fahrzeugherstellers basierend auf charakteristischen Designmerkmalen.
 Model (Modell): Feinere Unterscheidung innerhalb einer Marke, etwa zwischen verschiedenen Baureihen oder Generationen.
 Color (Farbe): Bestimmung der Primärfarbe unter Kompensation von Lichtverhältnissen und Unterscheidung zwischen verschiedenen Lackierungstypen.

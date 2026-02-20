@@ -6,9 +6,9 @@ Erläutert werden unter anderem der Deployment-Prozess sowie die im laufenden Be
 
 ## Container-Orchestrierung
 
-Die gesamte Applikation wird wie bereits erwähnt wurde mittels Docker Compose orchestriert, wobei zwei separate Konfigurationsdateien für die Entwicklungs- und Produktionsumgebungen benutzt werden.
-Docker Compose nutzt wie bereits im Kapitel (!! Cross Reference) erwähnt YAML-Dateien, welche zur Kennung mit den Endungen `.prod.yaml` und `.dev.yaml` versehen wurden.
-Beide Konfigurationen definieren dieselben Services, unterscheiden sich jedoch grundlegend in der Art und Weise, wie diese für Docker zum Starten dieser bereitgestellt werden.
+Die gesamte Applikation wird, mittels Docker Compose orchestriert, wobei zwei separate Konfigurationsdateien für die Entwicklungs- und Produktionsumgebungen benutzt werden.
+Docker Compose nutzt, wie bereits im entsprechenden Kapitel erwähnt, YAML-Dateien, welche zur Kennung mit den Endungen `.prod.yaml` und `.dev.yaml` versehen wurden.
+Beide Konfigurationen definieren dieselben Services, unterscheiden sich jedoch grundlegend in der Art und Weise, wie diese für Docker zum Starten bereitgestellt werden.
 
 
 ### Entwicklungsumgebung
@@ -67,7 +67,7 @@ Zusätzlich verfügen die Backend-Services und der Plate Recognizer-Container ü
 ## CI/CD Pipelines und Deployment
 
 CI/CD (Continuous Integration / Continuous Delivery) bezeichnet die Praxis, Codeänderungen automatisiert zu testen, bauen und bereitzustellen.
-Continuous Integration stellt sicher, dass jede Codeänderung automatisch auf Fehler geprüft werden, bevor diese in den Hauptbranch des Code-Repositories aufgenommen wird.
+Continuous Integration stellt sicher, dass Codeänderungen automatisch auf Fehler geprüft werden, bevor diese in den Hauptbranch des Code-Repositories aufgenommen wird.
 Continuous Delivery automatisiert darauf aufbauend den Build- und Bereitstellungsprozess, sodass neue Versionen automatisch auf dem Docker-Registry als Images zur Verfügung gestellt werden.
 
 Die Umsetzung dieser Prinzipien erfolgt im Projekt über GitHub Actions, ein in GitHub integriertes Automatisierungstool, mit welchem Workflows zum Bauen, Testen und Bereitstellen von Software direkt im Repository definiert werden können. 
@@ -394,7 +394,7 @@ Das Recovery Point Objective (RPO) entspricht dem konfigurierten Backup-Interval
 
 Die Entwicklerdokumentation wird im Repository gepflegt und automatisiert als statische Website veröffentlicht.
 Hierfür wird MkDocs mit dem Material-Theme eingesetzt, ein Python-basierter Static-Site-Generator, welcher Markdown-Dateien in eine Dokumentationswebsite transformiert.
-Die Verwendung von MkDocs hat den Vorteil, das out-of-the-box viele Grundfunktionen einer guten Dokumentation, wie etwa eine Navigationsleiste oder Suchfunktion bereits als Module funktionsfähig bereitgestellt werden.
+Die Verwendung von MkDocs hat den Vorteil, dass out-of-the-box viele Grundfunktionen einer guten Dokumentation, wie etwa eine Navigationsleiste oder Suchfunktion, bereits als Module funktionsfähig bereitgestellt werden.
 
 Die Dokumentation ist in sechs Hauptbereiche gegliedert:
 - Getting Started Voraussetzungen, Installation und Konfiguration für neue Entwickler
@@ -408,6 +408,6 @@ Im Falle eines Pushes wird die Dokumentation neu gebaut und auf GitHub Pages ver
 Dadurch ist die Dokumentation stets synchron mit dem aktuellen Stand des Codes und unter einer permanenten, öffentlichen URL erreichbar.
 
 Dieser Ansatz folgt dem Documentation-as-Code-Prinzip, bedeutet, dass die Dokumentation derselben Versionskontrolle wie der Quellcode unterliegt und Änderungen denselben Review-Prozess (Pull Requests) durchlaufen.
-Dies hat den großen Vorteil in der Entwicklung, dass diese als Teil der Code-Basis gesehen und verwaltet wird und so einfacher und schneller bei Änderungen angepasst werden kann.
+Dies hat in der Entwicklung den großen Vorteil, dass die Dokumentation als Teil der Code-Basis gesehen und verwaltet wird und so einfacher und schneller bei Änderungen angepasst werden kann.
 
 ![Entwicklerdokumentation mittels MkDocs](mkdocs.png)

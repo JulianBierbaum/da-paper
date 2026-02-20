@@ -102,7 +102,7 @@ Wie die Kameralinie von Synology vermuten lässt, bietet der Hersteller eigene P
 Diese laufen unter einem Gesamtsystem mit der Bezeichnung "Surveillance Station" und sind als Paket auf den hauseigenen NAS-Systemen verfügbar. (https://www.synology.com/en-global/surveillance)
 
 Innerhalb des Surveillance Station-Ökosystems bietet Synology mit der DVA-Serie (Deep Video Analytics) spezialisierte NVR-Geräte (Network Video Recorder) an, welche über GPU-beschleunigte KI-Funktionen verfügen.
-Im besonderen das Modell DVA1622 (zur Zeit des Projekts das einzige verfügbare Modell der DVA-Serie) bietet für diese Diplomarbeit in Kombination mit der Kamera BC500 viele Vorteile:
+Insbesondere das Modell DVA1622 (zur Zeit des Projekts das einzige verfügbare Modell der DVA-Serie) bietet für diese Diplomarbeit in Kombination mit der Kamera BC500 viele Vorteile:
 
 Zunächst bietet die Surveillance Station API Zugriff auf Live-Streams, Snapshots und Ereignis-Metadaten, was die Integration in eigene Microservices im Vergleich zum direkten Auslesen aus Kameras erheblich vereinfacht.
 Die DVA-Serie unterstützt nativ viele Features aus dem Security- und Surveillance-Bereich. 
@@ -115,7 +115,7 @@ Die Kombination aus relevanten Features, umfassender API und nativer Kamera-Unte
 
 ##### Montage
 
-Das NAS-System durch seine Kompaktheit und Kapselung auf keine besonderen Anforderungen an den Montage- bzw. Betriebsort angewiesen.
+Das NAS-System ist durch seine Kompaktheit und Kapselung auf keine besonderen Anforderungen an den Montage- bzw. Betriebsort angewiesen.
 Aus diesem Grund wurde dieses innerhalb des Bürogebäudes installiert, in welchem auch die Kamera an das Firmennetzwerk angeschlossen ist.
 
 
@@ -155,6 +155,6 @@ Um Datenbank-Schema Änderungen versioniert und reproduzierbar zu gestalten, wur
 Im Gegensatz zu manuellen SQL-Skripten ermöglicht dies rückverfolgbare Datenbankänderungen, die automatisiert über alle Umgebungen ausgerollt werden können.
 
 Das Gesamtsystem basiert auf Docker und einer Microservice-Architektur. 
-Wie zuvor detailiert erklärt läuft jeder Dienst (Data Collection, Notification, Grafana) in seinem eigenen Container mit klar definierten Schnittstellen. 
+Wie zuvor detailliert erklärt, läuft jeder Dienst (Data Collection, Notification, Grafana) in seinem eigenen Container mit klar definierten Schnittstellen. 
 Dies verhindert wie in den Theoretischen Grundlagen erklärt nicht nur Abhängigkeitskonflikte zwischen verschiedenen Services, sondern ermöglicht auch die unabhängige Skalierung einzelner Komponenten. 
 Die Containerisierung gewährleistet zudem Plattformunabhängigkeit, da das System problemlos von der Synology-Plattform auf andere migriert werden kann, ohne dass Anpassungen am Code notwendig sind. 

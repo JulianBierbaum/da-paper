@@ -6,7 +6,7 @@ Das folgende Kapitel beschreibt die Maßnahmen zur Sicherstellung der Softwarequ
 ## Teststrategie
 
 Die Teststrategie des Projekts kombiniert Unit-Tests zur Überprüfung einzelner Komponenten mit Integrationstests, welche das Zusammenspiel der Services auf API-Ebene validieren.
-Als Test-Framework wird Pytest eingesetzt, ergänzt durch das Pytest-Converage Modul für eine Codeabdeckungsanalyse.
+Als Test-Framework wird Pytest eingesetzt, ergänzt durch das Pytest-Coverage Modul für eine Codeabdeckungsanalyse.
 Hierbei wurde das Ziel festgelegt, eine Testabdeckung von über 90% für jeden Python-Service zu erreichen.
 
 
@@ -25,7 +25,7 @@ Dies umfasst Erfolgs- und Fehlerszenarien für Authentifizierung, Kameraabruf un
 Tests für den ALPR-API-Aufruf, geprüft mit gemockten HTTP-Responses für erfolgreiche und fehlgeschlagene Anfragen.
 
 - CountryHandler
-Die Bezirkserkennung für österreichische und slowenische Kennzeichen mit verschiedenen Eingabekombinationen werden mit Tests überprüft (z.B. unbekannter Ländercode, ein-/zweibuchstabige Kürzel).
+Die Bezirkserkennung für österreichische und slowenische Kennzeichen mit verschiedenen Eingabekombinationen wird mit Tests überprüft (z.B. unbekannter Ländercode, ein- und zweibuchstabige Kürzel).
 
 - DatabaseHandler
 Tests für Datenextraktion aus API-Antworten, Hash-Normalisierung (Groß-/Kleinschreibung, Leerzeichen) und die zeitfensterbasierte Duplikatserkennung mit Datenbankinteraktionen.
@@ -42,7 +42,7 @@ CRUD-Operationen für Benutzerpräferenzen, einschließlich Duplikat-E-Mail-Erke
 ### Integrationstests
 
 Die Integrationstests überprüfen die vollständigen API-Endpunkte unter Verwendung von FastAPI.
-Dieser ermöglicht das Senden von HTTP-Requests gegen die Applikation, ohne einen externen Server starten zu müssen.
+Dieses ermöglicht das Senden von HTTP-Requests gegen die Applikation, ohne einen externen Server starten zu müssen.
 
 Für den Notification Service umfasst dies die vollständige CRUD-Schnittstelle der Benutzerpräferenzen (Create, Read, Update, Delete) sowie die Benachrichtigungs-API mit verschiedenen Empfänger-Szenarien (alle Abonnenten, spezifische Empfänger, keine Empfänger, Zustellfehler).
 
@@ -51,7 +51,7 @@ Für den Notification Service umfasst dies die vollständige CRUD-Schnittstelle 
 
 Die Tests werden innerhalb der CI-Pipeline mit den zugehörigen Service-Containern auf dem PostgreSQL-Service ausgeführt, anstatt eine In-Memory-Datenbank wie SQLite als Ersatz zu verwenden.
 Diese Entscheidung wurde getroffen, da SQLite wesentliche PostgreSQL-Funktionalitäten wie Schema-Unterstützung und spezifische Datentypen (z.B. LargeBinary für die Plate-Hashes) nicht identisch abbilden kann.
-Durch die Nutzung derselben Datenbank-Engine in den Tests wird sichergestellt, dass die Tests tatsächlich das Verhalten der Produktionsumgebung widerspiegeln und keine falsch-positive Ergebnisse durch abweichendes Datenbankverhalten entstehen.
+Durch die Nutzung derselben Datenbank-Engine in den Tests wird sichergestellt, dass die Tests tatsächlich das Verhalten der Produktionsumgebung widerspiegeln und keine falsch-positiven Ergebnisse durch abweichendes Datenbankverhalten entstehen.
 
 Beide Services verwenden ein identisches Muster zur Datenisolation in ihrer Pytest-Konfigurationsdatei:
 
@@ -82,17 +82,16 @@ Die Reihenfolge der Testausführung ist somit beliebig.
 Für die Integrationstests wird zusätzlich die FastAPI Dependency-Injection überschrieben, sodass der Test-Client die Test-Datenbanksession und, im Fall des Notification Service, einen Test-API-Key verwendet.
 
 
-## Qualitätsicherung der Kennzeichenerkennung
+## Qualitätssicherung der Kennzeichenerkennung
 
 Die Bewertung der Erkennungsrate in einem ALPR-System wird dadurch erschwert, dass eine exakte Dunkelziffer, also der Anteil der Fahrzeuge, welche das System passieren aber nicht erkannt werden, ohne eine unabhängige Referenzmessung nicht ermittelt werden kann.
 Eine systematische Gegenüberstellung jeder einzelnen Durchfahrt mit der entsprechenden Erkennung wurde im Rahmen dieser Arbeit nicht durchgeführt.
 Die folgenden Erkenntnisse basieren daher auf Beobachtungen während des Betriebszeitraums sowie auf der Analyse der gespeicherten Erkennungsdaten.
 
 Mehrere Umgebungsfaktoren beeinflussen die Erkennungsqualität:
-Da die Zufahrt nach Süden ausgerichtet ist, ergeben sich bei tiefem Sonnenstand, insbesondere in den Morgen- und Abendstunden sowie im Winter, Gegenlichtbedingungen, welche die Kennzeichenlesbarkeit beeinträchtigt.
+Da die Zufahrt nach Süden ausgerichtet ist, ergeben sich bei tiefem Sonnenstand, insbesondere in den Morgen- und Abendstunden sowie im Winter, Gegenlichtbedingungen, welche die Kennzeichenlesbarkeit beeinträchtigen.
 Bei starkem Regen, Schneefall oder Nebel ist ebenfalls mit einer reduzierten Erkennungsrate zu rechnen, da die Sichtbarkeit der Kennzeichen physisch eingeschränkt ist.
 Nächtliche Erkennungen profitieren von der Infrarot-Beleuchtung der Kamera, die Kennzeichen auch bei Dunkelheit ausreichend beleuchtet.
-Die reflektierende EU-Kennzeichen werden hierbei besonders gut erfasst.
 
 Zur Sicherung der Datenqualität im Praxisbetrieb wurden zwei zentrale Strategien implementiert, welche bereits aus vorherigen Kapiteln bekannt sind:
 
