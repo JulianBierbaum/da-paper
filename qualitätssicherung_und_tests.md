@@ -85,7 +85,9 @@ Für die Integrationstests wird zusätzlich die FastAPI Dependency-Injection üb
 ## Qualitätssicherung der Kennzeichenerkennung
 
 Die Bewertung der Erkennungsrate in einem ALPR-System wird dadurch erschwert, dass eine exakte Dunkelziffer, also der Anteil der Fahrzeuge, welche das System passieren aber nicht erkannt werden, ohne eine unabhängige Referenzmessung nicht ermittelt werden kann.
-Eine systematische Gegenüberstellung jeder einzelnen Durchfahrt mit der entsprechenden Erkennung wurde im Rahmen dieser Arbeit nicht durchgeführt.
+Eine systematische Gegenüberstellung jeder einzelnen physischen Durchfahrt mit der entsprechenden Systemerkennung wurde im Rahmen dieser Arbeit nicht durchgeführt.
+Dies begründet sich dadurch, dass eine bloße Erfassung der Fahrzeuganzahl ohne erfolgreiche Kennzeichenidentifikation einen geringen operativen Zusatznutzen bieten würde, da die eigentliche Relevanz der Daten in der Analyse von Trends und statistischen Mittelwerten liegt.
+
 Die folgenden Erkenntnisse basieren daher auf Beobachtungen während des Betriebszeitraums sowie auf der Analyse der gespeicherten Erkennungsdaten.
 
 Mehrere Umgebungsfaktoren beeinflussen die Erkennungsqualität:

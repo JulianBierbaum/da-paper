@@ -1,7 +1,6 @@
 # Gliederung für die Diplomarbeit
 
 - Autor in Footnote
-- Keine Relationale Datenbanken vergleichen
 
 ---
 
@@ -98,10 +97,7 @@
 
 ## 8. Fazit und Ausblick
 *   **8.1 Zusammenfassung der Ergebnisse.** Überblick, Trefferrate (Nicht 100%, nur als Richtwerte zu nehmen und nicht als absolute zahlen), Reflexion
-*   **8.2 Kritische Reflexion:** 
-    *   Was lief gut, was würde man heute anders machen (Hardware oder Software)? 
-    *   Wurden alle Ziele (Funktional und Nicht-Funktional umgesetzt)
-*   **8.3 Ausblick:** Erweiterungsmöglichkeiten (z.B. KI-Modelle direkt auf der Hardware, App-Anbindung)
+*   **8.2 Ausblick:** Erweiterungsmöglichkeiten (z.B. KI-Modelle direkt auf der Hardware, App-Anbindung)
 
 ---
 
