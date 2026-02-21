@@ -3,6 +3,11 @@
 ## Gesamtarchitektur
 
 Das System wurde als hybride Microservice-Architektur konzipiert, in der jeder funktionale Bereich als eigenständiger, containerisierter Service realisiert wird.
+
+Für den Entwurf der Systemarchitektur wurde die Design-Methodik der „The 12-Factor App“ (https://12factor.net/) herangezogen. 
+Diese definiert eine Reihe von Best-Practices für die Entwicklung moderner Applikationen. 
+Im Rahmen dieser Arbeit wurden insbesondere die strikte Trennung von Konfiguration und Code durch Umgebungsvariablen (Faktor III), die Behandlung der Datenbank als angebundener Backing-Service (Faktor IV) sowie die Sicherstellung der Parität zwischen Entwicklungs- und Betriebsumgebung durch Containerisierung und CI/CD (Faktor X) umgesetzt. Auf die genaue Umsetzung der Faktoren wird in den betreffenden Kapiteln genauer eingegangen.
+
 Hybrid bedeutet in diesem Kontext primär, dass die einzelnen Services nicht ganzheitlich isoliert und entkoppelt sind, da nicht jeder dieser über eine eigene Datenhaltung verfügt.
 Stattdessen nutzen alle Komponenten einen gemeinsamen PostgreSQL Service, welcher auf Schema-Ebene isoliert ist.
 Auf dieses Konzept wird im Kapitel (!! CROSS REFERENCE) näher eingegangen.
@@ -33,7 +38,7 @@ Der Auth Service soll laut Konzeption Benutzer der Web-Oberfläche gegen das unt
 
 #### Frontend
 
-Als Benutzeroberfläche sollte primär der Web Service, eine mit Next.js realisierte Web-Applikation dienen. 
+Als Benutzeroberfläche sollte primär der Web Service, eine mit Next.js (https://nextjs.org/) realisierte Web-Applikation dienen. 
 Diese wurde als zentrale Oberfläche für Konfiguration und Verwaltung von Benachrichtigungen konzipiert und kommuniziert ausschließlich über REST-APIs mit den Backend-Services.
 Als Übergangslösung und zweite Visualisierungsplatform dient Grafana, in Form eines Dashboards für diverse Statistiken.
 
@@ -82,14 +87,14 @@ Grafana greift über einen Read-only Datenbankbenutzer lesend auf das Data-Colle
 
 ### Architekturansatz
 
-Anstatt für jeden Microservice eine eigene PostgreSQL-Instanz zu betreiben, wurde eine Single-Database-Strategie auf Basis einer PostgreSQL-Instanz mit Schema-basierter Isolation gewählt.
+Anstatt für jeden Microservice eine eigene PostgreSQL-Instanz zu betreiben, wurde eine Single-Database-Strategie auf Basis einer PostgreSQL-Instanz mit Schema-basierter Isolation gewählt (https://www.postgresql.org/docs/current/ddl-schemas.html).
 Innerhalb der gemeinsam genutzten PostgreSQL-Datenbank existieren also drei, logisch getrennte Schemas:
 
 1. Das Data-Collection-Schema (Ingestion) enthält die Kerndaten der Fahrzeugerkennungen.
 2. Das Analytics-Schema (Analytics) ist für aggregierte oder vorberechnete Analysedaten konzipiert.
 3. Das Notification-Schema (Notification) speichert Nutzerpräferenzen für den Benachrichtigungsdienst.
 
-Dieser Ansatz, eine einzelne Datenbankinstanz durch Schemas logisch zu unterteilen, anstatt mehrere Instanzen zu betreiben, bietet im Kontext dieser Diplomarbeit mehrere Vorteile.
+Dieser Ansatz, eine einzelne Datenbankinstanz durch Schemas logisch zu unterteilen, anstatt mehrere Instanzen zu betreiben, bietet im Kontext dieser Diplomarbeit mehrere Vorteile:
 Zunächst reduziert er den operativen Aufwand, da nur eine Datenbankinstanz verwaltet, gesichert und überwacht werden muss, wie es etwa bei einer klassischen Microservice-Architektur der Fall wäre.
 Dennoch bleibt die logische Trennung der Daten gewährleistet, da jeder Service nur auf sein zugewiesenes Schema zugreifen kann.
 Des Weiteren vereinfacht er Cross-Schema-Lesezugriffe, etwa kann der Analytics Service oder Grafana Abfragen direkt auf die Ingestion-Daten zugreifen, ohne dass dafür eine Datenreplikation oder zusätzliche API-Aufrufe zwischen Services nötig sind.
@@ -270,7 +275,7 @@ Dies bietet den Vorteil, dass keine separate Benutzerverwaltung implementiert un
 
 ### Datenbankzugriffskontrolle
 
-Ein zentrales Element der Sicherheitsarchitektur ist die konsequente Anwendung des Principle of Least Privilege, kurz PoLP auf Datenbankebene.
+Ein zentrales Element der Sicherheitsarchitektur ist die konsequente Anwendung des Principle of Least Privilege, kurz PoLP auf Datenbankebene (https://en.wikipedia.org/wiki/Principle_of_least_privilege).
 Jeder Service operiert mit einem eigenen, dedizierten PostgreSQL-Benutzer, dessen Rechte auf das absolut notwendige Minimum beschränkt sind.
 
 Durch diese Segmentierung wird sichergestellt, dass im Falle einer Infiltration eines einzelnen Services der Zugriff auf Daten anderer Bereiche verhindert wird.
@@ -312,7 +317,7 @@ Grafana greift über den analytics_user ebenfalls ausschließlich lesend auf die
 
 ### Datenschutz und Umgang mit Kennzeichen-Daten
 
-Der Umgang mit Kennzeichen-Daten ist aus DSGVO-Perspektive besonders sensibel, da Kennzeichen als personenbezogene Daten klassifiziert werden.
+Der Umgang mit Kennzeichen-Daten ist aus DSGVO-Perspektive besonders sensibel, da Kennzeichen als personenbezogene Daten klassifiziert werden (https://dsgvo-gesetz.de/themen/personenbezogene-daten/).
 Das System implementiert deswegen eine mehrstufige Anonymisierungsstrategie:
 
 1. Irreversibles Hashing

@@ -57,13 +57,13 @@ Der Service ist als FastAPI-Applikation implementiert und folgt einer modularen 
 - CountryHandler: Übernimmt die Anreicherung der Erkennungsdaten um regionale Herkunftsinformationen (Bezirkserkennung).
 - DatabaseHandler: Verantwortlich für die Datenaufbereitung, Anonymisierung und die Speicherung der Erkennungen in der Datenbank.
 
-Die Konfiguration des Services erfolgt über Umgebungsvariablen, welche mittels Pydantic Settings validiert werden.
+Die Konfiguration des Services erfolgt über Umgebungsvariablen, welche mittels Pydantic Settings validiert werden (https://docs.pydantic.dev/latest/concepts/pydantic_settings/#installation).
 Hierzu zählen unter anderem die Zugangsdaten für die Synology-API, der API-Key für Plate Recognizer, die Datenbankverbindungsparameter sowie ein konfigurierbares Duplikat-Erkennungsintervall.
 
 
 ### Externer Trigger
 
-Eine HTTP-Webhook ist wie zuvor erwähnt der Auslöser für die Verarbeitung der Bilddaten, welche von der Synology Surveillance Station bei der Erkennung eines Fahrzeugs aufgerufen wird.
+Eine HTTP-Webhook ist wie zuvor erwähnt der Auslöser für die Verarbeitung der Bilddaten, welche von der Synology Surveillance Station bei der Erkennung eines Fahrzeugs aufgerufen wird. (https://kb.synology.com/en-global/Surveillance/tutorial/How_do_I_send_SS_data_to_third-party_systems_via_webhooks)
 
 Der Webhook-Endpunkt `POST /api/vehicle_detected` erwartet im Request-Body den Namen der auslösenden Kamera und ist durch HTTP Basic Authentication geschützt, wie im Sicherheitskonzept (!! Cross Reference) erläutert.
 Bei eingehenden Requests wird zunächst die Authentifizierung gegen die konfigurierten Synology-Credentials geprüft.
@@ -164,7 +164,7 @@ Kamera-Anbindung, ALPR-Aufruf, Datenanreicherung, Anonymisierung und Speicherung
 
 ### Kamera-Anbindung (CameraHandler)
 
-Die Kommunikation mit der Synology Surveillance Station erfolgt über die dezidierte Web-API dieser und ist in der CameraHandler-Klasse gekapselt.
+Die Kommunikation mit der Synology Surveillance Station erfolgt über die dezidierte Web-API dieser und ist in der CameraHandler-Klasse gekapselt (https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/SurveillanceStation/All/enu/Surveillance_Station_Web_API.pdf).
 Der Ablauf der Kamera-Interaktion gliedert sich in drei Schritte:
 
 1. Authentifizierung
@@ -185,7 +185,7 @@ Jeder der drei Schritte ist durch spezifische Exceptions (AuthenticationError, C
 ### Plate Recognizer Integration (PlateRecognizerHandler)
 
 Die Bilddaten des Kamera-Snapshots werden, zur Kennzeichenerkennung, an den lokal betriebenen Plate Recognizer SDK-Container gesendet.
-Die PlateRecognizerHandler-Klasse implementiert diesen HTTP-Aufruf mit einer Retry-Strategie mittels der tenacity-Bibliothek:
+Die PlateRecognizerHandler-Klasse implementiert diesen HTTP-Aufruf mit einer Retry-Strategie mittels der tenacity-Bibliothek (https://tenacity.readthedocs.io/en/latest/):
 
 ```python
 class PlateRecognizerHandler:
@@ -219,7 +219,7 @@ Der @retry-Dekorator sorgt dafür, dass bei HTTP-Fehlern (etwa bei temporären �
 Dies erhöht die Robustheit des Systems, da kurzzeitige Ausfälle der ALPR-Komponente nicht zum Verlust von Erkennungen führen.
 
 Der Parameter regions schränkt die Erkennung auf die relevanten Regionen ein, für diese Diplomarbeit wurden aufgrund der Lage der Zotter Schokolade GmbH, Österreich, Ungarn, Slowenien und Deutschland gewählt.
-Dies verbessert die Erkennungsgenauigkeit, da das Modell die länderspezifischen Kennzeichenformate dieser Regionen priorisiert.
+Dies verbessert die Erkennungsgenauigkeit, da das Modell die länderspezifischen Kennzeichenformate dieser Regionen priorisiert (https://guides.platerecognizer.com/docs/snapshot/api-reference).
 Über den Parameter `mmc` (Make, Model, Color) wird die erweiterte Fahrzeugerkennung aktiviert, durch `direction` wird die Fahrtrichtung anhand der Fahrzeugorientierung angefordert.
 Die Bilddaten werden als `BytesIO`-Objekt übergeben, also als im Arbeitsspeicher gehaltener Byte-Stream.
 
@@ -236,7 +236,7 @@ Die Fahrzeugorientierung wird aus der API-Antwort als Enum (`FRONT` oder `REAR`)
 
 Bezirkserkennung (CountryHandler)
 Die Bezirkserkennung ist ein zentraler Bestandteil der Datenanreicherung und ermöglicht es, das Herkunftsbundesland bzw. den Herkunftsbezirk eines Fahrzeugs aus dem Kennzeichen abzuleiten.
-Die Implementierung nutzt hierfür eine JSON-Datei (`municipalities.json`), welche Bezirkskürzel für österreichische und slowenische Kennzeichen ihren vollen Namen und Bundesländern zuordnet.
+Die Implementierung nutzt hierfür eine JSON-Datei (`municipalities.json`), welche Bezirkskürzel für österreichische (https://www.oesterreich.gv.at/de/themen/mobilitaet/kfz/5/1) und slowenische (https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Slovenia) Kennzeichen deren vollen Namen und Bundesländern zuordnet.
 Diese Zuordnungstabellen werden beim Start des Services einmalig in den Arbeitsspeicher geladen und als Dictionary-Lookup verwendet.
 
 Der Erkennungsalgorithmus für österreichische Kennzeichen versucht zunächst, die ersten zwei Zeichen des Kennzeichens als Bezirkskürzel zu interpretieren.
@@ -403,8 +403,8 @@ Andernfalls werden alle Benutzer aus der Datenbank anhand des jeweiligen Präfer
 
 ### E-Mail-Versand (EmailHandler)
 
-Der eigentliche E-Mail-Versand erfolgt über den `EmailHandler`, welcher E-Mails über einen SMTP-Relay-Server versendet.
-Der SMTP-Server des Unternehmens wird als Relay für den internen Versand SMTP (Simple Mail Transfer Protocol) genutzt, um zu verhindern, dass die versendeten Mails aufgrund von Spam-Verdacht nicht korrekt zugestellt werden.
+Der eigentliche E-Mail-Versand erfolgt über den `EmailHandler`, welcher E-Mails über einen SMTP-Relay-Server versendet (https://mailtrap.io/blog/python-send-email-gmail/).
+Der SMTP-Server des Unternehmens wird als Relay für den internen Versand SMTP (Simple Mail Transfer Protocol) genutzt, um zu verhindern, dass die versendeten Mails aufgrund von Spam-Verdacht nicht korrekt zugestellt werden. (https://www.mailjet.com/blog/email-best-practices/what-is-an-smtp-relay/)
 
 Die Implementierung unterstützt sowohl Plaintext- als auch HTML-formatierte E-Mails.
 Der Versand an mehrere Empfänger erfolgt über die `send_bulk_email`-Methode, welche für jeden Empfänger eine eigene SMTP-Verbindung aufbaut.
@@ -413,18 +413,18 @@ Fehlgeschlagene Zustellungen an einzelne Empfänger führen nicht zum Abbruch de
 
 ## Grafana
 
-Als Visualisierungsplattform für die gesammelten Fahrzeugerkennungen dient Grafana, ein Open-Source-Tool für Datenvisualisierung und Monitoring.
+Als Visualisierungsplattform für die gesammelten Fahrzeugerkennungen dient Grafana, ein Open-Source-Tool für Datenvisualisierung und Monitoring. (https://grafana.com/)
 Grafana wird als eigener Container im Docker-Compose-Stack betrieben und verbindet sich lesend mit der PostgreSQL-Datenbank.
 
 
 ### Architektur und Provisioning
 
-Die Grafana-Konfiguration folgt einem Provisioning-Ansatz, bei dem Datenquellen und Dashboards nicht manuell über die Benutzeroberfläche, sondern deklarativ über Konfigurationsdateien definiert werden.
+Die Grafana-Konfiguration folgt einem Provisioning-Ansatz, bei dem Datenquellen und Dashboards nicht manuell über die Benutzeroberfläche, sondern deklarativ über Konfigurationsdateien definiert werden (https://grafana.com/docs/grafana/latest/administration/provisioning/).
 Dies hat den Vorteil, dass die gesamte Dashboard-Konfiguration im Repository passiert und beim Neustart des Containers automatisch wiederhergestellt wird.
 
 Die Konfiguration gliedert sich in drei Bereiche:
 1. grafana.ini: 
-Grundkonfiguration des Grafana-Servers, unter anderem HTTP-Port, Sicherheitseinstellungen und der Pfad zum Standard-Dashboard, das beim Login automatisch geladen wird.
+Grundkonfiguration des Grafana-Servers, unter anderem HTTP-Port, Sicherheitseinstellungen und der Pfad zum Standard-Dashboard, das beim Login automatisch geladen wird (https://grafana.com/docs/grafana/latest/setup-grafana/configure-grafana/).
 
 2. Datasource-Provisioning (`datasource.yaml`): 
 Definiert die Verbindung zur PostgreSQL-Datenbank. 

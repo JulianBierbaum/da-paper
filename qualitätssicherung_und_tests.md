@@ -6,7 +6,7 @@ Das folgende Kapitel beschreibt die Maßnahmen zur Sicherstellung der Softwarequ
 ## Teststrategie
 
 Die Teststrategie des Projekts kombiniert Unit-Tests zur Überprüfung einzelner Komponenten mit Integrationstests, welche das Zusammenspiel der Services auf API-Ebene validieren.
-Als Test-Framework wird Pytest eingesetzt, ergänzt durch das Pytest-Coverage Modul für eine Codeabdeckungsanalyse.
+Als Test-Framework wird Pytest (https://docs.pytest.org/en/stable/) eingesetzt, ergänzt durch das Pytest-Coverage Modul (https://pypi.org/project/pytest-cov/) für Codeabdeckungsanalysen.
 Hierbei wurde das Ziel festgelegt, eine Testabdeckung von über 90% für jeden Python-Service zu erreichen.
 
 
@@ -50,7 +50,7 @@ Für den Notification Service umfasst dies die vollständige CRUD-Schnittstelle 
 ### Testisolation und Datenbankstrategie
 
 Die Tests werden innerhalb der CI-Pipeline mit den zugehörigen Service-Containern auf dem PostgreSQL-Service ausgeführt, anstatt eine In-Memory-Datenbank wie SQLite als Ersatz zu verwenden.
-Diese Entscheidung wurde getroffen, da SQLite wesentliche PostgreSQL-Funktionalitäten wie Schema-Unterstützung und spezifische Datentypen (z.B. LargeBinary für die Plate-Hashes) nicht identisch abbilden kann.
+Diese Entscheidung wurde getroffen, da SQLite wesentliche PostgreSQL-Funktionalitäten wie Schema-Unterstützung und spezifische Datentypen (z.B. LargeBinary für die Plate-Hashes) nicht identisch abbilden kann (https://www.sqlite.org/datatype3.html).
 Durch die Nutzung derselben Datenbank-Engine in den Tests wird sichergestellt, dass die Tests tatsächlich das Verhalten der Produktionsumgebung widerspiegeln und keine falsch-positiven Ergebnisse durch abweichendes Datenbankverhalten entstehen.
 
 Beide Services verwenden ein identisches Muster zur Datenisolation in ihrer Pytest-Konfigurationsdatei:

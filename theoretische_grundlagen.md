@@ -7,16 +7,16 @@ Die Containerisierung ist eine Methode, bei der Anwendungen und deren Abhängigk
 Docker
 Docker ist eine offene Plattform, die 2013 veröffentlicht wurde und die Containerisierung von Anwendungen standardisiert. 
 Es stellt die notwendigen Tools bereit, um Container einfach zu erstellen und mit ihnen arbeiten zu können, und abstrahiert dabei die Komplexität der zugrundeliegenden Linux-Kernel-Features (Namespaces, cgroups).
-Die Docker-Plattform besteht aus der Docker Engine (Daemon, REST API und CLI), Docker Images und Docker Containern.
+Die Docker-Plattform besteht aus der Docker Engine (Daemon, REST API und CLI), Docker Images und Docker Containern. (https://docs.docker.com/get-started/docker-overview/)
 
 Architektur und Funktionsweise
-Docker basiert auf einer Client-Server-Architektur (https://docs.docker.com/get-started/docker-overview/).
-Der Docker-Daemon verwaltet Container, Images, Netzwerke und Volumes (persistenter Speicher), während der Docker-Client (CLI) die Schnittstelle für Benutzerinteraktionen bereitstellt. 
-Images, also Abbilder der Anwendung und ihrer Umgebung, werden als unveränderliche Vorlagen aus sogenannten Dockerfiles erstellt und in Layern organisiert, wobei jede Instruktion im Dockerfile einen neuen Layer erzeugt. 
-Dieses Layer-System ermöglicht effizientes Caching: Wenn ein Image neu gebaut werden muss, müssen nur die Layer neu erstellt werden, an denen tatsächlich Änderungen vorgenommen wurden.
+Docker basiert auf einer Client-Server-Architektur.
+Der Docker-Daemon verwaltet Container, Images, Netzwerke und Volumes (persistenter Speicher), während der Docker-Client (CLI) die Schnittstelle für Benutzerinteraktionen bereitstellt. (https://docs.docker.com/get-started/docker-overview/)
+Images, also Abbilder der Anwendung und ihrer Umgebung, werden als unveränderliche Vorlagen aus sogenannten Dockerfiles erstellt und in Layern organisiert, wobei jede Instruktion im Dockerfile einen neuen Layer erzeugt. (https://docs.docker.com/build/concepts/dockerfile/) 
+Dieses Layer-System ermöglicht effizientes Caching: Wenn ein Image neu gebaut werden muss, müssen nur die Layer neu erstellt werden, an denen tatsächlich Änderungen vorgenommen wurden. (https://docs.docker.com/build/cache/)
 
 Container werden aus diesen Images instanziiert und stellen isolierte Prozesse und deren Umgebung dar. 
-Im Gegensatz zu virtuellen Maschinen, die jeweils ein vollständiges Gastbetriebssystem benötigen, teilen sich Container den Host-Kernel, was sie deutlich ressourcenschonender macht.
+Im Gegensatz zu virtuellen Maschinen, die jeweils ein vollständiges Gastbetriebssystem benötigen, teilen sich Container den Host-Kernel, was sie deutlich ressourcenschonender macht. (https://docs.docker.com/get-started/docker-overview/)
 
 Vorteile von Containerisierung und Docker
 Der wohl größte Punkt, welcher für Containerisierung spricht, ist die Eliminierung des klassischen "Works on my machine"-Problems. 
@@ -42,15 +42,15 @@ Docker Compose
 Docker Compose ist ein Tool zur Definition und Verwaltung von Multi-Container-Anwendungen. 
 Compose ermöglicht die Orchestrierung mehrerer Services durch eine deklarative YAML-Konfigurationsdatei.
 In dieser Datei werden alle Services, Abhängigkeiten, Netzwerke, Volumes und Umgebungsvariablen definiert. 
-Docker Compose startet Services in der vordefinierten Reihenfolge und ermöglicht automatische Kommunikation zwischen ihnen. 
+Docker Compose startet Services in der vordefinierten Reihenfolge und ermöglicht automatische Kommunikation zwischen ihnen. (https://docs.docker.com/compose/intro/compose-application-model/)
 Besonders wertvoll ist Docker Compose für Entwicklungsumgebungen, da es die gesamte Infrastruktur als Code (Infrastructure as Code) definiert. 
 Statt mehrere Services manuell zu starten, orchestriert eine einzige Datei das komplette System, was auch unterschiedliche Umgebungen wie etwa Entwicklung und Live (Produktion) durch separate Compose-Dateien ermöglicht.
 
 Docker Hub
 Docker Hub ist die zentrale, cloudbasierte Registry für Docker-Images und fungiert als öffentliches Repository, ähnlich wie GitHub für Code. 
-Es enthält eine Vielzahl an vorgefertigten Images, darunter offizielle Images für gängige Software und Technologien wie PostgreSQL, Redis oder Python, welche von den jeweiligen Maintainern verifiziert werden.
+Es enthält eine Vielzahl an vorgefertigten Images, darunter offizielle Images für gängige Software und Technologien wie PostgreSQL, Redis oder Python, welche von den jeweiligen Maintainern verifiziert werden. (https://www.docker.com/products/docker-hub/)
 Beim Starten eines Stacks oder Containers lädt Docker automatisch benötigte Images von Docker Hub herunter, falls sie nicht lokal vorhanden sind. 
-In dieser Diplomarbeit werden beispielsweise offizielle Images für PostgreSQL und Grafana verwendet, während selbsterstellte Images für die Python-Services verwendet werden, welche in einer eigenen Docker-Registry gespeichert sind.
+In dieser Diplomarbeit werden beispielsweise offizielle Images für PostgreSQL und Grafana verwendet, während selbsterstellte Images für die Python-Services verwendet werden, welche auf einer eigenen Docker-Registry gespeichert sind.
 
 Für diese Diplomarbeit bietet sich Containerisierung sehr gut an, da das gesamte System mit einem einzigen Befehl auf jedem System orchestriert gestartet, gestoppt oder neu gebaut werden kann, unabhängig vom Host-Betriebssystem. 
 
@@ -61,15 +61,15 @@ Die Microservice-Architektur ist ein Designansatz, bei dem eine Anwendung als Sa
 
 Grundkonzept und Definition
 Während zum Beispiel eine monolithische Architektur alle Funktionen einer Anwendung in einem einzigen, zusammenhängenden Prozess vereint, werden bei Microservices einzelne Funktionsbereiche in eigenständige Services ausgelagert. 
-Jeder dieser Services läuft in einem eigenen Prozess, besitzt eine klar definierte Schnittstelle und kommuniziert über leichtgewichtige Protokolle wie REST/HTTP oder Message Queues, wie RabbitMQ, mit anderen Services.
+Jeder dieser Services läuft in einem eigenen Prozess, besitzt eine klar definierte Schnittstelle und kommuniziert über leichtgewichtige Protokolle wie REST/HTTP oder Message Queues, wie RabbitMQ, mit anderen Services. (https://aws.amazon.com/microservices/)
 In diesem Projekt erfolgt die Kommunikation primär über RESTful APIs, wobei jeder Service seine Endpunkte bereitstellt. 
 
-Der Begriff "Microservice" bezieht sich dabei weniger auf die absolute Größe des Codes, sondern vielmehr auf die fokussierte Verantwortung: Ein Service sollte genau eine Aufgabe erfüllen und diese gut (Single Responsibility Principle). Jeder Microservice ist eine eigenständige Einheit mit eigener Datenhaltung, Geschäftslogik und oft auch einem eigenen Technologie-Stack. 
+Der Begriff "Microservice" bezieht sich dabei weniger auf die absolute Größe des Codes, sondern vielmehr auf die fokussierte Verantwortung: Ein Service sollte genau eine Aufgabe erfüllen und diese gut (Single Responsibility Principle). Jeder Microservice ist eine eigenständige Einheit mit eigener Datenhaltung, Geschäftslogik und oft auch einem eigenen Technologie-Stack. (https://www.osohq.com/learn/microservices-best-practices)
 
 Vorteile der Microservice-Architektur
 Ein fundamentaler Vorteil von Microservices ist die Möglichkeit, Services unabhängig voneinander zu deployen. 
 Wenn eine Änderung an einem Service vorgenommen wird, kann dieser Service aktualisiert werden, ohne dass andere Services neu gestartet oder verändert werden müssen. 
-Dieses Prinzip profitiert stark von der Containerisierung, welche im letzten Kapitel erklärt wurde.
+Dieses Prinzip profitiert stark von der Containerisierung, welche im letzten Kapitel erklärt wurde. (https://aws.amazon.com/microservices/)
 
 Ein weiterer Vorteil von Microservices ist die Technologiefreiheit, welche sie bieten.
 Jeder Service kann in der für seine Anforderungen am besten geeigneten Programmiersprache und mit dem optimalen Framework entwickelt werden. 
@@ -100,7 +100,7 @@ ALPR (Automatic License Plate Recognition) bezeichnet die automatisierte Erfassu
 ALPR-Systeme arbeiten kontinuierlich und transformieren visuelle Informationen wie Kamera-Snapshots in strukturierte, maschinell verarbeitbare Daten und ermöglichen damit die automatische Identifikation von Fahrzeugen.
 
 Grundfunktionsweise
-Der Erkennungsprozess und die Verarbeitung der Daten erfolgt typischerweise in einem mehrstufigen Prozess: (https://senstar.com/de/senstarpedia/wie-alpr-funktioniert/)
+Der Erkennungsprozess und die Verarbeitung der Daten erfolgt typischerweise in einem mehrstufigen Prozess (https://senstar.com/de/senstarpedia/wie-alpr-funktioniert/):
 
 1. Detection (Lokalisierung): 
 Das System identifiziert zunächst relevante Bildbereiche. 

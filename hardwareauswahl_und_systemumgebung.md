@@ -51,7 +51,7 @@ Auch wurde seitens Zotter vorausgesetzt, dass sämtliche Daten nicht nur aus Dat
 Im Bezug auf die Kamera wurden von Anfang an nur IP-Kameras in Betracht gezogen, also Kameras, bei denen Video-Streams und Kommunikation per Ethernet stattfinden.
 Dies hat zwei Hauptgründe:
 Daten können zunächst in den meisten Fällen direkt per API-Requests ausgelesen werden, entweder über HTTP/REST-APIs oder im Fall von Video-Streams über RTSP (Real Time Streaming Protocol).
-Zudem nutzen viele IP-Kameras PoE (Power over Ethernet) für ihre Spannungsversorgung, was die Aufbaukomplexität weiter minimiert, da nur ein Kabel, welches Strom und Daten überträgt, verlegt werden muss.
+Zudem nutzen viele IP-Kameras PoE (Power over Ethernet) für ihre Spannungsversorgung, was die Aufbaukomplexität weiter minimiert, da nur ein Kabel, welches Strom und Daten überträgt, verlegt werden muss. (https://en.wikipedia.org/wiki/IP_camera)
 
 Vor dem offiziellen Start der Diplomarbeit wurden hierzu schon einige Überlegungen angestellt und mögliche Produkt-Kandidaten vorgemerkt.
 Im Zuge von Gesprächen mit Michael Zotter wurde darauf aufmerksam gemacht, dass bereits einige IP-Kameras des Herstellers Synology für frühere Testversuche angeschafft wurden.
@@ -89,11 +89,12 @@ Des Weiteren war aus einem früheren Praktikum bei Zotter Schokolade bekannt, da
 Als zweite Option wurde das Einrichten eines kleinen Servers auf der Hardware eines Office-Mini-PCs erwogen. 
 Dieser wäre aus reiner Implementierungs- und Funktionssicht mit der ersten Option gleichwertig, mit dem Vorteil, dass dieser Ansatz eine gewisse Unabhängigkeit zum internen Netzwerk und zur zentralen Infrastruktur ermöglicht.
 
-An diesem Punkt wurde im Kamera-Entscheidungsprozess auf die bestehenden Synology-Produkte aufmerksam gemacht. Mit dieser Neuausrichtung kam die Idee auf, das System auf einem eigenen NAS-System (Network-attached Storage), ebenfalls von Synology zu betreiben.
+An diesem Punkt wurde im Kamera-Entscheidungsprozess auf die bestehenden Synology-Produkte aufmerksam gemacht. 
+Mit dieser Neuausrichtung kam die Idee auf, das System auf einem eigenen NAS-System (Network-attached Storage), ebenfalls von Synology zu betreiben.
 
-Nicht nur wurden NAS-Systeme von Synology bereits im Unternehmen eingesetzt, diese sind in den meisten Bereichen gleichwertig mit den vorherigen beiden diskutierten Ansätzen und bieten in manchen Bereichen klare Vorteile:
+Nicht nur wurden NAS-Systeme von Synology bereits im Unternehmen eingesetzt, diese sind in den meisten Bereichen gleichwertig mit den vorherigen beiden diskutierten Ansätzen und bieten in manchen Bereichen klare Vorteile (https://aws.amazon.com/what-is/nas/):
 1. Die Vorteile der zweiten Option bleiben bestehen, es gibt weiterhin eine gesteigerte Unabhängigkeit zur Unternehmensinfrastruktur und damit hergehend mehr Entwicklungsfreiheit.
-2. Da es sich um ein NAS-System handelt, also ein Gerät, welches primär für die Speicherung von Daten konzipiert ist, stellt der benötigte Speicherplatz kein Problem mehr dar, da einfach neue Disks verbaut werden können (standardmäßig 2× 2TB Disks, RAID 1).
+2. Da es sich um ein NAS-System handelt, also ein Gerät, welches primär für die Speicherung von Daten konzipiert ist, stellt der benötigte Speicherplatz kein Problem mehr dar, da einfach neue Disks verbaut werden können (z.B. 2× 2TB Disks, RAID 1).
 3. Diese NAS-Systeme besitzen bereits leistungsstarke Komponenten, welche im Bezug auf Rechenleistung meist gleichwertig zu einem durchschnittlichen Mini-PC sind. 
 Auch sind die meisten NAS-Geräte mit einem vollwertigen Betriebssystem ausgestattet, welches Methoden bereitstellt, um Container mittels Docker reibungslos laufen zu lassen.
 
@@ -102,13 +103,13 @@ Wie die Kameralinie von Synology vermuten lässt, bietet der Hersteller eigene P
 Diese laufen unter einem Gesamtsystem mit der Bezeichnung "Surveillance Station" und sind als Paket auf den hauseigenen NAS-Systemen verfügbar. (https://www.synology.com/en-global/surveillance)
 
 Innerhalb des Surveillance Station-Ökosystems bietet Synology mit der DVA-Serie (Deep Video Analytics) spezialisierte NVR-Geräte (Network Video Recorder) an, welche über GPU-beschleunigte KI-Funktionen verfügen.
-Insbesondere das Modell DVA1622 (zur Zeit des Projekts das einzige verfügbare Modell der DVA-Serie) bietet für diese Diplomarbeit in Kombination mit der Kamera BC500 viele Vorteile:
+Insbesondere das Modell DVA1622 (zur Zeit des Projekts das einzige verfügbare Modell der DVA-Serie) bietet für diese Diplomarbeit in Kombination mit der Kamera BC500 viele Vorteile: (https://www.synology.com/en-global/products/DVA)
 
 Zunächst bietet die Surveillance Station API Zugriff auf Live-Streams, Snapshots und Ereignis-Metadaten, was die Integration in eigene Microservices im Vergleich zum direkten Auslesen aus Kameras erheblich vereinfacht.
 Die DVA-Serie unterstützt nativ viele Features aus dem Security- und Surveillance-Bereich. 
-So können etwa mittels Erkennungszonen bereits auf Surveillance Station-Ebene relevante Bildbereiche wie der Einfahrtsbereich definiert werden.
+So können etwa mittels Erkennungszonen bereits auf Surveillance Station-Ebene relevante Bildbereiche wie der Einfahrtsbereich definiert werden. (https://www.synology.com/en-global/products/DVA)
 Dies ist besonders für das Erstellen von "Triggers" relevant, also das Anlegen eines Bereiches, in dem im Falle einer Fahrzeugdurchfahrt die Kennzeichenerkennung stattfinden soll.
-Des Weiteren können alle Kamera-Einstellungen, Aufzeichnungen und Analysen über eine einheitliche Oberfläche auf dem NAS-Gerät verwaltet werden.
+Des Weiteren können alle Kamera-Einstellungen, Aufzeichnungen und Analysen über eine einheitliche Oberfläche auf dem NAS-Gerät verwaltet werden. (https://www.synology.com/en-global/surveillance)
 
 Die Kombination aus relevanten Features, umfassender API und nativer Kamera-Unterstützung machte das Synology DVA1622-NAS zur optimalen Wahl für die Realisierung des Kennzeichenerkennungssystems.
 
@@ -130,28 +131,31 @@ Kennzeichen stellen besondere Anforderungen an ein Erkennungssystem, wie im Kapi
 Sie müssen aus verschiedenen Winkeln, bei unterschiedlichen Lichtverhältnissen, mit Verschmutzungen und in Bewegung zuverlässig erkannt werden. 
 Zudem variieren Kennzeichenformate international stark in Schriftart, Layout und Zeichenabständen.
 
+Als weitere Option wrude die Verwendung der Synology-Nativen Lösung zur Kennzeichenerkennung erwogen.
+Dies erwies sich aber schnell als nicht Umsetzbar, da die Erkennung laut Hersteller auf dem Modell DVA1622 nur für stationäre Fahrzeuge ausgelegt ist. (https://kb.synology.com/de-de/UG/DVA_License_Plate_Recognition_AG/7)
+
 Die Entwicklung eines eigenen trainierten Modells auf Basis dieser Bibliotheken hätte einen erheblichen Aufwand für das Sammeln und Annotieren von Trainingsdaten bedeutet, wobei die resultierende Genauigkeit dennoch fraglich geblieben wäre. 
 In diese Richtung wurden im Zuge der Diplomarbeit-Entwicklung Prototypen erstellt, diese blieben aber in ihrer Qualität unzureichend oder waren in ihrem Realisierungsaufwand unrealistisch. 
+
 Aus diesem Grund fiel die Entscheidung auf Plate Recognizer, eine spezialisierte kommerzielle Lösung für Kennzeichenerkennung.
+Plate Recognizer bietet hochoptimierte Machine-Learning-Modelle, welche bereits auf Kennzeichenbildern aus über 90 Ländern trainiert wurden. (https://platerecognizer.com/countries/)
+Dies gewährleistet eine deutlich höhere Erkennungsrate auch unter erschwerten Bedingungen (https://platerecognizer.com/alpr-results). 
+Wie im Kapitel (!! Cross Reference) erwähnt bietet diese Lösung, zusätzlich zur reinen Texterkennung, erweiterte Funktionen wie Fahrzeugtyp- und Farberkennung, welche für zukünftige Erweiterungen des Systems nützlich sein können.
 
-Plate Recognizer bietet hochoptimierte Machine-Learning-Modelle, die bereits auf Millionen von Kennzeichenbildern aus über 90 Ländern trainiert wurden. 
-Dies gewährleistet eine deutlich höhere Erkennungsrate auch unter erschwerten Bedingungen. 
-Zusätzlich zur reinen Texterkennung bietet die Lösung erweiterte Funktionen wie Fahrzeugtyp- und Farberkennung, die für zukünftige Erweiterungen des Systems nützlich sein können.
-
-Wie zuvor erwähnt, ist ein weiterer entscheidender Vorteil die Verfügbarkeit als Docker-Container (Plate Recognizer SDK), der vollständig lokal auf dem DVA1622 NAS betrieben werden kann. 
-Im Gegensatz zu Cloud-basierten API-Lösungen bleiben damit alle Bilddaten im lokalen Netzwerk, was sowohl Datenschutzanforderungen erfüllt als auch Latenzzeiten minimiert. 
+Ein weiterer entscheidender Vorteil die Verfügbarkeit als Docker-Container (Plate Recognizer SDK), der vollständig lokal auf dem DVA1622 NAS betrieben werden kann. 
+Im Gegensatz zu Cloud-basierten API-Lösungen bleiben damit alle Bilddaten im lokalen Netzwerk, was sowohl Datenschutzanforderungen erfüllt als auch Latenzzeiten minimiert. (https://platerecognizer.com/snapshot/)
 
 
 ### Argumentation der Software-Technologien Entscheidungen
 
-Als Web-Framework wurde FastAPI auf Python gewählt, welches moderne asynchrone Request-Verarbeitung unterstützt und automatische API-Dokumentation via OpenAPI/Swagger generiert. 
-Im Vergleich zu Flask, dem vermutlich bekanntesten Python-Framework, bietet FastAPI native Type-Hints-Unterstützung und automatische Validierung von Request-/Response-Daten durch Pydantic. 
-Gegenüber dem schwergewichtigeren Django bringt FastAPI deutlich weniger Overhead mit und ist damit besser für kleine Microservices geeignet, bei denen schlanke, spezialisierte Services bevorzugt werden.
+Als Web-Framework wurde FastAPI auf Python gewählt (https://fastapi.tiangolo.com/), welches moderne asynchrone Request-Verarbeitung unterstützt und automatische API-Dokumentation via OpenAPI/Swagger generiert. 
+Im Vergleich zu Flask, dem vermutlich bekanntesten Python-Framework, bietet FastAPI native Type-Hints-Unterstützung und automatische Validierung von Request-/Response-Daten durch Pydantic. (https://blog.jetbrains.com/pycharm/2025/02/django-flask-fastapi/)
+Gegenüber dem schwergewichtigeren Django bringt FastAPI deutlich weniger Overhead mit und ist damit besser für kleine Microservices geeignet, bei denen schlanke, spezialisierte Services bevorzugt werden. (https://blog.jetbrains.com/pycharm/2025/02/django-flask-fastapi/)
 
-Für die Datenhaltung wurde PostgreSQL als relationale Datenbank gewählt. 
+Für die Datenhaltung wurde PostgreSQL als relationale Datenbank gewählt. (https://www.postgresql.org/)
 Während NoSQL-Datenbanken wie MongoDB für hochskalierbare, dokumentenbasierte Anwendungen Vorteile bieten, sprechen im vorliegenden Fall die strukturierten Datenbeziehungen (Erkennungen, Benutzer etc.) klar für eine relationale Datenbank. 
 
-Um Datenbank-Schema Änderungen versioniert und reproduzierbar zu gestalten, wurde Alembic als Migrations-Framework gewählt. 
+Um Datenbank-Schema Änderungen versioniert und reproduzierbar zu gestalten, wurde Alembic als Migrations-Framework gewählt (https://alembic.sqlalchemy.org/en/latest/). 
 Im Gegensatz zu manuellen SQL-Skripten ermöglicht dies rückverfolgbare Datenbankänderungen, die automatisiert über alle Umgebungen ausgerollt werden können.
 
 Das Gesamtsystem basiert auf Docker und einer Microservice-Architektur. 

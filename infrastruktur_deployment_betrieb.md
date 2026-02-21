@@ -66,11 +66,11 @@ Zusätzlich verfügen die Backend-Services und der Plate Recognizer-Container ü
 
 ## CI/CD Pipelines und Deployment
 
-CI/CD (Continuous Integration / Continuous Delivery) bezeichnet die Praxis, Codeänderungen automatisiert zu testen, bauen und bereitzustellen.
+CI/CD (Continuous Integration / Continuous Delivery) bezeichnet die Praxis, Codeänderungen automatisiert zu testen, bauen und bereitzustellen (https://www.redhat.com/en/topics/devops/what-is-ci-cd).
 Continuous Integration stellt sicher, dass Codeänderungen automatisch auf Fehler geprüft werden, bevor diese in den Hauptbranch des Code-Repositories aufgenommen wird.
 Continuous Delivery automatisiert darauf aufbauend den Build- und Bereitstellungsprozess, sodass neue Versionen automatisch auf dem Docker-Registry als Images zur Verfügung gestellt werden.
 
-Die Umsetzung dieser Prinzipien erfolgt im Projekt über GitHub Actions, ein in GitHub integriertes Automatisierungstool, mit welchem Workflows zum Bauen, Testen und Bereitstellen von Software direkt im Repository definiert werden können. 
+Die Umsetzung dieser Prinzipien erfolgt im Projekt über GitHub Actions, ein in GitHub integriertes Automatisierungstool, mit welchem Workflows zum Bauen, Testen und Bereitstellen von Software direkt im Repository definiert werden können (https://docs.github.com/en/actions). 
 Diese Prozesse werden durch Ereignisse wie Code-Pushes oder Merges automatisch ausgelöst und führen die konfigurierten Schritte auf virtuellen Servern aus.
 
 ### Build und Test Pipeline
@@ -80,9 +80,9 @@ Die primäre CI/CD-Pipeline wird bei jedem Push auf einen beliebigen Branch ausg
 Phase 1: Testing und Linting
 In der ersten Phase werden für jeden Python-Service automatisiert drei Prüfungen durchgeführt:
 
-1. Formatierung (Ruff Format): Überprüfung des Codes auf Einhaltung der definierten Formatierungsregeln.
-2. Linting (Ruff Check): Statische Codeanalyse zur Erkennung von potenziellen Fehlern und Stilabweichungen.
-3. Tests (Pytest mit Coverage): Ausführung aller Test-Cases, welche mit einer Codeabdeckungsanalyse kombiniert werden.
+1. Formatierung (Ruff Format (https://docs.astral.sh/ruff/formatter/)): Überprüfung des Codes auf Einhaltung der definierten Formatierungsregeln.
+2. Linting (Ruff Check (https://docs.astral.sh/ruff/linter/)): Statische Codeanalyse zur Erkennung von potenziellen Fehlern und Stilabweichungen.
+3. Tests (Pytest mit Coverag): Ausführung aller Test-Cases, welche mit einer Codeabdeckungsanalyse kombiniert werden.
 
 Alle Tests werden innerhalb von Docker-Containern ausgeführt, um eine konsistente und reproduzierbare Testumgebung zu gewährleisten, welche der Produktionsumgebung möglichst nahekommt.
 
@@ -198,7 +198,7 @@ echo "Build and push completed successfully!"
 
 ### Deployment mit Portainer
 
-Deployment auf der Produktionsumgebung erfolgt über die Plattform Portainer, ein Container Management-Tool mit Weboberfläche.
+Deployment auf der Produktionsumgebung erfolgt über die Plattform Portainer, ein Container Management-Tool mit Weboberfläche (https://docs.portainer.io/).
 Portainer wurde auf dem Synology-NAS installiert und ermöglicht das Verwalten der Docker-Container direkt über einen Browser.
 
 Für das Deployment wird in Portainer ein Stack erstellt, welcher die Produktions-Compose-Datei sowie die Datei mit den Umgebungsvariablen enthält.
@@ -308,7 +308,7 @@ ALTER ROLE notification_user SET search_path = :NOTIFICATION_SCHEMA,public;
 
 Für die Versionierung des Datenbankschemas wird Alembic eingesetzt, ein Migrationswerkzeug für SQLAlchemy-basierte Anwendungen.
 
-Der DB-Prestart-Container kopiert die SQLAlchemy-Modelle der einzelnen Services in den eigenen Build-Kontext und kann somit das Schema aller Services zentral verwalten.
+Der DB-Prestart-Container kopiert die SQLAlchemy-Modelle der einzelnen Services in den eigenen Build-Kontext und kann somit das Schema aller Services zentral verwalten. (https://dev.to/fadi-bck/managing-database-migrations-for-multiple-services-in-a-monorepo-with-alembic-3p5l)
 Diese sind mittels Volumes aus den Verzeichnissen der Backend-Services an den Prestart-Container angebunden.
 
 ```docker
@@ -346,7 +346,7 @@ Die Backup-Strategie des Systems umfasst sowohl automatisierte als auch manuelle
 Für die automatisierte Sicherung der PostgreSQL-Datenbank wird ein dedizierter Backup-Container eingesetzt, welcher als separater Service im Docker Compose-Stack definiert wurde.
 Dieser Container basiert auf dem offiziellen PostgreSQL-Alpine-Image und nutzt den Cron-Daemon zur zeitgesteuerten Ausführung des Backup-Scripts.
 
-Der Backup-Zeitplan wird über die Umgebungsvariable BACKUP_SCHEDULE im Cron-Format konfiguriert (In diesem Fall etwa 0 2 * * * für ein tägliches Backup um 02:00 Uhr).
+Der Backup-Zeitplan wird über die Umgebungsvariable BACKUP_SCHEDULE im Cron-Format konfiguriert (In diesem Fall etwa 0 2 * * * für ein tägliches Backup um 02:00 Uhr (https://crontab.guru/#0_2_*_*_*)).
 Falls die Variable nicht gesetzt wurde, werden automatische Backups deaktiviert und der Container wechselt in einen Idle-Zustand.
 
 ```mermaid
@@ -359,7 +359,7 @@ flowchart LR
 ```
 
 Der Cron-Daemon löst das Backup-Script zum konfigurierten Zeitpunkt aus. 
-Dieses wartet zunächst auf die Erreichbarkeit der Datenbank, erstellt dann einen vollständigen Datenbank-Dump mittels pg_dump im Custom-Format, komprimiert anschließend diesen mit Gzip und schreibt die Backup-Datei auf ein gemountetes Host-Volume. 
+Dieses wartet zunächst auf die Erreichbarkeit der Datenbank, erstellt dann einen vollständigen Datenbank-Dump mittels pg_dump (https://www.postgresql.org/docs/current/app-pgdump.html), komprimiert anschließend diesen mit Gzip und schreibt die entstandene Backup-Datei auf ein gemountetes Host-Volume. 
 Abschließend werden Backups, die älter als die konfigurierte Aufbewahrungsdauer (standardmäßig 30 Tage) sind, automatisch gelöscht.
 
 In dieser Implementierung wird bei jedem Durchlauf ein vollständiges Datenbank-Backup (Full Backup) erstellt, anstatt auf inkrementelle oder differentielle Strategien zurückzugreifen.
@@ -385,7 +385,7 @@ flowchart LR
 ```
 
 Das Script fordert zunächst eine explizite Bestätigung, da alle in der Datenbank bestehenden Daten überschrieben werden müssen. 
-Anschließend werden alle aktiven Datenbankverbindungen terminiert, die bestehende Datenbank gelöscht und neu angelegt, bevor das komprimierte Backup mittels pg_restore eingespielt wird.
+Anschließend werden alle aktiven Datenbankverbindungen terminiert, die bestehende Datenbank gelöscht und neu angelegt, bevor das komprimierte Backup mittels pg_restore (https://www.postgresql.org/docs/current/app-pgrestore.html) eingespielt wird.
 
 Das Recovery Point Objective (RPO) entspricht dem konfigurierten Backup-Intervall (standardmäßig 24 Stunden), das Recovery Time Objective (RTO) beträgt einige Sekunden bis wenige Minuten und ist primär durch die Größe des Backups bestimmt.
 
@@ -393,7 +393,7 @@ Das Recovery Point Objective (RPO) entspricht dem konfigurierten Backup-Interval
 ## Documentation as Code (MkDocs)
 
 Die Entwicklerdokumentation wird im Repository gepflegt und automatisiert als statische Website veröffentlicht.
-Hierfür wird MkDocs mit dem Material-Theme eingesetzt, ein Python-basierter Static-Site-Generator, welcher Markdown-Dateien in eine Dokumentationswebsite transformiert.
+Hierfür wird MkDocs (https://www.mkdocs.org/) mit dem Material-Theme (https://squidfunk.github.io/mkdocs-material/) eingesetzt, ein Python-basierter Static-Site-Generator, welcher Markdown-Dateien in eine Dokumentationswebsite transformiert.
 Die Verwendung von MkDocs hat den Vorteil, dass out-of-the-box viele Grundfunktionen einer guten Dokumentation, wie etwa eine Navigationsleiste oder Suchfunktion, bereits als Module funktionsfähig bereitgestellt werden.
 
 Die Dokumentation ist in sechs Hauptbereiche gegliedert:
