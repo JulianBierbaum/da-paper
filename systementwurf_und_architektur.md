@@ -59,27 +59,76 @@ Die Kommunikation zwischen den Services erfolgt ausschließlich über RESTful HT
 Der primäre Kommunikationsweg im System, welcher für die Datenerfassung erfolgt, lässt sich wie folgt zusammenfassen:
 
 1. Externer Trigger durch Erkennung eines Fahrzeugs -> Data Collection Service
-Die Synology Surveillance Station ruft bei Erkennung einer Fahrzeugbewegung einen REST-Webhook des Data Collection Service auf..
+```mermaid
+flowchart LR
+    SYN([Synology Surveillance Station])
+    DCS[Data Collection Service]
+    SYN -->|REST Webhook| DCS
+```
+Die Synology Surveillance Station ruft bei Erkennung einer Fahrzeugbewegung einen REST-Webhook des Data Collection Service auf.
 
 2. Data Collection Service -> Synology API
+```mermaid
+flowchart LR
+    DCS[Data Collection Service]
+    SYN[Synology API]
+    DCS -->|Authentifizierung + Snapshot-Anfrage| SYN
+    SYN -->|Kamera-Snapshot| DCS
+```
 Nach Empfang des Webhooks authentifiziert sich der Service bei der Synology-API, um einen aktuellen Kamera-Snapshot abzurufen.
 
 3. Data Collection Service -> Plate Recognizer SDK
+```mermaid
+flowchart LR
+    DCS[Data Collection Service]
+    PLR[Plate Recognizer SDK]
+    DCS -->|Bilddatei per HTTP| PLR
+    PLR -->|Erkennungsergebnis als JSON| DCS
+```
 Der abgerufene Snapshot wird als Bilddatei per HTTP an den lokal betriebenen Plate Recognizer Container gesendet, der die Kennzeichenerkennung durchführt und das Ergebnis als JSON zurückgibt.
 
 4. Data Collection Service -> PostgreSQL
+```mermaid
+flowchart LR
+    DCS[Data Collection Service]
+    PG[(PostgreSQL)]
+    DCS -->|anonymisierte Erkennungsdaten| PG
+```
 Die verarbeiteten und anonymisierten Erkennungsergebnisse werden direkt in die Datenbank geschrieben.
 
 
 Weitere konzipierte, teils implementierte Verbindungen:
 
 5. Web Service -> Backend-Services
+```mermaid
+flowchart LR
+    WEB[Web Service]
+    AUTH[Auth Service]
+    ANA[Analytics Service]
+    NOT[Notification Service]
+    WEB -->|Benutzeranmeldung| AUTH
+    WEB -->|Analysen| ANA
+    WEB -->|Benachrichtigungsverwaltung| NOT
+```
 Die Web-Oberfläche kommuniziert über REST-Calls mit dem Auth Service (Benutzeranmeldung), dem Analytics Service für Analysen und dem Notification Service (Benachrichtigungsverwaltung).
 
 6. Notification Service -> Analytics Service
+```mermaid
+flowchart LR
+    NOT[Notification Service]
+    ANA[Analytics Service]
+    NOT -->|Datenanfrage für Zusammenfassung| ANA
+    ANA -->|Periodische Daten| NOT
+```
 Für den Versand von periodischen Zusammenfassungen ruft der Notification Service Daten vom Analytics Service ab.
 
 7. Grafana -> PostgreSQL
+```mermaid
+flowchart LR
+    GRF[Grafana]
+    PG[(PostgreSQL)]
+    GRF -->|Read-only Datenbankbenutzer| PG
+```
 Grafana greift über einen Read-only Datenbankbenutzer lesend auf das Data-Collection-Schema der Datenbank zu, um das Dashboard mit aktuellen Daten zu versorgen.
 
 
