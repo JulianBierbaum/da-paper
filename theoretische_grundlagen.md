@@ -2,7 +2,7 @@
 
 ## Containerisierung (Docker)
 
-Die Containerisierung ist eine Methode, bei der Anwendungen und deren Abhängigkeiten in einer leichtgewichtigen, isolierten Einheit, den Container verpackt werden.
+Die Containerisierung ist eine Methode, bei der Anwendungen und deren Abhängigkeiten in einer leichtgewichtigen, isolierten Einheit, einem sogenannten Container, verpackt werden.
 
 Docker
 Docker ist eine offene Plattform, die 2013 veröffentlicht wurde und die Containerisierung von Anwendungen standardisiert. 
@@ -14,7 +14,7 @@ Die Docker-Plattform besteht aus der Docker Engine (Daemon, REST API und CLI), D
 Architektur und Funktionsweise
 Docker basiert auf einer Client-Server-Architektur.
 Der Docker-Daemon verwaltet Container, Images, Netzwerke und Volumes (persistenter Speicher), während der Docker-Client (CLI) die Schnittstelle für Benutzerinteraktionen bereitstellt. (https://docs.docker.com/get-started/docker-overview/)
-Images, also Abbilder der Anwendung und ihrer Umgebung, werden als unveränderliche Vorlagen aus sogenannten Dockerfiles erstellt und in Layern organisiert, wobei jede Instruktion im Dockerfile einen neuen Layer erzeugt. (https://docs.docker.com/build/concepts/dockerfile/) 
+Images, also Abbilder der Anwendung und ihrer Umgebung, werden als unveränderliche Vorlagen aus sogenannten Dockerfiles erstellt und in Layern organisiert, wobei bestimmte Instruktionen wie RUN oder COPY im Dockerfile jeweils einen neuen Layer erzeugen. (https://docs.docker.com/build/concepts/dockerfile/) 
 Dieses Layer-System ermöglicht effizientes Caching: Wenn ein Image neu gebaut werden muss, müssen nur die Layer neu erstellt werden, an denen tatsächlich Änderungen vorgenommen wurden. (https://docs.docker.com/build/cache/)
 
 Container werden aus diesen Images instanziiert und stellen isolierte Prozesse und deren Umgebung dar. 

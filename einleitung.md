@@ -61,7 +61,7 @@ Um diesen Anforderungen gerecht zu werden, wurden diese in folgende Teilaufgaben
 
 Diese Diplomarbeit gliedert sich in Hauptkapitel, die den Entwicklungsprozess des Systems von den theoretischen Grundlagen bis zur Implementierung nachvollziehbar machen sollen.
 
-Das nächste Kapitel befasst sich mit den theoretischen Grundlagen. Die eingesetzten Technologien: Microservices-Architektur, Containerisierung und die ALPR-Technologie werden näher beleuchtet und deren Relevanz für das Projekt begründet.
+Das nächste Kapitel befasst sich mit den theoretischen Grundlagen. Die eingesetzten Technologien (Microservices-Architektur, Containerisierung und ALPR-Technologie) werden näher beleuchtet und deren Relevanz für das Projekt begründet.
 
 In Kapitel 3 werden der Prozess der Hardwareauswahl, die eingesetzte Systemumgebung inklusive der getroffenen Entscheidungen bezüglich des Technologie-Stacks sowie die lokalen Standortgegebenheiten beschrieben. 
 Es werden die spezifischen Anforderungen an Kamera und Server unter Berücksichtigung von Umgebungsbedingungen und Vorgaben der Betreuerfirma evaluiert und die getroffenen Entscheidungen argumentiert.
@@ -70,7 +70,7 @@ Kapitel 4 präsentiert Systementwurf und Architektur. Das Gesamtkonzept dieser s
 
 Das darauffolgende Kapitel dokumentiert die Implementierung der einzelnen Services. Besonderes Augenmerk liegt hier auf der Integration der externen Komponenten wie Kameradaten oder der Verarbeitung der Bilddaten und des Datenflusses bei der Datenbeschaffung und -verarbeitung.
 
-Das 6. Kapitel behandelt Infrastruktur, Deployment und Betrieb. Es wird auf die Container-Orchestrierung, CI/CD-Pipelines mit Deployment, Monitoring-Strategien sowie die Backup- und Restore-Strategie eingegangen. Auch wird kurz die MkDocs basierte Entwicklerdokumentation erwähnt.
+Das 6. Kapitel behandelt Infrastruktur, Deployment und Betrieb. Es wird auf die Container-Orchestrierung, CI/CD-Pipelines mit Deployment, Monitoring-Strategien sowie die Backup- und Restore-Strategie eingegangen. Auch wird kurz die MkDocs-basierte Entwicklerdokumentation erwähnt.
 
 Kapitel 7 widmet sich der Qualitätssicherung durch Tests und der Funktionsweise der Kennzeichenerkennung unter realen Bedingungen.
 

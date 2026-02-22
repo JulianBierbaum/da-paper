@@ -67,7 +67,7 @@ Zusätzlich verfügen die Backend-Services und der Plate Recognizer-Container ü
 ## CI/CD Pipelines und Deployment
 
 CI/CD (Continuous Integration / Continuous Delivery) bezeichnet die Praxis, Codeänderungen automatisiert zu testen, bauen und bereitzustellen (https://www.redhat.com/en/topics/devops/what-is-ci-cd).
-Continuous Integration stellt sicher, dass Codeänderungen automatisch auf Fehler geprüft werden, bevor diese in den Hauptbranch des Code-Repositories aufgenommen wird.
+Continuous Integration stellt sicher, dass Codeänderungen automatisch auf Fehler geprüft werden, bevor diese in den Hauptbranch des Code-Repositories aufgenommen werden.
 Continuous Delivery automatisiert darauf aufbauend den Build- und Bereitstellungsprozess, sodass neue Versionen automatisch auf dem Docker-Registry als Images zur Verfügung gestellt werden.
 
 Die Umsetzung dieser Prinzipien erfolgt im Projekt über GitHub Actions, ein in GitHub integriertes Automatisierungstool, mit welchem Workflows zum Bauen, Testen und Bereitstellen von Software direkt im Repository definiert werden können (https://docs.github.com/en/actions). 
@@ -82,7 +82,7 @@ In der ersten Phase werden für jeden Python-Service automatisiert drei Prüfung
 
 1. Formatierung (Ruff Format (https://docs.astral.sh/ruff/formatter/)): Überprüfung des Codes auf Einhaltung der definierten Formatierungsregeln.
 2. Linting (Ruff Check (https://docs.astral.sh/ruff/linter/)): Statische Codeanalyse zur Erkennung von potenziellen Fehlern und Stilabweichungen.
-3. Tests (Pytest mit Coverag): Ausführung aller Test-Cases, welche mit einer Codeabdeckungsanalyse kombiniert werden.
+3. Tests (Pytest mit Coverage): Ausführung aller Test-Cases, welche mit einer Codeabdeckungsanalyse kombiniert werden.
 
 Alle Tests werden innerhalb von Docker-Containern ausgeführt, um eine konsistente und reproduzierbare Testumgebung zu gewährleisten, welche der Produktionsumgebung möglichst nahekommt.
 
@@ -389,7 +389,7 @@ Die Dokumentation ist in sechs Hauptbereiche gegliedert:
 - Deployment: Übersicht, Image-Erstellung und Produktionseinrichtung
 - Reference: Script-Referenzen, Docker-Compose-Dokumentation, API-Dokumentation und Data-Collection-Flow
 
-Die Veröffentlichung von Änderungen erfolgt automatisiert über eine eigenen GitHub Actions Workflow.
+Die Veröffentlichung von Änderungen erfolgt automatisiert über einen eigenen GitHub-Actions-Workflow.
 Im Falle eines Pushes wird die Dokumentation neu gebaut und auf GitHub Pages veröffentlicht.
 Dadurch ist die Dokumentation stets synchron mit dem aktuellen Stand des Codes und unter einer permanenten, öffentlichen URL erreichbar.
 

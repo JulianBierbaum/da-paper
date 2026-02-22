@@ -49,8 +49,11 @@ Für den Notification Service umfasst dies die vollständige CRUD-Schnittstelle 
 
 ### Testisolation und Datenbankstrategie
 
-Die Tests werden innerhalb der CI-Pipeline mit den zugehörigen Service-Containern auf dem PostgreSQL-Service ausgeführt, anstatt eine In-Memory-Datenbank wie SQLite als Ersatz zu verwenden.
-Diese Entscheidung wurde getroffen, da SQLite wesentliche PostgreSQL-Funktionalitäten wie Schema-Unterstützung und spezifische Datentypen (z.B. LargeBinary für die Plate-Hashes) nicht identisch abbilden kann (https://www.sqlite.org/datatype3.html).
+Die Tests werden innerhalb der CI-Pipeline mit den zugehörigen Service-Containern gegen den PostgreSQL-Service ausgeführt, anstatt eine In-Memory-Datenbank wie SQLite als Ersatz zu verwenden.
+
+Diese Entscheidung wurde getroffen, da SQLite wesentliche benutzte PostgreSQL-Funktionalitäten nicht identisch abbilden kann.
+Beispiele hierfür sind die Verwendung des nativen PostgreSQL-Enum-Datentyps (https://www.postgresql.org/docs/current/datatype-enum.html) für die Fahrzeugorientierung sowie die Verwendung von zeitzonenbehafteten Zeitstempeln (https://www.postgresql.org/docs/current/datatype-datetime.html). 
+SQLite bietet für diese Typen keine native Unterstützung (https://www.sqlite.org/datatype3.html).
 Durch die Nutzung derselben Datenbank-Engine in den Tests wird sichergestellt, dass die Tests tatsächlich das Verhalten der Produktionsumgebung widerspiegeln und keine falsch-positiven Ergebnisse durch abweichendes Datenbankverhalten entstehen.
 
 Beide Services verwenden ein identisches Muster zur Datenisolation in ihrer Pytest-Konfigurationsdatei:

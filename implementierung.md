@@ -7,7 +7,7 @@ Für jeden Service werden die zentralen Abläufe, Designentscheidungen und relev
 
 ## Konfiguration Synology Surveillance Station
 
-Auf der Surveillance-Station-Platform können alle Bereiche des Synology Überwachungssystems konfiguriert werden.
+Auf der Surveillance-Station-Plattform können alle Bereiche des Synology Überwachungssystems konfiguriert werden.
 Für diese Diplomarbeit sind jene Bereiche relevant, welche sich mit der Konfiguration der IP-Kameras, der Fahrzeugerkennung und der Aktionen (Trigger) befassen.
 
 
@@ -24,7 +24,7 @@ In den Einstellungen der hinzugefügten IP-Kamera wurden Optionen wie die Bildra
 
 ### Deep Video Analytics Konfiguration
 
-Da wie bereits im Kapitel Hardwareauswahl (!! CROSS REFERENCE) erwähnt die Synology DVA-Serie als NAS-System gewählt wurde, standen für die Umsetzung dieses Projects die erweiterten KI-Funktionen dieser Reihe zur Verfügung, diese werden von Synology als Deep Video Analytics (DVA) bezeichnet
+Da wie bereits im Kapitel Hardwareauswahl (!! CROSS REFERENCE) erwähnt die Synology DVA-Serie als NAS-System gewählt wurde, standen für die Umsetzung dieses Projekts die erweiterten KI-Funktionen dieser Reihe zur Verfügung, diese werden von Synology als Deep Video Analytics (DVA) bezeichnet.
 Eine dieser Funktionalitäten ist eine präzise und schnelle Durchfahrtskontrolle mittels Erkennungsbereichen. 
 Diese wurde genutzt, um den unten in der Abbildung (X) erkenntlichen Bereich zu markieren, in welchem ein Trigger ausgelöst wird, sobald ein Fahrzeug diesen durchfährt.
 Hierbei ist wichtig zu erwähnen, dass dieser DVA-Task so konfiguriert wurde, dass Fußgänger und stehende Fahrzeuge nicht erkannt werden.
@@ -35,7 +35,7 @@ Diese Einschränkungen sind wichtig, um das ALPR-System zu entlasten und Mehrfac
 ### Action Rule Konfiguration
 
 Innerhalb der Surveillance Station können sogenannte Action-Rules definiert werden, welche bei Erkennung einer Fahrzeugbewegung im konfigurierten Erkennungsbereich eine zuvor definierte Aktion ausführen.
-Dieses System wird genutzt, um im Falle einer Erkennung dem Data Collection Service zu Signalisieren, dass eine Fahrzeugerkennung stattgefunden hat. 
+Dieses System wird genutzt, um im Falle einer Erkennung dem Data Collection Service zu signalisieren, dass eine Fahrzeugerkennung stattgefunden hat. 
 Diese Aktionsregel wird aufgerufen, nachdem der zuvor konfigurierte DVA-Task ein Fahrzeug erkennt und ist damit der Startpunkt, für die im Backend stattfindende Verarbeitung der Bilddaten.
 Wie in Abbildung (X) erkenntlich, ruft diese einen Webhook des Data Collection Service auf; dieser wird im Kapitel (!! CROSS REFERENCE) näher beleuchtet.
 

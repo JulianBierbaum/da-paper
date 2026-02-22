@@ -48,7 +48,7 @@ Auch wurde seitens Zotter vorausgesetzt, dass sämtliche Daten nicht nur aus Dat
 
 ##### Auswahl
 
-Im Bezug auf die Kamera wurden von Anfang an nur IP-Kameras in Betracht gezogen, also Kameras, bei denen Video-Streams und Kommunikation per Ethernet stattfinden.
+In Bezug auf die Kamera wurden von Anfang an nur IP-Kameras in Betracht gezogen, also Kameras, bei denen Video-Streams und Kommunikation per Ethernet stattfinden.
 Dies hat zwei Hauptgründe:
 Daten können zunächst in den meisten Fällen direkt per API-Requests ausgelesen werden, entweder über HTTP/REST-APIs oder im Fall von Video-Streams über RTSP (Real Time Streaming Protocol).
 Zudem nutzen viele IP-Kameras PoE (Power over Ethernet) für ihre Spannungsversorgung, was die Aufbaukomplexität weiter minimiert, da nur ein Kabel, welches Strom und Daten überträgt, verlegt werden muss. (https://en.wikipedia.org/wiki/IP_camera)
@@ -69,7 +69,7 @@ Aufgrund der oben angesprochenen sofortigen Verfügbarkeit und des wegfallenden 
 
 ##### Montage
 
-![Markup der Kamerapositionierung und ](zotter-markup.png)
+![Markup der Kamerapositionierung](zotter-markup.png)
 
 Das Kamerasystem wurde, wie oben erkenntlich, so montiert, dass es in Richtung des Parkplatzes zeigt. 
 Dies erwies sich als die optimale Wahl, da so der mögliche Erkennungsbereich maximiert wird und die Montage an dieser Position einfacher realisierbar war.
@@ -84,7 +84,7 @@ Dieser verläuft bis in den Netzwerkschrank im angrenzenden Bürogebäude, wo di
 ##### Auswahl
 
 Die gewählte Microservice-Architektur im Zusammenspiel mit der angewandten Containerisierung erlaubt eine hohe Flexibilität für die Art der benötigten Hardware.
-Des Weiteren war aus einem früheren Praktikum bei Zotter Schokolade bekannt, dass die hausinternen Server-Kapazitäten für Container-Deployment besitzen. 
+Des Weiteren war aus einem früheren Praktikum bei Zotter Schokolade bekannt, dass die hausinterne Infrastruktur Kapazitäten für Container-Deployment bietet. 
 
 Als zweite Option wurde das Einrichten eines kleinen Servers auf der Hardware eines Office-Mini-PCs erwogen. 
 Dieser wäre aus reiner Implementierungs- und Funktionssicht mit der ersten Option gleichwertig, mit dem Vorteil, dass dieser Ansatz eine gewisse Unabhängigkeit zum internen Netzwerk und zur zentralen Infrastruktur ermöglicht.
@@ -95,7 +95,7 @@ Mit dieser Neuausrichtung kam die Idee auf, das System auf einem eigenen NAS-Sys
 Nicht nur wurden NAS-Systeme von Synology bereits im Unternehmen eingesetzt, diese sind in den meisten Bereichen gleichwertig mit den vorherigen beiden diskutierten Ansätzen und bieten in manchen Bereichen klare Vorteile (https://aws.amazon.com/what-is/nas/):
 1. Die Vorteile der zweiten Option bleiben bestehen, es gibt weiterhin eine gesteigerte Unabhängigkeit zur Unternehmensinfrastruktur und damit hergehend mehr Entwicklungsfreiheit.
 2. Da es sich um ein NAS-System handelt, also ein Gerät, welches primär für die Speicherung von Daten konzipiert ist, stellt der benötigte Speicherplatz kein Problem mehr dar, da einfach neue Disks verbaut werden können (z.B. 2× 2TB Disks, RAID 1).
-3. Diese NAS-Systeme besitzen bereits leistungsstarke Komponenten, welche im Bezug auf Rechenleistung meist gleichwertig zu einem durchschnittlichen Mini-PC sind. 
+3. Diese NAS-Systeme besitzen bereits leistungsstarke Komponenten, welche in Bezug auf Rechenleistung meist gleichwertig zu einem durchschnittlichen Mini-PC sind. 
 Auch sind die meisten NAS-Geräte mit einem vollwertigen Betriebssystem ausgestattet, welches Methoden bereitstellt, um Container mittels Docker reibungslos laufen zu lassen.
 
 Der größte Vorteil kommt aber mit der Kombination mit den oben beschriebenen Kameras des gleichnamigen Herstellers.
@@ -129,12 +129,12 @@ Aus diesem Grund wurde dieses innerhalb des Bürogebäudes installiert, in welch
 Für die eigentliche Kennzeichenerkennung stand die Entscheidung zwischen der Entwicklung einer eigenen Lösung auf Basis von Open-Source-OCR-Bibliotheken (wie Tesseract OCR oder EasyOCR) und der Verwendung einer kommerziellen Lösung im Raum.
 
 Bei der Evaluation von Tesseract und EasyOCR zeigte sich, dass diese generischen OCR-Engines zwar für Texterkennungsaufgaben gut geeignet sind, bei der spezifischen Herausforderung der Kennzeichenerkennung jedoch erhebliche Nachteile aufweisen. 
-Kennzeichen stellen besondere Anforderungen an ein Erkennungssystem, wie im Kapitel ALPR (!! Cross Reverence) bereits erwähnt: 
+Kennzeichen stellen besondere Anforderungen an ein Erkennungssystem, wie im Kapitel ALPR (!! Cross Reference) bereits erwähnt: 
 Sie müssen aus verschiedenen Winkeln, bei unterschiedlichen Lichtverhältnissen, mit Verschmutzungen und in Bewegung zuverlässig erkannt werden. 
 Zudem variieren Kennzeichenformate international stark in Schriftart, Layout und Zeichenabständen.
 
-Als weitere Option wrude die Verwendung der Synology-Nativen Lösung zur Kennzeichenerkennung erwogen.
-Dies erwies sich aber schnell als nicht Umsetzbar, da die Erkennung laut Hersteller auf dem Modell DVA1622 nur für stationäre Fahrzeuge ausgelegt ist. (https://kb.synology.com/de-de/UG/DVA_License_Plate_Recognition_AG/7)
+Als weitere Option wurde die Verwendung der Synology-nativen Lösung zur Kennzeichenerkennung erwogen.
+Dies erwies sich aber schnell als nicht umsetzbar, da die Erkennung laut Hersteller auf dem Modell DVA1622 nur für stationäre Fahrzeuge ausgelegt ist. (https://kb.synology.com/de-de/UG/DVA_License_Plate_Recognition_AG/7)
 
 Die Entwicklung eines eigenen trainierten Modells auf Basis dieser Bibliotheken hätte einen erheblichen Aufwand für das Sammeln und Annotieren von Trainingsdaten bedeutet, wobei die resultierende Genauigkeit dennoch fraglich geblieben wäre. 
 In diese Richtung wurden im Zuge der Diplomarbeit-Entwicklung Prototypen erstellt, diese blieben aber in ihrer Qualität unzureichend oder waren in ihrem Realisierungsaufwand unrealistisch. 
@@ -144,7 +144,7 @@ Plate Recognizer bietet hochoptimierte Machine-Learning-Modelle, welche bereits 
 Dies gewährleistet eine deutlich höhere Erkennungsrate auch unter erschwerten Bedingungen (https://platerecognizer.com/alpr-results). 
 Wie im Kapitel (!! Cross Reference) erwähnt bietet diese Lösung, zusätzlich zur reinen Texterkennung, erweiterte Funktionen wie Fahrzeugtyp- und Farberkennung, welche für zukünftige Erweiterungen des Systems nützlich sein können.
 
-Ein weiterer entscheidender Vorteil die Verfügbarkeit als Docker-Container (Plate Recognizer SDK), der vollständig lokal auf dem DVA1622 NAS betrieben werden kann. 
+Ein weiterer entscheidender Vorteil ist die Verfügbarkeit als Docker-Container (Plate Recognizer SDK), der vollständig lokal auf dem DVA1622 NAS betrieben werden kann. 
 Im Gegensatz zu Cloud-basierten API-Lösungen bleiben damit alle Bilddaten im lokalen Netzwerk, was sowohl Datenschutzanforderungen erfüllt als auch Latenzzeiten minimiert. (https://platerecognizer.com/snapshot/)
 
 

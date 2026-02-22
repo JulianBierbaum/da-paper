@@ -14,9 +14,9 @@ Auf dieses Konzept wird im Kapitel (!! CROSS REFERENCE) näher eingegangen.
 Die Gesamtarchitektur wurde so entworfen, dass diese die in der Aufgabenstellung definierten Anforderungen abbildet.
 Im Zuge der Entwicklung wurden nicht alle der im folgenden Kapitel erwähnten Komponenten implementiert, die bereits konzipierten Services werden dennoch in diesem Kapitel aus Gründen der Vollständigkeit erwähnt.
 
-![Architekur Diagramm](architektur.svg)
+![Architektur Diagramm](architektur.svg)
 
-Wie in der Abbildung erkenntlich basiert diese Diplomarbeit aus Komponenten, welche sich in drei primäre Kategorien einteilen lassen: Backend-, Frontend- und  Infrastruktur-Services.
+Wie in der Abbildung erkenntlich besteht diese Diplomarbeit aus Komponenten, welche sich in drei primäre Kategorien einteilen lassen: Backend-, Frontend- und  Infrastruktur-Services.
 Darüber hinaus bestehen Anbindungen an externe Services (wie etwa die Plate Recognizer SDK). 
 Sofern diese implementiert wurden, werden sie im Kapitel Implementierung (!! Reference) beim jeweiligen Dienst im Detail erläutert.
 Die Architektur folgt bewusst keinem API-Gateway Ansatz, wie es oft bei Microservice-Ansätzen typisch ist, da die Services primär intern kommunizieren und nur wenige Endpunkte nach außen hin offen zugänglich sind. 
@@ -173,13 +173,13 @@ Dieser ist im vorliegenden Anwendungsfall jedoch vernachlässigbar, da das Syste
 Zum Stand der Dokumentation dieser Arbeit beträgt ein volles Backup der gesamten Datenbank (Über 60.000 Erkennungen) ca. 3.4 MB. 
 Um diesen Punkt zu verdeutlichen, wurde die theoretische Dauer bis zur vollständigen Kapazitätsauslastung des verbauten NAS-Systems ermittelt.
 
-Formel zur Berechnung der Speicherauffüllungdauer anhand der Größe eines Full-Backups:
+Formel zur Berechnung der Speicherauffüllungsdauer anhand der Größe eines Full-Backups:
 
 $$T = \frac{S_{\max} D_t}{G_t}$$
 
 wobei $T$ Tagen der Dauer bis zum vollständigen Befüllen eines Speicherplatzes $S_{\max}$ in Bytes entspricht, $G_t$ die Größe eines Full-Backups in Bytes und $D_t$ die vergangenen Tage seit Beginn der Kennzeichenerfassungen zum Zeitpunkt $t$ darstellen.
 
-Als verfügbarer Speicherplatz $S_{\max}$ wurde 1TB ($10^{12}$ Bytes) angenommen, da dies dem Halben derzeit im NAS-System verbauten Speicher entspricht.
+Als verfügbarer Speicherplatz $S_{\max}$ wurde 1TB ($10^{12}$ Bytes) angenommen, da dies dem halben, derzeit im NAS-System verbauten Speicher entspricht.
 $G_t$ betrug (Stand 12. Februar 2026) wie bereits oben erwähnt rund 3,4MB ($3,4 \cdot 10^{6}$ Bytes) und zu diesem Stand sind 188 Tage ($D_t$) seit Beginn der Aufzeichnungen vergangen.
 
 Es gilt dementsprechend:
@@ -201,7 +201,7 @@ Die Herleitung dieser Formel ist dem Anhang zu entnehmen.
 
 ---
 
-Herleitung der Formel zur Berechnung der Speicherauffüllungdauer anhand der Größe eines Full-Backups:
+Herleitung der Formel zur Berechnung der Speicherauffüllungsdauer anhand der Größe eines Full-Backups:
 
 Die durchschnittliche Größe eines Datensatzes ($s$) ergibt sich aus:
 
