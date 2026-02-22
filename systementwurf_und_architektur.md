@@ -14,7 +14,7 @@ Auf dieses Konzept wird im Kapitel (!! CROSS REFERENCE) näher eingegangen.
 Die Gesamtarchitektur wurde so entworfen, dass diese die in der Aufgabenstellung definierten Anforderungen abbildet.
 Im Zuge der Entwicklung wurden nicht alle der im folgenden Kapitel erwähnten Komponenten implementiert, die bereits konzipierten Services werden dennoch in diesem Kapitel aus Gründen der Vollständigkeit erwähnt.
 
-(ARCHITEKTUR-DIAGRAMM)
+![Architekur Diagramm](architektur.svg)
 
 Wie in der Abbildung erkenntlich basiert diese Diplomarbeit aus Komponenten, welche sich in drei primäre Kategorien einteilen lassen: Backend-, Frontend- und  Infrastruktur-Services.
 Darüber hinaus bestehen Anbindungen an externe Services (wie etwa die Plate Recognizer SDK). 
@@ -59,76 +59,48 @@ Die Kommunikation zwischen den Services erfolgt ausschließlich über RESTful HT
 Der primäre Kommunikationsweg im System, welcher für die Datenerfassung erfolgt, lässt sich wie folgt zusammenfassen:
 
 1. Externer Trigger durch Erkennung eines Fahrzeugs -> Data Collection Service
-```mermaid
-flowchart LR
-    SYN([Synology Surveillance Station])
-    DCS[Data Collection Service]
-    SYN -->|REST Webhook| DCS
-```
+
+![Trigger für den Data Collection Service](trigger_for_data_collection.svg)
+
 Die Synology Surveillance Station ruft bei Erkennung einer Fahrzeugbewegung einen REST-Webhook des Data Collection Service auf.
 
 2. Data Collection Service -> Synology API
-```mermaid
-flowchart LR
-    DCS[Data Collection Service]
-    SYN[Synology API]
-    DCS -->|Authentifizierung + Snapshot-Anfrage| SYN
-    SYN -->|Kamera-Snapshot| DCS
-```
+
+![Data Collection Service zu Synology API](data_collection_to_synology.svg)
+
 Nach Empfang des Webhooks authentifiziert sich der Service bei der Synology-API, um einen aktuellen Kamera-Snapshot abzurufen.
 
 3. Data Collection Service -> Plate Recognizer SDK
-```mermaid
-flowchart LR
-    DCS[Data Collection Service]
-    PLR[Plate Recognizer SDK]
-    DCS -->|Bilddatei per HTTP| PLR
-    PLR -->|Erkennungsergebnis als JSON| DCS
-```
+
+![Data Collection Service zu Plate Recognizer SDK](data_collection_to_plate_recognizer.svg)
+
 Der abgerufene Snapshot wird als Bilddatei per HTTP an den lokal betriebenen Plate Recognizer Container gesendet, der die Kennzeichenerkennung durchführt und das Ergebnis als JSON zurückgibt.
 
 4. Data Collection Service -> PostgreSQL
-```mermaid
-flowchart LR
-    DCS[Data Collection Service]
-    PG[(PostgreSQL)]
-    DCS -->|anonymisierte Erkennungsdaten| PG
-```
+
+![Data Collection Service zu DB](data_collection_to_db.svg)
+
 Die verarbeiteten und anonymisierten Erkennungsergebnisse werden direkt in die Datenbank geschrieben.
 
 
 Weitere konzipierte, teils implementierte Verbindungen:
 
 5. Web Service -> Backend-Services
-```mermaid
-flowchart LR
-    WEB[Web Service]
-    AUTH[Auth Service]
-    ANA[Analytics Service]
-    NOT[Notification Service]
-    WEB -->|Benutzeranmeldung| AUTH
-    WEB -->|Analysen| ANA
-    WEB -->|Benachrichtigungsverwaltung| NOT
-```
+
+![Web Service Interaktionen](web_interactions.svg)
+
 Die Web-Oberfläche kommuniziert über REST-Calls mit dem Auth Service (Benutzeranmeldung), dem Analytics Service für Analysen und dem Notification Service (Benachrichtigungsverwaltung).
 
 6. Notification Service -> Analytics Service
-```mermaid
-flowchart LR
-    NOT[Notification Service]
-    ANA[Analytics Service]
-    NOT -->|Datenanfrage für Zusammenfassung| ANA
-    ANA -->|Periodische Daten| NOT
-```
+
+![Notification Service zu Analytics Service](notification_to_analytics.svg)
+
 Für den Versand von periodischen Zusammenfassungen ruft der Notification Service Daten vom Analytics Service ab.
 
 7. Grafana -> PostgreSQL
-```mermaid
-flowchart LR
-    GRF[Grafana]
-    PG[(PostgreSQL)]
-    GRF -->|Read-only Datenbankbenutzer| PG
-```
+
+![Grafana zu DB](grafana_to_db.svg)
+
 Grafana greift über einen Read-only Datenbankbenutzer lesend auf das Data-Collection-Schema der Datenbank zu, um das Dashboard mit aktuellen Daten zu versorgen.
 
 
@@ -164,32 +136,7 @@ Sie speichert pro Benutzer den Namen und E-Mail Adresse sowie zwei Flags, welche
 
 Die folgende Darstellung zeigt die Attribute der beiden Entitäten als ER-Diagramm:
 
-```mermaid
-erDiagram
-    VEHICLE_OBSERVATIONS {
-        int id PK
-        datetime timestamp
-        binary plate_hash
-        int plate_score
-        string country_code
-        string municipality
-        string vehicle_type
-        string make
-        string model
-        string color
-        enum orientation
-    }
-
-    USER_PREFERENCES {
-        int id PK
-        string name UK
-        string email UK
-        bool receive_alerts
-        bool receive_updates
-        datetime created_at
-        datetime updated_at
-    }
-```
+![Datenbank Tabellen](tables.svg)
 
 
 ### Argumentation zur Denormalisierung
@@ -332,33 +279,7 @@ Der Notification Service kann beispielsweise keine Fahrzeugerkennungsdaten ausle
 
 Die folgende Darstellung visualisiert die Berechtigungsstruktur:
 
-```mermaid
-graph LR
-    subgraph Services
-        DC["Data Collection Service"]
-        GR["Grafana"]
-        AN["Analytics Service"]
-        NO["Notification Service"]
-    end
-
-    subgraph PostgreSQL
-        subgraph "Ingestion-Schema"
-            VO["vehicle_observations"]
-        end
-        subgraph "Analytics-Schema"
-            AD["Analysedaten"]
-        end
-        subgraph "Notification-Schema"
-            UP["user_preferences"]
-        end
-    end
-
-    DC -- "read/write" --> VO
-    GR -- "read only" --> VO
-    AN -- "read only" --> VO
-    AN -- "read/write" --> AD
-    NO -- "read/write" --> UP
-```
+![DB Benutzer](db_user.svg)
 
 Wie die Darstellung zeigt, hat der Data-Collection-User Vollzugriff auf das Ingestion-Schema, der Analytics-User nur Lesezugriff darauf (aber Vollzugriff auf das eigene Analytics-Schema), und der Notification-User ist vollständig auf das Notification-Schema beschränkt.
 Grafana greift über den analytics_user ebenfalls ausschließlich lesend auf die Ingestion-Daten zu.
@@ -389,14 +310,7 @@ Sämtliche Bilddaten und Erkennungsergebnisse verlassen zu keinem Zeitpunkt das 
 Der Lebenszyklus der Fahrzeugerkennung beschreibt den logischen Weg der Daten von der Erfassung bis zur langfristigen Sicherung.
 Das Konzept ist so gestaltet, dass personenbezogene Daten so früh wie möglich eliminiert werden und nur anonymisierte, für die Analyse relevante Informationen persistent gespeichert werden.
 
-```mermaid
-flowchart LR
-    A["1. Erfassung<br/>(Webhook-Event)"] --> B["2. Extraktion<br/>(Snapshot + ALPR)"]
-    B --> C["3. Anreicherung<br/>(Land, Bezirk)"]
-    C --> D["4. Anonymisierung<br/>(SHA-256 Hash)"]
-    D --> E["5. Speicherung<br/>(PostgreSQL)"]
-    E --> F["6. Sicherung<br/>(Backup)"]
-```
+![Detection Flow](detection_flow.svg)
 
 Eine Fahrzeugbewegung im Erkennungsbereich löst ein Event aus (Erfassung), woraufhin ein Kamera-Snapshot angefordert und an die ALPR-Komponente gesendet wird (Extraktion), hierbei werden die Bilddaten nicht persistent gespeichert. 
 Die Erkennungsergebnisse werden anschließend, falls möglich, um regionale Herkunft auf Bezirksebene angereichert. 

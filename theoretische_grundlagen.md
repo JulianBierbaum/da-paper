@@ -9,6 +9,8 @@ Docker ist eine offene Plattform, die 2013 veröffentlicht wurde und die Contain
 Es stellt die notwendigen Tools bereit, um Container einfach zu erstellen und mit ihnen arbeiten zu können, und abstrahiert dabei die Komplexität der zugrundeliegenden Linux-Kernel-Features (Namespaces, cgroups).
 Die Docker-Plattform besteht aus der Docker Engine (Daemon, REST API und CLI), Docker Images und Docker Containern. (https://docs.docker.com/get-started/docker-overview/)
 
+![Docker Logo](image.png)
+
 Architektur und Funktionsweise
 Docker basiert auf einer Client-Server-Architektur.
 Der Docker-Daemon verwaltet Container, Images, Netzwerke und Volumes (persistenter Speicher), während der Docker-Client (CLI) die Schnittstelle für Benutzerinteraktionen bereitstellt. (https://docs.docker.com/get-started/docker-overview/)

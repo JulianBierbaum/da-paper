@@ -57,7 +57,7 @@ Vor dem offiziellen Start der Diplomarbeit wurden hierzu schon einige Überlegun
 Im Zuge von Gesprächen mit Michael Zotter wurde darauf aufmerksam gemacht, dass bereits einige IP-Kameras des Herstellers Synology für frühere Testversuche angeschafft wurden.
 Besonders das Modell BC500, von welchem einige Stück bereits im Besitz der Firma Zotter waren, erschien als besonders geeignet. (https://www.synology.com/en-eu/products/BC500)
 
-(BILD BC500)
+![Synology BC500](synology_bc500.png)
 
 Mit einer Witterungsbeständigkeitsbewertung von IP67, da als Außenkamera konzipiert, ist diese gut für den Außeneinsatz geeignet.
 Die maximale Videoauflösung von 2880×1620 Pixel bei maximal 30 FPS erschien auch für eine konsistente Kennzeichenerkennung ausreichend.
@@ -104,6 +104,8 @@ Diese laufen unter einem Gesamtsystem mit der Bezeichnung "Surveillance Station"
 
 Innerhalb des Surveillance Station-Ökosystems bietet Synology mit der DVA-Serie (Deep Video Analytics) spezialisierte NVR-Geräte (Network Video Recorder) an, welche über GPU-beschleunigte KI-Funktionen verfügen.
 Insbesondere das Modell DVA1622 (zur Zeit des Projekts das einzige verfügbare Modell der DVA-Serie) bietet für diese Diplomarbeit in Kombination mit der Kamera BC500 viele Vorteile: (https://www.synology.com/en-global/products/DVA)
+
+![Synology DVA1622](synology_dva1622.png)
 
 Zunächst bietet die Surveillance Station API Zugriff auf Live-Streams, Snapshots und Ereignis-Metadaten, was die Integration in eigene Microservices im Vergleich zum direkten Auslesen aus Kameras erheblich vereinfacht.
 Die DVA-Serie unterstützt nativ viele Features aus dem Security- und Surveillance-Bereich. 

@@ -204,7 +204,7 @@ Portainer wurde auf dem Synology-NAS installiert und ermöglicht das Verwalten d
 Für das Deployment wird in Portainer ein Stack erstellt, welcher die Produktions-Compose-Datei sowie die Datei mit den Umgebungsvariablen enthält.
 Bei Aktualisierungen werden die neuesten Images aus dem Docker-Registry heruntergeladen, woraufhin die betroffenen Container automatisch neu erstellt werden, ohne dass die Datenhaltung betroffen ist.
 
-(SCREENSHOT PORTAINER)
+![Laufender Container-Stack in Portainer](container_stack_portainer.png)
 
 
 ## Monitoring und Logging
@@ -349,14 +349,7 @@ Dieser Container basiert auf dem offiziellen PostgreSQL-Alpine-Image und nutzt d
 Der Backup-Zeitplan wird über die Umgebungsvariable BACKUP_SCHEDULE im Cron-Format konfiguriert (In diesem Fall etwa 0 2 * * * für ein tägliches Backup um 02:00 Uhr (https://crontab.guru/#0_2_*_*_*)).
 Falls die Variable nicht gesetzt wurde, werden automatische Backups deaktiviert und der Container wechselt in einen Idle-Zustand.
 
-```mermaid
-flowchart LR
-    A@{ shape: circle, label: "Cron-Trigger<br/>(BACKUP_SCHEDULE)" } --> B["Konnektivitätsprüfung<br/>(pg_isready)"]
-    B --> C["Full Backup<br/>(pg_dump)"]
-    C --> D["Komprimierung<br/>(Gzip)"]
-    D --> E["Speicherung auf<br/>Host-Volume"]
-    E --> F["Retention-Management<br/>(Alte Backups löschen)"]
-```
+![Backup Flow](backup_flow.svg)
 
 Der Cron-Daemon löst das Backup-Script zum konfigurierten Zeitpunkt aus. 
 Dieses wartet zunächst auf die Erreichbarkeit der Datenbank, erstellt dann einen vollständigen Datenbank-Dump mittels pg_dump (https://www.postgresql.org/docs/current/app-pgdump.html), komprimiert anschließend diesen mit Gzip und schreibt die entstandene Backup-Datei auf ein gemountetes Host-Volume. 
@@ -375,14 +368,7 @@ Ansonsten ist dieser funktionell gleich aufgebaut, wie das oben aufgezeigte Syst
 
 Für die Wiederherstellung existiert ebenfalls ein Script, welches einen vollständigen Disaster-Recovery-Prozess implementiert:
 
-```mermaid
-flowchart LR
-    A["Sicherheitsabfrage<br/>(Bestätigung durch Benutzer)"] --> B["Aktive Verbindungen terminieren"]
-    B --> C["Datenbank löschen<br/>(dropdb)"]
-    C --> D["Leere Datenbank neu anlegen<br/>(createdb)"]
-    D --> E["Backup einspielen<br/>(gunzip + pg_restore)"]
-    E --> F["Wiederherstellung abgeschlossen"]
-```
+![Restore Flow](restore_flow.svg)
 
 Das Script fordert zunächst eine explizite Bestätigung, da alle in der Datenbank bestehenden Daten überschrieben werden müssen. 
 Anschließend werden alle aktiven Datenbankverbindungen terminiert, die bestehende Datenbank gelöscht und neu angelegt, bevor das komprimierte Backup mittels pg_restore (https://www.postgresql.org/docs/current/app-pgrestore.html) eingespielt wird.
