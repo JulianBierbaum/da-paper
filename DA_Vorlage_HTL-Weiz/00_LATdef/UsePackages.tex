@@ -3,9 +3,9 @@
 \usepackage{fancyhdr}
 \usepackage{xcolor}
 \usepackage[utf8x]{inputenc}
-\usepackage{wrapfig}   
+\usepackage{wrapfig}
 \usepackage{color}
-\usepackage[printonlyused, withpage]{acronym}
+\usepackage{acronym}
 \usepackage{ifthen}
 \usepackage{lastpage}
 \usepackage{currfile}
@@ -32,12 +32,14 @@
 \usepackage{setspace}
 \usepackage{listings}
 \usepackage[T1]{fontenc}                  % Wichtig für korrekte Umlaute/Schriftkodierung
-\usepackage[scaled]{uarial}																				% Schriftart: Arial (skaliert)
+\usepackage[scaled]{helvet}												% Schriftart: Helvetica (Arial-Ersatz)
 \renewcommand*\familydefault{\sfdefault}
 \pagestyle{fancy}
 \usepackage[acronym,toc]{glossaries}
-\usepackage{docmute}					% includes parts of files just within the Begin and End Document
+\usepackage{docmute}				% includes parts of files just within the Begin and End Document
 \usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}	% Klickbare Links und URLs
+\usepackage{url}					% URL-Formatierung
 %---------------------Switch modulare Printversionen
 %
 \newboolean{UseWm} 		%Korrektur Wasserzeichen in das PDF drucken

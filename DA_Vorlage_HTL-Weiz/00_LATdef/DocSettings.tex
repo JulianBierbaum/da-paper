@@ -51,12 +51,12 @@
 %\lfoot{\small{\changefont{pag}{b}{sc}\textcolor{black!30}{\SYear - \SClass - \DPLNameOne, \DPLNameTwo}}} 
 %\cfoot{}
 %\rfoot{\small{\changefont{pag}{b}{sc}\textcolor{black!30}{\thepage\ \textbf{\textcolor{orange!100}I} \pageref{LastPage}}}}
-\lhead{\begin{tabular}{p{14.0cm}} 
-		\small{\sffamily\bfseries\textcolor{black!30}{\DAName}}
-	\end{tabular} \vspace{0.1cm}}
-\lfoot{\small{\sffamily\bfseries\textcolor{black!30}{\SYear - \SClass - \DPLNameOne, \DPLNameTwo}}} 
+\lhead{\begin{tabular}{p{14.0cm}}
+    \small{\sffamily\bfseries\textcolor{black!30}{\DAName}}
+  \end{tabular} \vspace{0.1cm}}
+\lfoot{\small{\sffamily\bfseries\textcolor{black!30}{\SYear - \SClass - \DPLNameOne \DPLNameTwo}}}
 \cfoot{}
-\rfoot{\small{\sffamily\bfseries\textcolor{black!30}{\thepage\ \textbf{\textcolor{orange!100}I} \pageref{LastPage}}}}
+\rfoot{\small{\sffamily\bfseries\textcolor{black!30}{\thepage\ \textbf{\textcolor{blue!100}I} \pageref{LastPage}}}}
 %s
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
@@ -65,9 +65,9 @@
 \renewcommand\headrule{\color{black!30}\myHeadrule }
 \renewcommand\footrule{\color{black!30}\myFootrule }
 \addto{\captionsngerman}{%
-	\renewcommand*{\contentsname}{Inhalt}
-	\renewcommand*{\listfigurename}{Abbildungen}
-	\renewcommand*{\listtablename}{Abbildungsverzeichnis}
+  \renewcommand*{\contentsname}{Inhalt}
+  \renewcommand*{\listfigurename}{Abbildungen}
+  \renewcommand*{\listtablename}{Abbildungsverzeichnis}
 }
 %\pagestyle{fancy}
 %\fancypagestyle{ErsteSeite}{%
@@ -76,33 +76,33 @@
 %}
 
 \fancypagestyle{ErsteSeite}{%
-	\fancyhf{} 
-	\renewcommand{\headrulewidth}{0.4pt}
-	
-	\fancyhead[C]{%
-		\begin{minipage}[b]{0.2\textwidth}
-			\raggedright
-			\includegraphics[width=\linewidth]{../../03_AUX/01_PICT/HTL-Weiz-Logo.pdf}
-		\end{minipage}%
-		\hfill
-		\begin{minipage}[b]{0.65\textwidth} 
-			\centering
-			\small 
-			\textbf{Höhere Technische Bundeslehranstalt Weiz}\\[2pt]
-			\footnotesize
-			\textbf{Höhere Abteilung für Elektrotechnik}\\
-			Ausbildungsschwerpunkt Informationstechnologie
-		\end{minipage}%
-		\hfill
-		\begin{minipage}[b]{0.12\textwidth} 
-			\raggedleft
-			\includegraphics[width=\linewidth]{../../03_AUX/01_PICT/HTL-Weiz-IT-Logo.png}
-		\end{minipage}%
-		\vspace{2mm} 
-	}
-	
-	% Fußzeile für ErsteSeite
-
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0.4pt}
+  
+  \fancyhead[C]{%
+    \begin{minipage}[b]{0.2\textwidth}
+      \raggedright
+      \includegraphics[width=\linewidth]{../../03_AUX/01_PICT/HTL-Weiz-Logo.pdf}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[b]{0.65\textwidth}
+      \centering
+      \small 
+      \textbf{Höhere Technische Bundeslehranstalt Weiz}\\[2pt]
+      \footnotesize
+      \textbf{Höhere Abteilung für Elektrotechnik}\\
+      Ausbildungsschwerpunkt Informationstechnologie
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[b]{0.12\textwidth}
+      \raggedleft
+      \includegraphics[width=\linewidth]{../../03_AUX/01_PICT/HTL-Weiz-IT-Logo.png}
+    \end{minipage}%
+    \vspace{2mm}
+  }
+  
+  % Fußzeile für ErsteSeite
+  
 }
 %\makenoidxglossaries
 \renewcommand*\acronymname{Vokabelverzeichnis}
@@ -116,34 +116,74 @@
 
 % Definition der Box mit tcolorbox
 \newtcolorbox{Merksatz}{
-	enhanced,              % Erlaubt Schatten
-	colback=yellow!10,     % Hintergrundfarbe
-	colframe=kaki,         % Rahmenfarbe
-	boxrule=1pt,           % Rahmendicke
-	arc=3pt,               % Eckenradius
-	drop fuzzy shadow,     % Weicher Schatten
-	width=15cm,            % Breite
-	center,                % Zentriert die Box
-	before upper={\refstepcounter{MsNr}\textcolor{kaki}{\large\textbf{Merke \theMsNr:}}~} % Titel
+  enhanced,              % Erlaubt Schatten
+  colback=yellow!10,     % Hintergrundfarbe
+  colframe=kaki,         % Rahmenfarbe
+  boxrule=1pt,           % Rahmendicke
+  arc=3pt,               % Eckenradius
+  drop fuzzy shadow,     % Weicher Schatten
+  width=15cm,            % Breite
+  center,                % Zentriert die Box
+  before upper={\refstepcounter{MsNr}\textcolor{kaki}{\large\textbf{Merke \theMsNr:}}~} % Titel
 }
 %--------------------------------------------------------------------------------
 
 % Settings for Codelistings within documentation:
 \lstset{ % General setup for the package
-	language=C,
-	basicstyle=\small\sffamily,
-	numbers=left,
-	numberstyle=\tiny,
-	frame=tb,
-	tabsize=4,
-	columns=fixed,
-	showstringspaces=false,
-	showtabs=false,
-	keepspaces,
-	commentstyle=\color{red},
-	keywordstyle=\color{blue}
+  language=C,
+  basicstyle=\small\sffamily,
+  numbers=left,
+  numberstyle=\tiny,
+  frame=tb,
+  tabsize=4,
+  columns=fixed,
+  showstringspaces=false,
+  showtabs=false,
+  keepspaces,
+  commentstyle=\color{red},
+  keywordstyle=\color{itblue},
 }
 
+\newcommand\YAMLcolonstyle{\color{red}\mdseries}
+\newcommand\YAMLkeystyle{\color{black}\bfseries}
+\newcommand\YAMLvaluestyle{\color{blue}\mdseries}
+
+\makeatletter
+
+\newcommand\language@yaml{yaml}
+
+\expandafter\expandafter\expandafter\lstdefinelanguage
+\expandafter{\language@yaml}
+{
+keywords={true,false,null,y,n},
+keywordstyle=\color{darkgray}\bfseries,
+basicstyle=\YAMLkeystyle\small\sffamily,                                 % assuming a key comes first
+sensitive=false,
+comment=[l]{\#},
+morecomment=[s]{/*}{*/},
+commentstyle=\color{purple}\ttfamily,
+stringstyle=\YAMLvaluestyle\ttfamily,
+moredelim=[l][\color{orange}]{\&},
+moredelim=[l][\color{magenta}]{*},
+moredelim=**[il][\YAMLcolonstyle{:}\YAMLvaluestyle]{:},   % switch to value style at :
+morestring=[b]',
+morestring=[b]",
+literate =    {---}{{\ProcessThreeDashes}}3
+{>}{{\textcolor{red}\textgreater}}1     
+{|}{{\textcolor{red}\textbar}}1 
+{\ -\ }{{\mdseries\ -\ }}3,
+}
+
+\lst@AddToHook{EveryLine}{\ifx\lst@language\language@yaml\YAMLkeystyle\fi}
+\makeatother
+
+\newcommand\ProcessThreeDashes{\llap{\color{cyan}\mdseries-{-}-}}
+
 \setcounter{footnote}{0}
+
+% Zitate hochgestellt in eckigen Klammern (z.B. ^{[1]})
+\makeatletter
+\def\@cite#1#2{\textsuperscript{[{#1\if@tempswa , #2\fi}]}}
+\makeatother
 
 % \changefont{pag}{m}{n}

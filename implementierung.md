@@ -105,7 +105,7 @@ async def handle_vehicle_detection(
 Die folgende Darstellung zeigt den vollständigen Ablauf von der Webhook-Auslösung bis zur Speicherung in der Datenbank als Sequenzdiagramm:
 
 
-![Data Collection Flow](data_collection.svg)
+![Data Collection Flow](data_collection.png)
 
 Wie dem Diagramm zu entnehmen ist, durchläuft jede Erkennung nach dem Webhook-Eingang die folgenden Phasen, welche in den nächsten Unterkapiteln im Detail erläutert werden:
 Kamera-Anbindung, ALPR-Aufruf, Datenanreicherung, Anonymisierung und Speicherung mit Duplikatprüfung.

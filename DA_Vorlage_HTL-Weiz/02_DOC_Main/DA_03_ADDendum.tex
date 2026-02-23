@@ -1,47 +1,235 @@
-% Zusammenfassung und Resumee der Diplomarbeit:
-\section{Zusammenfassung}
+%
+%****************************************************************************************************
+%========================= B E G I N   D O C U M E N T   A D D E N D U M =====================
+%****************************************************************************************************
+%
 
-Hier steht die Zusammenfassung und das Resumee der Diplomarbeit!
-\newpage
-
-% Anhang zur Diplomarbeit:
 \section{Anhang}
+\label{sec:anhang}
 
-Hier stehen zusätzliche Informationen zur Diplomarbeit!
-Zum Beispiel können hier Listings oder Teile des Programmes abgebildet sein:
+\subsection{Herleitung der Speicherdauerformel}
 
-\begin{lstlisting}
-// create new document
-string path = @"C:\Data\sample.xlsx";
-// add title row 
-List<string> titleRow = new List<string>();
-titleRow.Add("This is the 1st cell");
-titleRow.Add("This is the 2nd cell");
-openXmlExcel.addTitleRow(titleRow);
-// add scatter chart
-List<double[]> xValues = new List<double[]>();
-List<double[]> yValues = new List<double[]>();
-List<string> lineNames = new List<string>();
-// first line
-xValues.Add(new double[5] { -2, -1, 0, 1, 2 });
-yValues.Add(new double[5] { -2, -1, 0, 1, 2 });
-lineNames.Add("Line 1");
-// second line
-xValues.Add(new double[5] { -2, -1, 0, 1, 2 });
-yValues.Add(new double[5] { -3, -1, 0, 1, 3 });
-lineNames.Add("Line 2");
-// save document 
-openXmlExcel.saveFile();
+Die in Abschnitt~\ref{sec:denormalisierung} verwendete Formel zur Berechnung der Speicherauffüllungsdauer wurde wie folgt hergeleitet:
+
+Die durchschnittliche Größe eines Datensatzes ($s$) ergibt sich aus:
+
+\begin{equation}
+s = \frac{G_t}{E_t}
+\end{equation}
+
+wobei $G_t$ die Größe eines Backups und $E_t$ die Gesamtanzahl der Erkennungen zu diesem Zeitpunkt $t$ bezeichnen.
+Die tägliche Erkennungsrate $r$ berechnet sich folgendermaßen:
+
+\begin{equation}
+r = \frac{E_t}{D_t}
+\end{equation}
+
+wobei $D_t$ die Anzahl der bisherigen Aufzeichnungstage darstellt.
+Daraus lässt sich die Anzahl der Tage $T$ bestimmen, bis eine gegebene Speicherkapazität $S_{\max}$ erreicht ist:
+
+\begin{equation}
+T = \frac{S_{\max}}{s \cdot r}
+\end{equation}
+
+Ausgehend von den oben aufgelisteten Formeln ergibt sich durch Einsetzen von $s$ und $r$ in $T$:
+
+\begin{equation}
+T = \frac{S_{\max}}{\left(\frac{G_t}{E_t}\right)\left(\frac{E_t}{D_t}\right)}
+\end{equation}
+
+Nach Kürzen von $E_t$ folgt:
+
+\begin{equation}
+T = \frac{S_{\max}}{\frac{G_t}{D_t}}
+\end{equation}
+
+wobei $\frac{G_t}{D_t}$ die durchschnittliche Speicherzunahme pro Tag beschreibt.
+Damit ergibt sich die vereinfachte Formel:
+
+\begin{equation}
+T = \frac{S_{\max} \cdot D_t}{G_t}
+\end{equation}
+
+
+\subsection{Vollständige Verarbeitungsmethode (process\_vehicle\_detection)}
+
+Die folgende Methode zeigt den vollständigen Ablauf der Hintergrundverarbeitung einer Fahrzeugerkennung im Data Collection Service:
+
+\begin{lstlisting}[language=Python, caption={Vollständige Verarbeitungsmethode}, label={lst:process_full}]
+def process_vehicle_detection(camera_name: str, detection_time: datetime):
+    """background task for vehicle detection handling
+
+    Args:
+        camera_name (str): name of the camera that called the webhook
+        detection_time (datetime): time the event was triggered
+    """
+    try:
+        with get_db() as db:
+            # Authenticate client
+            sid = camera_service.authenticate_client(
+                host=settings.synology_host,
+                username=settings.synology_username,
+                password=settings.synology_password,
+            )
+
+            # Get camera data
+            cameras = camera_service.get_camera_data(
+                host=settings.synology_host, sid=sid)
+
+            # Find target camera
+            target_camera = camera_service.get_camera_by_name(
+                cameras=cameras, camera_name=camera_name)
+
+            # Get camera snapshot
+            frame = camera_service.get_camera_snapshot(
+                host=settings.synology_host, sid=sid, 
+                camera=target_camera)
+
+            image_data = frame.content
+            filename = f'observation_{detection_time}.jpg'
+            filepath = os.path.join('/app/snapshots', filename)
+
+            # Save image is enabled
+            if settings.save_images_for_debug:
+                try:
+                    with open(filepath, 'wb') as f:
+                        f.write(image_data)
+                    logger.info(f'Snapshot saved to {filepath}')
+                except Exception as e:
+                    logger.exception(f'Failed to save image: {e}')
+
+            # Send image to api
+            result = plate_service.send_to_api(
+                api_key=settings.api_key,
+                image_data=image_data,
+                camera_name=camera_name,
+                service_url=settings.plate_recognizer_service_url,
+            )
+            if not result:
+                logger.info(
+                    'Plate Recognizer returned no actual observations')
+                return
+            logger.debug(f'Plate Recognizer results: {result}')
+
+            # Add result to db
+            observations_to_create = db_handler.new_observation(
+                reader_result=result, 
+                detection_timestamp=detection_time
+            )
+
+            for observation_data in observations_to_create:
+                observation_data = \
+                    country_handler.get_municipality_and_fix_country(
+                        observation=observation_data)
+                observation_data = db_handler.hash_plate(
+                    observation=observation_data)
+
+                if not db_handler.check_for_duplicates(
+                    db=db,
+                    observation=observation_data,
+                    current_detection_time=detection_time,
+                    interval=timedelta(
+                        seconds=settings.interval_seconds),
+                ):
+                    db_handler.create_observation_entry(
+                        db=db, observation=observation_data)
+
+    except (CameraException, PlateRecognizerException, 
+            DatabaseException) as e:
+        logger.exception(f'{type(e).__name__}: {e}')
+    except Exception as e:
+        logger.exception(
+            f'Unexpected error during background processing: {e}')
+    return
 \end{lstlisting}
 
-\newpage
 
-\section{Verzeichnisse}
-% Tabellenverzeichnis:
+\subsection{Datenbank-Initialisierungsskript (init.sql)}
+
+Das folgende SQL-Skript wird beim ersten Start des Systems durch den DB-Prestart-Container ausgeführt und erstellt die Schemas, Benutzer und Berechtigungen:
+
+\begin{lstlisting}[language=SQL, caption={Datenbank-Initialisierungsskript (init.sql)}, label={lst:init_sql}]
+-- Create users with environment variable passwords
+CREATE USER notification_user 
+    WITH PASSWORD :NOTIFICATION_DB_PASSWORD;
+CREATE USER data_collection_user 
+    WITH PASSWORD :DATA_COLLECTION_DB_PASSWORD;
+CREATE USER analytics_user 
+    WITH PASSWORD :ANALYTICS_DB_PASSWORD;
+
+-- Grant database connection privileges
+GRANT CONNECT ON DATABASE :DB_NAME TO data_collection_user;
+GRANT CONNECT ON DATABASE :DB_NAME TO analytics_user;
+GRANT CONNECT ON DATABASE :DB_NAME TO notification_user;
+
+-- Create schemas
+CREATE SCHEMA IF NOT EXISTS :DATA_COLLECTION_SCHEMA;
+CREATE SCHEMA IF NOT EXISTS :ANALYTICS_SCHEMA;
+CREATE SCHEMA IF NOT EXISTS :NOTIFICATION_SCHEMA;
+
+-- Data Collection Service permissions 
+-- (writes to :DATA_COLLECTION_SCHEMA)
+GRANT ALL ON SCHEMA :DATA_COLLECTION_SCHEMA 
+    TO data_collection_user;
+GRANT ALL PRIVILEGES ON ALL TABLES 
+    IN SCHEMA :DATA_COLLECTION_SCHEMA TO data_collection_user;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES 
+    IN SCHEMA :DATA_COLLECTION_SCHEMA TO data_collection_user;
+ALTER DEFAULT PRIVILEGES IN SCHEMA :DATA_COLLECTION_SCHEMA 
+    GRANT ALL ON TABLES TO data_collection_user;
+ALTER DEFAULT PRIVILEGES IN SCHEMA :DATA_COLLECTION_SCHEMA 
+    GRANT ALL ON SEQUENCES TO data_collection_user;
+
+-- Analytics Service permissions 
+-- (reads from :DATA_COLLECTION_SCHEMA, 
+--  writes to :ANALYTICS_SCHEMA)
+GRANT USAGE ON SCHEMA :DATA_COLLECTION_SCHEMA 
+    TO analytics_user;
+GRANT SELECT ON ALL TABLES 
+    IN SCHEMA :DATA_COLLECTION_SCHEMA TO analytics_user;
+ALTER DEFAULT PRIVILEGES IN SCHEMA :DATA_COLLECTION_SCHEMA 
+    GRANT SELECT ON TABLES TO analytics_user;
+
+GRANT ALL ON SCHEMA :ANALYTICS_SCHEMA TO analytics_user;
+GRANT ALL PRIVILEGES ON ALL TABLES 
+    IN SCHEMA :ANALYTICS_SCHEMA TO analytics_user;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES 
+    IN SCHEMA :ANALYTICS_SCHEMA TO analytics_user;
+ALTER DEFAULT PRIVILEGES IN SCHEMA :ANALYTICS_SCHEMA 
+    GRANT ALL ON TABLES TO analytics_user;
+ALTER DEFAULT PRIVILEGES IN SCHEMA :ANALYTICS_SCHEMA 
+    GRANT ALL ON SEQUENCES TO analytics_user;
+
+-- Notification Service permissions 
+-- (writes to :NOTIFICATION_SCHEMA)
+GRANT ALL ON SCHEMA :NOTIFICATION_SCHEMA 
+    TO notification_user;
+GRANT ALL PRIVILEGES ON ALL TABLES 
+    IN SCHEMA :NOTIFICATION_SCHEMA TO notification_user;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES 
+    IN SCHEMA :NOTIFICATION_SCHEMA TO notification_user;
+ALTER DEFAULT PRIVILEGES IN SCHEMA :NOTIFICATION_SCHEMA 
+    GRANT ALL ON TABLES TO notification_user;
+ALTER DEFAULT PRIVILEGES IN SCHEMA :NOTIFICATION_SCHEMA 
+    GRANT ALL ON SEQUENCES TO notification_user;
+
+-- Set search paths for each user
+ALTER ROLE data_collection_user 
+    SET search_path = :DATA_COLLECTION_SCHEMA,public;
+ALTER ROLE analytics_user 
+    SET search_path = :ANALYTICS_SCHEMA,
+                      :DATA_COLLECTION_SCHEMA,public;
+ALTER ROLE notification_user 
+    SET search_path = :NOTIFICATION_SCHEMA,public;
+\end{lstlisting}
+
+
+%
+\newpage 
 \listoffigures 
 %
-% Abkürzungsverzeichnis:
+\newpage
 \input{./../02_DOC_Main/DA_04_ACR.tex}
 %
-% Literaturverzeichnis:
+\newpage
 \input{./../02_DOC_Main/DA_05_LIT.tex}
