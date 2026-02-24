@@ -17,7 +17,7 @@
 \contentsline {subsection}{\numberline {3.1}Hardwareauswahl}{18}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}Anforderungsanalyse an die Hardware}{18}{subsubsection.3.1.1}%
 \contentsline {paragraph}{\nonumberline Grundanforderungen}{18}{paragraph*.26}%
-\contentsline {paragraph}{\nonumberline Anforderungen Kamera}{19}{paragraph*.29}%
+\contentsline {paragraph}{\nonumberline Anforderungen Kamera}{18}{paragraph*.29}%
 \contentsline {paragraph}{\nonumberline Anforderungen Server}{19}{paragraph*.31}%
 \contentsline {subsubsection}{\numberline {3.1.2}Evaluierung der Hardware-Optionen}{19}{subsubsection.3.1.2}%
 \contentsline {paragraph}{\nonumberline Kamera -- Auswahl}{19}{paragraph*.33}%
@@ -27,104 +27,104 @@
 \contentsline {subsection}{\numberline {3.2}Technik-Stack und Technologieauswahl der Kennzeichenerkennung}{23}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}Technologieauswahl Kennzeichenerkennung}{23}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Argumentation der Software-Technologien Entscheidungen}{24}{subsubsection.3.2.2}%
-\contentsline {section}{\numberline {4}Systementwurf und Architektur}{25}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Gesamtarchitektur}{25}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Backend-Services}{26}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Frontend}{26}{subsubsection.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.3}Infrastruktur-Services}{26}{subsubsection.4.1.3}%
-\contentsline {subsubsection}{\numberline {4.1.4}Kommunikationswege}{27}{subsubsection.4.1.4}%
-\contentsline {paragraph}{\nonumberline 1. Externer Trigger durch Erkennung eines Fahrzeugs $\to $ Data Collection Service}{27}{figure.caption.46}%
-\contentsline {paragraph}{\nonumberline 2. Data Collection Service $\to $ Synology API}{27}{figure.caption.49}%
-\contentsline {paragraph}{\nonumberline 3. Data Collection Service $\to $ Plate Recognizer SDK}{27}{figure.caption.52}%
-\contentsline {paragraph}{\nonumberline 4. Data Collection Service $\to $ PostgreSQL}{28}{figure.caption.55}%
-\contentsline {paragraph}{\nonumberline 5. Web Service $\to $ Backend-Services}{28}{figure.caption.58}%
-\contentsline {paragraph}{\nonumberline 6. Notification Service $\to $ Analytics Service}{28}{figure.caption.61}%
-\contentsline {paragraph}{\nonumberline 7. Grafana $\to $ PostgreSQL}{28}{figure.caption.64}%
-\contentsline {subsection}{\numberline {4.2}Datenbankdesign}{29}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Architekturansatz}{29}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Entitäten und ER-Modell}{30}{subsubsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.3}Argumentation zur Denormalisierung}{30}{subsubsection.4.2.3}%
-\contentsline {paragraph}{\nonumberline 1. Datenherkunft aus externer API}{30}{paragraph*.67}%
-\contentsline {paragraph}{\nonumberline 2. Lesedominanz}{31}{paragraph*.69}%
-\contentsline {paragraph}{\nonumberline 3. Einfachheit der Abfragen}{31}{paragraph*.71}%
-\contentsline {paragraph}{\nonumberline 4. Unveränderlichkeit der Daten}{31}{paragraph*.73}%
-\contentsline {paragraph}{\nonumberline 5. Speicherplatz als unkritische Ressource}{32}{paragraph*.75}%
-\contentsline {paragraph}{\nonumberline Formel zur Berechnung der Speicherauffüllungsdauer anhand der Größe eines Full-Backups:}{32}{paragraph*.77}%
-\contentsline {subsection}{\numberline {4.3}Sicherheitskonzept}{33}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Authentifizierung und Endpunkt-Sicherheit}{33}{subsubsection.4.3.1}%
-\contentsline {paragraph}{\nonumberline Data Collection Service (HTTP Basic Authentication)}{33}{paragraph*.79}%
-\contentsline {paragraph}{\nonumberline Notification Service (API-Key Authentication)}{33}{paragraph*.81}%
-\contentsline {paragraph}{\nonumberline Auth Service / Web Service (Active Directory Integration)}{33}{paragraph*.83}%
-\contentsline {subsubsection}{\numberline {4.3.2}Datenbankzugriffskontrolle}{34}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Datenschutz und Umgang mit Kennzeichen-Daten}{35}{subsubsection.4.3.3}%
-\contentsline {paragraph}{\nonumberline 1. Irreversibles Hashing}{35}{paragraph*.86}%
-\contentsline {paragraph}{\nonumberline 2. Keine Speicherung von Bilddaten}{35}{paragraph*.88}%
-\contentsline {paragraph}{\nonumberline 3. Verarbeitung im lokalen Netzwerk}{35}{paragraph*.90}%
-\contentsline {subsubsection}{\numberline {4.3.4}Datenlebenszyklus (Data Lifecycle)}{35}{subsubsection.4.3.4}%
-\contentsline {section}{\numberline {5}Implementierung}{37}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Konfiguration Synology Surveillance Station}{37}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}IP Camera Konfiguration}{37}{subsubsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.2}Deep Video Analytics Konfiguration}{37}{subsubsection.5.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.3}Action Rule Konfiguration}{38}{subsubsection.5.1.3}%
-\contentsline {subsection}{\numberline {5.2}Data Collection Service}{38}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Konzept und Aufbau}{40}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}Externer Trigger}{40}{subsubsection.5.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.3}Ablauf der Verarbeitung}{41}{subsubsection.5.2.3}%
-\contentsline {subsubsection}{\numberline {5.2.4}Kamera-Anbindung (CameraHandler)}{43}{subsubsection.5.2.4}%
-\contentsline {paragraph}{\nonumberline 1. Authentifizierung}{43}{paragraph*.97}%
-\contentsline {paragraph}{\nonumberline 2. Kameraliste und Identifikation}{43}{paragraph*.99}%
-\contentsline {paragraph}{\nonumberline 3. Snapshot-Abruf}{43}{paragraph*.101}%
-\contentsline {subsubsection}{\numberline {5.2.5}Plate Recognizer Integration (PlateRecognizerHandler)}{43}{subsubsection.5.2.5}%
-\contentsline {subsubsection}{\numberline {5.2.6}Datenverarbeitung und Enrichment-Schleife}{45}{subsubsection.5.2.6}%
-\contentsline {paragraph}{\nonumberline Datenextraktion}{45}{paragraph*.103}%
-\contentsline {paragraph}{\nonumberline Bezirkserkennung (CountryHandler)}{45}{paragraph*.105}%
-\contentsline {paragraph}{\nonumberline Anonymisierung (Hashing)}{46}{paragraph*.107}%
-\contentsline {subsubsection}{\numberline {5.2.7}Duplikatprüfung und Speicherung}{46}{subsubsection.5.2.7}%
-\contentsline {subsection}{\numberline {5.3}Notification Service}{47}{subsection.5.3}%
-\contentsline {subsubsection}{\numberline {5.3.1}Architektur und API-Design}{47}{subsubsection.5.3.1}%
-\contentsline {paragraph}{\nonumberline Benutzerpräferenzen (\texttt {/api/user\_preferences})}{47}{paragraph*.109}%
-\contentsline {paragraph}{\nonumberline Benachrichtigungsversand (\texttt {/api/notifications})}{47}{paragraph*.111}%
-\contentsline {subsubsection}{\numberline {5.3.2}E-Mail-Versand (EmailHandler)}{47}{subsubsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.4}Grafana}{48}{subsection.5.4}%
-\contentsline {subsubsection}{\numberline {5.4.1}Architektur und Provisioning}{48}{subsubsection.5.4.1}%
-\contentsline {paragraph}{\nonumberline 1. grafana.ini:}{48}{paragraph*.113}%
-\contentsline {paragraph}{\nonumberline 2. Datasource-Provisioning (\texttt {datasource.yaml}):}{48}{paragraph*.115}%
-\contentsline {paragraph}{\nonumberline 3. Dashboard-Provisioning (\texttt {dashboard-provider.yaml} und Dashboard-JSON):}{48}{paragraph*.117}%
-\contentsline {subsubsection}{\numberline {5.4.2}Dashboard-Aufbau und Darstellungen}{48}{subsubsection.5.4.2}%
-\contentsline {section}{\numberline {6}Infrastruktur, Deployment und Betrieb}{51}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Container-Orchestrierung}{51}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Entwicklungsumgebung}{51}{subsubsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.2}Produktionsumgebung}{51}{subsubsection.6.1.2}%
-\contentsline {subsubsection}{\numberline {6.1.3}Startabhängigkeiten und Healthchecks}{52}{subsubsection.6.1.3}%
-\contentsline {subsection}{\numberline {6.2}CI/CD Pipelines und Deployment}{53}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}Build und Test Pipeline}{53}{subsubsection.6.2.1}%
-\contentsline {paragraph}{\nonumberline Phase 1: Testing und Linting}{53}{paragraph*.120}%
-\contentsline {paragraph}{\nonumberline Phase 2: Build und Push}{53}{paragraph*.122}%
-\contentsline {subsubsection}{\numberline {6.2.2}Deployment mit Portainer}{54}{subsubsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.3}Monitoring und Logging}{55}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Healthchecks}{55}{subsubsection.6.3.1}%
-\contentsline {subsubsection}{\numberline {6.3.2}Logging}{55}{subsubsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.4}Datenbank-Management}{56}{subsection.6.4}%
-\contentsline {subsubsection}{\numberline {6.4.1}Initiale Einrichtung}{56}{subsubsection.6.4.1}%
-\contentsline {subsubsection}{\numberline {6.4.2}Schema-Migrationen mit Alembic}{56}{subsubsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.5}Backup-Strategie}{57}{subsection.6.5}%
-\contentsline {subsubsection}{\numberline {6.5.1}Automatisiertes Backup}{57}{subsubsection.6.5.1}%
-\contentsline {subsubsection}{\numberline {6.5.2}Manuelles Backup und Wiederherstellung}{58}{subsubsection.6.5.2}%
-\contentsline {subsection}{\numberline {6.6}Documentation as Code (MkDocs)}{59}{subsection.6.6}%
-\contentsline {section}{\numberline {7}Qualitätssicherung und Tests}{60}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Teststrategie}{60}{subsection.7.1}%
-\contentsline {subsubsection}{\numberline {7.1.1}Unit-Tests}{60}{subsubsection.7.1.1}%
-\contentsline {subsubsection}{\numberline {7.1.2}Integrationstests}{61}{subsubsection.7.1.2}%
-\contentsline {subsubsection}{\numberline {7.1.3}Testisolation und Datenbankstrategie}{61}{subsubsection.7.1.3}%
-\contentsline {subsection}{\numberline {7.2}Qualitätssicherung der Kennzeichenerkennung}{63}{subsection.7.2}%
-\contentsline {section}{\numberline {8}Fazit und Ausblick}{64}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Zusammenfassung der Ergebnisse}{64}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Ausblick}{64}{subsection.8.2}%
-\contentsline {section}{\numberline {9}Anhang}{65}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Herleitung der Speicherdauerformel}{65}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Vollständige Verarbeitungsmethode (process\_vehicle\_detection)}{66}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Datenbank-Initialisierungsskript (init.sql)}{69}{subsection.9.3}%
-\contentsline {section}{\nonumberline Abbildungen}{71}{section*.127}%
-\contentsline {section}{Abkürzungsverzeichnis}{72}{section*.128}%
-\contentsline {section}{\nonumberline Literaturverzeichnis}{74}{section*.131}%
+\contentsline {section}{\numberline {4}Systementwurf und Architektur}{26}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Gesamtarchitektur}{26}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Backend-Services}{27}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Frontend}{27}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Infrastruktur-Services}{27}{subsubsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.4}Kommunikationswege}{28}{subsubsection.4.1.4}%
+\contentsline {paragraph}{\nonumberline 1. Externer Trigger durch Erkennung eines Fahrzeugs $\to $ Data Collection Service}{28}{figure.caption.46}%
+\contentsline {paragraph}{\nonumberline 2. Data Collection Service $\to $ Synology API}{28}{figure.caption.49}%
+\contentsline {paragraph}{\nonumberline 3. Data Collection Service $\to $ Plate Recognizer SDK}{28}{figure.caption.52}%
+\contentsline {paragraph}{\nonumberline 4. Data Collection Service $\to $ PostgreSQL}{29}{figure.caption.55}%
+\contentsline {paragraph}{\nonumberline 5. Web Service $\to $ Backend-Services}{29}{figure.caption.58}%
+\contentsline {paragraph}{\nonumberline 6. Notification Service $\to $ Analytics Service}{29}{figure.caption.61}%
+\contentsline {paragraph}{\nonumberline 7. Grafana $\to $ PostgreSQL}{29}{figure.caption.64}%
+\contentsline {subsection}{\numberline {4.2}Datenbankdesign}{30}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Architekturansatz}{30}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Entitäten und ER-Modell}{31}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Argumentation zur Denormalisierung}{31}{subsubsection.4.2.3}%
+\contentsline {paragraph}{\nonumberline 1. Datenherkunft aus externer API}{31}{paragraph*.67}%
+\contentsline {paragraph}{\nonumberline 2. Lesedominanz}{32}{paragraph*.69}%
+\contentsline {paragraph}{\nonumberline 3. Einfachheit der Abfragen}{32}{paragraph*.71}%
+\contentsline {paragraph}{\nonumberline 4. Unveränderlichkeit der Daten}{32}{paragraph*.73}%
+\contentsline {paragraph}{\nonumberline 5. Speicherplatz als unkritische Ressource}{33}{paragraph*.75}%
+\contentsline {paragraph}{\nonumberline Formel zur Berechnung der Speicherauffüllungsdauer anhand der Größe eines Full-Backups:}{33}{paragraph*.77}%
+\contentsline {subsection}{\numberline {4.3}Sicherheitskonzept}{34}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Authentifizierung und Endpunkt-Sicherheit}{34}{subsubsection.4.3.1}%
+\contentsline {paragraph}{\nonumberline Data Collection Service (HTTP Basic Authentication)}{34}{paragraph*.79}%
+\contentsline {paragraph}{\nonumberline Notification Service (API-Key Authentication)}{34}{paragraph*.81}%
+\contentsline {paragraph}{\nonumberline Auth Service / Web Service (Active Directory Integration)}{34}{paragraph*.83}%
+\contentsline {subsubsection}{\numberline {4.3.2}Datenbankzugriffskontrolle}{35}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Datenschutz und Umgang mit Kennzeichen-Daten}{36}{subsubsection.4.3.3}%
+\contentsline {paragraph}{\nonumberline 1. Irreversibles Hashing}{36}{paragraph*.86}%
+\contentsline {paragraph}{\nonumberline 2. Keine Speicherung von Bilddaten}{36}{paragraph*.88}%
+\contentsline {paragraph}{\nonumberline 3. Verarbeitung im lokalen Netzwerk}{36}{paragraph*.90}%
+\contentsline {subsubsection}{\numberline {4.3.4}Datenlebenszyklus (Data Lifecycle)}{36}{subsubsection.4.3.4}%
+\contentsline {section}{\numberline {5}Implementierung}{38}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Konfiguration Synology Surveillance Station}{38}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}IP Camera Konfiguration}{38}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Deep Video Analytics Konfiguration}{38}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}Action Rule Konfiguration}{39}{subsubsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.2}Data Collection Service}{39}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Konzept und Aufbau}{41}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Externer Trigger}{41}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Ablauf der Verarbeitung}{42}{subsubsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.4}Kamera-Anbindung (CameraHandler)}{44}{subsubsection.5.2.4}%
+\contentsline {paragraph}{\nonumberline 1. Authentifizierung}{44}{paragraph*.97}%
+\contentsline {paragraph}{\nonumberline 2. Kameraliste und Identifikation}{44}{paragraph*.99}%
+\contentsline {paragraph}{\nonumberline 3. Snapshot-Abruf}{44}{paragraph*.101}%
+\contentsline {subsubsection}{\numberline {5.2.5}Plate Recognizer Integration (PlateRecognizerHandler)}{44}{subsubsection.5.2.5}%
+\contentsline {subsubsection}{\numberline {5.2.6}Datenverarbeitung und Enrichment-Schleife}{46}{subsubsection.5.2.6}%
+\contentsline {paragraph}{\nonumberline Datenextraktion}{46}{paragraph*.103}%
+\contentsline {paragraph}{\nonumberline Bezirkserkennung (CountryHandler)}{46}{paragraph*.105}%
+\contentsline {paragraph}{\nonumberline Anonymisierung (Hashing)}{47}{paragraph*.107}%
+\contentsline {subsubsection}{\numberline {5.2.7}Duplikatprüfung und Speicherung}{47}{subsubsection.5.2.7}%
+\contentsline {subsection}{\numberline {5.3}Notification Service}{48}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Architektur und API-Design}{48}{subsubsection.5.3.1}%
+\contentsline {paragraph}{\nonumberline Benutzerpräferenzen (\texttt {/api/user\_preferences})}{48}{paragraph*.109}%
+\contentsline {paragraph}{\nonumberline Benachrichtigungsversand (\texttt {/api/notifications})}{48}{paragraph*.111}%
+\contentsline {subsubsection}{\numberline {5.3.2}E-Mail-Versand (EmailHandler)}{48}{subsubsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.4}Grafana}{49}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Architektur und Provisioning}{49}{subsubsection.5.4.1}%
+\contentsline {paragraph}{\nonumberline 1. grafana.ini:}{49}{paragraph*.113}%
+\contentsline {paragraph}{\nonumberline 2. Datasource-Provisioning (\texttt {datasource.yaml}):}{49}{paragraph*.115}%
+\contentsline {paragraph}{\nonumberline 3. Dashboard-Provisioning (\texttt {dashboard-provider.yaml} und Dashboard-JSON):}{49}{paragraph*.117}%
+\contentsline {subsubsection}{\numberline {5.4.2}Dashboard-Aufbau und Darstellungen}{49}{subsubsection.5.4.2}%
+\contentsline {section}{\numberline {6}Infrastruktur, Deployment und Betrieb}{52}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Container-Orchestrierung}{52}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Entwicklungsumgebung}{52}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Produktionsumgebung}{52}{subsubsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.3}Startabhängigkeiten und Healthchecks}{53}{subsubsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.2}CI/CD Pipelines und Deployment}{54}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Build und Test Pipeline}{54}{subsubsection.6.2.1}%
+\contentsline {paragraph}{\nonumberline Phase 1: Testing und Linting}{54}{paragraph*.120}%
+\contentsline {paragraph}{\nonumberline Phase 2: Build und Push}{54}{paragraph*.122}%
+\contentsline {subsubsection}{\numberline {6.2.2}Deployment mit Portainer}{55}{subsubsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.3}Monitoring und Logging}{56}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Healthchecks}{56}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}Logging}{56}{subsubsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.4}Datenbank-Management}{57}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}Initiale Einrichtung}{57}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2}Schema-Migrationen mit Alembic}{57}{subsubsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.5}Backup-Strategie}{58}{subsection.6.5}%
+\contentsline {subsubsection}{\numberline {6.5.1}Automatisiertes Backup}{58}{subsubsection.6.5.1}%
+\contentsline {subsubsection}{\numberline {6.5.2}Manuelles Backup und Wiederherstellung}{59}{subsubsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.6}Documentation as Code (MkDocs)}{60}{subsection.6.6}%
+\contentsline {section}{\numberline {7}Qualitätssicherung und Tests}{61}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Teststrategie}{61}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Unit-Tests}{61}{subsubsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.2}Integrationstests}{62}{subsubsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.3}Testisolation und Datenbankstrategie}{62}{subsubsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.2}Qualitätssicherung der Kennzeichenerkennung}{64}{subsection.7.2}%
+\contentsline {section}{\numberline {8}Fazit und Ausblick}{65}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Zusammenfassung der Ergebnisse}{65}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Ausblick}{65}{subsection.8.2}%
+\contentsline {section}{\numberline {9}Anhang}{66}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Herleitung der Speicherdauerformel}{66}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Vollständige Verarbeitungsmethode (process\_vehicle\_detection)}{67}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Datenbank-Initialisierungsskript (init.sql)}{70}{subsection.9.3}%
+\contentsline {section}{\nonumberline Abbildungen}{72}{section*.127}%
+\contentsline {section}{Abkürzungsverzeichnis}{73}{section*.128}%
+\contentsline {section}{\nonumberline Literaturverzeichnis}{75}{section*.131}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

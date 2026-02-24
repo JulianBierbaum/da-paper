@@ -1,15 +1,15 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'DA_main.blg'
-[48] biber:340> INFO - === Tue Feb 24, 2026, 14:43:52
-[66] Biber.pm:420> INFO - Reading 'DA_main.bcf'
-[103] Biber.pm:994> INFO - Found 62 citekeys in bib section 0
-[111] Biber.pm:4463> INFO - Processing section 0
-[116] Biber.pm:4654> INFO - Looking for bibtex file 'literatur.bib' for section 0
-[117] bibtex.pm:1713> INFO - LaTeX decoding ...
-[133] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
-[291] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[291] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[291] Biber.pm:4283> INFO - Sorting list 'anyt/global//global/global/global' of type 'entry' with template 'anyt' and locale 'de-DE'
-[291] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
-[317] bbl.pm:676> INFO - Writing 'DA_main.bbl' with encoding 'UTF-8'
-[329] bbl.pm:779> INFO - Output to DA_main.bbl
+[42] biber:340> INFO - === Tue Feb 24, 2026, 16:07:20
+[52] Biber.pm:420> INFO - Reading 'DA_main.bcf'
+[101] Biber.pm:994> INFO - Found 62 citekeys in bib section 0
+[109] Biber.pm:4463> INFO - Processing section 0
+[117] Biber.pm:4654> INFO - Looking for bibtex file 'literatur.bib' for section 0
+[119] bibtex.pm:1713> INFO - LaTeX decoding ...
+[147] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
+[315] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[315] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[316] Biber.pm:4283> INFO - Sorting list 'anyt/global//global/global/global' of type 'entry' with template 'anyt' and locale 'de-DE'
+[316] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
+[342] bbl.pm:676> INFO - Writing 'DA_main.bbl' with encoding 'UTF-8'
+[357] bbl.pm:779> INFO - Output to DA_main.bbl

@@ -47,10 +47,10 @@
 
 % --- Literaturverwaltung mit biblatex ---
 \usepackage[
-  backend=biber,
-  style=alphabetic,
-  sorting=anyt,
-  urldate=short
+    backend=biber,
+    style=alphabetic,
+    sorting=anyt,
+    urldate=short
 ]{biblatex}
 
 
@@ -65,7 +65,7 @@
 
 % "am <Datum>" statt "besucht am <Datum>"
 \DefineBibliographyStrings{ngerman}{
-  urlseen = {am},
+    urlseen = {am},
 }
 
 \addbibresource{literatur.bib}
@@ -75,3 +75,6 @@
 %
 \newboolean{UseWm} 		%Korrektur Wasserzeichen in das PDF drucken
 \setboolean{UseWm}{false} 		%Zuweisung eines Wertes
+
+% Eigener Befehl für Bildquellen
+\newcommand{\source}[1]{\vspace{-0.2cm}\caption*{\centering \footnotesize Quelle: {#1}}}

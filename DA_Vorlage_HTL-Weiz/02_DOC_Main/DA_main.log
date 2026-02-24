@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.11.9)  24 FEB 2026 14:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.11.9)  24 FEB 2026 16:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2163,12 +2163,12 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 File: ./../03_AUX/01_PICT/docker-logo-blue.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/docker-logo-blue.png>
 Package pdftex.def Info: ./../03_AUX/01_PICT/docker-logo-blue.png  used on input line 17.
-(pdftex.def)             Requested size: 85.35826pt x 19.41733pt.
+(pdftex.def)             Requested size: 199.16928pt x 45.30981pt.
 
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
-Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 35.
+Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 36.
 (pdftex.def)             Requested size: 70.621pt x 30.42433pt.
 
 Package fancyhdr Warning: \headheight is too small (18.125pt): 
@@ -2178,7 +2178,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
 [12{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./../03_AUX/01_PICT/docker-logo-blue.png>]
-Overfull \hbox (14.16734pt too wide) in paragraph at lines 53--59
+Overfull \hbox (14.16734pt too wide) in paragraph at lines 54--60
 \T1/phv/m/n/12 Docker Com-po-se ist ein Tool zur De-fi-ni-ti-on und Ver-wal-tung von Multi-Container-Anwendungen.
  []
 
@@ -2186,7 +2186,7 @@ Overfull \hbox (14.16734pt too wide) in paragraph at lines 53--59
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
-Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 59.
+Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 60.
 (pdftex.def)             Requested size: 70.621pt x 30.42433pt.
 
 Package fancyhdr Warning: \headheight is too small (18.125pt): 
@@ -2199,7 +2199,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
-Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 81.
+Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 82.
 (pdftex.def)             Requested size: 70.621pt x 30.42433pt.
 
 Package fancyhdr Warning: \headheight is too small (18.125pt): 
@@ -2212,7 +2212,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
-Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 107.
+Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 108.
 (pdftex.def)             Requested size: 70.621pt x 30.42433pt.
 
 Package fancyhdr Warning: \headheight is too small (18.125pt): 
@@ -2222,12 +2222,12 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
 [15]
-Overfull \hbox (26.70863pt too wide) in paragraph at lines 133--136
+Overfull \hbox (26.70863pt too wide) in paragraph at lines 134--137
 \T1/phv/m/n/12 der Plau-si-bi-li-tät der er-kann-ten Num-mern-ta-fel. Auch wer-den ty-pi-sche OCR-Verwechslungen
  []
 
 
-Overfull \hbox (3.7028pt too wide) in paragraph at lines 139--140
+Overfull \hbox (3.7028pt too wide) in paragraph at lines 140--141
 \T1/phv/m/n/12 In die-sem Sys-tem wird der Dienst Pla-te Re-co-gni-zer ein-ge-setzt, der mo-der-ne De-ep Learning-
  []
 
@@ -2235,7 +2235,7 @@ Overfull \hbox (3.7028pt too wide) in paragraph at lines 139--140
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
-Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 140.
+Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 141.
 (pdftex.def)             Requested size: 70.621pt x 30.42433pt.
 
 Package fancyhdr Warning: \headheight is too small (18.125pt): 
@@ -2245,7 +2245,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
 [16]
-Overfull \hbox (4.07765pt too wide) in paragraph at lines 145--146
+Overfull \hbox (4.07765pt too wide) in paragraph at lines 146--147
 []\T1/phv/b/n/12 Make (Mar-ke): \T1/phv/m/n/12 Iden-ti-fi-ka-ti-on des Fahr-zeugher-stel-lers ba-sie-rend auf cha-rak-te-ris-ti-schen
  []
 
@@ -2263,13 +2263,13 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
 [17] (./../02a_DOC_DPL1/kap_03_hardware_technologie.tex
-<./../03_AUX/01_PICT/zotter.png, id=403, 1541.76pt x 763.35187pt>
+<./../03_AUX/01_PICT/zotter.png, id=406, 1541.76pt x 763.35187pt>
 File: ./../03_AUX/01_PICT/zotter.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/zotter.png>
 Package pdftex.def Info: ./../03_AUX/01_PICT/zotter.png  used on input line 25.
 (pdftex.def)             Requested size: 455.24408pt x 225.3965pt.
 
-Overfull \hbox (17.67874pt too wide) in paragraph at lines 30--34
+Overfull \hbox (17.67874pt too wide) in paragraph at lines 31--35
 \T1/phv/m/n/12 re-du-ziert zwar den In-stal-la-ti-ons-auf-wand der Hard-wa-re, er-höht je-doch die Software-Komplexität,
  []
 
@@ -2277,7 +2277,7 @@ Overfull \hbox (17.67874pt too wide) in paragraph at lines 30--34
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
-Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 34.
+Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 44.
 (pdftex.def)             Requested size: 70.621pt x 30.42433pt.
 
 Package fancyhdr Warning: \headheight is too small (18.125pt): 
@@ -2286,11 +2286,11 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[18 <./../03_AUX/01_PICT/zotter.png>]
+[18]
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
-Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 60.
+Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 61.
 (pdftex.def)             Requested size: 70.621pt x 30.42433pt.
 
 Package fancyhdr Warning: \headheight is too small (18.125pt): 
@@ -2299,22 +2299,22 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[19]
-<./../03_AUX/01_PICT/synology_bc500.png, id=429, 722.7pt x 445.665pt>
+[19 <./../03_AUX/01_PICT/zotter.png>]
+<./../03_AUX/01_PICT/synology_bc500.png, id=434, 722.7pt x 445.665pt>
 File: ./../03_AUX/01_PICT/synology_bc500.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/synology_bc500.png>
-Package pdftex.def Info: ./../03_AUX/01_PICT/synology_bc500.png  used on input line 67.
+Package pdftex.def Info: ./../03_AUX/01_PICT/synology_bc500.png  used on input line 68.
 (pdftex.def)             Requested size: 170.71652pt x 105.2753pt.
-<./../03_AUX/01_PICT/zotter-markup.png, id=430, 2055.68pt x 1005.7575pt>
+<./../03_AUX/01_PICT/zotter-markup.png, id=437, 2055.68pt x 1005.7575pt>
 File: ./../03_AUX/01_PICT/zotter-markup.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/zotter-markup.png>
-Package pdftex.def Info: ./../03_AUX/01_PICT/zotter-markup.png  used on input line 84.
+Package pdftex.def Info: ./../03_AUX/01_PICT/zotter-markup.png  used on input line 86.
 (pdftex.def)             Requested size: 455.24408pt x 222.72527pt.
 
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
-Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 97.
+Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 98.
 (pdftex.def)             Requested size: 70.621pt x 30.42433pt.
 
 Package fancyhdr Warning: \headheight is too small (18.125pt): 
@@ -2327,7 +2327,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
-Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 112.
+Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 114.
 (pdftex.def)             Requested size: 70.621pt x 30.42433pt.
 
 Package fancyhdr Warning: \headheight is too small (18.125pt): 
@@ -2337,26 +2337,21 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
 [21 <./../03_AUX/01_PICT/zotter-markup.png>]
-<./../03_AUX/01_PICT/synology_dva1622.png, id=460, 652.4375pt x 454.69875pt>
+<./../03_AUX/01_PICT/synology_dva1622.png, id=468, 652.4375pt x 454.69875pt>
 File: ./../03_AUX/01_PICT/synology_dva1622.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/synology_dva1622.png>
-Package pdftex.def Info: ./../03_AUX/01_PICT/synology_dva1622.png  used on input line 125.
+Package pdftex.def Info: ./../03_AUX/01_PICT/synology_dva1622.png  used on input line 128.
 (pdftex.def)             Requested size: 170.71652pt x 118.97513pt.
 
-Overfull \hbox (13.24307pt too wide) in paragraph at lines 130--135
+Overfull \hbox (13.24307pt too wide) in paragraph at lines 134--139
 []\T1/phv/m/n/12 Zunächst bie-tet die Sur-veil-lan-ce Sta-ti-on API Zu-griff auf Live-Streams, Snaps-hots und Ereignis-
- []
-
-
-Overfull \hbox (16.54964pt too wide) in paragraph at lines 136--137
-[]\T1/phv/m/n/12 Die Kom-bi-na-ti-on aus re-le-van-ten Fea-tu-res, um-fas-sen-der API und na-ti-ver Kamera-Unterstützung
  []
 
 
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
-Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 137.
+Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 139.
 (pdftex.def)             Requested size: 70.621pt x 30.42433pt.
 
 Package fancyhdr Warning: \headheight is too small (18.125pt): 
@@ -2366,10 +2361,15 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
 [22 <./../03_AUX/01_PICT/synology_dva1622.png>]
+Overfull \hbox (16.54964pt too wide) in paragraph at lines 140--141
+[]\T1/phv/m/n/12 Die Kom-bi-na-ti-on aus re-le-van-ten Fea-tu-res, um-fas-sen-der API und na-ti-ver Kamera-Unterstützung
+ []
+
+
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
-Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 167.
+Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 166.
 (pdftex.def)             Requested size: 70.621pt x 30.42433pt.
 
 Package fancyhdr Warning: \headheight is too small (18.125pt): 
@@ -2379,7 +2379,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
 [23]
-Overfull \hbox (24.45471pt too wide) in paragraph at lines 174--177
+Overfull \hbox (24.45471pt too wide) in paragraph at lines 178--181
 \T1/phv/m/n/12 API/S-wag-ger ge-ne-riert. Im Ver-gleich zu Flask, dem ver-mut-lich be-kann-tes-ten Python-Framework,
  []
 
@@ -2396,8 +2396,21 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[24] (./../02a_DOC_DPL1/kap_04_systementwurf_architektur.tex
-<./../03_AUX/01_PICT/architektur.png, id=509, 1377.145pt x 531.9875pt>
+[24]
+
+File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
+<use ./../03_AUX/01_PICT///HTL_logo.pdf>
+Package pdftex.def Info: ./../03_AUX/01_PICT///HTL_logo.pdf  used on input line 35.
+(pdftex.def)             Requested size: 70.621pt x 30.42433pt.
+
+Package fancyhdr Warning: \headheight is too small (18.125pt): 
+(fancyhdr)                Make it at least 34.77437pt, for example:
+(fancyhdr)                \setlength{\headheight}{34.77437pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
+
+[25] (./../02a_DOC_DPL1/kap_04_systementwurf_architektur.tex
+<./../03_AUX/01_PICT/architektur.png, id=526, 1377.145pt x 531.9875pt>
 File: ./../03_AUX/01_PICT/architektur.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/architektur.png>
 Package pdftex.def Info: ./../03_AUX/01_PICT/architektur.png  used on input line 22.
@@ -2415,7 +2428,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[25 <./../03_AUX/01_PICT/architektur.png>]
+[26 <./../03_AUX/01_PICT/architektur.png>]
 Overfull \hbox (12.64464pt too wide) in paragraph at lines 35--38
 \T1/phv/m/n/12 FastAPI-Framework. Der Da-ta Col-lec-ti-on Ser-vice nimmt als Herz-stück des Sys-tems Webhook-
  []
@@ -2433,8 +2446,8 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[26]
-<./../03_AUX/01_PICT/trigger_for_data_collection.png, id=529, 3013.2575pt x 411.5375pt>
+[27]
+<./../03_AUX/01_PICT/trigger_for_data_collection.png, id=545, 3013.2575pt x 411.5375pt>
 File: ./../03_AUX/01_PICT/trigger_for_data_collection.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/trigger_for_data_collection.png>
 Package pdftex.def Info: ./../03_AUX/01_PICT/trigger_for_data_collection.png  used on input line 74.
@@ -2444,17 +2457,17 @@ Overfull \hbox (2.84688pt too wide) in paragraph at lines 79--80
 \T1/phv/m/n/12 Die Syn-o-lo-gy Sur-veil-lan-ce Sta-ti-on ruft bei Er-ken-nung ei-ner Fahr-zeug-be-we-gung einen REST-
  []
 
-<./../03_AUX/01_PICT/data_collection_to_synology.png, id=530, 2931.95375pt x 496.85625pt>
+<./../03_AUX/01_PICT/data_collection_to_synology.png, id=546, 2931.95375pt x 496.85625pt>
 File: ./../03_AUX/01_PICT/data_collection_to_synology.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/data_collection_to_synology.png>
 Package pdftex.def Info: ./../03_AUX/01_PICT/data_collection_to_synology.png  used on input line 85.
 (pdftex.def)             Requested size: 364.19664pt x 61.71263pt.
-<./../03_AUX/01_PICT/data_collection_to_plate_recognizer.png, id=531, 3208.98875pt x 496.85625pt>
+<./../03_AUX/01_PICT/data_collection_to_plate_recognizer.png, id=547, 3208.98875pt x 496.85625pt>
 File: ./../03_AUX/01_PICT/data_collection_to_plate_recognizer.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/data_collection_to_plate_recognizer.png>
 Package pdftex.def Info: ./../03_AUX/01_PICT/data_collection_to_plate_recognizer.png  used on input line 96.
 (pdftex.def)             Requested size: 364.19664pt x 56.3829pt.
-<./../03_AUX/01_PICT/data_collection_to_db.png, id=532, 2825.55624pt x 474.77374pt>
+<./../03_AUX/01_PICT/data_collection_to_db.png, id=548, 2825.55624pt x 474.77374pt>
 File: ./../03_AUX/01_PICT/data_collection_to_db.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/data_collection_to_db.png>
 Package pdftex.def Info: ./../03_AUX/01_PICT/data_collection_to_db.png  used on input line 107.
@@ -2472,18 +2485,18 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[27 <./../03_AUX/01_PICT/trigger_for_data_collection.png> <./../03_AUX/01_PICT/data_collection_to_synology.png>]
-<./../03_AUX/01_PICT/web_interactions.png, id=548, 2813.51125pt x 1259.70625pt>
+[28 <./../03_AUX/01_PICT/trigger_for_data_collection.png> <./../03_AUX/01_PICT/data_collection_to_synology.png>]
+<./../03_AUX/01_PICT/web_interactions.png, id=564, 2813.51125pt x 1259.70625pt>
 File: ./../03_AUX/01_PICT/web_interactions.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/web_interactions.png>
 Package pdftex.def Info: ./../03_AUX/01_PICT/web_interactions.png  used on input line 121.
 (pdftex.def)             Requested size: 364.19664pt x 163.05637pt.
-<./../03_AUX/01_PICT/notification_to_analytics.png, id=549, 2960.05875pt x 496.85625pt>
+<./../03_AUX/01_PICT/notification_to_analytics.png, id=565, 2960.05875pt x 496.85625pt>
 File: ./../03_AUX/01_PICT/notification_to_analytics.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/notification_to_analytics.png>
 Package pdftex.def Info: ./../03_AUX/01_PICT/notification_to_analytics.png  used on input line 132.
 (pdftex.def)             Requested size: 364.19664pt x 61.12888pt.
-<./../03_AUX/01_PICT/grafana_to_db.png, id=550, 2279.51625pt x 474.77374pt>
+<./../03_AUX/01_PICT/grafana_to_db.png, id=566, 2279.51625pt x 474.77374pt>
 File: ./../03_AUX/01_PICT/grafana_to_db.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/grafana_to_db.png>
 Package pdftex.def Info: ./../03_AUX/01_PICT/grafana_to_db.png  used on input line 143.
@@ -2501,7 +2514,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[28 <./../03_AUX/01_PICT/data_collection_to_plate_recognizer.png> <./../03_AUX/01_PICT/data_collection_to_db.png> <./../03_AUX/01_PICT/web_interactions.png>]
+[29 <./../03_AUX/01_PICT/data_collection_to_plate_recognizer.png> <./../03_AUX/01_PICT/data_collection_to_db.png> <./../03_AUX/01_PICT/web_interactions.png>]
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
@@ -2514,8 +2527,8 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[29 <./../03_AUX/01_PICT/notification_to_analytics.png> <./../03_AUX/01_PICT/grafana_to_db.png>]
-<./../03_AUX/01_PICT/tables.png, id=584, 3382.6375pt x 2474.24374pt>
+[30 <./../03_AUX/01_PICT/notification_to_analytics.png> <./../03_AUX/01_PICT/grafana_to_db.png>]
+<./../03_AUX/01_PICT/tables.png, id=600, 3382.6375pt x 2474.24374pt>
 File: ./../03_AUX/01_PICT/tables.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/tables.png>
 Package pdftex.def Info: ./../03_AUX/01_PICT/tables.png  used on input line 189.
@@ -2533,7 +2546,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[30]
+[31]
 Overfull \hbox (0.26378pt too wide) in paragraph at lines 213--214
 [] []\T1/phv/b/n/12 3. Ein-fach-heit der Ab-fra-gen[][] \T1/phv/m/n/12 Die Grafana-Dashboards ver-wen-den di-rek-te SQL-Abfragen.
  []
@@ -2551,7 +2564,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[31 <./../03_AUX/01_PICT/tables.png>]
+[32 <./../03_AUX/01_PICT/tables.png>]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 7.59998pt on input line 240.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
@@ -2571,7 +2584,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[32]
+[33]
 Overfull \hbox (91.73544pt too wide) in paragraph at lines 265--269
 [] []\T1/phv/b/n/12 Data Col-lec-ti-on Ser-vice (HTTP Ba-sic Au-then-ti-ca-ti-on)[][] \T1/phv/m/n/12 Der Webhook-Endpunkt \T1/cmtt/m/n/12 /api/vehicle_detected\T1/phv/m/n/12 ,
  []
@@ -2594,8 +2607,8 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[33]
-<./../03_AUX/01_PICT/db_user.png, id=640, 3348.51pt x 2755.29375pt>
+[34]
+<./../03_AUX/01_PICT/db_user.png, id=656, 3348.51pt x 2755.29375pt>
 File: ./../03_AUX/01_PICT/db_user.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/db_user.png>
 Package pdftex.def Info: ./../03_AUX/01_PICT/db_user.png  used on input line 298.
@@ -2623,8 +2636,8 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[34 <./../03_AUX/01_PICT/db_user.png>]
-<./../03_AUX/01_PICT/detection_flow.png, id=650, 5395.15625pt x 411.5375pt>
+[35 <./../03_AUX/01_PICT/db_user.png>]
+<./../03_AUX/01_PICT/detection_flow.png, id=666, 5395.15625pt x 411.5375pt>
 File: ./../03_AUX/01_PICT/detection_flow.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/detection_flow.png>
 Package pdftex.def Info: ./../03_AUX/01_PICT/detection_flow.png  used on input line 336.
@@ -2642,7 +2655,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[35 <./../03_AUX/01_PICT/detection_flow.png>])
+[36 <./../03_AUX/01_PICT/detection_flow.png>])
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
@@ -2655,13 +2668,13 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[36] (./../02a_DOC_DPL1/kap_05_implementierung.tex
-<./../03_AUX/01_PICT/ip_camera_tool.png, id=672, 1023.825pt x 478.78876pt>
+[37] (./../02a_DOC_DPL1/kap_05_implementierung.tex
+<./../03_AUX/01_PICT/ip_camera_tool.png, id=689, 1023.825pt x 478.78876pt>
 File: ./../03_AUX/01_PICT/ip_camera_tool.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/ip_camera_tool.png>
 Package pdftex.def Info: ./../03_AUX/01_PICT/ip_camera_tool.png  used on input line 24.
 (pdftex.def)             Requested size: 455.24408pt x 212.88864pt.
-<./../03_AUX/01_PICT/erkennungsbereich_config.png, id=675, 919.18407pt x 563.10374pt>
+<./../03_AUX/01_PICT/erkennungsbereich_config.png, id=692, 919.18407pt x 563.10374pt>
 File: ./../03_AUX/01_PICT/erkennungsbereich_config.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/erkennungsbereich_config.png>
 Package pdftex.def Info: ./../03_AUX/01_PICT/erkennungsbereich_config.png  used on input line 41.
@@ -2679,8 +2692,8 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[37]
-<./../03_AUX/01_PICT/action_rule.png, id=685, 827.34094pt x 562.35094pt>
+[38]
+<./../03_AUX/01_PICT/action_rule.png, id=701, 827.34094pt x 562.35094pt>
 File: ./../03_AUX/01_PICT/action_rule.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/action_rule.png>
 Package pdftex.def Info: ./../03_AUX/01_PICT/action_rule.png  used on input line 56.
@@ -2698,7 +2711,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[38 <./../03_AUX/01_PICT/ip_camera_tool.png>]
+[39 <./../03_AUX/01_PICT/ip_camera_tool.png>]
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
@@ -2711,7 +2724,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[39 <./../03_AUX/01_PICT/erkennungsbereich_config.png> <./../03_AUX/01_PICT/action_rule.png>]
+[40 <./../03_AUX/01_PICT/erkennungsbereich_config.png> <./../03_AUX/01_PICT/action_rule.png>]
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
@@ -2724,10 +2737,10 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[40] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[41] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
-<./../03_AUX/01_PICT/data_collection.png, id=712, 7482.95625pt x 8221.71625pt>
+<./../03_AUX/01_PICT/data_collection.png, id=729, 7482.95625pt x 8221.71625pt>
 File: ./../03_AUX/01_PICT/data_collection.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/data_collection.png>
 Package pdftex.def Info: ./../03_AUX/01_PICT/data_collection.png  used on input line 132.
@@ -2745,7 +2758,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[41]
+[42]
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
@@ -2758,7 +2771,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[42 <./../03_AUX/01_PICT/data_collection.png>]
+[43 <./../03_AUX/01_PICT/data_collection.png>]
 Overfull \hbox (6.97862pt too wide) in paragraph at lines 154--157
 \T1/phv/m/n/12 An-fra-ge, im JPEG-Format an-ge-for-dert. Die Bild-da-ten wer-den als Byte-Stream im Ar-beitsspei-
  []
@@ -2781,7 +2794,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[43]
+[44]
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 (Font)              scaled to size 10.40245pt on input line 176.
 
@@ -2797,7 +2810,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[44]
+[45]
 Overfull \hbox (21.43924pt too wide) in paragraph at lines 221--224
 \T1/phv/m/n/12 Kenn-zei-chen von Pla-te Re-co-gni-zer mit dem Län-der-co-de \T1/cmtt/m/n/12 unknown \T1/phv/m/n/12 klas-si-fi-ziert, der Kennzeichen-
  []
@@ -2815,7 +2828,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[45]
+[46]
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
@@ -2828,7 +2841,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[46]
+[47]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 272.
 
@@ -2864,7 +2877,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[47]
+[48]
 Overfull \hbox (14.93684pt too wide) in paragraph at lines 310--313
 [] []\T1/phv/b/n/12 2. Datasource-Provisioning (\T1/cmtt/m/n/12 datasource.yaml\T1/phv/b/n/12 ):[][] \T1/phv/m/n/12 De-fi-niert die Ver-bin-dung zur PostgreSQL-
  []
@@ -2882,8 +2895,8 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[48]
-<./../03_AUX/01_PICT/grafana_dashboard.png, id=867, 1061.46562pt x 1647.90656pt>
+[49]
+<./../03_AUX/01_PICT/grafana_dashboard.png, id=884, 1061.46562pt x 1647.90656pt>
 File: ./../03_AUX/01_PICT/grafana_dashboard.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/grafana_dashboard.png>
 Package pdftex.def Info: ./../03_AUX/01_PICT/grafana_dashboard.png  used on input line 337.
@@ -2905,7 +2918,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[49]
+[50]
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
@@ -2918,7 +2931,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[50 <./../03_AUX/01_PICT/grafana_dashboard.png>] (./../02a_DOC_DPL1/kap_06_infrastruktur.tex
+[51 <./../03_AUX/01_PICT/grafana_dashboard.png>] (./../02a_DOC_DPL1/kap_06_infrastruktur.tex
 Overfull \hbox (15.86592pt too wide) in paragraph at lines 5--7
 \T1/phv/m/n/12 Be-trieb re-le-van-ten Aspek-te wie Mo-ni-to-ring und Log-ging, Datenbank-Management und Backup-
  []
@@ -2943,7 +2956,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[51]
+[52]
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
@@ -2956,7 +2969,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[52] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[53] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
@@ -2973,7 +2986,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[53]
+[54]
 Overfull \hbox (69.04456pt too wide) in paragraph at lines 106--107
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -2988,7 +3001,7 @@ Overfull \hbox (62.80302pt too wide) in paragraph at lines 113--114
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<./../03_AUX/01_PICT/container_stack_portainer.png, id=927, 1638.12pt x 609.77812pt>
+<./../03_AUX/01_PICT/container_stack_portainer.png, id=943, 1638.12pt x 609.77812pt>
 File: ./../03_AUX/01_PICT/container_stack_portainer.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/container_stack_portainer.png>
 Package pdftex.def Info: ./../03_AUX/01_PICT/container_stack_portainer.png  used on input line 138.
@@ -3006,7 +3019,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[54]
+[55]
 Overfull \hbox (3.35316pt too wide) in paragraph at lines 154--155
 []\T1/phv/m/n/12 PostgreSQL-Datenbank: Ver-wen-dung des na-ti-ven \T1/cmtt/m/n/12 pg_isready\T1/phv/m/n/12 -Kommandos zur Über-
  []
@@ -3024,7 +3037,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[55 <./../03_AUX/01_PICT/container_stack_portainer.png>]
+[56 <./../03_AUX/01_PICT/container_stack_portainer.png>]
 Overfull \hbox (156.426pt too wide) in paragraph at lines 171--172
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -3047,7 +3060,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[56]
+[57]
 Overfull \hbox (13.8708pt too wide) in paragraph at lines 208--209
 []\T1/phv/m/n/12 Die Alembic-Konfiguration im-por-tiert die Base-Klassen der Backend-Services im Environment-
  []
@@ -3065,8 +3078,8 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[57]
-<./../03_AUX/01_PICT/backup_flow.png, id=1002, 6229.2725pt x 1077.02374pt>
+[58]
+<./../03_AUX/01_PICT/backup_flow.png, id=1018, 6229.2725pt x 1077.02374pt>
 File: ./../03_AUX/01_PICT/backup_flow.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/backup_flow.png>
 Package pdftex.def Info: ./../03_AUX/01_PICT/backup_flow.png  used on input line 242.
@@ -3081,7 +3094,7 @@ Overfull \hbox (6.23315pt too wide) in paragraph at lines 262--263
 []\T1/phv/m/n/12 Für die Wie-der-her-stel-lung exis-tiert eben-falls ein Script, wel-ches einen voll-stän-di-gen Disaster-
  []
 
-<./../03_AUX/01_PICT/restore_flow.png, id=1005, 7535.15125pt x 516.93124pt>
+<./../03_AUX/01_PICT/restore_flow.png, id=1021, 7535.15125pt x 516.93124pt>
 File: ./../03_AUX/01_PICT/restore_flow.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/restore_flow.png>
 Package pdftex.def Info: ./../03_AUX/01_PICT/restore_flow.png  used on input line 266.
@@ -3099,7 +3112,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[58 <./../03_AUX/01_PICT/backup_flow.png> <./../03_AUX/01_PICT/restore_flow.png>]
+[59 <./../03_AUX/01_PICT/backup_flow.png> <./../03_AUX/01_PICT/restore_flow.png>]
 Overfull \hbox (1.92406pt too wide) in paragraph at lines 279--282
 \T1/phv/m/n/12 Ma-te-ri-al[]] ein-ge-setzt, ein Python-basierter Static-Site-Generator, wel-cher Markdown-Dateien
  []
@@ -3114,7 +3127,7 @@ Overfull \hbox (2.98824pt too wide) in paragraph at lines 292--295
 \T1/phv/m/n/12 Actions-Workflow. Im Fal-le ei-nes Pu-shes wird die Do-ku-men-ta-ti-on neu ge-baut und auf GitHub
  []
 
-<./../03_AUX/01_PICT/mkdocs.png, id=1023, 1901.60437pt x 1066.7353pt>
+<./../03_AUX/01_PICT/mkdocs.png, id=1039, 1901.60437pt x 1066.7353pt>
 File: ./../03_AUX/01_PICT/mkdocs.png Graphic file (type png)
 <use ./../03_AUX/01_PICT/mkdocs.png>
 Package pdftex.def Info: ./../03_AUX/01_PICT/mkdocs.png  used on input line 301.
@@ -3132,7 +3145,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[59] (./../02a_DOC_DPL1/kap_07_qualitaetssicherung.tex
+[60] (./../02a_DOC_DPL1/kap_07_qualitaetssicherung.tex
 Overfull \hbox (20.8253pt too wide) in paragraph at lines 17--19
 \T1/phv/m/n/12 API, Pla-te Re-co-gni-zer und der SMTP-Server wer-den durch die Mocking-Library \T1/cmtt/m/n/12 unittest.mock
  []
@@ -3150,7 +3163,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[60 <./../03_AUX/01_PICT/mkdocs.png>]
+[61 <./../03_AUX/01_PICT/mkdocs.png>]
 Overfull \hbox (7.62357pt too wide) in paragraph at lines 33--35
 []\T1/phv/b/n/12 DatabaseHandler: \T1/phv/m/n/12 Tests für Da-ten-ex-trak-ti-on aus API-Antworten, Hash-Normalisierung
  []
@@ -3188,7 +3201,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[61]
+[62]
 Overfull \hbox (59.93723pt too wide) in paragraph at lines 65--66
 []\T1/phv/m/n/12 Beide Ser-vices ver-wen-den ein iden-ti-sches Mus-ter zur Da-te-ni-so-la-ti-on in ih-rer Pytest-Konfigurationsdatei: 
  []
@@ -3206,7 +3219,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[62])
+[63])
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
@@ -3219,7 +3232,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[63] (./../02a_DOC_DPL1/kap_08_fazit_ausblick.tex
+[64] (./../02a_DOC_DPL1/kap_08_fazit_ausblick.tex
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
@@ -3232,7 +3245,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[64])) (./DA_03_ADDendum.tex
+[65])) (./DA_03_ADDendum.tex
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
@@ -3245,7 +3258,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[65]
+[66]
 Overfull \hbox (6.62924pt too wide) in paragraph at lines 59--60
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -3263,7 +3276,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[66]
+[67]
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
@@ -3276,7 +3289,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[67] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[68] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
 
@@ -3291,7 +3304,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[68]
+[69]
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
@@ -3304,7 +3317,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[69]
+[70]
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
@@ -3317,7 +3330,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[70] (./DA_main.lof)
+[71] (./DA_main.lof)
 \tf@lof=\write7
 \openout7 = `DA_main.lof'.
 
@@ -3334,7 +3347,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[71]
+[72]
 
 Package glossaries Info: Preparing to sort glossary `acronym' (total number of
 (glossaries)             referenced entries: 29)
@@ -3352,7 +3365,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[72]
+[73]
 
 File: ./../03_AUX/01_PICT///HTL_logo.pdf Graphic file (type pdf)
 <use ./../03_AUX/01_PICT///HTL_logo.pdf>
@@ -3365,7 +3378,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[73] (./../02_DOC_Main/DA_05_LIT.tex
+[74] (./../02_DOC_Main/DA_05_LIT.tex
 Overfull \hbox (15.94826pt too wide) in paragraph at lines 4--4
 []\T1/phv/m/n/12 DSGVO-Gesetz.de. Per-so-nen-be-zo-ge-ne Da-ten. In: []$\T1/cmtt/m/n/12 https : / / dsgvo -[]
  []
@@ -3388,7 +3401,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[74]
+[75]
 Overfull \hbox (5.81183pt too wide) in paragraph at lines 4--4
 []\T1/phv/m/n/12 Greenhouse Gas Pro-to-col. Cor-po-ra-te Va-lue Chain (Sco-pe 3) Stan-
  []
@@ -3421,7 +3434,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[75]
+[76]
 Overfull \hbox (2.94887pt too wide) in paragraph at lines 4--4
 []\T1/phv/m/n/12 Plate Re-co-gni-zer. Snaps-hot API Re-fe-rence. In: []$\T1/cmtt/m/n/12 https : / / guides .
  []
@@ -3464,7 +3477,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[76]
+[77]
 Overfull \hbox (3.93134pt too wide) in paragraph at lines 4--4
 []\T1/phv/m/n/12 Steiermark Tou-ris-mus. Die meist-be-such-ten Aus-flugs-zie-le der Stei-
  []
@@ -3482,7 +3495,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[77]
+[78]
 Overfull \hbox (16.70013pt too wide) in paragraph at lines 4--4
 []\T1/phv/m/n/12 Synology. De-ep Vi-deo Ana-ly-tics (DVA). In: []$\T1/cmtt/m/n/12 https : / / www . synology .
  []
@@ -3510,7 +3523,7 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-16.64937pt}.
 
-[78] 
+[79] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./DA_main.aux)
  ***********
@@ -3524,21 +3537,21 @@ Package logreq Info: Writing requests to 'DA_main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53670 strings out of 473197
- 1088887 string characters out of 5718605
- 2135690 words of memory out of 5000000
- 75413 multiletter control sequences out of 15000+600000
- 604514 words of font info for 99 fonts, out of 8000000 for 9000
+ 53674 strings out of 473197
+ 1088922 string characters out of 5718605
+ 2135719 words of memory out of 5000000
+ 75415 multiletter control sequences out of 15000+600000
+ 604827 words of font info for 100 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  115i,20n,110p,11069b,2461s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
 
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on DA_main.pdf (78 pages, 15137659 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on DA_main.pdf (79 pages, 15169926 bytes).
 PDF statistics:
- 1954 PDF objects out of 2073 (max. 8388607)
- 1748 compressed objects within 18 object streams
- 674 named destinations out of 1000 (max. 500000)
+ 1975 PDF objects out of 2073 (max. 8388607)
+ 1761 compressed objects within 18 object streams
+ 675 named destinations out of 1000 (max. 500000)
  1001 words of extra memory for PDF output out of 10000 (max. 10000000)
 

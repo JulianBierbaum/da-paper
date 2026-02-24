@@ -18,7 +18,109 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global/global}
+  \datalist[entry]{anyt/global//global/global/global}
+    \entry{twelve_factor}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=78c94d63299ff16130ed37a90dc97dcd}{%
+           family={Wiggins},
+           familyi={W\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{78c94d63299ff16130ed37a90dc97dcd}
+      \strng{fullhash}{78c94d63299ff16130ed37a90dc97dcd}
+      \strng{fullhashraw}{78c94d63299ff16130ed37a90dc97dcd}
+      \strng{bibnamehash}{78c94d63299ff16130ed37a90dc97dcd}
+      \strng{authorbibnamehash}{78c94d63299ff16130ed37a90dc97dcd}
+      \strng{authornamehash}{78c94d63299ff16130ed37a90dc97dcd}
+      \strng{authorfullhash}{78c94d63299ff16130ed37a90dc97dcd}
+      \strng{authorfullhashraw}{78c94d63299ff16130ed37a90dc97dcd}
+      \field{labelalpha}{12-Factor App}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{12-Factor App}
+      \field{title}{The Twelve-Factor App}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://12factor.net/
+      \endverb
+      \verb{url}
+      \verb https://12factor.net/
+      \endverb
+    \endentry
+    \entry{alembic}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=caae4779decff7b0f79121b219159d3b}{%
+           family={Bayer},
+           familyi={B\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{caae4779decff7b0f79121b219159d3b}
+      \strng{fullhash}{caae4779decff7b0f79121b219159d3b}
+      \strng{fullhashraw}{caae4779decff7b0f79121b219159d3b}
+      \strng{bibnamehash}{caae4779decff7b0f79121b219159d3b}
+      \strng{authorbibnamehash}{caae4779decff7b0f79121b219159d3b}
+      \strng{authornamehash}{caae4779decff7b0f79121b219159d3b}
+      \strng{authorfullhash}{caae4779decff7b0f79121b219159d3b}
+      \strng{authorfullhashraw}{caae4779decff7b0f79121b219159d3b}
+      \field{labelalpha}{Alembic}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Alembic}
+      \field{title}{Alembic -- A database migration tool for SQLAlchemy}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://alembic.sqlalchemy.org/en/latest/
+      \endverb
+      \verb{url}
+      \verb https://alembic.sqlalchemy.org/en/latest/
+      \endverb
+    \endentry
+    \entry{alembic_monorepo}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=5466362116d967783652c3493d305e29}{%
+           family={Bck},
+           familyi={B\bibinitperiod},
+           given={Fadi},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{5466362116d967783652c3493d305e29}
+      \strng{fullhash}{5466362116d967783652c3493d305e29}
+      \strng{fullhashraw}{5466362116d967783652c3493d305e29}
+      \strng{bibnamehash}{5466362116d967783652c3493d305e29}
+      \strng{authorbibnamehash}{5466362116d967783652c3493d305e29}
+      \strng{authornamehash}{5466362116d967783652c3493d305e29}
+      \strng{authorfullhash}{5466362116d967783652c3493d305e29}
+      \strng{authorfullhashraw}{5466362116d967783652c3493d305e29}
+      \field{labelalpha}{Alembic Monorepo}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Alembic Monorepo}
+      \field{title}{Managing Database Migrations for Multiple Services in a Monorepo with Alembic}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dev.to/fadi-bck/managing-database-migrations-for-multiple-services-in-a-monorepo-with-alembic-3p5l
+      \endverb
+      \verb{url}
+      \verb https://dev.to/fadi-bck/managing-database-migrations-for-multiple-services-in-a-monorepo-with-alembic-3p5l
+      \endverb
+    \endentry
     \entry{aws_microservices}{online}{}{}
       \name{author}{1}{}{%
         {{hash=3eb2c1a57a8160029f036e3dcbf84bf1}{%
@@ -85,72 +187,6 @@
       \verb https://aws.amazon.com/what-is/nas/
       \endverb
     \endentry
-    \entry{ruff_formatter}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=82d37d790055d7f66f39aee86d2b8749}{%
-           family={Astral},
-           familyi={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{82d37d790055d7f66f39aee86d2b8749}
-      \strng{fullhash}{82d37d790055d7f66f39aee86d2b8749}
-      \strng{fullhashraw}{82d37d790055d7f66f39aee86d2b8749}
-      \strng{bibnamehash}{82d37d790055d7f66f39aee86d2b8749}
-      \strng{authorbibnamehash}{82d37d790055d7f66f39aee86d2b8749}
-      \strng{authornamehash}{82d37d790055d7f66f39aee86d2b8749}
-      \strng{authorfullhash}{82d37d790055d7f66f39aee86d2b8749}
-      \strng{authorfullhashraw}{82d37d790055d7f66f39aee86d2b8749}
-      \field{extraname}{1}
-      \field{labelalpha}{Ruff Formatter}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{shorthand}{Ruff Formatter}
-      \field{title}{Ruff Formatter}
-      \field{urlday}{23}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://docs.astral.sh/ruff/formatter/
-      \endverb
-      \verb{url}
-      \verb https://docs.astral.sh/ruff/formatter/
-      \endverb
-    \endentry
-    \entry{ruff_linter}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=82d37d790055d7f66f39aee86d2b8749}{%
-           family={Astral},
-           familyi={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{82d37d790055d7f66f39aee86d2b8749}
-      \strng{fullhash}{82d37d790055d7f66f39aee86d2b8749}
-      \strng{fullhashraw}{82d37d790055d7f66f39aee86d2b8749}
-      \strng{bibnamehash}{82d37d790055d7f66f39aee86d2b8749}
-      \strng{authorbibnamehash}{82d37d790055d7f66f39aee86d2b8749}
-      \strng{authornamehash}{82d37d790055d7f66f39aee86d2b8749}
-      \strng{authorfullhash}{82d37d790055d7f66f39aee86d2b8749}
-      \strng{authorfullhashraw}{82d37d790055d7f66f39aee86d2b8749}
-      \field{extraname}{2}
-      \field{labelalpha}{Ruff Linter}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{shorthand}{Ruff Linter}
-      \field{title}{Ruff Linter}
-      \field{urlday}{23}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://docs.astral.sh/ruff/linter/
-      \endverb
-      \verb{url}
-      \verb https://docs.astral.sh/ruff/linter/
-      \endverb
-    \endentry
     \entry{baseus_ip_ratings}{online}{}{}
       \name{author}{1}{}{%
         {{hash=b93caca67d1d47d9b47966ba011dfc82}{%
@@ -183,72 +219,38 @@
       \verb https://security.baseus.com/en-eu/blogs/content/a-guide-to-ip65-ip66-and-ip67-ratings-for-outdoor-security-cameras
       \endverb
     \endentry
-    \entry{alembic}{online}{}{}
+    \entry{cron_guru}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=caae4779decff7b0f79121b219159d3b}{%
-           family={Bayer},
-           familyi={B\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
+        {{hash=1eabd3cbf42760ab21d0696fcd2a8dc7}{%
+           family={Guru},
+           familyi={G\bibinitperiod},
+           given={Crontab},
+           giveni={C\bibinitperiod}}}%
       }
-      \strng{namehash}{caae4779decff7b0f79121b219159d3b}
-      \strng{fullhash}{caae4779decff7b0f79121b219159d3b}
-      \strng{fullhashraw}{caae4779decff7b0f79121b219159d3b}
-      \strng{bibnamehash}{caae4779decff7b0f79121b219159d3b}
-      \strng{authorbibnamehash}{caae4779decff7b0f79121b219159d3b}
-      \strng{authornamehash}{caae4779decff7b0f79121b219159d3b}
-      \strng{authorfullhash}{caae4779decff7b0f79121b219159d3b}
-      \strng{authorfullhashraw}{caae4779decff7b0f79121b219159d3b}
-      \field{labelalpha}{Alembic}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \strng{namehash}{1eabd3cbf42760ab21d0696fcd2a8dc7}
+      \strng{fullhash}{1eabd3cbf42760ab21d0696fcd2a8dc7}
+      \strng{fullhashraw}{1eabd3cbf42760ab21d0696fcd2a8dc7}
+      \strng{bibnamehash}{1eabd3cbf42760ab21d0696fcd2a8dc7}
+      \strng{authorbibnamehash}{1eabd3cbf42760ab21d0696fcd2a8dc7}
+      \strng{authornamehash}{1eabd3cbf42760ab21d0696fcd2a8dc7}
+      \strng{authorfullhash}{1eabd3cbf42760ab21d0696fcd2a8dc7}
+      \strng{authorfullhashraw}{1eabd3cbf42760ab21d0696fcd2a8dc7}
+      \field{labelalpha}{Cron Guru}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{shorthand}{Alembic}
-      \field{title}{Alembic -- A database migration tool for SQLAlchemy}
+      \field{shorthand}{Cron Guru}
+      \field{title}{Cron schedule expression editor}
       \field{urlday}{23}
       \field{urlmonth}{2}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://alembic.sqlalchemy.org/en/latest/
+      \verb https://crontab.guru/
       \endverb
       \verb{url}
-      \verb https://alembic.sqlalchemy.org/en/latest/
-      \endverb
-    \endentry
-    \entry{alembic_monorepo}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=5466362116d967783652c3493d305e29}{%
-           family={Bck},
-           familyi={B\bibinitperiod},
-           given={Fadi},
-           giveni={F\bibinitperiod}}}%
-      }
-      \strng{namehash}{5466362116d967783652c3493d305e29}
-      \strng{fullhash}{5466362116d967783652c3493d305e29}
-      \strng{fullhashraw}{5466362116d967783652c3493d305e29}
-      \strng{bibnamehash}{5466362116d967783652c3493d305e29}
-      \strng{authorbibnamehash}{5466362116d967783652c3493d305e29}
-      \strng{authornamehash}{5466362116d967783652c3493d305e29}
-      \strng{authorfullhash}{5466362116d967783652c3493d305e29}
-      \strng{authorfullhashraw}{5466362116d967783652c3493d305e29}
-      \field{labelalpha}{Alembic Monorepo}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{shorthand}{Alembic Monorepo}
-      \field{title}{Managing Database Migrations for Multiple Services in a Monorepo with Alembic}
-      \field{urlday}{23}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://dev.to/fadi-bck/managing-database-migrations-for-multiple-services-in-a-monorepo-with-alembic-3p5l
-      \endverb
-      \verb{url}
-      \verb https://dev.to/fadi-bck/managing-database-migrations-for-multiple-services-in-a-monorepo-with-alembic-3p5l
+      \verb https://crontab.guru/
       \endverb
     \endentry
     \entry{docker_cache}{online}{}{}
@@ -317,7 +319,7 @@
       \verb https://docs.docker.com/compose/intro/compose-application-model/
       \endverb
     \endentry
-    \entry{docker_hub}{online}{}{}
+    \entry{docker_dockerfile}{online}{}{}
       \name{author}{1}{}{%
         {{hash=c5fd214cdd0d2b3b4272e73b022ba5c2}{%
            family={{Docker}},
@@ -332,6 +334,39 @@
       \strng{authorfullhash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
       \strng{authorfullhashraw}{c5fd214cdd0d2b3b4272e73b022ba5c2}
       \field{extraname}{3}
+      \field{labelalpha}{Docker Dockerfile}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Docker Dockerfile}
+      \field{title}{Dockerfile reference}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.docker.com/build/concepts/dockerfile/
+      \endverb
+      \verb{url}
+      \verb https://docs.docker.com/build/concepts/dockerfile/
+      \endverb
+    \endentry
+    \entry{docker_hub}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=c5fd214cdd0d2b3b4272e73b022ba5c2}{%
+           family={{Docker}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
+      \strng{fullhash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
+      \strng{fullhashraw}{c5fd214cdd0d2b3b4272e73b022ba5c2}
+      \strng{bibnamehash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
+      \strng{authorbibnamehash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
+      \strng{authornamehash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
+      \strng{authorfullhash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
+      \strng{authorfullhashraw}{c5fd214cdd0d2b3b4272e73b022ba5c2}
+      \field{extraname}{4}
       \field{labelalpha}{Docker Hub}
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
@@ -364,7 +399,7 @@
       \strng{authornamehash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
       \strng{authorfullhash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
       \strng{authorfullhashraw}{c5fd214cdd0d2b3b4272e73b022ba5c2}
-      \field{extraname}{4}
+      \field{extraname}{5}
       \field{labelalpha}{Docker Overview}
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
@@ -381,73 +416,6 @@
       \endverb
       \verb{url}
       \verb https://docs.docker.com/get-started/docker-overview/
-      \endverb
-    \endentry
-    \entry{docker_dockerfile}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=c5fd214cdd0d2b3b4272e73b022ba5c2}{%
-           family={{Docker}},
-           familyi={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
-      \strng{fullhash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
-      \strng{fullhashraw}{c5fd214cdd0d2b3b4272e73b022ba5c2}
-      \strng{bibnamehash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
-      \strng{authorbibnamehash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
-      \strng{authornamehash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
-      \strng{authorfullhash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
-      \strng{authorfullhashraw}{c5fd214cdd0d2b3b4272e73b022ba5c2}
-      \field{extraname}{5}
-      \field{labelalpha}{Docker Dockerfile}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{shorthand}{Docker Dockerfile}
-      \field{title}{Dockerfile reference}
-      \field{urlday}{23}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://docs.docker.com/build/concepts/dockerfile/
-      \endverb
-      \verb{url}
-      \verb https://docs.docker.com/build/concepts/dockerfile/
-      \endverb
-    \endentry
-    \entry{mkdocs_material}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=e5494f40f91852d3bb5d811824e84563}{%
-           family={Donath},
-           familyi={D\bibinitperiod},
-           given={Martin},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{e5494f40f91852d3bb5d811824e84563}
-      \strng{fullhash}{e5494f40f91852d3bb5d811824e84563}
-      \strng{fullhashraw}{e5494f40f91852d3bb5d811824e84563}
-      \strng{bibnamehash}{e5494f40f91852d3bb5d811824e84563}
-      \strng{authorbibnamehash}{e5494f40f91852d3bb5d811824e84563}
-      \strng{authornamehash}{e5494f40f91852d3bb5d811824e84563}
-      \strng{authorfullhash}{e5494f40f91852d3bb5d811824e84563}
-      \strng{authorfullhashraw}{e5494f40f91852d3bb5d811824e84563}
-      \field{labelalpha}{MkDocs Material}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{shorthand}{MkDocs Material}
-      \field{title}{Material for MkDocs}
-      \field{urlday}{23}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://squidfunk.github.io/mkdocs-material/
-      \endverb
-      \verb{url}
-      \verb https://squidfunk.github.io/mkdocs-material/
       \endverb
     \endentry
     \entry{dsgvo_personenbezogen}{online}{}{}
@@ -482,135 +450,38 @@
       \verb https://dsgvo-gesetz.de/themen/personenbezogene-daten/
       \endverb
     \endentry
-    \entry{github_actions}{online}{}{}
+    \entry{fastapi}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=d3b7c913cd04ebfec0e9ec32cb6fd58c}{%
-           family={{GitHub}},
-           familyi={G\bibinitperiod}}}%
+        {{hash=f5305ee02dd2a5c6215b53401b4a10b0}{%
+           family={Ramírez},
+           familyi={R\bibinitperiod},
+           given={Sebastián},
+           giveni={S\bibinitperiod}}}%
       }
-      \strng{namehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
-      \strng{fullhash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
-      \strng{fullhashraw}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
-      \strng{bibnamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
-      \strng{authorbibnamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
-      \strng{authornamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
-      \strng{authorfullhash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
-      \strng{authorfullhashraw}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
-      \field{labelalpha}{GitHub Actions}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \strng{namehash}{f5305ee02dd2a5c6215b53401b4a10b0}
+      \strng{fullhash}{f5305ee02dd2a5c6215b53401b4a10b0}
+      \strng{fullhashraw}{f5305ee02dd2a5c6215b53401b4a10b0}
+      \strng{bibnamehash}{f5305ee02dd2a5c6215b53401b4a10b0}
+      \strng{authorbibnamehash}{f5305ee02dd2a5c6215b53401b4a10b0}
+      \strng{authornamehash}{f5305ee02dd2a5c6215b53401b4a10b0}
+      \strng{authorfullhash}{f5305ee02dd2a5c6215b53401b4a10b0}
+      \strng{authorfullhashraw}{f5305ee02dd2a5c6215b53401b4a10b0}
+      \field{labelalpha}{FastAPI}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{shorthand}{GitHub Actions}
-      \field{title}{GitHub Actions Documentation}
+      \field{shorthand}{FastAPI}
+      \field{title}{FastAPI}
       \field{urlday}{23}
       \field{urlmonth}{2}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://docs.github.com/en/actions
+      \verb https://fastapi.tiangolo.com/
       \endverb
       \verb{url}
-      \verb https://docs.github.com/en/actions
-      \endverb
-    \endentry
-    \entry{grafana_configure}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=92d1002bbeda9145e9369766ab6d96a9}{%
-           family={{Grafana Labs}},
-           familyi={G\bibinitperiod}}}%
-      }
-      \strng{namehash}{92d1002bbeda9145e9369766ab6d96a9}
-      \strng{fullhash}{92d1002bbeda9145e9369766ab6d96a9}
-      \strng{fullhashraw}{92d1002bbeda9145e9369766ab6d96a9}
-      \strng{bibnamehash}{92d1002bbeda9145e9369766ab6d96a9}
-      \strng{authorbibnamehash}{92d1002bbeda9145e9369766ab6d96a9}
-      \strng{authornamehash}{92d1002bbeda9145e9369766ab6d96a9}
-      \strng{authorfullhash}{92d1002bbeda9145e9369766ab6d96a9}
-      \strng{authorfullhashraw}{92d1002bbeda9145e9369766ab6d96a9}
-      \field{extraname}{1}
-      \field{labelalpha}{Grafana Config}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{shorthand}{Grafana Config}
-      \field{title}{Configure Grafana}
-      \field{urlday}{23}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://grafana.com/docs/grafana/latest/setup-grafana/configure-grafana/
-      \endverb
-      \verb{url}
-      \verb https://grafana.com/docs/grafana/latest/setup-grafana/configure-grafana/
-      \endverb
-    \endentry
-    \entry{grafana}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=92d1002bbeda9145e9369766ab6d96a9}{%
-           family={{Grafana Labs}},
-           familyi={G\bibinitperiod}}}%
-      }
-      \strng{namehash}{92d1002bbeda9145e9369766ab6d96a9}
-      \strng{fullhash}{92d1002bbeda9145e9369766ab6d96a9}
-      \strng{fullhashraw}{92d1002bbeda9145e9369766ab6d96a9}
-      \strng{bibnamehash}{92d1002bbeda9145e9369766ab6d96a9}
-      \strng{authorbibnamehash}{92d1002bbeda9145e9369766ab6d96a9}
-      \strng{authornamehash}{92d1002bbeda9145e9369766ab6d96a9}
-      \strng{authorfullhash}{92d1002bbeda9145e9369766ab6d96a9}
-      \strng{authorfullhashraw}{92d1002bbeda9145e9369766ab6d96a9}
-      \field{extraname}{2}
-      \field{labelalpha}{Grafana}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{shorthand}{Grafana}
-      \field{title}{Grafana -- The open observability platform}
-      \field{urlday}{23}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://grafana.com/
-      \endverb
-      \verb{url}
-      \verb https://grafana.com/
-      \endverb
-    \endentry
-    \entry{grafana_provisioning}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=92d1002bbeda9145e9369766ab6d96a9}{%
-           family={{Grafana Labs}},
-           familyi={G\bibinitperiod}}}%
-      }
-      \strng{namehash}{92d1002bbeda9145e9369766ab6d96a9}
-      \strng{fullhash}{92d1002bbeda9145e9369766ab6d96a9}
-      \strng{fullhashraw}{92d1002bbeda9145e9369766ab6d96a9}
-      \strng{bibnamehash}{92d1002bbeda9145e9369766ab6d96a9}
-      \strng{authorbibnamehash}{92d1002bbeda9145e9369766ab6d96a9}
-      \strng{authornamehash}{92d1002bbeda9145e9369766ab6d96a9}
-      \strng{authorfullhash}{92d1002bbeda9145e9369766ab6d96a9}
-      \strng{authorfullhashraw}{92d1002bbeda9145e9369766ab6d96a9}
-      \field{extraname}{3}
-      \field{labelalpha}{Grafana Provisioning}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{shorthand}{Grafana Provisioning}
-      \field{title}{Provision Grafana}
-      \field{urlday}{23}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://grafana.com/docs/grafana/latest/administration/provisioning/
-      \endverb
-      \verb{url}
-      \verb https://grafana.com/docs/grafana/latest/administration/provisioning/
+      \verb https://fastapi.tiangolo.com/
       \endverb
     \endentry
     \entry{ghg_scope3}{online}{}{}
@@ -645,38 +516,135 @@
       \verb https://ghgprotocol.org/corporate-value-chain-scope-3-standard
       \endverb
     \endentry
-    \entry{cron_guru}{online}{}{}
+    \entry{github_actions}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=1eabd3cbf42760ab21d0696fcd2a8dc7}{%
-           family={Guru},
-           familyi={G\bibinitperiod},
-           given={Crontab},
-           giveni={C\bibinitperiod}}}%
+        {{hash=d3b7c913cd04ebfec0e9ec32cb6fd58c}{%
+           family={{GitHub}},
+           familyi={G\bibinitperiod}}}%
       }
-      \strng{namehash}{1eabd3cbf42760ab21d0696fcd2a8dc7}
-      \strng{fullhash}{1eabd3cbf42760ab21d0696fcd2a8dc7}
-      \strng{fullhashraw}{1eabd3cbf42760ab21d0696fcd2a8dc7}
-      \strng{bibnamehash}{1eabd3cbf42760ab21d0696fcd2a8dc7}
-      \strng{authorbibnamehash}{1eabd3cbf42760ab21d0696fcd2a8dc7}
-      \strng{authornamehash}{1eabd3cbf42760ab21d0696fcd2a8dc7}
-      \strng{authorfullhash}{1eabd3cbf42760ab21d0696fcd2a8dc7}
-      \strng{authorfullhashraw}{1eabd3cbf42760ab21d0696fcd2a8dc7}
-      \field{labelalpha}{Cron Guru}
+      \strng{namehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{fullhash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{fullhashraw}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{bibnamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authorbibnamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authornamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authorfullhash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authorfullhashraw}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \field{labelalpha}{GitHub Actions}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{shorthand}{Cron Guru}
-      \field{title}{Cron schedule expression editor}
+      \field{shorthand}{GitHub Actions}
+      \field{title}{GitHub Actions Documentation}
       \field{urlday}{23}
       \field{urlmonth}{2}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://crontab.guru/
+      \verb https://docs.github.com/en/actions
       \endverb
       \verb{url}
-      \verb https://crontab.guru/
+      \verb https://docs.github.com/en/actions
+      \endverb
+    \endentry
+    \entry{grafana}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=92d1002bbeda9145e9369766ab6d96a9}{%
+           family={{Grafana Labs}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{fullhash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{fullhashraw}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{bibnamehash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{authorbibnamehash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{authornamehash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{authorfullhash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{authorfullhashraw}{92d1002bbeda9145e9369766ab6d96a9}
+      \field{extraname}{1}
+      \field{labelalpha}{Grafana}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Grafana}
+      \field{title}{Grafana -- The open observability platform}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://grafana.com/
+      \endverb
+      \verb{url}
+      \verb https://grafana.com/
+      \endverb
+    \endentry
+    \entry{grafana_configure}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=92d1002bbeda9145e9369766ab6d96a9}{%
+           family={{Grafana Labs}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{fullhash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{fullhashraw}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{bibnamehash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{authorbibnamehash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{authornamehash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{authorfullhash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{authorfullhashraw}{92d1002bbeda9145e9369766ab6d96a9}
+      \field{extraname}{2}
+      \field{labelalpha}{Grafana Config}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Grafana Config}
+      \field{title}{Configure Grafana}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://grafana.com/docs/grafana/latest/setup-grafana/configure-grafana/
+      \endverb
+      \verb{url}
+      \verb https://grafana.com/docs/grafana/latest/setup-grafana/configure-grafana/
+      \endverb
+    \endentry
+    \entry{grafana_provisioning}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=92d1002bbeda9145e9369766ab6d96a9}{%
+           family={{Grafana Labs}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{fullhash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{fullhashraw}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{bibnamehash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{authorbibnamehash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{authornamehash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{authorfullhash}{92d1002bbeda9145e9369766ab6d96a9}
+      \strng{authorfullhashraw}{92d1002bbeda9145e9369766ab6d96a9}
+      \field{extraname}{3}
+      \field{labelalpha}{Grafana Provisioning}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Grafana Provisioning}
+      \field{title}{Provision Grafana}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://grafana.com/docs/grafana/latest/administration/provisioning/
+      \endverb
+      \verb{url}
+      \verb https://grafana.com/docs/grafana/latest/administration/provisioning/
       \endverb
     \endentry
     \entry{jetbrains_frameworks}{online}{}{}
@@ -775,38 +743,6 @@
       \verb https://mailtrap.io/blog/python-send-email-gmail/
       \endverb
     \endentry
-    \entry{tenacity}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=a07c3eab861c4f5f23886f556ddc9673}{%
-           family={Mergify},
-           familyi={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{a07c3eab861c4f5f23886f556ddc9673}
-      \strng{fullhash}{a07c3eab861c4f5f23886f556ddc9673}
-      \strng{fullhashraw}{a07c3eab861c4f5f23886f556ddc9673}
-      \strng{bibnamehash}{a07c3eab861c4f5f23886f556ddc9673}
-      \strng{authorbibnamehash}{a07c3eab861c4f5f23886f556ddc9673}
-      \strng{authornamehash}{a07c3eab861c4f5f23886f556ddc9673}
-      \strng{authorfullhash}{a07c3eab861c4f5f23886f556ddc9673}
-      \strng{authorfullhashraw}{a07c3eab861c4f5f23886f556ddc9673}
-      \field{labelalpha}{Tenacity}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{shorthand}{Tenacity}
-      \field{title}{tenacity -- Retrying library for Python}
-      \field{urlday}{23}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://tenacity.readthedocs.io/en/latest/
-      \endverb
-      \verb{url}
-      \verb https://tenacity.readthedocs.io/en/latest/
-      \endverb
-    \endentry
     \entry{mkdocs}{online}{}{}
       \name{author}{1}{}{%
         {{hash=e95c17e10e14605933def1f9cef99b82}{%
@@ -839,36 +775,70 @@
       \verb https://www.mkdocs.org/
       \endverb
     \endentry
-    \entry{oesterreich_kfz}{online}{}{}
+    \entry{mkdocs_material}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=1bcf19b39b0cebbce119daf56b12c766}{%
-           family={{oesterreich.gv.at}},
-           familyi={o\bibinitperiod}}}%
+        {{hash=e5494f40f91852d3bb5d811824e84563}{%
+           family={Donath},
+           familyi={D\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
       }
-      \strng{namehash}{1bcf19b39b0cebbce119daf56b12c766}
-      \strng{fullhash}{1bcf19b39b0cebbce119daf56b12c766}
-      \strng{fullhashraw}{1bcf19b39b0cebbce119daf56b12c766}
-      \strng{bibnamehash}{1bcf19b39b0cebbce119daf56b12c766}
-      \strng{authorbibnamehash}{1bcf19b39b0cebbce119daf56b12c766}
-      \strng{authornamehash}{1bcf19b39b0cebbce119daf56b12c766}
-      \strng{authorfullhash}{1bcf19b39b0cebbce119daf56b12c766}
-      \strng{authorfullhashraw}{1bcf19b39b0cebbce119daf56b12c766}
-      \field{labelalpha}{Österreich KFZ}
-      \field{sortinit}{o}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \strng{namehash}{e5494f40f91852d3bb5d811824e84563}
+      \strng{fullhash}{e5494f40f91852d3bb5d811824e84563}
+      \strng{fullhashraw}{e5494f40f91852d3bb5d811824e84563}
+      \strng{bibnamehash}{e5494f40f91852d3bb5d811824e84563}
+      \strng{authorbibnamehash}{e5494f40f91852d3bb5d811824e84563}
+      \strng{authornamehash}{e5494f40f91852d3bb5d811824e84563}
+      \strng{authorfullhash}{e5494f40f91852d3bb5d811824e84563}
+      \strng{authorfullhashraw}{e5494f40f91852d3bb5d811824e84563}
+      \field{labelalpha}{MkDocs Material}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{shorthand}{Österreich KFZ}
-      \field{title}{Kennzeichnung von Kraftfahrzeugen}
+      \field{shorthand}{MkDocs Material}
+      \field{title}{Material for MkDocs}
       \field{urlday}{23}
       \field{urlmonth}{2}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://www.oesterreich.gv.at/de/themen/mobilitaet/kfz/5/1
+      \verb https://squidfunk.github.io/mkdocs-material/
       \endverb
       \verb{url}
-      \verb https://www.oesterreich.gv.at/de/themen/mobilitaet/kfz/5/1
+      \verb https://squidfunk.github.io/mkdocs-material/
+      \endverb
+    \endentry
+    \entry{nextjs}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=dc173d57136dbe619cbccee88ee6421c}{%
+           family={{Vercel}},
+           familyi={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{dc173d57136dbe619cbccee88ee6421c}
+      \strng{fullhash}{dc173d57136dbe619cbccee88ee6421c}
+      \strng{fullhashraw}{dc173d57136dbe619cbccee88ee6421c}
+      \strng{bibnamehash}{dc173d57136dbe619cbccee88ee6421c}
+      \strng{authorbibnamehash}{dc173d57136dbe619cbccee88ee6421c}
+      \strng{authornamehash}{dc173d57136dbe619cbccee88ee6421c}
+      \strng{authorfullhash}{dc173d57136dbe619cbccee88ee6421c}
+      \strng{authorfullhashraw}{dc173d57136dbe619cbccee88ee6421c}
+      \field{labelalpha}{Next.js}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Next.js}
+      \field{title}{Next.js}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://nextjs.org/
+      \endverb
+      \verb{url}
+      \verb https://nextjs.org/
       \endverb
     \endentry
     \entry{oso_microservices}{online}{}{}
@@ -903,7 +873,39 @@
       \verb https://www.osohq.com/learn/microservices-best-practices
       \endverb
     \endentry
-    \entry{platerecognizer_results}{online}{}{}
+    \entry{oesterreich_kfz}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=1bcf19b39b0cebbce119daf56b12c766}{%
+           family={{oesterreich.gv.at}},
+           familyi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{1bcf19b39b0cebbce119daf56b12c766}
+      \strng{fullhash}{1bcf19b39b0cebbce119daf56b12c766}
+      \strng{fullhashraw}{1bcf19b39b0cebbce119daf56b12c766}
+      \strng{bibnamehash}{1bcf19b39b0cebbce119daf56b12c766}
+      \strng{authorbibnamehash}{1bcf19b39b0cebbce119daf56b12c766}
+      \strng{authornamehash}{1bcf19b39b0cebbce119daf56b12c766}
+      \strng{authorfullhash}{1bcf19b39b0cebbce119daf56b12c766}
+      \strng{authorfullhashraw}{1bcf19b39b0cebbce119daf56b12c766}
+      \field{labelalpha}{Österreich KFZ}
+      \field{sortinit}{Ö}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Österreich KFZ}
+      \field{title}{Kennzeichnung von Kraftfahrzeugen}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.oesterreich.gv.at/de/themen/mobilitaet/kfz/5/1
+      \endverb
+      \verb{url}
+      \verb https://www.oesterreich.gv.at/de/themen/mobilitaet/kfz/5/1
+      \endverb
+    \endentry
+    \entry{platerecognizer_alpr}{online}{}{}
       \name{author}{1}{}{%
         {{hash=a0e69145cd50e35fb9ac8bd935bb08eb}{%
            family={{Plate Recognizer}},
@@ -918,55 +920,22 @@
       \strng{authorfullhash}{a0e69145cd50e35fb9ac8bd935bb08eb}
       \strng{authorfullhashraw}{a0e69145cd50e35fb9ac8bd935bb08eb}
       \field{extraname}{1}
-      \field{labelalpha}{Plate Rec Results}
+      \field{labelalpha}{Plate Rec ALPR}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{shorthand}{Plate Rec Results}
-      \field{title}{ALPR Results}
+      \field{shorthand}{Plate Rec ALPR}
+      \field{title}{What is ALPR?}
       \field{urlday}{23}
       \field{urlmonth}{2}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://platerecognizer.com/alpr-results
+      \verb https://platerecognizer.com/what-is-alpr/
       \endverb
       \verb{url}
-      \verb https://platerecognizer.com/alpr-results
-      \endverb
-    \endentry
-    \entry{platerecognizer_camera_setup}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=a0e69145cd50e35fb9ac8bd935bb08eb}{%
-           family={{Plate Recognizer}},
-           familyi={P\bibinitperiod}}}%
-      }
-      \strng{namehash}{a0e69145cd50e35fb9ac8bd935bb08eb}
-      \strng{fullhash}{a0e69145cd50e35fb9ac8bd935bb08eb}
-      \strng{fullhashraw}{a0e69145cd50e35fb9ac8bd935bb08eb}
-      \strng{bibnamehash}{a0e69145cd50e35fb9ac8bd935bb08eb}
-      \strng{authorbibnamehash}{a0e69145cd50e35fb9ac8bd935bb08eb}
-      \strng{authornamehash}{a0e69145cd50e35fb9ac8bd935bb08eb}
-      \strng{authorfullhash}{a0e69145cd50e35fb9ac8bd935bb08eb}
-      \strng{authorfullhashraw}{a0e69145cd50e35fb9ac8bd935bb08eb}
-      \field{extraname}{2}
-      \field{labelalpha}{Plate Rec Setup}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{shorthand}{Plate Rec Setup}
-      \field{title}{Camera Setup for Best ANPR}
-      \field{urlday}{23}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://platerecognizer.com/camera-setup-for-best-anpr/
-      \endverb
-      \verb{url}
-      \verb https://platerecognizer.com/camera-setup-for-best-anpr/
+      \verb https://platerecognizer.com/what-is-alpr/
       \endverb
     \endentry
     \entry{platerecognizer_api}{online}{}{}
@@ -983,7 +952,7 @@
       \strng{authornamehash}{a0e69145cd50e35fb9ac8bd935bb08eb}
       \strng{authorfullhash}{a0e69145cd50e35fb9ac8bd935bb08eb}
       \strng{authorfullhashraw}{a0e69145cd50e35fb9ac8bd935bb08eb}
-      \field{extraname}{3}
+      \field{extraname}{2}
       \field{labelalpha}{Plate Rec API}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
@@ -1002,39 +971,6 @@
       \verb https://guides.platerecognizer.com/docs/snapshot/api-reference
       \endverb
     \endentry
-    \entry{platerecognizer_snapshot}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=a0e69145cd50e35fb9ac8bd935bb08eb}{%
-           family={{Plate Recognizer}},
-           familyi={P\bibinitperiod}}}%
-      }
-      \strng{namehash}{a0e69145cd50e35fb9ac8bd935bb08eb}
-      \strng{fullhash}{a0e69145cd50e35fb9ac8bd935bb08eb}
-      \strng{fullhashraw}{a0e69145cd50e35fb9ac8bd935bb08eb}
-      \strng{bibnamehash}{a0e69145cd50e35fb9ac8bd935bb08eb}
-      \strng{authorbibnamehash}{a0e69145cd50e35fb9ac8bd935bb08eb}
-      \strng{authornamehash}{a0e69145cd50e35fb9ac8bd935bb08eb}
-      \strng{authorfullhash}{a0e69145cd50e35fb9ac8bd935bb08eb}
-      \strng{authorfullhashraw}{a0e69145cd50e35fb9ac8bd935bb08eb}
-      \field{extraname}{4}
-      \field{labelalpha}{Plate Rec Snapshot}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{shorthand}{Plate Rec Snapshot}
-      \field{title}{Snapshot SDK}
-      \field{urlday}{23}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://platerecognizer.com/snapshot/
-      \endverb
-      \verb{url}
-      \verb https://platerecognizer.com/snapshot/
-      \endverb
-    \endentry
     \entry{platerecognizer_countries}{online}{}{}
       \name{author}{1}{}{%
         {{hash=a0e69145cd50e35fb9ac8bd935bb08eb}{%
@@ -1049,7 +985,7 @@
       \strng{authornamehash}{a0e69145cd50e35fb9ac8bd935bb08eb}
       \strng{authorfullhash}{a0e69145cd50e35fb9ac8bd935bb08eb}
       \strng{authorfullhashraw}{a0e69145cd50e35fb9ac8bd935bb08eb}
-      \field{extraname}{5}
+      \field{extraname}{3}
       \field{labelalpha}{Plate Rec Countries}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
@@ -1082,7 +1018,7 @@
       \strng{authornamehash}{a0e69145cd50e35fb9ac8bd935bb08eb}
       \strng{authorfullhash}{a0e69145cd50e35fb9ac8bd935bb08eb}
       \strng{authorfullhashraw}{a0e69145cd50e35fb9ac8bd935bb08eb}
-      \field{extraname}{6}
+      \field{extraname}{4}
       \field{labelalpha}{Plate Rec MMC}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
@@ -1101,7 +1037,73 @@
       \verb https://platerecognizer.com/vehicle-make-model-recognition-with-color/
       \endverb
     \endentry
-    \entry{platerecognizer_alpr}{online}{}{}
+    \entry{platerecognizer_results}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=a0e69145cd50e35fb9ac8bd935bb08eb}{%
+           family={{Plate Recognizer}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{a0e69145cd50e35fb9ac8bd935bb08eb}
+      \strng{fullhash}{a0e69145cd50e35fb9ac8bd935bb08eb}
+      \strng{fullhashraw}{a0e69145cd50e35fb9ac8bd935bb08eb}
+      \strng{bibnamehash}{a0e69145cd50e35fb9ac8bd935bb08eb}
+      \strng{authorbibnamehash}{a0e69145cd50e35fb9ac8bd935bb08eb}
+      \strng{authornamehash}{a0e69145cd50e35fb9ac8bd935bb08eb}
+      \strng{authorfullhash}{a0e69145cd50e35fb9ac8bd935bb08eb}
+      \strng{authorfullhashraw}{a0e69145cd50e35fb9ac8bd935bb08eb}
+      \field{extraname}{5}
+      \field{labelalpha}{Plate Rec Results}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Plate Rec Results}
+      \field{title}{ALPR Results}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://platerecognizer.com/alpr-results
+      \endverb
+      \verb{url}
+      \verb https://platerecognizer.com/alpr-results
+      \endverb
+    \endentry
+    \entry{platerecognizer_camera_setup}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=a0e69145cd50e35fb9ac8bd935bb08eb}{%
+           family={{Plate Recognizer}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{a0e69145cd50e35fb9ac8bd935bb08eb}
+      \strng{fullhash}{a0e69145cd50e35fb9ac8bd935bb08eb}
+      \strng{fullhashraw}{a0e69145cd50e35fb9ac8bd935bb08eb}
+      \strng{bibnamehash}{a0e69145cd50e35fb9ac8bd935bb08eb}
+      \strng{authorbibnamehash}{a0e69145cd50e35fb9ac8bd935bb08eb}
+      \strng{authornamehash}{a0e69145cd50e35fb9ac8bd935bb08eb}
+      \strng{authorfullhash}{a0e69145cd50e35fb9ac8bd935bb08eb}
+      \strng{authorfullhashraw}{a0e69145cd50e35fb9ac8bd935bb08eb}
+      \field{extraname}{6}
+      \field{labelalpha}{Plate Rec Setup}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Plate Rec Setup}
+      \field{title}{Camera Setup for Best ANPR}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://platerecognizer.com/camera-setup-for-best-anpr/
+      \endverb
+      \verb{url}
+      \verb https://platerecognizer.com/camera-setup-for-best-anpr/
+      \endverb
+    \endentry
+    \entry{platerecognizer_snapshot}{online}{}{}
       \name{author}{1}{}{%
         {{hash=a0e69145cd50e35fb9ac8bd935bb08eb}{%
            family={{Plate Recognizer}},
@@ -1116,22 +1118,22 @@
       \strng{authorfullhash}{a0e69145cd50e35fb9ac8bd935bb08eb}
       \strng{authorfullhashraw}{a0e69145cd50e35fb9ac8bd935bb08eb}
       \field{extraname}{7}
-      \field{labelalpha}{Plate Rec ALPR}
+      \field{labelalpha}{Plate Rec Snapshot}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{shorthand}{Plate Rec ALPR}
-      \field{title}{What is ALPR?}
+      \field{shorthand}{Plate Rec Snapshot}
+      \field{title}{Snapshot SDK}
       \field{urlday}{23}
       \field{urlmonth}{2}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://platerecognizer.com/what-is-alpr/
+      \verb https://platerecognizer.com/snapshot/
       \endverb
       \verb{url}
-      \verb https://platerecognizer.com/what-is-alpr/
+      \verb https://platerecognizer.com/snapshot/
       \endverb
     \endentry
     \entry{portainer}{online}{}{}
@@ -1164,6 +1166,204 @@
       \endverb
       \verb{url}
       \verb https://docs.portainer.io/
+      \endverb
+    \endentry
+    \entry{postgresql_datetime}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=917cf2b2062aec0c604dbecc106084cd}{%
+           family={{The PostgreSQL Global Development Group}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{fullhash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{fullhashraw}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{bibnamehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authorbibnamehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authornamehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authorfullhash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authorfullhashraw}{917cf2b2062aec0c604dbecc106084cd}
+      \field{extraname}{1}
+      \field{labelalpha}{Postgres DateTime}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Postgres DateTime}
+      \field{title}{Date/Time Types}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.postgresql.org/docs/current/datatype-datetime.html
+      \endverb
+      \verb{url}
+      \verb https://www.postgresql.org/docs/current/datatype-datetime.html
+      \endverb
+    \endentry
+    \entry{postgresql_enum}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=917cf2b2062aec0c604dbecc106084cd}{%
+           family={{The PostgreSQL Global Development Group}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{fullhash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{fullhashraw}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{bibnamehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authorbibnamehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authornamehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authorfullhash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authorfullhashraw}{917cf2b2062aec0c604dbecc106084cd}
+      \field{extraname}{2}
+      \field{labelalpha}{Postgres Enum}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Postgres Enum}
+      \field{title}{Enumerated Types}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.postgresql.org/docs/current/datatype-enum.html
+      \endverb
+      \verb{url}
+      \verb https://www.postgresql.org/docs/current/datatype-enum.html
+      \endverb
+    \endentry
+    \entry{postgres_pgdump}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=917cf2b2062aec0c604dbecc106084cd}{%
+           family={{The PostgreSQL Global Development Group}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{fullhash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{fullhashraw}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{bibnamehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authorbibnamehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authornamehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authorfullhash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authorfullhashraw}{917cf2b2062aec0c604dbecc106084cd}
+      \field{extraname}{3}
+      \field{labelalpha}{Postgres pg\_dump}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Postgres pg\_dump}
+      \field{title}{pg\_dump}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.postgresql.org/docs/current/app-pgdump.html
+      \endverb
+      \verb{url}
+      \verb https://www.postgresql.org/docs/current/app-pgdump.html
+      \endverb
+    \endentry
+    \entry{postgres_pgrestore}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=917cf2b2062aec0c604dbecc106084cd}{%
+           family={{The PostgreSQL Global Development Group}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{fullhash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{fullhashraw}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{bibnamehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authorbibnamehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authornamehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authorfullhash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authorfullhashraw}{917cf2b2062aec0c604dbecc106084cd}
+      \field{extraname}{4}
+      \field{labelalpha}{Postgres pg\_restore}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Postgres pg\_restore}
+      \field{title}{pg\_restore}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.postgresql.org/docs/current/app-pgrestore.html
+      \endverb
+      \verb{url}
+      \verb https://www.postgresql.org/docs/current/app-pgrestore.html
+      \endverb
+    \endentry
+    \entry{postgresql}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=917cf2b2062aec0c604dbecc106084cd}{%
+           family={{The PostgreSQL Global Development Group}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{fullhash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{fullhashraw}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{bibnamehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authorbibnamehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authornamehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authorfullhash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authorfullhashraw}{917cf2b2062aec0c604dbecc106084cd}
+      \field{extraname}{5}
+      \field{labelalpha}{PostgreSQL}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{PostgreSQL}
+      \field{title}{PostgreSQL -- The World's Most Advanced Open Source Relational Database}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.postgresql.org/
+      \endverb
+      \verb{url}
+      \verb https://www.postgresql.org/
+      \endverb
+    \endentry
+    \entry{postgresql_schemas}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=917cf2b2062aec0c604dbecc106084cd}{%
+           family={{The PostgreSQL Global Development Group}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{fullhash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{fullhashraw}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{bibnamehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authorbibnamehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authornamehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authorfullhash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authorfullhashraw}{917cf2b2062aec0c604dbecc106084cd}
+      \field{extraname}{6}
+      \field{labelalpha}{PostgreSQL Schemas}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{PostgreSQL Schemas}
+      \field{title}{PostgreSQL Schemas}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.postgresql.org/docs/current/ddl-schemas.html
+      \endverb
+      \verb{url}
+      \verb https://www.postgresql.org/docs/current/ddl-schemas.html
       \endverb
     \endentry
     \entry{pydantic_settings}{online}{}{}
@@ -1213,7 +1413,7 @@
       \strng{authorfullhash}{5a748c120135eca0627c0c3b4985e917}
       \strng{authorfullhashraw}{5a748c120135eca0627c0c3b4985e917}
       \field{labelalpha}{Pytest}
-      \field{sortinit}{p}
+      \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
@@ -1245,7 +1445,7 @@
       \strng{authorfullhash}{bf07ca7bfaca89f3ae094f2b27871db3}
       \strng{authorfullhashraw}{bf07ca7bfaca89f3ae094f2b27871db3}
       \field{labelalpha}{Pytest Cov}
-      \field{sortinit}{p}
+      \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
@@ -1260,40 +1460,6 @@
       \endverb
       \verb{url}
       \verb https://pypi.org/project/pytest-cov/
-      \endverb
-    \endentry
-    \entry{fastapi}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=f5305ee02dd2a5c6215b53401b4a10b0}{%
-           family={Ramírez},
-           familyi={R\bibinitperiod},
-           given={Sebastián},
-           giveni={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{f5305ee02dd2a5c6215b53401b4a10b0}
-      \strng{fullhash}{f5305ee02dd2a5c6215b53401b4a10b0}
-      \strng{fullhashraw}{f5305ee02dd2a5c6215b53401b4a10b0}
-      \strng{bibnamehash}{f5305ee02dd2a5c6215b53401b4a10b0}
-      \strng{authorbibnamehash}{f5305ee02dd2a5c6215b53401b4a10b0}
-      \strng{authornamehash}{f5305ee02dd2a5c6215b53401b4a10b0}
-      \strng{authorfullhash}{f5305ee02dd2a5c6215b53401b4a10b0}
-      \strng{authorfullhashraw}{f5305ee02dd2a5c6215b53401b4a10b0}
-      \field{labelalpha}{FastAPI}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{shorthand}{FastAPI}
-      \field{title}{FastAPI}
-      \field{urlday}{23}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://fastapi.tiangolo.com/
-      \endverb
-      \verb{url}
-      \verb https://fastapi.tiangolo.com/
       \endverb
     \endentry
     \entry{redhat_cicd}{online}{}{}
@@ -1328,6 +1494,72 @@
       \verb https://www.redhat.com/en/topics/devops/what-is-ci-cd
       \endverb
     \endentry
+    \entry{ruff_formatter}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=82d37d790055d7f66f39aee86d2b8749}{%
+           family={Astral},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{82d37d790055d7f66f39aee86d2b8749}
+      \strng{fullhash}{82d37d790055d7f66f39aee86d2b8749}
+      \strng{fullhashraw}{82d37d790055d7f66f39aee86d2b8749}
+      \strng{bibnamehash}{82d37d790055d7f66f39aee86d2b8749}
+      \strng{authorbibnamehash}{82d37d790055d7f66f39aee86d2b8749}
+      \strng{authornamehash}{82d37d790055d7f66f39aee86d2b8749}
+      \strng{authorfullhash}{82d37d790055d7f66f39aee86d2b8749}
+      \strng{authorfullhashraw}{82d37d790055d7f66f39aee86d2b8749}
+      \field{extraname}{1}
+      \field{labelalpha}{Ruff Formatter}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Ruff Formatter}
+      \field{title}{Ruff Formatter}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.astral.sh/ruff/formatter/
+      \endverb
+      \verb{url}
+      \verb https://docs.astral.sh/ruff/formatter/
+      \endverb
+    \endentry
+    \entry{ruff_linter}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=82d37d790055d7f66f39aee86d2b8749}{%
+           family={Astral},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{82d37d790055d7f66f39aee86d2b8749}
+      \strng{fullhash}{82d37d790055d7f66f39aee86d2b8749}
+      \strng{fullhashraw}{82d37d790055d7f66f39aee86d2b8749}
+      \strng{bibnamehash}{82d37d790055d7f66f39aee86d2b8749}
+      \strng{authorbibnamehash}{82d37d790055d7f66f39aee86d2b8749}
+      \strng{authornamehash}{82d37d790055d7f66f39aee86d2b8749}
+      \strng{authorfullhash}{82d37d790055d7f66f39aee86d2b8749}
+      \strng{authorfullhashraw}{82d37d790055d7f66f39aee86d2b8749}
+      \field{extraname}{2}
+      \field{labelalpha}{Ruff Linter}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Ruff Linter}
+      \field{title}{Ruff Linter}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.astral.sh/ruff/linter/
+      \endverb
+      \verb{url}
+      \verb https://docs.astral.sh/ruff/linter/
+      \endverb
+    \endentry
     \entry{senstar_alpr}{online}{}{}
       \name{author}{1}{}{%
         {{hash=1493c7128f5949c4c13d5cad2ca2cc13}{%
@@ -1358,6 +1590,38 @@
       \endverb
       \verb{url}
       \verb https://senstar.com/de/senstarpedia/wie-alpr-funktioniert/
+      \endverb
+    \endentry
+    \entry{so_backup_size}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=84d7dc19766c446f5e4084e8fce87f82}{%
+           family={{Stack Overflow}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{fullhash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{fullhashraw}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{bibnamehash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{authorbibnamehash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{authornamehash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{authorfullhash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{authorfullhashraw}{84d7dc19766c446f5e4084e8fce87f82}
+      \field{labelalpha}{SO Backup Size}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{SO Backup Size}
+      \field{title}{Is database backup size the same as database size?}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://stackoverflow.com/questions/35480650/is-database-back-up-size-is-same-as-database-size
+      \endverb
+      \verb{url}
+      \verb https://stackoverflow.com/questions/35480650/is-database-back-up-size-is-same-as-database-size
       \endverb
     \endentry
     \entry{sqlite_datatypes}{online}{}{}
@@ -1424,38 +1688,6 @@
       \verb https://www.sqlskills.com/blogs/erin/trending-database-growth-from-backups/
       \endverb
     \endentry
-    \entry{so_backup_size}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=84d7dc19766c446f5e4084e8fce87f82}{%
-           family={{Stack Overflow}},
-           familyi={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{84d7dc19766c446f5e4084e8fce87f82}
-      \strng{fullhash}{84d7dc19766c446f5e4084e8fce87f82}
-      \strng{fullhashraw}{84d7dc19766c446f5e4084e8fce87f82}
-      \strng{bibnamehash}{84d7dc19766c446f5e4084e8fce87f82}
-      \strng{authorbibnamehash}{84d7dc19766c446f5e4084e8fce87f82}
-      \strng{authornamehash}{84d7dc19766c446f5e4084e8fce87f82}
-      \strng{authorfullhash}{84d7dc19766c446f5e4084e8fce87f82}
-      \strng{authorfullhashraw}{84d7dc19766c446f5e4084e8fce87f82}
-      \field{labelalpha}{SO Backup Size}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{shorthand}{SO Backup Size}
-      \field{title}{Is database backup size the same as database size?}
-      \field{urlday}{23}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://stackoverflow.com/questions/35480650/is-database-back-up-size-is-same-as-database-size
-      \endverb
-      \verb{url}
-      \verb https://stackoverflow.com/questions/35480650/is-database-back-up-size-is-same-as-database-size
-      \endverb
-    \endentry
     \entry{steiermark_ausflugsziele}{online}{}{}
       \name{author}{1}{}{%
         {{hash=cdd25eee5f8ecc431478fdc09849909e}{%
@@ -1488,7 +1720,7 @@
       \verb https://www.steiermark.com/de/Magazin/Die-meistbesuchten-Ausflugsziele-der-Steiermark_mad_45932860
       \endverb
     \endentry
-    \entry{synology_bc500}{online}{}{}
+    \entry{synology_api}{online}{}{}
       \name{author}{1}{}{%
         {{hash=b1463639cf7b9728008831fdc3ad61fc}{%
            family={{Synology}},
@@ -1503,6 +1735,39 @@
       \strng{authorfullhash}{b1463639cf7b9728008831fdc3ad61fc}
       \strng{authorfullhashraw}{b1463639cf7b9728008831fdc3ad61fc}
       \field{extraname}{1}
+      \field{labelalpha}{Synology API}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Synology API}
+      \field{title}{Surveillance Station Web API}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/SurveillanceStation/All/enu/Surveillance_Station_Web_API.pdf
+      \endverb
+      \verb{url}
+      \verb https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/SurveillanceStation/All/enu/Surveillance_Station_Web_API.pdf
+      \endverb
+    \endentry
+    \entry{synology_bc500}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=b1463639cf7b9728008831fdc3ad61fc}{%
+           family={{Synology}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b1463639cf7b9728008831fdc3ad61fc}
+      \strng{fullhash}{b1463639cf7b9728008831fdc3ad61fc}
+      \strng{fullhashraw}{b1463639cf7b9728008831fdc3ad61fc}
+      \strng{bibnamehash}{b1463639cf7b9728008831fdc3ad61fc}
+      \strng{authorbibnamehash}{b1463639cf7b9728008831fdc3ad61fc}
+      \strng{authornamehash}{b1463639cf7b9728008831fdc3ad61fc}
+      \strng{authorfullhash}{b1463639cf7b9728008831fdc3ad61fc}
+      \strng{authorfullhashraw}{b1463639cf7b9728008831fdc3ad61fc}
+      \field{extraname}{2}
       \field{labelalpha}{Synology BC500}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
@@ -1535,7 +1800,7 @@
       \strng{authornamehash}{b1463639cf7b9728008831fdc3ad61fc}
       \strng{authorfullhash}{b1463639cf7b9728008831fdc3ad61fc}
       \strng{authorfullhashraw}{b1463639cf7b9728008831fdc3ad61fc}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{labelalpha}{Synology DVA}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
@@ -1552,39 +1817,6 @@
       \endverb
       \verb{url}
       \verb https://www.synology.com/en-global/products/DVA
-      \endverb
-    \endentry
-    \entry{synology_webhooks}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=b1463639cf7b9728008831fdc3ad61fc}{%
-           family={{Synology}},
-           familyi={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{b1463639cf7b9728008831fdc3ad61fc}
-      \strng{fullhash}{b1463639cf7b9728008831fdc3ad61fc}
-      \strng{fullhashraw}{b1463639cf7b9728008831fdc3ad61fc}
-      \strng{bibnamehash}{b1463639cf7b9728008831fdc3ad61fc}
-      \strng{authorbibnamehash}{b1463639cf7b9728008831fdc3ad61fc}
-      \strng{authornamehash}{b1463639cf7b9728008831fdc3ad61fc}
-      \strng{authorfullhash}{b1463639cf7b9728008831fdc3ad61fc}
-      \strng{authorfullhashraw}{b1463639cf7b9728008831fdc3ad61fc}
-      \field{extraname}{3}
-      \field{labelalpha}{Synology Webhooks}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{shorthand}{Synology Webhooks}
-      \field{title}{How do I send Surveillance Station data to third-party systems via webhooks?}
-      \field{urlday}{23}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://kb.synology.com/en-global/Surveillance/tutorial/How_do_I_send_SS_data_to_third-party_systems_via_webhooks
-      \endverb
-      \verb{url}
-      \verb https://kb.synology.com/en-global/Surveillance/tutorial/How_do_I_send_SS_data_to_third-party_systems_via_webhooks
       \endverb
     \endentry
     \entry{synology_lpr}{online}{}{}
@@ -1653,7 +1885,7 @@
       \verb https://www.synology.com/en-global/surveillance
       \endverb
     \endentry
-    \entry{synology_api}{online}{}{}
+    \entry{synology_webhooks}{online}{}{}
       \name{author}{1}{}{%
         {{hash=b1463639cf7b9728008831fdc3ad61fc}{%
            family={{Synology}},
@@ -1668,286 +1900,54 @@
       \strng{authorfullhash}{b1463639cf7b9728008831fdc3ad61fc}
       \strng{authorfullhashraw}{b1463639cf7b9728008831fdc3ad61fc}
       \field{extraname}{6}
-      \field{labelalpha}{Synology API}
+      \field{labelalpha}{Synology Webhooks}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{shorthand}{Synology API}
-      \field{title}{Surveillance Station Web API}
+      \field{shorthand}{Synology Webhooks}
+      \field{title}{How do I send Surveillance Station data to third-party systems via webhooks?}
       \field{urlday}{23}
       \field{urlmonth}{2}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/SurveillanceStation/All/enu/Surveillance_Station_Web_API.pdf
+      \verb https://kb.synology.com/en-global/Surveillance/tutorial/How_do_I_send_SS_data_to_third-party_systems_via_webhooks
       \endverb
       \verb{url}
-      \verb https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/SurveillanceStation/All/enu/Surveillance_Station_Web_API.pdf
+      \verb https://kb.synology.com/en-global/Surveillance/tutorial/How_do_I_send_SS_data_to_third-party_systems_via_webhooks
       \endverb
     \endentry
-    \entry{postgresql_datetime}{online}{}{}
+    \entry{tenacity}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=917cf2b2062aec0c604dbecc106084cd}{%
-           family={{The PostgreSQL Global Development Group}},
-           familyi={T\bibinitperiod}}}%
+        {{hash=a07c3eab861c4f5f23886f556ddc9673}{%
+           family={Mergify},
+           familyi={M\bibinitperiod}}}%
       }
-      \strng{namehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{fullhash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{fullhashraw}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{bibnamehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authorbibnamehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authornamehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authorfullhash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authorfullhashraw}{917cf2b2062aec0c604dbecc106084cd}
-      \field{extraname}{1}
-      \field{labelalpha}{Postgres DateTime}
+      \strng{namehash}{a07c3eab861c4f5f23886f556ddc9673}
+      \strng{fullhash}{a07c3eab861c4f5f23886f556ddc9673}
+      \strng{fullhashraw}{a07c3eab861c4f5f23886f556ddc9673}
+      \strng{bibnamehash}{a07c3eab861c4f5f23886f556ddc9673}
+      \strng{authorbibnamehash}{a07c3eab861c4f5f23886f556ddc9673}
+      \strng{authornamehash}{a07c3eab861c4f5f23886f556ddc9673}
+      \strng{authorfullhash}{a07c3eab861c4f5f23886f556ddc9673}
+      \strng{authorfullhashraw}{a07c3eab861c4f5f23886f556ddc9673}
+      \field{labelalpha}{Tenacity}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{shorthand}{Postgres DateTime}
-      \field{title}{Date/Time Types}
+      \field{shorthand}{Tenacity}
+      \field{title}{tenacity -- Retrying library for Python}
       \field{urlday}{23}
       \field{urlmonth}{2}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://www.postgresql.org/docs/current/datatype-datetime.html
+      \verb https://tenacity.readthedocs.io/en/latest/
       \endverb
       \verb{url}
-      \verb https://www.postgresql.org/docs/current/datatype-datetime.html
-      \endverb
-    \endentry
-    \entry{postgresql_enum}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=917cf2b2062aec0c604dbecc106084cd}{%
-           family={{The PostgreSQL Global Development Group}},
-           familyi={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{fullhash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{fullhashraw}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{bibnamehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authorbibnamehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authornamehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authorfullhash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authorfullhashraw}{917cf2b2062aec0c604dbecc106084cd}
-      \field{extraname}{2}
-      \field{labelalpha}{Postgres Enum}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{shorthand}{Postgres Enum}
-      \field{title}{Enumerated Types}
-      \field{urlday}{23}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.postgresql.org/docs/current/datatype-enum.html
-      \endverb
-      \verb{url}
-      \verb https://www.postgresql.org/docs/current/datatype-enum.html
-      \endverb
-    \endentry
-    \entry{postgres_pgdump}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=917cf2b2062aec0c604dbecc106084cd}{%
-           family={{The PostgreSQL Global Development Group}},
-           familyi={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{fullhash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{fullhashraw}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{bibnamehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authorbibnamehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authornamehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authorfullhash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authorfullhashraw}{917cf2b2062aec0c604dbecc106084cd}
-      \field{extraname}{3}
-      \field{labelalpha}{Postgres pg\_dump}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{shorthand}{Postgres pg\_dump}
-      \field{title}{pg\_dump}
-      \field{urlday}{23}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.postgresql.org/docs/current/app-pgdump.html
-      \endverb
-      \verb{url}
-      \verb https://www.postgresql.org/docs/current/app-pgdump.html
-      \endverb
-    \endentry
-    \entry{postgres_pgrestore}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=917cf2b2062aec0c604dbecc106084cd}{%
-           family={{The PostgreSQL Global Development Group}},
-           familyi={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{fullhash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{fullhashraw}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{bibnamehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authorbibnamehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authornamehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authorfullhash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authorfullhashraw}{917cf2b2062aec0c604dbecc106084cd}
-      \field{extraname}{4}
-      \field{labelalpha}{Postgres pg\_restore}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{shorthand}{Postgres pg\_restore}
-      \field{title}{pg\_restore}
-      \field{urlday}{23}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.postgresql.org/docs/current/app-pgrestore.html
-      \endverb
-      \verb{url}
-      \verb https://www.postgresql.org/docs/current/app-pgrestore.html
-      \endverb
-    \endentry
-    \entry{postgresql}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=917cf2b2062aec0c604dbecc106084cd}{%
-           family={{The PostgreSQL Global Development Group}},
-           familyi={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{fullhash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{fullhashraw}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{bibnamehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authorbibnamehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authornamehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authorfullhash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authorfullhashraw}{917cf2b2062aec0c604dbecc106084cd}
-      \field{extraname}{5}
-      \field{labelalpha}{PostgreSQL}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{shorthand}{PostgreSQL}
-      \field{title}{PostgreSQL -- The World's Most Advanced Open Source Relational Database}
-      \field{urlday}{23}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.postgresql.org/
-      \endverb
-      \verb{url}
-      \verb https://www.postgresql.org/
-      \endverb
-    \endentry
-    \entry{postgresql_schemas}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=917cf2b2062aec0c604dbecc106084cd}{%
-           family={{The PostgreSQL Global Development Group}},
-           familyi={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{fullhash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{fullhashraw}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{bibnamehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authorbibnamehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authornamehash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authorfullhash}{917cf2b2062aec0c604dbecc106084cd}
-      \strng{authorfullhashraw}{917cf2b2062aec0c604dbecc106084cd}
-      \field{extraname}{6}
-      \field{labelalpha}{PostgreSQL Schemas}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{shorthand}{PostgreSQL Schemas}
-      \field{title}{PostgreSQL Schemas}
-      \field{urlday}{23}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.postgresql.org/docs/current/ddl-schemas.html
-      \endverb
-      \verb{url}
-      \verb https://www.postgresql.org/docs/current/ddl-schemas.html
-      \endverb
-    \endentry
-    \entry{nextjs}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=dc173d57136dbe619cbccee88ee6421c}{%
-           family={{Vercel}},
-           familyi={V\bibinitperiod}}}%
-      }
-      \strng{namehash}{dc173d57136dbe619cbccee88ee6421c}
-      \strng{fullhash}{dc173d57136dbe619cbccee88ee6421c}
-      \strng{fullhashraw}{dc173d57136dbe619cbccee88ee6421c}
-      \strng{bibnamehash}{dc173d57136dbe619cbccee88ee6421c}
-      \strng{authorbibnamehash}{dc173d57136dbe619cbccee88ee6421c}
-      \strng{authornamehash}{dc173d57136dbe619cbccee88ee6421c}
-      \strng{authorfullhash}{dc173d57136dbe619cbccee88ee6421c}
-      \strng{authorfullhashraw}{dc173d57136dbe619cbccee88ee6421c}
-      \field{labelalpha}{Next.js}
-      \field{sortinit}{V}
-      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{shorthand}{Next.js}
-      \field{title}{Next.js}
-      \field{urlday}{23}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://nextjs.org/
-      \endverb
-      \verb{url}
-      \verb https://nextjs.org/
-      \endverb
-    \endentry
-    \entry{twelve_factor}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=78c94d63299ff16130ed37a90dc97dcd}{%
-           family={Wiggins},
-           familyi={W\bibinitperiod},
-           given={Adam},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{78c94d63299ff16130ed37a90dc97dcd}
-      \strng{fullhash}{78c94d63299ff16130ed37a90dc97dcd}
-      \strng{fullhashraw}{78c94d63299ff16130ed37a90dc97dcd}
-      \strng{bibnamehash}{78c94d63299ff16130ed37a90dc97dcd}
-      \strng{authorbibnamehash}{78c94d63299ff16130ed37a90dc97dcd}
-      \strng{authornamehash}{78c94d63299ff16130ed37a90dc97dcd}
-      \strng{authorfullhash}{78c94d63299ff16130ed37a90dc97dcd}
-      \strng{authorfullhashraw}{78c94d63299ff16130ed37a90dc97dcd}
-      \field{labelalpha}{12-Factor App}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{shorthand}{12-Factor App}
-      \field{title}{The Twelve-Factor App}
-      \field{urlday}{23}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://12factor.net/
-      \endverb
-      \verb{url}
-      \verb https://12factor.net/
+      \verb https://tenacity.readthedocs.io/en/latest/
       \endverb
     \endentry
     \entry{wiki_ip_camera}{online}{}{}
