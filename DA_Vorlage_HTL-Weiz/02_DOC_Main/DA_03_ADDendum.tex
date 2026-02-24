@@ -14,40 +14,40 @@ Die in Abschnitt~\ref{sec:denormalisierung} verwendete Formel zur Berechnung der
 Die durchschnittliche Größe eines Datensatzes ($s$) ergibt sich aus:
 
 \begin{equation}
-s = \frac{G_t}{E_t}
+    s = \frac{G_t}{E_t}
 \end{equation}
 
 wobei $G_t$ die Größe eines Backups und $E_t$ die Gesamtanzahl der Erkennungen zu diesem Zeitpunkt $t$ bezeichnen.
 Die tägliche Erkennungsrate $r$ berechnet sich folgendermaßen:
 
 \begin{equation}
-r = \frac{E_t}{D_t}
+    r = \frac{E_t}{D_t}
 \end{equation}
 
 wobei $D_t$ die Anzahl der bisherigen Aufzeichnungstage darstellt.
 Daraus lässt sich die Anzahl der Tage $T$ bestimmen, bis eine gegebene Speicherkapazität $S_{\max}$ erreicht ist:
 
 \begin{equation}
-T = \frac{S_{\max}}{s \cdot r}
+    T = \frac{S_{\max}}{s \cdot r}
 \end{equation}
 
 Ausgehend von den oben aufgelisteten Formeln ergibt sich durch Einsetzen von $s$ und $r$ in $T$:
 
 \begin{equation}
-T = \frac{S_{\max}}{\left(\frac{G_t}{E_t}\right)\left(\frac{E_t}{D_t}\right)}
+    T = \frac{S_{\max}}{\left(\frac{G_t}{E_t}\right)\left(\frac{E_t}{D_t}\right)}
 \end{equation}
 
 Nach Kürzen von $E_t$ folgt:
 
 \begin{equation}
-T = \frac{S_{\max}}{\frac{G_t}{D_t}}
+    T = \frac{S_{\max}}{\frac{G_t}{D_t}}
 \end{equation}
 
 wobei $\frac{G_t}{D_t}$ die durchschnittliche Speicherzunahme pro Tag beschreibt.
 Damit ergibt sich die vereinfachte Formel:
 
 \begin{equation}
-T = \frac{S_{\max} \cdot D_t}{G_t}
+    T = \frac{S_{\max} \cdot D_t}{G_t}
 \end{equation}
 
 
@@ -228,8 +228,9 @@ ALTER ROLE notification_user
 \newpage 
 \listoffigures 
 %
+\glsaddallunused
 \newpage
-\input{./../02_DOC_Main/DA_04_ACR.tex}
+\printnoidxglossary[type=\acronymtype, title={Abkürzungsverzeichnis}, sort=letter]
 %
 \newpage
 \input{./../02_DOC_Main/DA_05_LIT.tex}
