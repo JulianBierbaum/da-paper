@@ -24,7 +24,9 @@ Im Zuge der Entwicklung wurden nicht alle der im folgenden Kapitel erwähnten Ko
     \label{fig:architektur}
 \end{figure}
 
-Wie in der Abbildung erkenntlich besteht diese Diplomarbeit aus Komponenten, welche sich in drei primäre Kategorien einteilen lassen: Backend-, Frontend- und Infrastruktur-Services.
+Wie in der Abbildung (Abb. \ref{fig:architektur}) erkenntlich besteht diese Diplomarbeit aus Komponenten, welche sich in drei primäre Kategorien einteilen lassen: Backend-, Frontend- und Infrastruktur-Services.
+
+\newpage
 Darüber hinaus bestehen Anbindungen an externe Services (wie etwa die Plate Recognizer SDK).
 Sofern diese implementiert wurden, werden sie im Kapitel Implementierung (Abschnitt~\ref{sec:implementierung}) beim jeweiligen Dienst im Detail erläutert.
 Die Architektur folgt bewusst keinem API-Gateway Ansatz, wie es oft bei Microservice-Ansätzen typisch ist, da die Services primär intern kommunizieren und nur wenige Endpunkte nach außen hin offen zugänglich sind.
@@ -50,7 +52,7 @@ Als Benutzeroberfläche sollte primär der Web Service, eine mit Next.js \cite{n
 Diese wurde als zentrale Oberfläche für Konfiguration und Verwaltung von Benachrichtigungen konzipiert und kommuniziert ausschließlich über REST-APIs mit den Backend-Services.
 Als Übergangslösung und zweite Visualisierungsplatform dient Grafana, in Form eines Dashboards für diverse Statistiken.
 
-
+\newpage
 \subsubsection{Infrastruktur-Services}
 
 Die Infrastruktur-Ebene umfasst mehrere Stützkomponenten, die den Betrieb des Gesamtsystems ermöglichen.
@@ -67,7 +69,7 @@ Die Details zu diesen Infrastruktur-Komponenten werden im Kapitel~\ref{sec:infra
 Die Kommunikation zwischen den Services erfolgt ausschließlich über RESTful HTTP-APIs.
 Der primäre Kommunikationsweg im System, welcher für die Datenerfassung erfolgt, lässt sich wie folgt zusammenfassen:
 
-\paragraph{1. Externer Trigger durch Erkennung eines Fahrzeugs $\to$ Data Collection Service}
+\paragraph{1. Externer Trigger durch Erkennung eines Fahrzeugs $\to$ Data Collection Service}~\\
 
 \begin{figure}[htbp]
     \centering
@@ -78,7 +80,8 @@ Der primäre Kommunikationsweg im System, welcher für die Datenerfassung erfolg
 
 Die Synology Surveillance Station ruft bei Erkennung einer Fahrzeugbewegung einen REST-Webhook des Data Collection Service auf.
 
-\paragraph{2. Data Collection Service $\to$ Synology API}
+\newpage
+\paragraph{2. Data Collection Service $\to$ Synology API}~\\
 
 \begin{figure}[htbp]
     \centering
@@ -89,7 +92,7 @@ Die Synology Surveillance Station ruft bei Erkennung einer Fahrzeugbewegung eine
 
 Nach Empfang des Webhooks authentifiziert sich der Service bei der Synology-API, um einen aktuellen Kamera-Snapshot abzurufen.
 
-\paragraph{3. Data Collection Service $\to$ Plate Recognizer SDK}
+\paragraph{3. Data Collection Service $\to$ Plate Recognizer SDK}~\\
 
 \begin{figure}[htbp]
     \centering
@@ -100,7 +103,7 @@ Nach Empfang des Webhooks authentifiziert sich der Service bei der Synology-API,
 
 Der abgerufene Snapshot wird als Bilddatei per HTTP an den lokal betriebenen Plate Recognizer Container gesendet, der die Kennzeichenerkennung durchführt und das Ergebnis als JSON zurückgibt.
 
-\paragraph{4. Data Collection Service $\to$ PostgreSQL}
+\paragraph{4. Data Collection Service $\to$ PostgreSQL}~\\
 
 \begin{figure}[htbp]
     \centering
@@ -111,21 +114,21 @@ Der abgerufene Snapshot wird als Bilddatei per HTTP an den lokal betriebenen Pla
 
 Die verarbeiteten und anonymisierten Erkennungsergebnisse werden direkt in die Datenbank geschrieben.
 
-\vspace{0.5cm}
 Weitere konzipierte, teils implementierte Verbindungen:
 
-\paragraph{5. Web Service $\to$ Backend-Services}
+\newpage
+\paragraph{5. Web Service $\to$ Backend-Services}~\\
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{web_interactions.png}
+    \includegraphics[width=0.7\textwidth]{web_interactions.png}
     \caption{Web Service Interaktionen}
     \label{fig:web_interactions}
 \end{figure}
 
 Die Web-Oberfläche kommuniziert über REST-Calls mit dem Auth Service (Benutzeranmeldung), dem Analytics Service für Analysen und dem Notification Service (Benachrichtigungsverwaltung).
 
-\paragraph{6. Notification Service $\to$ Analytics Service}
+\paragraph{6. Notification Service $\to$ Analytics Service}~\\
 
 \begin{figure}[htbp]
     \centering
@@ -136,18 +139,18 @@ Die Web-Oberfläche kommuniziert über REST-Calls mit dem Auth Service (Benutzer
 
 Für den Versand von periodischen Zusammenfassungen ruft der Notification Service Daten vom Analytics Service ab.
 
-\paragraph{7. Grafana $\to$ PostgreSQL}
+\paragraph{7. Grafana $\to$ PostgreSQL}~\\
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{grafana_to_db.png}
+    \includegraphics[width=0.6\textwidth]{grafana_to_db.png}
     \caption{Grafana zu DB}
     \label{fig:grafana_to_db}
 \end{figure}
 
 Grafana greift über einen Read-only Datenbankbenutzer lesend auf das Data-Collection-Schema der Datenbank zu, um das Dashboard mit aktuellen Daten zu versorgen.
 
-
+\newpage
 \subsection{Datenbankdesign}
 \label{sec:datenbankdesign}
 
@@ -169,20 +172,21 @@ Dennoch bleibt die logische Trennung der Daten gewährleistet, da jeder Service 
 Des Weiteren vereinfacht er Cross-Schema-Lesezugriffe, etwa kann der Analytics Service oder Grafana Abfragen direkt auf die Ingestion-Daten zugreifen, ohne dass dafür eine Datenreplikation oder zusätzliche API-Aufrufe zwischen Services nötig sind.
 Die Zugriffskontrolle wird dabei über dedizierte PostgreSQL-Benutzer mit minimalen Berechtigungen erzwungen, was im Abschnitt zum Sicherheitskonzept näher beleuchtet wird.
 
-
 \subsubsection{Entitäten und ER-Modell}
 
 Das Datenbankschema des Systems umfasst zwei zentrale Entitäten, welche sich in getrennten Schemas befinden.
 
 Die Tabelle \texttt{vehicle\_observations} im Data-Collection-Schema ist die zentrale Entität des gesamten Systems.
 Jeder Datensatz repräsentiert eine einzelne erfasste Fahrzeugerkennung und bildet die Grundlage für sämtliche Analysen und Visualisierungen.
+
+\newpage
 Die Tabelle speichert neben dem Erkennungszeitpunkt und einem anonymisierten Hash des Kennzeichens auch den Konfidenzwert der Erkennung, das Herkunftsland, gegebenenfalls den Bezirk (für österreichische und slowenische Kennzeichen), Fahrzeugkategorie, Marke, Modell, Farbe sowie die Fahrtrichtung.
 Letztere wird durch die Orientierung des Fahrzeugs (Vorder- oder Rückseite sichtbar) ermittelt und ermöglicht damit die Unterscheidung zwischen Ein- und Ausfahrten.
 
 Die Tabelle \texttt{user\_preferences} im Notification-Schema verwaltet die Benachrichtigungseinstellungen der Systembenutzer.
 Sie speichert pro Benutzer den Namen und E-Mail Adresse sowie zwei Flags, welche festlegen, ob der Benutzer Echtzeit-Alerts oder periodische Zusammenfassungen per E-Mail erhalten möchte.
 
-Die folgende Darstellung zeigt die Attribute der beiden Entitäten als ER-Diagramm:
+Die folgende Darstellung (Abb. \ref{fig:db_tables}) zeigt die Attribute der beiden Entitäten als ER-Diagramm:
 
 \begin{figure}[htbp]
     \centering
@@ -191,13 +195,14 @@ Die folgende Darstellung zeigt die Attribute der beiden Entitäten als ER-Diagra
     \label{fig:db_tables}
 \end{figure}
 
-
+\newpage
 \subsubsection{Argumentation zur Denormalisierung}
 \label{sec:denormalisierung}
 
 Das Datenbankschema der \texttt{vehicle\_observations} Tabelle ist bewusst nicht vollständig normalisiert.
 Statt etwa \texttt{country\_code}, \texttt{vehicle\_type}, \texttt{make}, \texttt{model} und \texttt{color} in eigene Lookup-Tabellen mit Foreign-Key-Relationen auszulagern, werden diese direkt als Strings in der Observationstabelle gespeichert.
 
+\vspace{0.5cm}
 Diese Entscheidung beruht auf mehreren Gründen:
 
 \paragraph{1. Datenherkunft aus externer API}
@@ -216,13 +221,15 @@ Die Grafana-Dashboards verwenden direkte SQL-Abfragen. Eine einfache, flache Tab
 Fahrzeugerkennungen sind unveränderliche Ereignisse, im Gegensatz zu beispielsweise einem Produktkatalog, wo sich der Name eines Herstellers ändern kann, sind gespeicherte Erkennungen statisch.
 Die Hauptvorteile einer Normalisierung, etwa die konsistente Aktualisierung gemeinsamer Daten, sind daher nicht wirklich relevant.
 
+\newpage
 \paragraph{5. Speicherplatz als unkritische Ressource}
 Die durch die Denormalisierung entstehende Datenredundanz, etwa wiederholt gespeicherte Herstellernamen, führt zu einem geringfügig höheren Speicherbedarf.
 Dieser ist im vorliegenden Anwendungsfall jedoch vernachlässigbar, da das System auf einer NAS-Plattform mit erweiterbarem Speicher betrieben wird und die Datensatzgröße pro Erkennung minimal ist.
 Zum Stand der Dokumentation dieser Arbeit beträgt ein volles Backup der gesamten Datenbank (Über 60.000 Erkennungen) ca. 3.4 MB.
 Um diesen Punkt zu verdeutlichen, wurde die theoretische Dauer bis zur vollständigen Kapazitätsauslastung des verbauten NAS-Systems ermittelt.
 
-\paragraph{Formel zur Berechnung der Speicherauffüllungsdauer anhand der Größe eines Full-Backups:}
+\vspace{0.5cm}
+Formel zur Berechnung der Speicherauffüllungsdauer anhand der Größe eines Full-Backups:
 
 \begin{equation}
     \label{eq:speicher}
@@ -242,14 +249,13 @@ Es gilt dementsprechend:
 
 Das 1TB-NAS würde daraus folgend bei gleichbleibendem Wachstum also erst in rund 151 Tausend Jahren voll sein.
 Die Speicherkapazität ist damit für den praktischen Betrieb als unbegrenzt zu betrachten, selbst wenn der verfügbare Speicher als erheblich kleiner angenommen wird.
-
 \footnote{Es ist anzumerken, dass die Größe eines Full-Backups zwar in einem linearen Zusammenhang mit der tatsächlichen Datenbankgröße steht, diese aber zum Beispiel durch Komprimierung nicht vollständig widerspiegelt \cite{so_backup_size, sqlskills_backup}.
     Auch nehmen die Erkennungs-Einträge nicht den gesamten Platz des Backups ein, da andere Daten wie etwa die anderer Services ebenfalls in diesem enthalten sind.
     Das oben genannte Ergebnis ist aus diesen Gründen nur als Annäherung zu betrachten, wobei die Kernaussage ohne Zweifel bestehen bleibt.}
 
 Die Herleitung dieser Formel ist dem Anhang zu entnehmen.
 
-
+\newpage
 \subsection{Sicherheitskonzept}
 \label{sec:sicherheitskonzept}
 
@@ -260,14 +266,14 @@ Die Sicherheitsarchitektur des Systems ist in mehrere Schichten gegliedert, die 
 
 Die Absicherung der API-Endpunkte erfolgt je nach Service und Anforderung durch unterschiedliche Mechanismen:
 
-\paragraph{Data Collection Service (HTTP Basic Authentication)}
+\paragraph{Data Collection Service (HTTP Basic Authentication)}~\\
 \label{sec:dc_auth}
 Der Webhook-Endpunkt \texttt{/api/vehicle\_detected}, über den die Synology Surveillance Station Fahrzeugerkennungen meldet, ist durch HTTP Basic Authentication geschützt.
 Die Zugangsdaten werden dabei gegen die Synology-Credentials des Systems validiert.
 HTTP Basic Authentication ist dabei die einzige von der Surveillance Station unterstützte Authentifizierungsmethode für Webhook-Aufrufe, weshalb hier keine Alternative in Frage kam.
 Da der Endpunkt ausschließlich für die maschinenbasierte Kommunikation innerhalb des lokalen Netzwerks vorgesehen ist und nicht von außen erreichbar ist, ist dieses Sicherheitsniveau für diesen Anwendungsfall ausreichend.
 
-\paragraph{Notification Service (API-Key Authentication)}
+\paragraph{Notification Service (API-Key Authentication)}~\\
 \label{sec:notif_auth}
 Der Notification Service erwartet einen statischen API-Key im Authorization-Header jeder Anfrage.
 Die Entscheidung gegen eine komplexere Authentifizierung, etwa mittels JWT (JSON Web Tokens) oder Session-basierter Tokens fiel aus mehreren Gründen:
@@ -276,7 +282,8 @@ zweitens würde eine JWT-basierte Lösung eine Schlüsselverwaltung (Signing Key
 Die Notwendigkeit eines statischen API-Key, der über Umgebungsvariablen konfiguriert wird, kommt daher, dass der Port dieses Services zu Testzwecken freigeschaltet wurde.
 Für diesen Zweck bietet ein Token ein angemessenes Sicherheitsniveau bei geringer Komplexität.
 
-\paragraph{Auth Service / Web Service (Active Directory Integration)}
+\newpage
+\paragraph{Auth Service / Web Service (Active Directory Integration)}~\\
 Für die Authentifizierung von Benutzern der Web-Oberfläche wurde die Integration mit dem bestehenden Active Directory (AD) der Firma Zotter konzipiert.
 Dieser sollte mittels LDAP (Lightweight Directory Access Protocol)-Anbindung Nutzerdaten aus dem firmeninternen Microsoft-AD Server beziehen und diese für den Login-Prozess nutzen.
 Dies bietet den Vorteil, dass keine separate Benutzerverwaltung implementiert und gewartet werden muss und die bestehende Unternehmensinfrastruktur zur Zugangskontrolle genutzt werden kann.
@@ -291,8 +298,7 @@ Jeder Service operiert mit einem eigenen, dedizierten PostgreSQL-Benutzer, desse
 Durch diese Segmentierung wird sichergestellt, dass im Falle einer Infiltration eines einzelnen Services der Zugriff auf Daten anderer Bereiche verhindert wird.
 Der Notification Service kann beispielsweise keine Fahrzeugerkennungsdaten auslesen, und ein Angreifer mit Zugriff auf den Analytics Service könnte keine Daten verändern, da er nur Leserechte auf das Ingestion-Schema besitzt.
 
-Die folgende Darstellung visualisiert die Berechtigungsstruktur:
-
+\newpage
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{db_user.png}
@@ -300,7 +306,7 @@ Die folgende Darstellung visualisiert die Berechtigungsstruktur:
     \label{fig:db_user}
 \end{figure}
 
-Wie die Darstellung zeigt, hat der Data-Collection-User Vollzugriff auf das Ingestion-Schema, der Analytics-User nur Lesezugriff darauf (aber Vollzugriff auf das eigene Analytics-Schema), und der Notification-User ist vollständig auf das Notification-Schema beschränkt.
+Wie die Darstellung (Abb. \ref{fig:db_user}) zeigt, hat der Data-Collection-User Vollzugriff auf das Ingestion-Schema, der Analytics-User nur Lesezugriff darauf (aber Vollzugriff auf das eigene Analytics-Schema), und der Notification-User ist vollständig auf das Notification-Schema beschränkt.
 Grafana greift über den \texttt{analytics\_user} ebenfalls ausschließlich lesend auf die Ingestion-Daten zu.
 
 

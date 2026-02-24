@@ -13,13 +13,6 @@ Das folgende Kapitel soll einen Einblick in den Entscheidungsprozess bieten, nac
 Hierfür werden zunächst die Grundanforderungen an das Gesamtsystem aus der Aufgabenstellung (Abschnitt~\ref{sec:aufgabenstellung}) abgeleitet, darauf aufbauend werden dann die spezifischen Anforderungen an die Hardwarekomponenten dargelegt.
 Danach werden die einzelnen, im Auswahlprozess evaluierten Optionen gegenübergestellt und hinsichtlich ihrer Eignung analysiert.
 
-
-\subsubsection{Anforderungsanalyse an die Hardware}
-
-\paragraph{Grundanforderungen}
-Wie oben kurz erwähnt, gibt es einige Anforderungen, die für die Funktionsfähigkeit des Systems unausweichlich sind.
-Zunächst galt es, die Gegebenheiten vor Ort zu betrachten, also Lage und Aufbau des Bereiches, in dem der Fahrzeugverkehr erkannt werden sollte.
-
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{zotter.png}
@@ -28,7 +21,14 @@ Zunächst galt es, die Gegebenheiten vor Ort zu betrachten, also Lage und Aufbau
     \label{fig:zotter_luftbild}
 \end{figure}
 
-Wie das Luftbild zeigt, verfügt der Parkplatz über eine kombinierte Ein- und Ausfahrt.
+\newpage
+\subsubsection{Anforderungsanalyse an die Hardware}
+
+\paragraph{Grundanforderungen}
+Wie oben kurz erwähnt, existieren einige Anforderungen, welche für die Funktionsfähigkeit des Systems unausweichlich sind.
+Zunächst galt es, die Gegebenheiten vor Ort zu betrachten, also Lage und Aufbau des Bereiches, in dem der Fahrzeugverkehr erkannt werden sollte.
+
+Wie das Luftbild (Abb. \ref{fig:zotter_luftbild}) zeigt, verfügt der Parkplatz über eine kombinierte Ein- und Ausfahrt.
 Dies reduziert zwar den Installationsaufwand der Hardware, erhöht jedoch die Software-Komplexität, da die Bewegungsrichtung der Fahrzeuge softwareseitig erkannt werden muss.
 Das Zeitintervall zwischen zwei aufeinanderfolgenden Fahrzeugen wurde aufgrund der Breite der Einfahrt auf zwei bis drei Sekunden geschätzt.
 Das System sollte folglich in der Lage sein, 20 bis 30 Bilder pro Minute zu analysieren und die daraus gewonnenen Daten persistent zu speichern.
@@ -65,7 +65,7 @@ Besonders das Modell BC500, von welchem einige Stück bereits im Besitz der Firm
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=6cm]{synology_bc500.png}
+    \includegraphics[width=8cm]{synology_bc500.png}
     \caption{Synology BC500}
     \source{\url{https://fileres.synology.com/images/ec/products/BC500.jpg}}
     \label{fig:synology_bc500}
@@ -78,8 +78,15 @@ Zusätzlich schien die BC500 über eine robuste API für das Auslesen von Daten 
 
 Aufgrund der oben angesprochenen sofortigen Verfügbarkeit und des wegfallenden Mehraufwands für diese Kamera, verbunden mit den genannten Spezifikationen, fiel die Entscheidung nach Absprache mit unserer Kontaktperson auf das Synology-Modell.
 
-
+\newpage
 \paragraph{Kamera -- Montage}
+
+Das Kamerasystem wurde, wie unten erkenntlich (Abb. \ref{fig:kamera_montage}), so montiert, dass es in Richtung des Parkplatzes zeigt.
+Dies erwies sich als die optimale Wahl, da so der mögliche Erkennungsbereich maximiert wird und die Montage an dieser Position einfacher realisierbar war.
+Bei der genauen Positionierung und Ausrichtung der Kamera wurde versucht, sich so gut wie möglich am Kamera-Setup-Guide von Plate Recognizer zu orientieren. \cite{platerecognizer_camera_setup}
+
+Die erforderliche Netzwerkverkabelung wurde, wie oben im Bild ersichtlich, über den bereits vorhandenen Kabelkanal der Sicherheitsschranke geführt.
+Dieser verläuft bis in den Netzwerkschrank im angrenzenden Bürogebäude, wo die Anbindung an das Firmennetzwerk erfolgt.
 
 \begin{figure}[htbp]
     \centering
@@ -89,14 +96,7 @@ Aufgrund der oben angesprochenen sofortigen Verfügbarkeit und des wegfallenden 
     \label{fig:kamera_montage}
 \end{figure}
 
-Das Kamerasystem wurde, wie oben erkenntlich, so montiert, dass es in Richtung des Parkplatzes zeigt.
-Dies erwies sich als die optimale Wahl, da so der mögliche Erkennungsbereich maximiert wird und die Montage an dieser Position einfacher realisierbar war.
-Bei der genauen Positionierung und Ausrichtung der Kamera wurde versucht, sich so gut wie möglich am Kamera-Setup-Guide von Plate Recognizer zu orientieren. \cite{platerecognizer_camera_setup}
-
-Die erforderliche Netzwerkverkabelung wurde, wie oben im Bild ersichtlich, über den bereits vorhandenen Kabelkanal der Sicherheitsschranke geführt.
-Dieser verläuft bis in den Netzwerkschrank im angrenzenden Bürogebäude, wo die Anbindung an das Firmennetzwerk erfolgt.
-
-
+\newpage
 \paragraph{Server -- Auswahl}
 
 Die gewählte Microservice-Architektur im Zusammenspiel mit der angewandten Containerisierung erlaubt eine hohe Flexibilität für die Art der benötigten Hardware.
@@ -120,12 +120,13 @@ Der größte Vorteil kommt aber mit der Kombination mit den oben beschriebenen K
 Wie die Kameralinie von Synology vermuten lässt, bietet der Hersteller eigene Produkte gezielt für Überwachungsaufgaben an.
 Diese laufen unter einem Gesamtsystem mit der Bezeichnung "`Surveillance Station"' und sind als Paket auf den hauseigenen NAS-Systemen verfügbar. \cite{synology_surveillance}
 
+\newpage
 Innerhalb des Surveillance Station-Ökosystems bietet Synology mit der DVA-Serie (Deep Video Analytics) spezialisierte NVR-Geräte (Network Video Recorder) an, welche über GPU-beschleunigte KI-Funktionen verfügen.
 Insbesondere das Modell DVA1622 (zur Zeit des Projekts das einzige verfügbare Modell der DVA-Serie) bietet für diese Diplomarbeit in Kombination mit der Kamera BC500 viele Vorteile: \cite{synology_dva}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=6cm]{synology_dva1622.png}
+    \includegraphics[width=8cm]{synology_dva1622.png}
     \caption{Synology DVA1622}
     \source{\url{https://www.synology.com/img/products/detail/DVA1622/heading.png}}
     \label{fig:synology_dva1622}
@@ -145,7 +146,7 @@ Die Kombination aus relevanten Features, umfassender API und nativer Kamera-Unte
 Das NAS-System ist durch seine Kompaktheit und Kapselung auf keine besonderen Anforderungen an den Montage- bzw. Betriebsort angewiesen.
 Aus diesem Grund wurde dieses innerhalb des Bürogebäudes installiert, in welchem auch die Kamera an das Firmennetzwerk angeschlossen ist.
 
-
+\newpage
 \subsection{Technik-Stack und Technologieauswahl der Kennzeichenerkennung}
 \label{sec:techstack}
 

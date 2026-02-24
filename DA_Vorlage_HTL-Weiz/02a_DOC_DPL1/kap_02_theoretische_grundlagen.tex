@@ -5,31 +5,31 @@
 \subsection{Containerisierung (Docker)}
 \label{sec:docker}
 
-Die Containerisierung ist eine Methode, bei der Anwendungen und deren Abhängigkeiten in einer leichtgewichtigen, isolierten Einheit, einem sogenannten Container, verpackt werden.
+Die Containerisierung ist eine Methode, bei welcher Anwendungen und deren Abhängigkeiten in einer leichtgewichtigen, isolierten Einheit, einem sogenannten Container, verpackt werden.
 
-\subsubsection*{Docker}
-Docker ist eine offene Plattform, die 2013 veröffentlicht wurde und die Containerisierung von Anwendungen standardisiert.
+\subsubsection{Docker}
+Docker ist eine offene Plattform, welche 2013 veröffentlicht wurde und die Containerisierung von Anwendungen standardisiert.
 Es stellt die notwendigen Tools bereit, um Container einfach zu erstellen und mit ihnen arbeiten zu können, und abstrahiert dabei die Komplexität der zugrundeliegenden Linux-Kernel-Features (Namespaces, cgroups).
-Die Docker-Plattform besteht aus der Docker Engine (Daemon, REST API und CLI), Docker Images und Docker Containern. \cite{docker_overview}
+Die Docker-Plattform besteht aus der Docker Engine (Daemon, REST-API und CLI), Docker Images und Docker Containern. \cite{docker_overview}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=7cm]{docker-logo-blue.png}
+    \includegraphics[width=8cm]{docker-logo-blue.png}
     \caption{Docker Logo}
     \source{\url{https://www.docker.com/company/newsroom/media-resources/}}
     \label{fig:docker_logo}
 \end{figure}
 
-\subsubsection*{Architektur und Funktionsweise}
+\subsubsection{Architektur und Funktionsweise}
 Docker basiert auf einer Client-Server-Architektur.
-Der Docker-Daemon verwaltet Container, Images, Netzwerke und Volumes (persistenter Speicher), während der Docker-Client (CLI) die Schnittstelle für Benutzerinteraktionen bereitstellt. \cite{docker_overview}
+Der Docker-Daemon verwaltet Container, Images, Netzwerke und Volumes (persistenter Speicher), während der Docker-Client (CLI) die Schnittstelle für Benutzerinteraktionen bereitstellt. \cite{docker_overview} \\
 Images, also Abbilder der Anwendung und ihrer Umgebung, werden als unveränderliche Vorlagen aus sogenannten Dockerfiles erstellt und in Layern organisiert, wobei bestimmte Instruktionen wie \texttt{RUN} oder \texttt{COPY} im Dockerfile jeweils einen neuen Layer erzeugen. \cite{docker_dockerfile}
 Dieses Layer-System ermöglicht effizientes Caching: Wenn ein Image neu gebaut werden muss, müssen nur die Layer neu erstellt werden, an denen tatsächlich Änderungen vorgenommen wurden. \cite{docker_cache}
 
 Container werden aus diesen Images instanziiert und stellen isolierte Prozesse und deren Umgebung dar.
 Im Gegensatz zu virtuellen Maschinen, die jeweils ein vollständiges Gastbetriebssystem benötigen, teilen sich Container den Host-Kernel, was sie deutlich ressourcenschonender macht. \cite{docker_overview}
 
-\subsubsection*{Vorteile von Containerisierung und Docker}
+\subsubsection{Vorteile von Containerisierung und Docker}
 Der wohl größte Punkt, welcher für Containerisierung spricht, ist die Eliminierung des klassischen "`Works on my machine"'-Problems.
 Der Container läuft in der Entwicklung identisch zur Produktion, da das gesamte Betriebssystem, einschließlich Konfigurationen, Bibliotheken und Abhängigkeiten, im Image verpackt sind.
 Dies reduziert Deployment-Fehler erheblich und erleichtert das Debugging, da Entwickler exakt dieselbe Umgebung lokal reproduzieren können.
@@ -49,7 +49,8 @@ Bei Problemen, etwa nach einem Update, kann somit schnell zu einer vorherigen, s
 Zudem bieten Container eine hohe Skalierbarkeit. So können Anwendungen sehr leicht horizontal skaliert werden, indem mehrere Instanzen derselben Services gestartet werden.
 In Verbindung mit Orchestrierungstools wie Kubernetes können Services dynamisch basierend auf der aktuellen Last skaliert werden.
 
-\subsubsection*{Docker Compose}
+\newpage
+\subsubsection{Docker Compose}
 \label{sec:docker_compose}
 Docker Compose ist ein Tool zur Definition und Verwaltung von Multi-Container-Anwendungen.
 Compose ermöglicht die Orchestrierung mehrerer Services durch eine deklarative YAML-Konfigurationsdatei.
@@ -58,7 +59,7 @@ Docker Compose startet Services in der vordefinierten Reihenfolge und ermöglich
 Besonders wertvoll ist Docker Compose für Entwicklungsumgebungen, da es die gesamte Infrastruktur als Code (Infrastructure as Code) definiert.
 Statt mehrere Services manuell zu starten, orchestriert eine einzige Datei das komplette System, was auch unterschiedliche Umgebungen wie etwa Entwicklung und Live (Produktion) durch separate Compose-Dateien ermöglicht.
 
-\subsubsection*{Docker Hub}
+\subsubsection{Docker Hub}
 Docker Hub ist die zentrale, cloudbasierte Registry für Docker-Images und fungiert als öffentliches Repository, ähnlich wie GitHub für Code.
 Es enthält eine Vielzahl an vorgefertigten Images, darunter offizielle Images für gängige Software und Technologien wie PostgreSQL, Redis oder Python, welche von den jeweiligen Maintainern verifiziert werden. \cite{docker_hub}
 Beim Starten eines Stacks oder Containers lädt Docker automatisch benötigte Images von Docker Hub herunter, falls sie nicht lokal vorhanden sind.
@@ -66,20 +67,20 @@ In dieser Diplomarbeit werden beispielsweise offizielle Images für PostgreSQL u
 
 Für diese Diplomarbeit bietet sich Containerisierung sehr gut an, da das gesamte System mit einem einzigen Befehl auf jedem System orchestriert gestartet, gestoppt oder neu gebaut werden kann, unabhängig vom Host-Betriebssystem.
 
-
+\newpage
 \subsection{Microservice Architektur}
 \label{sec:microservices}
 
 Die Microservice-Architektur ist ein Designansatz, bei dem eine Anwendung als Sammlung kleiner, lose gekoppelter Dienste aufgebaut wird.
 
-\subsubsection*{Grundkonzept und Definition}
+\subsubsection{Grundkonzept und Definition}
 Während zum Beispiel eine monolithische Architektur alle Funktionen einer Anwendung in einem einzigen, zusammenhängenden Prozess vereint, werden bei Microservices einzelne Funktionsbereiche in eigenständige Services ausgelagert.
 Jeder dieser Services läuft in einem eigenen Prozess, besitzt eine klar definierte Schnittstelle und kommuniziert über leichtgewichtige Protokolle wie REST/HTTP oder Message Queues, wie RabbitMQ, mit anderen Services. \cite{aws_microservices}
 In diesem Projekt erfolgt die Kommunikation primär über RESTful APIs, wobei jeder Service seine Endpunkte bereitstellt.
 
 Der Begriff "`Microservice"' bezieht sich dabei weniger auf die absolute Größe des Codes, sondern vielmehr auf die fokussierte Verantwortung: Ein Service sollte genau eine Aufgabe erfüllen und diese gut (Single Responsibility Principle). Jeder Microservice ist eine eigenständige Einheit mit eigener Datenhaltung, Geschäftslogik und oft auch einem eigenen Technologie-Stack. \cite{oso_microservices}
 
-\subsubsection*{Vorteile der Microservice-Architektur}
+\subsubsection{Vorteile der Microservice-Architektur}
 Ein fundamentaler Vorteil von Microservices ist die Möglichkeit, Services unabhängig voneinander zu deployen.
 Wenn eine Änderung an einem Service vorgenommen wird, kann dieser Service aktualisiert werden, ohne dass andere Services neu gestartet oder verändert werden müssen.
 Dieses Prinzip profitiert stark von der Containerisierung, welche im letzten Kapitel erklärt wurde. \cite{aws_microservices}
@@ -92,7 +93,7 @@ Auch wird durch die Isolation der Services die Fehlerausbreitung begrenzt.
 Etwa kann, wenn ein ganzer Service (wie der für Benachrichtigungen) abstürzen sollte oder nicht erreichbar ist, die Kernfunktion des Systems, also die Kennzeichenerfassung ohne Unterbrechungen weiterarbeiten.
 Das System kann mit degradierter Funktionalität weiterlaufen, anstatt vollständig auszufallen, was zu höherer Fehlertoleranz und Resilience führt.
 
-\subsubsection*{Wartbarkeit und Verständlichkeit}
+\subsubsection{Wartbarkeit und Verständlichkeit}
 Microservices ermöglichen es, dass Entwickler unabhängig voneinander arbeiten können. Jeder kann für einen oder mehrere Services verantwortlich sein und autonom Entscheidungen über Technologien, Entwicklungsprozesse und Deployment-Strategien treffen.
 Kleinere, fokussierte Codebasen sind auch einfacher zu verstehen und zu warten als ein großer Monolith.
 Neue Entwickler können sich schnell in einen einzelnen Service einarbeiten, ohne das gesamte System verstehen zu müssen.
@@ -106,14 +107,14 @@ Diese beziehen sich primär auf die erhöhte Komplexität, welche die Verteilung
 
 Im Fazit ist die Microservice-Architektur ein mächtiger Ansatz für komplexe Systeme, der Flexibilität, Fehlertoleranz und Skalierbarkeit bietet und in dieser Diplomarbeit vor allem in Bezug auf Fehlertoleranz, wie es oben beschrieben wurde, einen großen Vorteil mit sich bringt.
 
-
+\newpage
 \subsection{ALPR (Automatic License Plate Recognition)}
 \label{sec:alpr}
 
 ALPR (Automatic License Plate Recognition) bezeichnet die automatisierte Erfassung und Auswertung von Fahrzeugkennzeichen aus Bilddaten mittels Computer-Vision und Deep Learning. \cite{platerecognizer_alpr}
 ALPR-Systeme arbeiten kontinuierlich und transformieren visuelle Informationen wie Kamera-Snapshots in strukturierte, maschinell verarbeitbare Daten und ermöglichen damit die automatische Identifikation von Fahrzeugen.
 
-\subsubsection*{Grundfunktionsweise}
+\subsubsection{Grundfunktionsweise}
 Der Erkennungsprozess und die Verarbeitung der Daten erfolgt typischerweise in einem mehrstufigen Prozess \cite{senstar_alpr}:
 
 \begin{enumerate}
@@ -136,10 +137,11 @@ Der Erkennungsprozess und die Verarbeitung der Daten erfolgt typischerweise in e
           Auch werden typische OCR-Verwechslungen wie "`0"' versus "`O"' oder "`1"' versus "`I"' kontextbasiert korrigiert.
 \end{enumerate}
 
-\subsubsection*{Technologie und Anbieter}
+\newpage
+\subsubsection{Technologie und Anbieter}
 In diesem System wird der Dienst Plate Recognizer eingesetzt, der moderne Deep Learning-Ansätze nutzt und im Vergleich zu anderen Optionen wie etwa einem Offline-OCR-Modell über klassische Texterkennung hinausgeht.
 
-\subsubsection*{MMC-Erkennung (Make, Model, Color)}
+\subsubsection{MMC-Erkennung (Make, Model, Color)}
 \label{sec:mmc}
 Neben der im Vergleich sehr zuverlässigen Kennzeichenerkennung identifiziert Plate Recognizer zusätzliche Fahrzeugattribute \cite{platerecognizer_mmc}, ein Ansatz, der MMC-Erkennung genannt wird:
 \begin{itemize}
@@ -148,7 +150,7 @@ Neben der im Vergleich sehr zuverlässigen Kennzeichenerkennung identifiziert Pl
     \item \textbf{Color (Farbe):} Bestimmung der Primärfarbe unter Kompensation von Lichtverhältnissen und Unterscheidung zwischen verschiedenen Lackierungstypen.
 \end{itemize}
 
-\subsubsection*{On-Premise SDK}
+\subsubsection{On-Premise SDK}
 \label{sec:on_premise}
 Plate Recognizer bietet sowohl Cloud-basierte APIs als auch ein On-Premise SDK an.
 Die On-Premise-Variante ermöglicht vollständige lokale Ausführung ohne externe Netzwerkabhängigkeit \cite{platerecognizer_snapshot}, eine Anforderung, welche Zotter Schokolade sehr wichtig war.

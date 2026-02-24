@@ -16,7 +16,6 @@ Für diese Diplomarbeit sind jene Bereiche relevant, welche sich mit der Konfigu
 \subsubsection{IP Camera Konfiguration}
 
 Mit dem IP Camera-Tool können Synology-Kameras im Netzwerk automatisch erkannt und konfiguriert werden.
-Zunächst wurde die installierte Kamera mit Hilfe dieses Tools erkannt und zum System hinzugefügt, dies funktionierte schnell ohne jegliche Komplikationen.
 In den Einstellungen der hinzugefügten IP-Kamera wurden Optionen wie die Bildrate oder Auflösung der Kamera maximiert, um die bestmöglichen Grundvoraussetzungen für eine erfolgreiche Erkennung zu bieten.
 
 \begin{figure}[htbp]
@@ -25,9 +24,8 @@ In den Einstellungen der hinzugefügten IP-Kamera wurden Optionen wie die Bildra
     \caption{IP Camera Tool\protect\footnotemark}
     \label{fig:ip_camera_tool}
 \end{figure}
-\footnotetext{Der in der Abbildung ersichtliche schwarze Balken in der rechten, oberen Ecke dient dem Datenschutz der auf der anderen Straßenseite befindlichen Familienhäuser und schränkt die Funktion des Systems in keiner Weise ein.}
 
-
+\newpage
 \subsubsection{Deep Video Analytics Konfiguration}
 
 Da wie bereits im Kapitel~\ref{sec:hardware} erwähnt die Synology DVA-Serie als NAS-System gewählt wurde, standen für die Umsetzung dieses Projekts die erweiterten KI-Funktionen dieser Reihe zur Verfügung, diese werden von Synology als Deep Video Analytics (DVA) bezeichnet.
@@ -42,8 +40,9 @@ Diese Einschränkungen sind wichtig, um das ALPR-System zu entlasten und Mehrfac
     \caption{Erkennungsbereich im Deep Video Analytics Tool}
     \label{fig:erkennungsbereich}
 \end{figure}
+\footnotetext{Der in der Abbildung ersichtliche schwarze Balken in der rechten, oberen Ecke dient dem Datenschutz der auf der anderen Straßenseite befindlichen Familienhäuser und schränkt die Funktion des Systems in keiner Weise ein.}
 
-
+\newpage
 \subsubsection{Action Rule Konfiguration}
 
 Innerhalb der Surveillance Station können sogenannte Action-Rules definiert werden, welche bei Erkennung einer Fahrzeugbewegung im konfigurierten Erkennungsbereich eine zuvor definierte Aktion ausführen.
@@ -58,7 +57,7 @@ Wie in Abbildung~\ref{fig:action_rule} erkenntlich, ruft diese einen Webhook des
     \label{fig:action_rule}
 \end{figure}
 
-
+\newpage
 \subsection{Data Collection Service}
 
 Der Data Collection Service bildet das funktionale Herzstück des gesamten Systems.
@@ -123,20 +122,12 @@ async def handle_vehicle_detection(
 \end{lstlisting}
 
 
+\newpage
 \subsubsection{Ablauf der Verarbeitung}
 
-Die folgende Darstellung zeigt den vollständigen Ablauf von der Webhook-Auslösung bis zur Speicherung in der Datenbank als Sequenzdiagramm:
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\textwidth]{data_collection.png}
-    \caption{Data Collection Flow}
-    \label{fig:data_collection_flow}
-\end{figure}
-
-Wie dem Diagramm zu entnehmen ist, durchläuft jede Erkennung nach dem Webhook-Eingang die folgenden Phasen, welche in den nächsten Unterkapiteln im Detail erläutert werden:
+Die im Anhang angeführte Darstellung (Abb. \ref{fig:data_collection_flow}) zeigt den vollständigen Ablauf von der Webhook-Auslösung bis zur Speicherung in der Datenbank als Sequenzdiagramm.
+Jede Erkennung durchläuft nach dem Webhook-Eingang die folgenden Phasen, welche in den nächsten Unterkapiteln im Detail erläutert werden:
 Kamera-Anbindung, ALPR-Aufruf, Datenanreicherung, Anonymisierung und Speicherung mit Duplikatprüfung.
-
 
 \subsubsection{Kamera-Anbindung (CameraHandler)}
 
@@ -165,7 +156,6 @@ Die \texttt{PlateRecognizerHandler}-Klasse implementiert diesen HTTP-Aufruf mit 
 
 \begin{lstlisting}[language=Python, caption={Plate Recognizer Integration mit Retry-Strategie}, label={lst:plate_recognizer}]
 class PlateRecognizerHandler:
-
     @retry(
         wait=wait_fixed(1),
         stop=stop_after_attempt(5),
@@ -315,7 +305,7 @@ Die Verbindungsparameter (Host, Datenbankname, Credentials) werden über Umgebun
 Das Dashboard wird als JSON-Datei bereitgestellt und beim Start, wie oben erwähnt, automatisch geladen.
 Änderungen am Dashboard werden direkt in der JSON-Datei vorgenommen.
 
-
+\newpage
 \subsubsection{Dashboard-Aufbau und Darstellungen}
 
 Das Dashboard bietet einen umfassenden Überblick über die gesammelten Fahrzeugdaten.
@@ -334,7 +324,7 @@ Das Dashboard umfasst folgende Darstellungen:
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\textwidth]{grafana_dashboard.png}
+    \includegraphics[width=0.9\textwidth]{grafana_dashboard.png}
     \caption{Grafana Dashboard}
     \label{fig:grafana_dashboard}
 \end{figure}
