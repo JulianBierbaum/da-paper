@@ -40,6 +40,33 @@
 \usepackage[most]{tcolorbox}
 \usepackage[hidelinks]{hyperref}	% Klickbare Links und URLs
 \usepackage{url}					% URL-Formatierung
+
+% --- Literaturverwaltung mit biblatex ---
+\usepackage[
+    backend=biber,
+    style=alphabetic,
+    sorting=nty,
+    urldate=short
+]{biblatex}
+
+
+% Komma nach dem Autor statt Punkt im Verzeichnis
+\DeclareDelimFormat{nametitledelim}{\addcomma\space}
+
+% Titel im Verzeichnis nicht kursiv
+\DeclareFieldFormat{title}{#1}
+
+% "In: <URL>" statt "URL: <URL>"
+\DeclareFieldFormat{url}{In:\space\url{#1}}
+
+% "am <Datum>" statt "besucht am <Datum>"
+\DefineBibliographyStrings{ngerman}{
+  urlseen = {am},
+}
+
+\addbibresource{literatur.bib}
+% ----------------------------------------
+
 %---------------------Switch modulare Printversionen
 %
 \newboolean{UseWm} 		%Korrektur Wasserzeichen in das PDF drucken

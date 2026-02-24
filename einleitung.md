@@ -57,7 +57,7 @@ Um diesen Anforderungen gerecht zu werden, wurden diese in folgende Teilaufgaben
 - Bereitstellung einer Entwickler-Dokumentation für zukünftige Wartung und Erweiterungen
 
 
-## Aufbau der Arbeit
+## Aufbau dieser Arbeit
 
 Diese Diplomarbeit gliedert sich in Hauptkapitel, die den Entwicklungsprozess des Systems von den theoretischen Grundlagen bis zur Implementierung nachvollziehbar machen sollen.
 
