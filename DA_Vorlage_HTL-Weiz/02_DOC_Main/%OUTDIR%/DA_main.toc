@@ -124,7 +124,8 @@
 \contentsline {subsection}{\numberline {9.1}Herleitung der Speicherdauerformel}{66}{subsection.9.1}%
 \contentsline {subsection}{\numberline {9.2}Vollständige Verarbeitungsmethode (process\_vehicle\_detection)}{67}{subsection.9.2}%
 \contentsline {subsection}{\numberline {9.3}Datenbank-Initialisierungsskript (init.sql)}{69}{subsection.9.3}%
-\contentsline {section}{\nonumberline Abbildungen}{72}{section*.127}%
-\contentsline {section}{Abkürzungsverzeichnis}{73}{section*.128}%
-\contentsline {section}{\nonumberline Literaturverzeichnis}{75}{section*.131}%
+\contentsline {subsection}{\numberline {9.4}Stundenmitschrift}{71}{subsection.9.4}%
+\contentsline {section}{\nonumberline Abbildungen}{73}{section*.127}%
+\contentsline {section}{Abkürzungsverzeichnis}{74}{section*.128}%
+\contentsline {section}{\nonumberline Literaturverzeichnis}{76}{section*.131}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

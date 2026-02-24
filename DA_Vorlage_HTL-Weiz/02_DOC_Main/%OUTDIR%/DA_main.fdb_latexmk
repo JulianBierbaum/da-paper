@@ -1,21 +1,21 @@
 # Fdb version 4
-["biber %OUTDIR%/DA_main"] 1771945640.43777 "%OUTDIR%/DA_main.bcf" "%OUTDIR%/DA_main.bbl" "%OUTDIR%/DA_main" 1771947181.7087 0
-  "%OUTDIR%/DA_main.bcf" 1771947181.54344 113489 7ff02f884287d153cf034343ee25f6d2 "pdflatex"
+["biber %OUTDIR%/DA_main"] 1771945640.43777 "%OUTDIR%/DA_main.bcf" "%OUTDIR%/DA_main.bbl" "%OUTDIR%/DA_main" 1771949887.36858 0
+  "%OUTDIR%/DA_main.bcf" 1771949887.18112 113489 7ff02f884287d153cf034343ee25f6d2 "pdflatex"
   "literatur.bib" 1771945333.89913 13962 34c38b3969f4151dff58d03acb63ee56 ""
   (generated)
   "%OUTDIR%/DA_main.bbl"
   "%OUTDIR%/DA_main.blg"
   (rewritten before read)
-["pdflatex"] 1771947172.59832 "/home/bj/papers/da-paper/DA_Vorlage_HTL-Weiz/02_DOC_Main/DA_main.tex" "DA_main.pdf" "DA_main" 1771947181.70896 0
+["pdflatex"] 1771949878.15694 "/home/bj/papers/da-paper/DA_Vorlage_HTL-Weiz/02_DOC_Main/DA_main.tex" "DA_main.pdf" "DA_main" 1771949887.36885 0
   "%OUTDIR%/../../03_AUX/01_PICT/HTL-Weiz-IT-Logo.png" 1770230179.66692 23832 fe482267c12923c0327e1223d233bfc0 ""
   "%OUTDIR%/../../03_AUX/01_PICT/HTL-Weiz-Logo.pdf" 1770230179.66692 3997 5008f3e5d44970f6148a4fcad9f0fe41 ""
-  "%OUTDIR%/DA_main.aux" 1771947181.50701 85130 673bc644d8f5b1c69cdfeb85d3e06a7a "pdflatex"
+  "%OUTDIR%/DA_main.aux" 1771949887.14152 85638 cc3efbb42b12df2327e1d76c429d2f44 "pdflatex"
   "%OUTDIR%/DA_main.bbl" 1771945641.23788 83084 6ef6a7226852f0582c2e565d114b1d70 "biber %OUTDIR%/DA_main"
   "%OUTDIR%/DA_main.glsdefs" 1771938328.60325 16111 4113914f75006fea5877c1af1d966db5 ""
-  "%OUTDIR%/DA_main.lof" 1771947181.54344 2808 bca9b4f1ce9d7d5974c107a93a2664b8 "pdflatex"
-  "%OUTDIR%/DA_main.out" 1771947174.60644 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "%OUTDIR%/DA_main.run.xml" 1771947181.54344 2361 ac1d47eb93881097f10c11869cd3d44c "pdflatex"
-  "%OUTDIR%/DA_main.toc" 1771947181.54344 12433 e2b53459081de05b2ca9581847a045a6 "pdflatex"
+  "%OUTDIR%/DA_main.lof" 1771949887.18112 2808 bca9b4f1ce9d7d5974c107a93a2664b8 "pdflatex"
+  "%OUTDIR%/DA_main.out" 1771949880.17552 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "%OUTDIR%/DA_main.run.xml" 1771949887.18112 2361 ac1d47eb93881097f10c11869cd3d44c "pdflatex"
+  "%OUTDIR%/DA_main.toc" 1771949887.18112 12517 496a8557856e58dcaaa887f8d81812a1 "pdflatex"
   "../00_LATdef/DocSettings.tex" 1771947172.33124 7602 8b8b8dee904aeb01a9c453068ebe2e38 ""
   "../00_LATdef/UsePackages.tex" 1771946073.10035 2583 f7a6eb487d9ef6e2392a4209cab279f1 ""
   "../02_DOC_Main/DA_05_LIT.tex" 1771939258.35841 10888 4382301894f635a9dd4d371b5a868d49 ""
@@ -355,7 +355,7 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1762709238 5467255 9a64d1b40e0b893fc5588ecce9d8accf ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1762709356 3349796 a128bf6bd412251dd32f55ff6f57bb8a ""
   "DA_01_INTroduction.tex" 1771877104.79434 8660 f55aceae82e2a7ee50e79458f3699b2f ""
-  "DA_03_ADDendum.tex" 1771940367.54181 9003 50727d85ab86f34eafce4483afd874bc ""
+  "DA_03_ADDendum.tex" 1771949869.69803 14664 90b7ff17b59d78e8c7dedd55bb2688f8 ""
   "DA_04_ACR.tex" 1771939504.40325 1706 5810cb548ef251e76b20a7d7cca1afdb ""
   "DA_main.tex" 1771939497.54165 3239 b7aa86c9500a220353ba221931dacfd1 ""
   (generated)
