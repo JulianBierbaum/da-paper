@@ -101,39 +101,39 @@
 \contentsline {section}{\numberline {6}Infrastruktur, Deployment und Betrieb}{54}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Container-Orchestrierung}{54}{subsection.6.1}%
 \contentsline {subsubsection}{\numberline {6.1.1}Entwicklungsumgebung}{54}{subsubsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.2}Produktionsumgebung}{54}{subsubsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2}Produktionsumgebung}{55}{subsubsection.6.1.2}%
 \contentsline {subsubsection}{\numberline {6.1.3}Startabhängigkeiten und Healthchecks}{55}{subsubsection.6.1.3}%
 \contentsline {subsection}{\numberline {6.2}CI/CD Pipelines und Deployment}{56}{subsection.6.2}%
 \contentsline {subsubsection}{\numberline {6.2.1}Build und Test Pipeline}{56}{subsubsection.6.2.1}%
 \contentsline {paragraph}{\nonumberline Phase 1: Testing und Linting}{56}{paragraph*.101}%
-\contentsline {paragraph}{\nonumberline Phase 2: Build und Push}{56}{paragraph*.103}%
-\contentsline {subsubsection}{\numberline {6.2.2}Deployment mit Portainer}{57}{subsubsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.3}Monitoring und Logging}{58}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Healthchecks}{58}{subsubsection.6.3.1}%
-\contentsline {subsubsection}{\numberline {6.3.2}Logging}{58}{subsubsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.4}Datenbank-Management}{59}{subsection.6.4}%
-\contentsline {subsubsection}{\numberline {6.4.1}Initiale Einrichtung}{59}{subsubsection.6.4.1}%
-\contentsline {subsubsection}{\numberline {6.4.2}Schema-Migrationen mit Alembic}{59}{subsubsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.5}Backup-Strategie}{60}{subsection.6.5}%
-\contentsline {subsubsection}{\numberline {6.5.1}Automatisiertes Backup}{60}{subsubsection.6.5.1}%
-\contentsline {subsubsection}{\numberline {6.5.2}Manuelles Backup und Wiederherstellung}{61}{subsubsection.6.5.2}%
-\contentsline {subsection}{\numberline {6.6}Documentation as Code (MkDocs)}{62}{subsection.6.6}%
-\contentsline {section}{\numberline {7}Qualitätssicherung und Tests}{63}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Teststrategie}{63}{subsection.7.1}%
-\contentsline {subsubsection}{\numberline {7.1.1}Unit-Tests}{63}{subsubsection.7.1.1}%
-\contentsline {subsubsection}{\numberline {7.1.2}Integrationstests}{64}{subsubsection.7.1.2}%
-\contentsline {subsubsection}{\numberline {7.1.3}Testisolation und Datenbankstrategie}{64}{subsubsection.7.1.3}%
-\contentsline {subsection}{\numberline {7.2}Qualitätssicherung der Kennzeichenerkennung}{65}{subsection.7.2}%
-\contentsline {section}{\numberline {8}Fazit und Ausblick}{67}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Zusammenfassung der Ergebnisse}{67}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Ausblick}{67}{subsection.8.2}%
-\contentsline {section}{\numberline {9}Anhang}{69}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Herleitung der Speicherdauerformel}{69}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Sequenzdiagramm des Kennzeichenerkennungsprozess}{70}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Vollständige Verarbeitungsmethode (process\_vehicle\_detection)}{72}{subsection.9.3}%
-\contentsline {subsection}{\numberline {9.4}Datenbank-Initialisierungsskript (init.sql)}{74}{subsection.9.4}%
-\contentsline {subsection}{\numberline {9.5}Stundenmitschrift}{76}{subsection.9.5}%
-\contentsline {section}{\nonumberline Abbildungen}{78}{section*.108}%
-\contentsline {section}{Abkürzungsverzeichnis}{79}{section*.109}%
-\contentsline {section}{\nonumberline Literaturverzeichnis}{81}{section*.112}%
+\contentsline {paragraph}{\nonumberline Phase 2: Build und Push}{57}{paragraph*.103}%
+\contentsline {subsubsection}{\numberline {6.2.2}Deployment mit Portainer}{58}{subsubsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.3}Monitoring und Logging}{59}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Healthchecks}{59}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}Logging}{59}{subsubsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.4}Datenbank-Management}{60}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}Initiale Einrichtung}{60}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2}Schema-Migrationen mit Alembic}{60}{subsubsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.5}Backup-Strategie}{62}{subsection.6.5}%
+\contentsline {subsubsection}{\numberline {6.5.1}Automatisiertes Backup}{62}{subsubsection.6.5.1}%
+\contentsline {subsubsection}{\numberline {6.5.2}Manuelles Backup und Wiederherstellung}{63}{subsubsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.6}Documentation as Code (MkDocs)}{63}{subsection.6.6}%
+\contentsline {section}{\numberline {7}Qualitätssicherung und Tests}{65}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Teststrategie}{65}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Unit-Tests}{65}{subsubsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.2}Integrationstests}{66}{subsubsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.3}Testisolation und Datenbankstrategie}{66}{subsubsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.2}Qualitätssicherung der Kennzeichenerkennung}{68}{subsection.7.2}%
+\contentsline {section}{\numberline {8}Fazit und Ausblick}{69}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Zusammenfassung der Ergebnisse}{69}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Ausblick}{70}{subsection.8.2}%
+\contentsline {section}{\numberline {9}Anhang}{71}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Herleitung der Speicherdauerformel}{71}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Sequenzdiagramm des Kennzeichenerkennungsprozess}{72}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Vollständige Verarbeitungsmethode (process\_vehicle\_detection)}{74}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Datenbank-Initialisierungsskript (init.sql)}{76}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Stundenmitschrift}{78}{subsection.9.5}%
+\contentsline {section}{\nonumberline Abbildungen}{80}{section*.108}%
+\contentsline {section}{Abkürzungsverzeichnis}{81}{section*.109}%
+\contentsline {section}{\nonumberline Literaturverzeichnis}{83}{section*.112}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

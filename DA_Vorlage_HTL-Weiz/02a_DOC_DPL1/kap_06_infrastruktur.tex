@@ -31,7 +31,7 @@ data-collection-service:
 Durch diese Konfiguration werden Codeänderungen sofort im laufenden Container wirksam (Hot-Reload), ohne dass der Container neu gebaut werden muss.
 Dies beschleunigt den Entwicklungszyklus erheblich, da Änderungen am Quellcode schnell in der Docker-Umgebung getestet werden können.
 
-
+\newpage
 \subsubsection{Produktionsumgebung}
 
 Die Produktionskonfiguration verwendet hingegen vorgefertigte Docker-Images, welche über eine Docker-Registry heruntergeladen werden:
@@ -63,10 +63,10 @@ depends_on:
     condition: service_completed_successfully
 \end{lstlisting}
 
-Der Prestart-Service wartet selbst wiederum auf den PostgreSQL-Container, welcher über einen so genannten Healthcheck seine Bereitschaft signalisiert.
+Der Prestart-Service wartet selbst wiederum auf den PostgreSQL-Container, welcher über einen Healthcheck seine Bereitschaft signalisiert.
 Zusätzlich verfügen die Backend-Services und der Plate Recognizer-Container über eigene Healthchecks, mit welchen, über definierte HTTP-Endpunkte der aktuellen Zustand eines Services überwacht werden kann.
 
-
+\newpage
 \subsection{CI/CD Pipelines und Deployment}
 \label{sec:cicd}
 
@@ -92,6 +92,7 @@ In der ersten Phase werden für jeden Python-Service automatisiert drei Prüfung
 
 Alle Tests werden innerhalb von Docker-Containern ausgeführt, um eine konsistente und reproduzierbare Testumgebung zu gewährleisten, welche der Produktionsumgebung möglichst nahekommt.
 
+\newpage
 \paragraph{Phase 2: Build und Push}
 Wenn die Testphase erfolgreich abgeschlossen wurde und der Push auf dem Haupt-Branch erfolgt, wird die zweite Phase ausgelöst.
 Diese nutzt ein Build-Script, welches automatisiert alle Docker-Images baut und auf das definierte Registry pusht.
@@ -124,7 +125,7 @@ Da für die Python-Services UV als Package Manager benutzt wurde, dient das \tex
 Frontend-Services werden mittels des \texttt{package-lock.json}-Files identifiziert und alle anderen Services, welche nicht im Service-Verzeichnis liegen, werden separat aufgerufen.
 Das vollständige \texttt{build.sh}-Script ist im Anhang einsehbar.
 
-
+\newpage
 \subsubsection{Deployment mit Portainer}
 
 Deployment auf der Produktionsumgebung erfolgt über die Plattform Portainer, ein Container Management-Tool mit Weboberfläche \cite{portainer}.
@@ -140,7 +141,7 @@ Bei Aktualisierungen werden die neuesten Images aus dem Docker-Registry herunter
   \label{fig:portainer}
 \end{figure}
 
-
+\newpage
 \subsection{Monitoring und Logging}
 
 
@@ -174,7 +175,7 @@ Durch die Verwendung des Python Logging-Moduls in allen Backend-Services wird ei
 
 Des Weiteren könnte dieses Modul zukünftig ohne großen Mehraufwand erweitert werden, um etwa gleichzeitig mit dem Console-Log in zentrale Log-Files zu schreiben.
 
-
+\newpage
 \subsection{Datenbank-Management}
 
 
@@ -205,6 +206,7 @@ COPY services/notification-service/src/ /app/notification/src/
 # COPY services/analytics-service/src/ /app/analytics/src/
 \end{lstlisting}
 
+\newpage
 Die Alembic-Konfiguration importiert die Base-Klassen der Backend-Services im Environment-Python-File:
 
 \begin{lstlisting}[language=python, caption={Alembic target\_metadata}, label={lst:alembic_env}]
@@ -223,7 +225,7 @@ target_metadata = [
 Durch diesen zentralisierten Ansatz können Migrationen generiert werden, welche über alle Schemas hinweg konsistent sind.
 Die Migrationen werden wie bei Alembic üblich versioniert und mit dem Repository eingecheckt, wobei jede Migration durch eine Python-Datei repräsentiert wird, welche sowohl die Up- als auch Downgrade-Funktion enthält, um Schema-Änderungen vorwärts und rückwärts anwenden zu können.
 
-
+\newpage
 \subsection{Backup-Strategie}
 
 Die Backup-Strategie des Systems umfasst sowohl automatisierte als auch manuelle Sicherungsmechanismen und einen manuellen Wiederherstellungsprozess.
@@ -272,7 +274,6 @@ Das Script fordert zunächst eine explizite Bestätigung, da alle in der Datenba
 Anschließend werden alle aktiven Datenbankverbindungen terminiert, die bestehende Datenbank gelöscht und neu angelegt, bevor das komprimierte Backup mittels \texttt{pg\_restore} \cite{postgres_pgrestore} eingespielt wird.
 
 Das Recovery Point Objective (RPO) entspricht dem konfigurierten Backup-Intervall (standardmäßig 24 Stunden), das Recovery Time Objective (RTO) beträgt einige Sekunden bis wenige Minuten und ist primär durch die Größe des Backups bestimmt.
-
 
 \subsection{Documentation as Code (MkDocs)}
 
