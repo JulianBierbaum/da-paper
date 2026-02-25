@@ -133,7 +133,7 @@
 \contentsline {subsection}{\numberline {9.3}Vollständige Verarbeitungsmethode (process\_vehicle\_detection)}{72}{subsection.9.3}%
 \contentsline {subsection}{\numberline {9.4}Datenbank-Initialisierungsskript (init.sql)}{74}{subsection.9.4}%
 \contentsline {subsection}{\numberline {9.5}Stundenmitschrift}{76}{subsection.9.5}%
-\contentsline {section}{\nonumberline Abbildungen}{78}{section*.109}%
-\contentsline {section}{Abkürzungsverzeichnis}{79}{section*.110}%
-\contentsline {section}{\nonumberline Literaturverzeichnis}{81}{section*.113}%
+\contentsline {section}{\nonumberline Abbildungen}{78}{section*.108}%
+\contentsline {section}{Abkürzungsverzeichnis}{79}{section*.109}%
+\contentsline {section}{\nonumberline Literaturverzeichnis}{81}{section*.112}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

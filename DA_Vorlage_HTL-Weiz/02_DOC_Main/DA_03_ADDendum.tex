@@ -50,15 +50,46 @@ Damit ergibt sich die vereinfachte Formel:
 \end{equation}
 
 \newpage
+% 1. Force the layout to start on an EVEN page (the left side of a spread)
+\ifodd\value{page}\hbox{}\newpage\fi
 \subsection{Sequenzdiagramm des Kennzeichenerkennungsprozess}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\textwidth]{data_collection.png}
-    \caption{Data Collection Flow}
-    \label{fig:data_collection_flow}
-\end{figure}
+% --- LEFT PAGE (P1) ---
+\begin{tikzpicture}[remember picture, overlay]
+% Anchor to the spine, shifted down by 2cm to avoid covering the subsection heading
+\node[anchor=east, inner sep=0pt, yshift=-2cm, xshift=-22mm] at (current page.east) {
+\adjustbox{
+        trim={0pt} {0.44\height} {0pt} {0pt},
+        clip,
+        angle=90               
+    }{%
+% Scaled to leave margin space for the heading and caption
+\includegraphics[width=0.78\paperheight, height=2\paperwidth, keepaspectratio]{data_collection.png}%
+    }
+};
+\end{tikzpicture}
 
+% Pushes the caption to the bottom of the left page
+\vfill
+\captionof{figure}{Data Collection Flow}
+\label{fig:data_collection_flow}
+\vspace{1cm}
+
+\newpage
+
+% --- RIGHT PAGE (P2) ---
+\begin{tikzpicture}[remember picture, overlay]
+% Anchor to the spine, shifted down by the exact same amount to ensure alignment
+\node[anchor=west, inner sep=0pt, yshift=-2cm, xshift=30mm] at (current page.west) {
+\adjustbox{
+            trim={0pt} {0pt} {0pt} {0.56\height}, 
+            clip,
+            angle=90               
+        }{%
+\includegraphics[width=0.78\paperheight, height=2\paperwidth, keepaspectratio]{data_collection.png}%
+        }
+    };
+\end{tikzpicture}
 
 \newpage
 \subsection{Vollständige Verarbeitungsmethode (process\_vehicle\_detection)}
