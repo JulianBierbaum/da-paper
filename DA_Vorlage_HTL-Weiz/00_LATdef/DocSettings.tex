@@ -46,28 +46,29 @@
 \rhead{\includegraphics[scale=0.07]{/HTL_logo.pdf}}
 \chead{}
 %\lhead{\begin{tabular}{p{7.0cm}} 
-%		\small{\changefont{pag}{b}{sc}\textcolor{black!30}{\DAName}}
+%		\small{\changefont{pag}{b}{sc}\textcolor{black!60}{\DAName}}
 %	\end{tabular} \vspace{0.1cm}}
-%\lfoot{\small{\changefont{pag}{b}{sc}\textcolor{black!30}{\SYear - \SClass - \DPLNameOne, \DPLNameTwo}}} 
+%\lfoot{\small{\changefont{pag}{b}{sc}\textcolor{black!60}{\SYear - \SClass - \DPLNameOne, \DPLNameTwo}}} 
 %\cfoot{}
-%\rfoot{\small{\changefont{pag}{b}{sc}\textcolor{black!30}{\thepage\ \textbf{\textcolor{orange!100}I} \pageref{LastPage}}}}
+%\rfoot{\small{\changefont{pag}{b}{sc}\textcolor{black!60}{\thepage\ \textbf{\textcolor{orange!100}I} \pageref{LastPage}}}}
 \lhead{\begin{tabular}{p{14.0cm}}
-    \small{\sffamily\bfseries\textcolor{black!30}{\DAName}}
+    \small{\sffamily\bfseries\textcolor{black!60}{\DAName}}
   \end{tabular} \vspace{0.1cm}}
-\lfoot{\small{\sffamily\bfseries\textcolor{black!30}{\SYear - \SClass - \DPLNameOne \DPLNameTwo}}}
+\lfoot{\small{\sffamily\bfseries\textcolor{black!60}{\SYear - \SClass - \DPLNameOne \DPLNameTwo}}}
 \cfoot{}
-\rfoot{\small{\sffamily\bfseries\textcolor{black!30}{\thepage\ \textbf{\textcolor{blue!100}I} \pageref{LastPage}}}}
+\rfoot{\small{\sffamily\bfseries\textcolor{black!60}{\thepage}}}
 %s
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 \let\myHeadrule\headrule
 \let\myFootrule\footrule
-\renewcommand\headrule{\color{black!30}\myHeadrule }
-\renewcommand\footrule{\color{black!30}\myFootrule }
+\renewcommand\headrule{\color{black!60}\myHeadrule }
+\renewcommand\footrule{\color{black!60}\myFootrule }
 \addto{\captionsngerman}{%
   \renewcommand*{\contentsname}{Inhalt}
   \renewcommand*{\listfigurename}{Abbildungen}
   \renewcommand*{\listtablename}{Abbildungsverzeichnis}
+  \renewcommand{\lstlistlistingname}{Codeverzeichnis}
 }
 %\pagestyle{fancy}
 %\fancypagestyle{ErsteSeite}{%
@@ -209,10 +210,5 @@ literate =    {---}{{\ProcessThreeDashes}}3
 \newcommand\ProcessThreeDashes{\llap{\color{cyan}\mdseries-{-}-}}
 
 \setcounter{footnote}{0}
-
-% Zitate hochgestellt in eckigen Klammern (z.B. ^{[1]})
-\makeatletter
-\def\@cite#1#2{\textsuperscript{[{#1\if@tempswa , #2\fi}]}}
-\makeatother
 
 % \changefont{pag}{m}{n}

@@ -47,14 +47,18 @@
 \usepackage{url}					% URL-Formatierung
 \usepackage{adjustbox}
 
+\usepackage{footmisc} % Fußnoten standardmäßig mit Zahlen
+
 % --- Literaturverwaltung mit biblatex ---
 \usepackage[
     backend=biber,
-    style=alphabetic,
-    sorting=anyt,
+    style=ieee,
+    sorting=none,
     urldate=short
 ]{biblatex}
 
+\setlength{\bibitemsep}{0.9em}     % Abstand zwischen den Literaturverzeichniseinträgen
+\setlength{\bibnamesep}{0.9em}
 
 % Komma nach dem Autor statt Punkt im Verzeichnis
 \DeclareDelimFormat{nametitledelim}{\addcomma\space}

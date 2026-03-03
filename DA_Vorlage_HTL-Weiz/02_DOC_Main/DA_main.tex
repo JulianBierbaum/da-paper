@@ -32,6 +32,8 @@
 \input{DA_04_ACR.tex} % Akronyme müssen im Preamble definiert werden (glossaries)
 %
 \begin{document}
+\pagenumbering{Roman}
+\fancyfoot[R]{\small{\sffamily\bfseries\textcolor{black!60}{\thepage}}}
 % Einleitungsteil der DA:
 \input{DA_01_INTroduction.tex}% Titelblatt, Erklärungen, Kurzfassungen, Inhaltsverzeichnis
 \newpage
@@ -40,6 +42,9 @@
 %========================== B E G I N   D O C U M E N T   B O D Y =========================
 %****************************************************************************************************
 % Kapitel der DA:
+\cleardoublepage
+\pagenumbering{arabic}
+\fancyfoot[R]{\small{\sffamily\bfseries\textcolor{black!60}{\thepage\ \textbf{\textcolor{blue!100}I} \pageref{LastPage}}}}
 \input{./../02a_DOC_DPL1/DA_Diplomand_1.tex} % Alle Kapitel
 %
 % Diplomand 2 und 3 entfallen (Einzelarbeit):

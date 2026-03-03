@@ -1,14 +1,14 @@
 # Fdb version 4
-["biber DA_Diplomand_1"] 0 "DA_Diplomand_1.bcf" "DA_Diplomand_1.bbl" "DA_Diplomand_1" 1772275185.26377 0
+["biber DA_Diplomand_1"] 0 "DA_Diplomand_1.bcf" "DA_Diplomand_1.bbl" "DA_Diplomand_1" 1772562288.88428 0
   "DA_Diplomand_1.bcf" 0 -1 0 "pdflatex"
   "literatur.bib" 0 -1 0 ""
   (generated)
   "DA_Diplomand_1.bbl"
   "DA_Diplomand_1.blg"
   (rewritten before read)
-["pdflatex"] 1772275177.42805 "/home/bj/papers/da-paper/DA_Vorlage_HTL-Weiz/02a_DOC_DPL1/DA_Diplomand_1.tex" "DA_Diplomand_1.pdf" "DA_Diplomand_1" 1772275185.26406 0
-  "../00_LATdef/DocSettings.tex" 1771947172.33124 7602 8b8b8dee904aeb01a9c453068ebe2e38 ""
-  "../00_LATdef/UsePackages.tex" 1772030757.46037 2607 c3e0e5cd5021846b6e9a84b768853d8b ""
+["pdflatex"] 1772562282.26524 "/home/bj/papers/da-paper/DA_Vorlage_HTL-Weiz/02a_DOC_DPL1/DA_Diplomand_1.tex" "DA_Diplomand_1.pdf" "DA_Diplomand_1" 1772562288.88465 0
+  "../00_LATdef/DocSettings.tex" 1772562282.25085 7453 c9b9685ea89e7344339f634fc03f8693 ""
+  "../00_LATdef/UsePackages.tex" 1772562274.43082 2601 d24f659093f4c3878fdd81f960de4058 ""
   "../02a_DOC_DPL1/kap_01_einleitung.tex" 1771951623.6334 5975 5dfc3e6f798ed90f3eae8b4559386f6f ""
   "../02a_DOC_DPL1/kap_02_theoretische_grundlagen.tex" 1771952968.51214 14876 2dd9555bf66436d72a03de5534a34bab ""
   "../02a_DOC_DPL1/kap_03_hardware_technologie.tex" 1771953743.65907 16442 25f92573d277276adc38fe68805e595b ""
@@ -191,7 +191,10 @@
   "/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty" 1738182759 2846 e26604d3d895e65d874c07f30c291f3f ""
   "/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu" 1738182759 5133 bb0384e6091850704d549ae3f89f4e46 ""
   "/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def" 1738182759 11506 388b649dec09e3aa948bd46eca41981b ""
-  "/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/alphabetic.bbx" 1566680006 1731 ebd75bda3dd71a7cbd30fde6e3bb6391 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/biblatex-ieee/ieee.bbx" 1736974824 20271 1eac7fbe5b0f0962d74f3a4bdfd91115 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/biblatex-ieee/ieee.cbx" 1736974824 1656 a518b0a946e572160844a2fabe7460a2 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric-comp.bbx" 1342308459 92 7cdbb04a1e32fba0fbb91b6e6d123497 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx" 1609451401 1818 9ed166ac0a9204a8ebe450ca09db5dde ""
   "/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx" 1609451401 25680 409c3f3d570418bc545e8065bebd0688 ""
   "/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg" 1342308459 69 249fa6df04d948e51b6d5c67bea30c42 ""
   "/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def" 1711143581 96838 228f189cb4020ea9f6d467af8aa859c2 ""
@@ -199,7 +202,8 @@
   "/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty" 1711143581 9961 107fdb78f652fccae7bce0d23bdc19cd ""
   "/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def" 1643926307 13919 5426dbe90e723f089052b4e908b56ef9 ""
   "/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def" 1711143581 32761 18d14e3b502c120f79b2184de4e21d14 ""
-  "/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/alphabetic.cbx" 1678141846 4312 24e682e8d56177ec752e5121836ce56e ""
+  "/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric-verb.cbx" 1463430410 2572 a3d826c7f13332f510994e94197e914a ""
+  "/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx" 1711143581 40021 daa5a82ed0967f3ac4b77cb8384cac55 ""
   "/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/german.lbx" 1711143581 34038 becdb53ec3bba7d52240eb831ab15506 ""
   "/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx" 1510525977 520 79db3ad588d8a32d9a5aa90a48bd8364 ""
   "/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def" 1702241854 8818 aa5157b46368efebf023abff55611467 ""
@@ -346,10 +350,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1741904018 41538 c016915c1d51223b6dbbfe27341748a8 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1762709238 5467255 9a64d1b40e0b893fc5588ecce9d8accf ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1762709356 3349796 a128bf6bd412251dd32f55ff6f57bb8a ""
-  "DA_Diplomand_1.aux" 1772275184.96806 75920 1808a8ccef2aa4afe8339f57c973adcd "pdflatex"
+  "DA_Diplomand_1.aux" 1772562288.59893 75920 7dc64d6da4afcd07b83aef3fbd73d59f "pdflatex"
   "DA_Diplomand_1.bbl" 0 -1 0 "biber DA_Diplomand_1"
-  "DA_Diplomand_1.out" 1772275179.45725 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "DA_Diplomand_1.run.xml" 1772275185.00337 2410 8587c489cd324d54ff1ace838fb22caa "pdflatex"
+  "DA_Diplomand_1.out" 1772562284.37487 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "DA_Diplomand_1.run.xml" 1772562288.63893 2501 b9703baa0c0f332df76d9484cbbc6af6 "pdflatex"
   "DA_Diplomand_1.tex" 1771874547.16587 2126 780db4b50caa50e9f004764fccfe5f7f ""
   (generated)
   "DA_Diplomand_1.aux"
