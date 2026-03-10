@@ -1,15 +1,15 @@
-[0] Config.pm:308> INFO - This is Biber 2.20
-[0] Config.pm:311> INFO - Logfile is 'DA_main.blg'
-[58] biber:340> INFO - === Tue Mar  3, 2026, 19:26:56
-[70] Biber.pm:420> INFO - Reading 'DA_main.bcf'
-[104] Biber.pm:994> INFO - Found 62 citekeys in bib section 0
-[112] Biber.pm:4463> INFO - Processing section 0
-[120] Biber.pm:4654> INFO - Looking for bibtex file 'literatur.bib' for section 0
-[121] bibtex.pm:1713> INFO - LaTeX decoding ...
-[145] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
-[312] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[312] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[312] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[312] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
-[331] bbl.pm:676> INFO - Writing 'DA_main.bbl' with encoding 'UTF-8'
-[344] bbl.pm:779> INFO - Output to DA_main.bbl
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'DA_main.blg'
+[65] biber:342> INFO - === Tue Mar 10, 2026, 08:45:06
+[87] Biber.pm:421> INFO - Reading 'DA_main.bcf'
+[166] Biber.pm:1002> INFO - Found 62 citekeys in bib section 0
+[177] Biber.pm:4487> INFO - Processing section 0
+[186] Biber.pm:4678> INFO - Looking for bibtex file 'literatur.bib' for section 0
+[187] bibtex.pm:1713> INFO - LaTeX decoding ...
+[212] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
+[600] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[600] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[600] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[600] Biber.pm:4313> INFO - No sort tailoring available for locale 'de-DE'
+[631] bbl.pm:676> INFO - Writing 'DA_main.bbl' with encoding 'UTF-8'
+[648] bbl.pm:779> INFO - Output to DA_main.bbl
