@@ -9,8 +9,8 @@ Erläutert werden unter anderem der Deployment-Prozess sowie die im laufenden Be
 \subsection{Container-Orchestrierung}
 \label{sec:container_orchestrierung}
 
-Die gesamte Applikation wird, mittels Docker Compose orchestriert, wobei zwei separate Konfigurationsdateien für die Entwicklungs- und Produktionsumgebungen benutzt werden.
-Docker Compose nutzt, wie bereits im entsprechenden Kapitel erwähnt, YAML-Dateien, welche zur Kennung mit den Endungen \texttt{.prod.yaml} und \texttt{.dev.yaml} versehen wurden.
+Die gesamte Applikation wird mittels Docker Compose orchestriert, wobei zwei separate Konfigurationsdateien für die Entwicklungs- und Produktionsumgebungen benutzt werden.
+Docker Compose nutzt, wie bereits im entsprechenden Kapitel erwähnt, YAML-Dateien, welche zur Unterscheidung mit den Endungen \texttt{.prod.yaml} und \texttt{.dev.yaml} versehen wurden.
 Beide Konfigurationen definieren dieselben Services, unterscheiden sich jedoch grundlegend in der Art und Weise, wie diese für Docker zum Starten bereitgestellt werden.
 
 
@@ -72,7 +72,7 @@ Zusätzlich verfügen die Backend-Services und der Plate Recognizer-Container ü
 
 CI/CD (Continuous Integration / Continuous Delivery) bezeichnet die Praxis, Codeänderungen automatisiert zu testen, bauen und bereitzustellen \cite{redhat_cicd}.
 Continuous Integration stellt sicher, dass Codeänderungen automatisch auf Fehler geprüft werden, bevor diese in den Hauptbranch des Code-Repositories aufgenommen werden.
-Continuous Delivery automatisiert darauf aufbauend den Build- und Bereitstellungsprozess, sodass neue Versionen automatisch auf dem Docker-Registry als Images zur Verfügung gestellt werden.
+Continuous Delivery automatisiert darauf aufbauend den Build- und Bereitstellungsprozess, sodass neue Versionen automatisch in der Docker-Registry als Images zur Verfügung gestellt werden.
 
 Die Umsetzung dieser Prinzipien erfolgt im Projekt über GitHub Actions, ein in GitHub integriertes Automatisierungstool, mit welchem Workflows zum Bauen, Testen und Bereitstellen von Software direkt im Repository definiert werden können \cite{github_actions}.
 Diese Prozesse werden durch Ereignisse wie Code-Pushes oder Merges automatisch ausgelöst und führen die konfigurierten Schritte auf virtuellen Servern aus.
@@ -95,7 +95,7 @@ Alle Tests werden innerhalb von Docker-Containern ausgeführt, um eine konsisten
 \newpage
 \paragraph{Phase 2: Build und Push}
 Wenn die Testphase erfolgreich abgeschlossen wurde und der Push auf dem Haupt-Branch erfolgt, wird die zweite Phase ausgelöst.
-Diese nutzt ein Build-Script, welches automatisiert alle Docker-Images baut und auf das definierte Registry pusht.
+Diese nutzt ein Build-Script, welches automatisiert alle Docker-Images baut und in die definierte Registry pusht.
 
 \begin{lstlisting}[language=bash, caption={Auszug Build-Script \texttt{build.sh}}, label={lst:build_script}]
 # Build all services

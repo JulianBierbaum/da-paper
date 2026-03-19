@@ -1,3 +1,4 @@
+\babel@toc {ngerman}{}\relax 
 \contentsline {lstlisting}{\numberline {1}{\ignorespaces Webhook-Endpunkt für Fahrzeugerkennung}}{37}{lstlisting.1}%
 \contentsline {lstlisting}{\numberline {2}{\ignorespaces Plate Recognizer Integration mit Retry-Strategie}}{39}{lstlisting.2}%
 \contentsline {lstlisting}{\numberline {3}{\ignorespaces Zeitfensterbasierte Duplikatserkennung}}{41}{lstlisting.3}%
@@ -11,3 +12,4 @@
 \contentsline {lstlisting}{\numberline {11}{\ignorespaces Pytest-Fixture für Datenisolation}}{59}{lstlisting.11}%
 \contentsline {lstlisting}{\numberline {12}{\ignorespaces Vollständige Verarbeitungsmethode}}{66}{lstlisting.12}%
 \contentsline {lstlisting}{\numberline {13}{\ignorespaces Datenbank-Initialisierungsskript (init.sql)}}{68}{lstlisting.13}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

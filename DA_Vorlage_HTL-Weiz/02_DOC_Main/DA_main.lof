@@ -1,27 +1,27 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Docker Logo\relax }}{5}{figure.caption.6}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Luftbild des Hauptgebäudes und Parkplatz der Zotter Schokolade GmbH\relax }}{12}{figure.caption.9}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Synology BC500\relax }}{14}{figure.caption.18}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Markup der Kamerapositionierung\relax }}{15}{figure.caption.21}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Synology DVA1622\relax }}{17}{figure.caption.24}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Architektur Diagramm\relax }}{20}{figure.caption.27}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Trigger für den Data Collection Service\relax }}{22}{figure.caption.30}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Data Collection Service zu Synology API\relax }}{23}{figure.caption.33}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Data Collection Service zu Plate Recognizer SDK\relax }}{23}{figure.caption.36}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Data Collection Service zu DB\relax }}{23}{figure.caption.39}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Web Service Interaktionen\relax }}{24}{figure.caption.42}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Notification Service zu Analytics Service\relax }}{24}{figure.caption.45}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Grafana zu DB\relax }}{24}{figure.caption.48}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Datenbank Tabellen\relax }}{26}{figure.caption.49}%
-\contentsline {figure}{\numberline {15}{\ignorespaces DB Benutzer\relax }}{31}{figure.caption.66}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Detection Flow\relax }}{32}{figure.caption.73}%
-\contentsline {figure}{\numberline {17}{\ignorespaces IP Camera Tool\relax }}{33}{figure.caption.74}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Erkennungsbereich im Deep Video Analytics Tool\footnotemark \relax }}{34}{figure.caption.75}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Action-Rule für die Erkennung von Fahrzeugen\relax }}{35}{figure.caption.76}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Grafana Dashboard\relax }}{45}{figure.caption.99}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Laufender Container-Stack in Portainer\relax }}{50}{figure.caption.104}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Backup Flow\relax }}{54}{figure.caption.105}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Restore Flow\relax }}{55}{figure.caption.106}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Entwicklerdokumentation mittels MkDocs\relax }}{56}{figure.caption.107}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Data Collection Flow\relax }}{64}{figure.25}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Docker Logo}}{5}{figure.caption.6}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Luftbild des Hauptgebäudes und Parkplatz der Zotter Schokolade GmbH}}{12}{figure.caption.9}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Synology BC500}}{14}{figure.caption.18}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Markup der Kamerapositionierung}}{15}{figure.caption.21}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Synology DVA1622}}{17}{figure.caption.24}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Architektur Diagramm}}{20}{figure.caption.27}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Trigger für den Data Collection Service}}{22}{figure.caption.30}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Data Collection Service zu Synology API}}{23}{figure.caption.33}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Data Collection Service zu Plate Recognizer SDK}}{23}{figure.caption.36}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Data Collection Service zu DB}}{23}{figure.caption.39}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Web Service Interaktionen}}{24}{figure.caption.42}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Notification Service zu Analytics Service}}{24}{figure.caption.45}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Grafana zu DB}}{24}{figure.caption.48}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Datenbank Tabellen}}{26}{figure.caption.49}%
+\contentsline {figure}{\numberline {15}{\ignorespaces DB Benutzer}}{31}{figure.caption.66}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Detection Flow}}{32}{figure.caption.73}%
+\contentsline {figure}{\numberline {17}{\ignorespaces IP Camera Tool}}{33}{figure.caption.74}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Erkennungsbereich im Deep Video Analytics Tool\footnotemark }}{34}{figure.caption.75}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Action-Rule für die Erkennung von Fahrzeugen}}{35}{figure.caption.76}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Grafana Dashboard}}{45}{figure.caption.99}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Laufender Container-Stack in Portainer}}{50}{figure.caption.104}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Backup Flow}}{54}{figure.caption.105}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Restore Flow}}{55}{figure.caption.106}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Entwicklerdokumentation mittels MkDocs}}{56}{figure.caption.107}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Data Collection Flow}}{64}{figure.25}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
