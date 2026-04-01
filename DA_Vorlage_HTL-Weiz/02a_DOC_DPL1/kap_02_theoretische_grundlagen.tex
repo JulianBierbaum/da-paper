@@ -5,7 +5,7 @@
 \subsection{Containerisierung (Docker)}
 \label{sec:docker}
 
-Die Containerisierung ist eine Methode, bei welcher Anwendungen und deren Abhängigkeiten in einer leichtgewichtigen, isolierten Einheit, einem sogenannten Container, verpackt werden.
+Die Containerisierung ist eine Methode, bei welcher Anwendungen und deren Abhängigkeiten in einer leichtgewichtigen, isolierten Einheit, einem sogenannten Container, verpackt werden. \cite{aws_containerization}
 
 \subsubsection{Docker}
 Docker ist eine offene Plattform, welche 2013 veröffentlicht wurde und die Containerisierung von Anwendungen standardisiert.
@@ -30,11 +30,11 @@ Container werden aus diesen Images instanziiert und stellen isolierte Prozesse u
 Im Gegensatz zu virtuellen Maschinen, die jeweils ein vollständiges Gastbetriebssystem benötigen, teilen sich Container den Host-Kernel, was sie deutlich ressourcenschonender macht. \cite{docker_overview}
 
 \subsubsection{Vorteile von Containerisierung und Docker}
-Der wohl größte Punkt, welcher für Containerisierung spricht, ist die Eliminierung des klassischen "`Works on my machine"'-Problems.
+Ein Punkt, welcher für Containerisierung spricht, ist die Eliminierung des klassischen "`Works on my machine"'-Problems.
 Der Container läuft in der Entwicklung identisch zur Produktion, da das gesamte Betriebssystem, einschließlich Konfigurationen, Bibliotheken und Abhängigkeiten, im Image verpackt sind.
 Dies reduziert Deployment-Fehler erheblich und erleichtert das Debugging, da Entwickler exakt dieselbe Umgebung lokal reproduzieren können.
 
-Ohne Nutzung von Containerisierung müssten die einzelnen Services entweder als Programme verpackt werden (zum Beispiel als Windows .exe-File)
+Ohne Nutzung von Containerisierung müssten die einzelnen Services, inklusive ihrer Abhängigkeiten und Konfigurationen, entweder als Programme verpackt werden (zum Beispiel als Windows .exe-File)
 oder der gesamte Programmcode muss auf dem Ziel-System ausgerollt und gestartet werden, was das oben genannte "`Works on my machine"'-Problem mit sich bringt.
 
 Wie zuvor erwähnt läuft jeder Service (Grafana, PostgreSQL, Python-Services etc.) in einer vollständig isolierten Umgebung.
@@ -55,9 +55,9 @@ In Verbindung mit Orchestrierungstools wie Kubernetes können Services dynamisch
 Docker Compose ist ein Tool zur Definition und Verwaltung von Multi-Container-Anwendungen.
 Compose ermöglicht die Orchestrierung mehrerer Services durch eine deklarative YAML-Konfigurationsdatei.
 In dieser Datei werden alle Services, Abhängigkeiten, Netzwerke, Volumes und Umgebungsvariablen definiert.
-Docker Compose startet Services in der vordefinierten Reihenfolge und ermöglicht automatische Kommunikation zwischen ihnen. \cite{docker_compose}
+Docker Compose startet Services in der vordefinierten Reihenfolge und ermöglicht automatische Kommunikation zwischen ihnen.
 Besonders wertvoll ist Docker Compose für Entwicklungsumgebungen, da es die gesamte Infrastruktur als Code (Infrastructure as Code) definiert.
-Statt mehrere Services manuell zu starten, orchestriert eine einzige Datei das komplette System, was auch unterschiedliche Umgebungen wie etwa Entwicklung und Live (Produktion) durch separate Compose-Dateien ermöglicht.
+Statt mehrere Services manuell zu starten, orchestriert eine einzige Datei das komplette System, was auch unterschiedliche Umgebungen wie etwa Entwicklung und Live (Produktion) durch separate Compose-Dateien ermöglicht. \cite{docker_compose}
 
 \subsubsection{Docker Hub}
 Docker Hub ist die zentrale, cloudbasierte Registry für Docker-Images und fungiert als öffentliches Repository, ähnlich wie GitHub für Code.
@@ -65,7 +65,7 @@ Es enthält eine Vielzahl an vorgefertigten Images, darunter offizielle Images f
 Beim Starten eines Stacks oder Containers lädt Docker automatisch benötigte Images von Docker Hub herunter, falls sie nicht lokal vorhanden sind.
 In dieser Diplomarbeit werden beispielsweise offizielle Images für PostgreSQL und Grafana verwendet, während selbsterstellte Images für die Python-Services verwendet werden, welche auf einer eigenen Docker-Registry gespeichert sind.
 
-Für diese Diplomarbeit bietet sich Containerisierung sehr gut an, da das gesamte System mit einem einzigen Befehl auf jedem System orchestriert gestartet, gestoppt oder neu gebaut werden kann, unabhängig vom Host-Betriebssystem.
+Für diese Diplomarbeit bietet sich Containerisierung an, da das gesamte System mit einem einzigen Befehl auf jedem System orchestriert gestartet, gestoppt oder neu gebaut werden kann, unabhängig vom Host-Betriebssystem.
 
 \newpage
 \subsection{Microservice Architektur}
@@ -104,15 +104,16 @@ und die gesamte Infrastruktur kann als Code versioniert und reproduzierbar deplo
 
 Die Implementierung einer Microservice Architektur bringt auch einige Herausforderungen und Trade-offs mit sich.
 Diese beziehen sich primär auf die erhöhte Komplexität, welche die Verteilung der Funktionalität unausweichlich mit sich bringt und ein gewisser Overhead, der entsteht, da jeder Service in einer separaten Instanz (Container) gestartet werden muss.
+Zudem führt die notwendige Inter-Service-Kommunikation über das Netzwerk im Vergleich zu monolithischen Architekturen zu zusätzlichen Latenzen.
 
-Im Fazit ist die Microservice-Architektur ein mächtiger Ansatz für komplexe Systeme, der Flexibilität, Fehlertoleranz und Skalierbarkeit bietet und in dieser Diplomarbeit vor allem in Bezug auf Fehlertoleranz, wie es oben beschrieben wurde, einen großen Vorteil mit sich bringt.
+Im Fazit ist die Microservice-Architektur ein mächtiger Ansatz für komplexe Systeme, der Flexibilität, Fehlertoleranz und Skalierbarkeit bietet und in dieser Diplomarbeit vor allem in Bezug auf Fehlertoleranz, wie es oben beschrieben wurde, einen großen Vorteil mit sich bringt. \cite{ibm_microservices}
 
 \newpage
 \subsection{ALPR (Automatic License Plate Recognition)}
 \label{sec:alpr}
 
-ALPR (Automatic License Plate Recognition) bezeichnet die automatisierte Erfassung und Auswertung von Fahrzeugkennzeichen aus Bilddaten mittels Computer-Vision und Deep Learning. \cite{platerecognizer_alpr}
-ALPR-Systeme arbeiten kontinuierlich und transformieren visuelle Informationen wie Kamera-Snapshots in strukturierte, maschinell verarbeitbare Daten und ermöglichen damit die automatische Identifikation von Fahrzeugen.
+ALPR (Automatic License Plate Recognition) bezeichnet die automatisierte Erfassung und Auswertung von Fahrzeugkennzeichen aus Bilddaten mittels Computer-Vision und Deep Learning. 
+ALPR-Systeme arbeiten kontinuierlich und transformieren visuelle Informationen wie Kamera-Snapshots in strukturierte, maschinell verarbeitbare Daten und ermöglichen damit die automatische Identifikation von Fahrzeugen. \cite{platerecognizer_alpr}
 
 \subsubsection{Grundfunktionsweise}
 Der Erkennungsprozess und die Verarbeitung der Daten erfolgt typischerweise in einem mehrstufigen Prozess \cite{senstar_alpr}:
@@ -143,7 +144,7 @@ In diesem System wird der Dienst Plate Recognizer eingesetzt, der moderne Deep L
 
 \subsubsection{MMC-Erkennung (Make, Model, Color)}
 \label{sec:mmc}
-Neben der im Vergleich sehr zuverlässigen Kennzeichenerkennung identifiziert Plate Recognizer zusätzliche Fahrzeugattribute \cite{platerecognizer_mmc}, ein Ansatz, der MMC-Erkennung genannt wird:
+Neben der im Vergleich sehr zuverlässigen Kennzeichenerkennung identifiziert Plate Recognizer zusätzliche Fahrzeugattribute, ein Ansatz, der MMC-Erkennung genannt wird \cite{platerecognizer_mmc}:
 \begin{itemize}
     \item \textbf{Make (Marke):} Identifikation des Fahrzeugherstellers basierend auf charakteristischen Designmerkmalen.
     \item \textbf{Model (Modell):} Feinere Unterscheidung innerhalb einer Marke, etwa zwischen verschiedenen Baureihen oder Generationen.
@@ -153,7 +154,7 @@ Neben der im Vergleich sehr zuverlässigen Kennzeichenerkennung identifiziert Pl
 \subsubsection{On-Premise SDK}
 \label{sec:on_premise}
 Plate Recognizer bietet sowohl Cloud-basierte APIs als auch ein On-Premise SDK an.
-Die On-Premise-Variante ermöglicht vollständige lokale Ausführung ohne externe Netzwerkabhängigkeit \cite{platerecognizer_snapshot}, eine Anforderung, welche Zotter Schokolade sehr wichtig war.
+Die On-Premise-Variante ermöglicht vollständige lokale Ausführung ohne externe Netzwerkabhängigkeit, eine Anforderung, welche Zotter Schokolade sehr wichtig war. \cite{platerecognizer_snapshot}
 
 \paragraph{Vorteile der lokalen Ausführung:}
 Der größte Vorteil in der Offline-Verarbeitung der Bilddaten liegt darin, dass die potenziell personenbezogene Informationen niemals das lokale Netzwerk des Unternehmens verlassen.

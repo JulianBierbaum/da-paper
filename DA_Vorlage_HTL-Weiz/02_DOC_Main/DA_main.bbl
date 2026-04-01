@@ -79,6 +79,37 @@
       \verb https://ghgprotocol.org/corporate-value-chain-scope-3-standard
       \endverb
     \endentry
+    \entry{aws_containerization}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=3eb2c1a57a8160029f036e3dcbf84bf1}{%
+           family={{Amazon Web Services}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{bibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorbibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is Containerization?}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://aws.amazon.com/what-is/containerization/
+      \endverb
+      \verb{url}
+      \verb https://aws.amazon.com/what-is/containerization/
+      \endverb
+    \endentry
     \entry{docker_overview}{online}{}{}
       \name{author}{1}{}{%
         {{hash=c5fd214cdd0d2b3b4272e73b022ba5c2}{%
@@ -94,8 +125,8 @@
       \strng{authorfullhash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
       \strng{authorfullhashraw}{c5fd214cdd0d2b3b4272e73b022ba5c2}
       \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Docker overview}
@@ -125,8 +156,8 @@
       \strng{authorfullhash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
       \strng{authorfullhashraw}{c5fd214cdd0d2b3b4272e73b022ba5c2}
       \field{extraname}{2}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Dockerfile reference}
@@ -156,8 +187,8 @@
       \strng{authorfullhash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
       \strng{authorfullhashraw}{c5fd214cdd0d2b3b4272e73b022ba5c2}
       \field{extraname}{3}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Docker build cache}
@@ -187,8 +218,8 @@
       \strng{authorfullhash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
       \strng{authorfullhashraw}{c5fd214cdd0d2b3b4272e73b022ba5c2}
       \field{extraname}{4}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Docker Compose application model}
@@ -218,8 +249,8 @@
       \strng{authorfullhash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
       \strng{authorfullhashraw}{c5fd214cdd0d2b3b4272e73b022ba5c2}
       \field{extraname}{5}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Docker Hub}
@@ -248,7 +279,7 @@
       \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
       \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
       \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
-      \field{extraname}{1}
+      \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -293,6 +324,38 @@
       \endverb
       \verb{url}
       \verb https://www.osohq.com/learn/microservices-best-practices
+      \endverb
+    \endentry
+    \entry{ibm_microservices}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=45bd9614bc096bff44a5793096c06d9d}{%
+           family={Stephanie\bibnamedelima Susnjara},
+           familyi={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Ian\bibnamedelima Smalley},
+           giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{45bd9614bc096bff44a5793096c06d9d}
+      \strng{fullhash}{45bd9614bc096bff44a5793096c06d9d}
+      \strng{fullhashraw}{45bd9614bc096bff44a5793096c06d9d}
+      \strng{bibnamehash}{45bd9614bc096bff44a5793096c06d9d}
+      \strng{authorbibnamehash}{45bd9614bc096bff44a5793096c06d9d}
+      \strng{authornamehash}{45bd9614bc096bff44a5793096c06d9d}
+      \strng{authorfullhash}{45bd9614bc096bff44a5793096c06d9d}
+      \strng{authorfullhashraw}{45bd9614bc096bff44a5793096c06d9d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Microservices advantages and disadvantages}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ibm.com/think/insights/microservices-advantages-disadvantages
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/think/insights/microservices-advantages-disadvantages
       \endverb
     \endentry
     \entry{platerecognizer_alpr}{online}{}{}
@@ -463,8 +526,8 @@
       \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
       \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{IP camera}
@@ -494,8 +557,8 @@
       \strng{authorfullhash}{b1463639cf7b9728008831fdc3ad61fc}
       \strng{authorfullhashraw}{b1463639cf7b9728008831fdc3ad61fc}
       \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{BC500}
@@ -555,7 +618,7 @@
       \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
       \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
       \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -711,8 +774,8 @@
       \strng{authorfullhash}{a0e69145cd50e35fb9ac8bd935bb08eb}
       \strng{authorfullhashraw}{a0e69145cd50e35fb9ac8bd935bb08eb}
       \field{extraname}{6}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{ALPR Results}
@@ -959,8 +1022,8 @@
       \strng{authornamehash}{84d7dc19766c446f5e4084e8fce87f82}
       \strng{authorfullhash}{84d7dc19766c446f5e4084e8fce87f82}
       \strng{authorfullhashraw}{84d7dc19766c446f5e4084e8fce87f82}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Is database backup size the same as database size?}
@@ -989,8 +1052,8 @@
       \strng{authornamehash}{09e7e5939d490fa072497c71f5e47816}
       \strng{authorfullhash}{09e7e5939d490fa072497c71f5e47816}
       \strng{authorfullhashraw}{09e7e5939d490fa072497c71f5e47816}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Trending Database Growth from Backups}
@@ -1020,8 +1083,8 @@
       \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
       \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Principle of least privilege}
@@ -1294,8 +1357,8 @@
       \strng{authornamehash}{38340ca9a2666abc345a518b80070c79}
       \strng{authorfullhash}{38340ca9a2666abc345a518b80070c79}
       \strng{authorfullhashraw}{38340ca9a2666abc345a518b80070c79}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{How to Send an Email Using Python (Gmail)}
@@ -1324,8 +1387,8 @@
       \strng{authornamehash}{ff01de9408b9c15ff689f4e32fc19f99}
       \strng{authorfullhash}{ff01de9408b9c15ff689f4e32fc19f99}
       \strng{authorfullhashraw}{ff01de9408b9c15ff689f4e32fc19f99}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{SMTP Relay -- What it is and How it Works}
@@ -1477,6 +1540,7 @@
       \strng{authornamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
       \strng{authorfullhash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
       \strng{authorfullhashraw}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \field{extraname}{1}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
@@ -1601,8 +1665,8 @@
       \strng{authornamehash}{5466362116d967783652c3493d305e29}
       \strng{authorfullhash}{5466362116d967783652c3493d305e29}
       \strng{authorfullhashraw}{5466362116d967783652c3493d305e29}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Managing Database Migrations for Multiple Services in a Monorepo with Alembic}
@@ -1633,8 +1697,8 @@
       \strng{authornamehash}{1eabd3cbf42760ab21d0696fcd2a8dc7}
       \strng{authorfullhash}{1eabd3cbf42760ab21d0696fcd2a8dc7}
       \strng{authorfullhashraw}{1eabd3cbf42760ab21d0696fcd2a8dc7}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Cron schedule expression editor}
@@ -1709,6 +1773,37 @@
       \endverb
       \verb{url}
       \verb https://www.postgresql.org/docs/current/app-pgrestore.html
+      \endverb
+    \endentry
+    \entry{github_pages}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=d3b7c913cd04ebfec0e9ec32cb6fd58c}{%
+           family={GitHub},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{fullhash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{fullhashraw}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{bibnamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authorbibnamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authornamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authorfullhash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authorfullhashraw}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \field{extraname}{2}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is GitHub Pages?}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
+      \endverb
+      \verb{url}
+      \verb https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
       \endverb
     \endentry
     \entry{mkdocs}{online}{}{}
@@ -1879,8 +1974,8 @@
       \strng{authorfullhash}{917cf2b2062aec0c604dbecc106084cd}
       \strng{authorfullhashraw}{917cf2b2062aec0c604dbecc106084cd}
       \field{extraname}{6}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Date/Time Types}
@@ -1909,8 +2004,8 @@
       \strng{authornamehash}{497757a9c5b2ec17ded656170b51c788}
       \strng{authorfullhash}{497757a9c5b2ec17ded656170b51c788}
       \strng{authorfullhashraw}{497757a9c5b2ec17ded656170b51c788}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Datatypes In SQLite}

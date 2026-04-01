@@ -9,7 +9,7 @@ Diese beschränkt sich für diese Diplomarbeit auf zwei primäre Komponenten:
 Einerseits wird eine Kamera benötigt, welche Live-Daten von der Ein- und Ausfahrt des Parkplatzes erfasst und diese weitersenden kann.
 Zusätzlich ist ein Server oder eine vergleichbare Hardware erforderlich, auf dem die Services der Diplomarbeit deployed werden können, und welcher für die rechenintensiven Aufgaben zuständig ist.
 
-Das folgende Kapitel soll einen Einblick in den Entscheidungsprozess bieten, nach dem die benötigte Hardware ausgewählt wurde.
+Das folgende Kapitel bietet einen Einblick in den Entscheidungsprozess, nach welchem die benötigte Hardware ausgewählt wurde.
 Hierfür werden zunächst die Grundanforderungen an das Gesamtsystem aus der Aufgabenstellung (Abschnitt~\ref{sec:aufgabenstellung}) abgeleitet, darauf aufbauend werden dann die spezifischen Anforderungen an die Hardwarekomponenten dargelegt.
 Danach werden die einzelnen, im Auswahlprozess evaluierten Optionen gegenübergestellt und hinsichtlich ihrer Eignung analysiert.
 
@@ -85,7 +85,7 @@ Das Kamerasystem wurde, wie unten erkenntlich (Abb. \ref{fig:kamera_montage}), s
 Dies erwies sich als die optimale Wahl, da so der mögliche Erkennungsbereich maximiert wird und die Montage an dieser Position einfacher realisierbar war.
 Bei der genauen Positionierung und Ausrichtung der Kamera wurde versucht, sich so gut wie möglich am Kamera-Setup-Guide von Plate Recognizer zu orientieren. \cite{platerecognizer_camera_setup}
 
-Die erforderliche Netzwerkverkabelung wurde, wie oben im Bild ersichtlich, über den bereits vorhandenen Kabelkanal der Sicherheitsschranke geführt.
+Die erforderliche Netzwerkverkabelung wurde, wie oben im Bild ersichtlich, von Haustechnikern der Zotter Schokolade GmbH, über den bereits vorhandenen Kabelkanal der Sicherheitsschranke geführt.
 Dieser verläuft bis in den Netzwerkschrank im angrenzenden Bürogebäude, wo die Anbindung an das Firmennetzwerk erfolgt.
 
 \begin{figure}[htbp]
@@ -116,7 +116,7 @@ Nicht nur wurden NAS-Systeme von Synology bereits im Unternehmen eingesetzt, die
           Auch sind die meisten NAS-Geräte mit einem vollwertigen Betriebssystem ausgestattet, welches Methoden bereitstellt, um Container mittels Docker reibungslos laufen zu lassen.
 \end{enumerate}
 
-Der größte Vorteil kommt aber mit der Kombination mit den oben beschriebenen Kameras des gleichnamigen Herstellers.
+Ein weiterer Vorteil entsteht durch die Kombination mit den oben beschriebenen Kameras des gleichnamigen Herstellers.
 Wie die Kameralinie von Synology vermuten lässt, bietet der Hersteller eigene Produkte gezielt für Überwachungsaufgaben an.
 Diese laufen unter einem Gesamtsystem mit der Bezeichnung "`Surveillance Station"' und sind als Paket auf den hauseigenen NAS-Systemen verfügbar. \cite{synology_surveillance}
 
@@ -170,23 +170,23 @@ Plate Recognizer bietet hochoptimierte Machine-Learning-Modelle, welche bereits 
 Dies gewährleistet eine deutlich höhere Erkennungsrate auch unter erschwerten Bedingungen \cite{platerecognizer_results}.
 Wie im Kapitel~\ref{sec:mmc} erwähnt bietet diese Lösung, zusätzlich zur reinen Texterkennung, erweiterte Funktionen wie Fahrzeugtyp- und Farberkennung, welche für zukünftige Erweiterungen des Systems nützlich sein können.
 
-Ein weiterer entscheidender Vorteil ist die Verfügbarkeit als Docker-Container (Plate Recognizer SDK), der vollständig lokal auf dem DVA1622 NAS betrieben werden kann.
+Ein weiterer Vorteil ist die Verfügbarkeit als Docker-Container (Plate Recognizer SDK), der vollständig lokal auf dem DVA1622 NAS betrieben werden kann.
 Im Gegensatz zu Cloud-basierten API-Lösungen bleiben damit alle Bilddaten im lokalen Netzwerk, was sowohl Datenschutzanforderungen erfüllt als auch Latenzzeiten minimiert. \cite{platerecognizer_snapshot}
 
 
 \subsubsection{Argumentation der Software-Technologien Entscheidungen}
 
-Als Web-Framework wurde FastAPI auf Python gewählt \cite{fastapi}, welches moderne asynchrone Request-Verarbeitung unterstützt und automatische API-Dokumentation via OpenAPI/Swagger generiert.
-Im Vergleich zu Flask, dem vermutlich bekanntesten Python-Framework, bietet FastAPI native Type-Hints-Unterstützung und automatische Validierung von Request-/Response-Daten durch Pydantic. \cite{jetbrains_frameworks}
+Als Web-Framework wurde FastAPI auf Python gewählt, welches asynchrone Request-Verarbeitung unterstützt und automatische API-Dokumentation via OpenAPI/Swagger generiert. \cite{fastapi}
+Im Vergleich zu Flask, einem weiteren Python-Framework für Endpoint-Generierung, bietet FastAPI native Type-Hints-Unterstützung und automatische Validierung von Request-/Response-Daten durch Pydantic. \cite{jetbrains_frameworks}
 Gegenüber dem schwergewichtigeren Django bringt FastAPI deutlich weniger Overhead mit und ist damit besser für kleine Microservices geeignet, bei denen schlanke, spezialisierte Services bevorzugt werden. \cite{jetbrains_frameworks}
 
 Für die Datenhaltung wurde PostgreSQL als relationale Datenbank gewählt. \cite{postgresql}
-Während NoSQL-Datenbanken wie MongoDB für hochskalierbare, dokumentenbasierte Anwendungen Vorteile bieten, sprechen im vorliegenden Fall die strukturierten Datenbeziehungen (Erkennungen, Benutzer etc.) klar für eine relationale Datenbank.
+Während NoSQL-Datenbanken wie MongoDB für hochskalierbare, dokumentenbasierte Anwendungen Vorteile bieten, sprechen im vorliegenden Fall die strukturierten Datenbeziehungen (Erkennungen, Benutzer etc.) für eine relationale Datenbank.
 
 Um Datenbank-Schema Änderungen versioniert und reproduzierbar zu gestalten, wurde Alembic als Migrations-Framework gewählt \cite{alembic}.
-Im Gegensatz zu manuellen SQL-Skripten ermöglicht dies rückverfolgbare Datenbankänderungen, die automatisiert über alle Umgebungen ausgerollt werden können.
+Im Gegensatz zu manuellen SQL-Skripten ermöglicht dies rückverfolgbare Datenbankänderungen, die automatisiert über alle Umgebungen ausgerollt werden können. \\
 
 Das Gesamtsystem basiert auf Docker und einer Microservice-Architektur.
 Wie zuvor detailliert erklärt, läuft jeder Dienst (Data Collection, Notification, Grafana) in seinem eigenen Container mit klar definierten Schnittstellen.
-Dies verhindert wie in den Theoretischen Grundlagen erklärt nicht nur Abhängigkeitskonflikte zwischen verschiedenen Services, sondern ermöglicht auch die unabhängige Skalierung einzelner Komponenten.
+Dies verhindert, wie in den Theoretischen Grundlagen (Kapitel~\ref{sec:microservices}) erklärt, nicht nur Abhängigkeitskonflikte zwischen verschiedenen Services, sondern ermöglicht auch die unabhängige Skalierung einzelner Komponenten.
 Die Containerisierung gewährleistet zudem Plattformunabhängigkeit, da das System problemlos von der Synology-Plattform auf andere migriert werden kann, ohne dass Anpassungen am Code notwendig sind.

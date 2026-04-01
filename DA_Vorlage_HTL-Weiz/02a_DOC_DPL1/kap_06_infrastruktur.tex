@@ -43,8 +43,8 @@ data-collection-service:
 \end{lstlisting}
 
 Die Volume-Mounts für den Quellcode entfallen hier vollständig, da dieser direkt in die zuvor gebauten Images eingebettet wurde.
-Eine wichtige Ausnahme hierbei ist allerdings das Volume der Datenbank, welches für den Bestand der Daten natürlich weiterhin außerhalb des Images gespeichert wird.
-Dies bedeutet, dass diese Images vollständig eigenständig sind und alle Abhängigkeiten sowie den Applikationscode bereits enthalten.
+Eine wichtige Ausnahme hierbei ist allerdings das Volume der Datenbank, welches für den Bestand der Daten weiterhin außerhalb des Images gespeichert wird.
+Dies bedeutet, dass diese Images eigenständig sind und alle Abhängigkeiten sowie den Applikationscode bereits enthalten.
 
 Für das Deployment auf der Produktionsumgebung werden daher ausschließlich die Docker Compose-Datei und die Umgebungsvariablen zur Konfiguration benötigt, ein Klonen des Quellcode-Repositories ist nicht erforderlich.
 Dies ist für die Nutzung von Portainer wichtig, ein Tool, welches später in diesem Kapitel näher beleuchtet wird.
@@ -74,8 +74,8 @@ CI/CD (Continuous Integration / Continuous Delivery) bezeichnet die Praxis, Code
 Continuous Integration stellt sicher, dass Codeänderungen automatisch auf Fehler geprüft werden, bevor diese in den Hauptbranch des Code-Repositories aufgenommen werden.
 Continuous Delivery automatisiert darauf aufbauend den Build- und Bereitstellungsprozess, sodass neue Versionen automatisch in der Docker-Registry als Images zur Verfügung gestellt werden.
 
-Die Umsetzung dieser Prinzipien erfolgt im Projekt über GitHub Actions, ein in GitHub integriertes Automatisierungstool, mit welchem Workflows zum Bauen, Testen und Bereitstellen von Software direkt im Repository definiert werden können \cite{github_actions}.
-Diese Prozesse werden durch Ereignisse wie Code-Pushes oder Merges automatisch ausgelöst und führen die konfigurierten Schritte auf virtuellen Servern aus.
+Die Umsetzung dieser Prinzipien erfolgt im Projekt über GitHub Actions, ein in GitHub integriertes Automatisierungstool, mit welchem Workflows zum Bauen, Testen und Bereitstellen von Software direkt im Repository definiert werden können.
+Diese Prozesse werden durch Ereignisse wie Code-Pushes oder Merges automatisch ausgelöst und führen die konfigurierten Schritte auf virtuellen Servern aus. \cite{github_actions}
 
 \subsubsection{Build und Test Pipeline}
 
@@ -147,7 +147,7 @@ Bei Aktualisierungen werden die neuesten Images aus dem Docker-Registry herunter
 
 \subsubsection{Healthchecks}
 
-Wie bereits erwähnt verfügen die Services über Healthchecks, welche von Docker Compose in regelmäßigen Intervallen (alle 5 Sekunden) ausgeführt werden und primär dazu dienen, die Verfügbarkeit der Services zu überwachen.
+Wie bereits erwähnt (Kapitel~\ref{sec:container_orchestrierung}) verfügen die Services über Healthchecks, welche von Docker Compose in regelmäßigen Intervallen (alle 5 Sekunden) ausgeführt werden und primär dazu dienen, die Verfügbarkeit der Services zu überwachen.
 Die Methode des Healthchecks variiert je nach Service-Art:
 
 \begin{itemize}
@@ -173,7 +173,7 @@ Durch die Verwendung des Python Logging-Moduls in allen Backend-Services wird ei
 2026-02-17 15:55:26,461 - data-collection-service - INFO - No vehicle observations found in reader result.
 \end{lstlisting}
 
-Des Weiteren könnte dieses Modul zukünftig ohne großen Mehraufwand erweitert werden, um etwa gleichzeitig mit dem Console-Log in zentrale Log-Files zu schreiben.
+Des Weiteren könnte dieses Modul zukünftig erweitert werden, um etwa gleichzeitig mit dem Console-Log in zentrale Log-Files zu schreiben.
 
 \newpage
 \subsection{Datenbank-Management}
@@ -277,7 +277,7 @@ Das Recovery Point Objective (RPO) entspricht dem konfigurierten Backup-Interval
 
 \subsection{Documentation as Code (MkDocs)}
 
-Die Entwicklerdokumentation wird im Repository gepflegt und automatisiert als statische Website veröffentlicht.
+Die Entwicklerdokumentation wird im Repository gepflegt und automatisiert, mithilfe von GitHub Pages \cite{github_pages}, veröffentlicht.
 Hierfür wird MkDocs \cite{mkdocs} mit dem Material-Theme \cite{mkdocs_material} eingesetzt, ein Python-basierter Static-Site-Generator, welcher Markdown-Dateien in eine Dokumentationswebsite transformiert.
 Die Verwendung von MkDocs hat den Vorteil, dass out-of-the-box viele Grundfunktionen einer guten Dokumentation, wie etwa eine Navigationsleiste oder Suchfunktion, bereits als Module funktionsfähig bereitgestellt werden.
 

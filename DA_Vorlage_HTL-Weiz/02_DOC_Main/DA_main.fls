@@ -637,6 +637,9 @@ OUTPUT DA_main.toc
 INPUT ./../03_AUX/01_PICT///HTL_logo.pdf
 INPUT ./../03_AUX/01_PICT///HTL_logo.pdf
 INPUT ./../03_AUX/01_PICT///HTL_logo.pdf
+INPUT ./../03_AUX/01_PICT///HTL_logo.pdf
+INPUT ./../03_AUX/01_PICT///HTL_logo.pdf
+INPUT ./../03_AUX/01_PICT///HTL_logo.pdf
 INPUT ./../02a_DOC_DPL1/DA_Diplomand_1.tex
 INPUT ./../02a_DOC_DPL1/DA_Diplomand_1.tex
 INPUT ./../02a_DOC_DPL1/DA_Diplomand_1.tex

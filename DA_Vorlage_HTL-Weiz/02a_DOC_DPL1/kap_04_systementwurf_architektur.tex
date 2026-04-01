@@ -270,7 +270,7 @@ Die Absicherung der API-Endpunkte erfolgt je nach Service und Anforderung durch 
 \label{sec:dc_auth}
 Der Webhook-Endpunkt \texttt{/api/vehicle\_detected}, über den die Synology Surveillance Station Fahrzeugerkennungen meldet, ist durch HTTP Basic Authentication geschützt.
 Die Zugangsdaten werden dabei gegen die Synology-Credentials des Systems validiert.
-HTTP Basic Authentication ist dabei die einzige von der Surveillance Station unterstützte Authentifizierungsmethode für Webhook-Aufrufe, weshalb hier keine Alternative in Frage kam.
+HTTP Basic Authentication ist dabei die einzige von der Surveillance Station unterstützte Authentifizierungsmethode für Webhook-Aufrufe.
 Da der Endpunkt ausschließlich für die maschinenbasierte Kommunikation innerhalb des lokalen Netzwerks vorgesehen ist und nicht von außen erreichbar ist, ist dieses Sicherheitsniveau für diesen Anwendungsfall ausreichend.
 
 \paragraph{Notification Service (API-Key Authentication)}~\\

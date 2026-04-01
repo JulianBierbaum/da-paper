@@ -9,7 +9,8 @@ Das folgende Kapitel beschreibt die Maßnahmen zur Sicherstellung der Softwarequ
 
 Die Teststrategie des Projekts kombiniert Unit-Tests zur Überprüfung einzelner Komponenten mit Integrationstests, welche das Zusammenspiel der Services auf API-Ebene validieren.
 Als Test-Framework wird Pytest \cite{pytest} eingesetzt, ergänzt durch das Pytest-Coverage-Modul \cite{pytest_cov} für Codeabdeckungsanalysen.
-Hierbei wurde das Ziel festgelegt, eine Testabdeckung von über 90\% für jeden Python-Service zu erreichen.
+Hierbei wurde das Ziel festgelegt, eine Testabdeckung von über 90\% für jeden Python-Service zu erreichen. \\
+Dies konnte in der Implementierung mit einer Testabdeckung von 91\% für den Data-Collection Service und 94\% für den Notification Service auch erreicht werden.
 
 
 \subsubsection{Unit-Tests}
@@ -99,18 +100,21 @@ Für die Integrationstests wird zusätzlich die FastAPI Dependency-Injection üb
 Die Bewertung der Erkennungsrate in einem ALPR-System wird dadurch erschwert, dass eine exakte Dunkelziffer, also der Anteil der Fahrzeuge, welche das System passieren aber nicht erkannt werden, ohne eine unabhängige Referenzmessung nicht ermittelt werden kann.
 Eine systematische Gegenüberstellung jeder einzelnen physischen Durchfahrt mit der entsprechenden Systemerkennung wurde im Rahmen dieser Arbeit nicht durchgeführt.
 Dies begründet sich dadurch, dass eine bloße Erfassung der Fahrzeuganzahl ohne erfolgreiche Kennzeichenidentifikation einen geringen operativen Zusatznutzen bieten würde, da die eigentliche Relevanz der Daten in der Analyse von Trends und statistischen Mittelwerten liegt.
-
 Die folgenden Erkenntnisse basieren daher auf Beobachtungen während des Betriebszeitraums sowie auf der Analyse der gespeicherten Erkennungsdaten.
 
-Mehrere Umgebungsfaktoren beeinflussen die Erkennungsqualität:
-Da die Zufahrt nach Süden ausgerichtet ist, ergeben sich bei tiefem Sonnenstand, insbesondere in den Morgen- und Abendstunden sowie im Winter, Gegenlichtbedingungen, welche die Kennzeichenlesbarkeit beeinträchtigen.
-Bei starkem Regen, Schneefall oder Nebel ist ebenfalls mit einer reduzierten Erkennungsrate zu rechnen, da die Sichtbarkeit der Kennzeichen physisch eingeschränkt ist.
-Nächtliche Erkennungen profitieren von der Infrarot-Beleuchtung der Kamera, die Kennzeichen auch bei Dunkelheit ausreichend beleuchtet.
+\subsubsection{Herausforderungen und Umgebungseinflüsse}
 
-Zur Sicherung der Datenqualität im Praxisbetrieb wurden zwei zentrale Strategien implementiert, welche bereits aus vorherigen Kapiteln bekannt sind:
+Mehrere Umgebungsfaktoren beeinflussen die Erkennungsqualität im täglichen Betrieb maßgeblich.
+Da die Zufahrt nach Süden ausgerichtet ist, ergeben sich bei tiefem Sonnenstand (insbesondere in den Morgen- und Abendstunden sowie im Winter) Gegenlichtbedingungen, welche die Kennzeichenlesbarkeit beeinträchtigen können.
+Bei starkem Regen, Schneefall oder Nebel ist ebenfalls mit einer reduzierten Erkennungsrate zu rechnen, da die Sichtbarkeit der Kennzeichen physisch eingeschränkt ist.
+Nächtliche Erkennungen profitieren hingegen von der integrierten Infrarot-Beleuchtung der Kamera, die Kennzeichen auch bei vollständiger Dunkelheit ausreichend beleuchtet und lesbar macht.
+
+\subsubsection{Implementierte Maßnahmen zur Datenoptimierung}
+
+Zur Sicherung der Datenqualität im Praxisbetrieb wurden zwei zentrale Strategien implementiert, um Fehlinterpretationen und Datenredundanz zu minimieren:
 
 Zunächst eliminiert die zeitfensterbasierte Duplikatserkennung Mehrfacherkennungen desselben Fahrzeugs bei langsamer Durchfahrt oder wiederholter Bewegung im Erkennungsbereich.
-Der konfigurierbare Intervall-Filter, wie in der Implementierung (Abschnitt~\ref{sec:duplikatpruefung}) beschrieben, verhindert, dass ein Fahrzeug, das beispielsweise anhält und erneut anfährt, als separate Erkennung gezählt wird.
+Der konfigurierbare Intervall-Filter, wie in der Implementierung (Abschnitt~\ref{sec:duplikatpruefung}) beschrieben, verhindert, dass ein Fahrzeug, das beispielsweise anhält und erneut anfährt, fälschlicherweise als separate Erkennung gezählt wird.
 
 Weiters beschränkt die Regionseinschränkung bei der ALPR-Erkennung die Analyse auf die vier relevanten Länder (AT, HU, SI, DE).
-Dies verbessert die Genauigkeit, da das Modell länderspezifische Kennzeichenformate priorisiert und weniger Fehlinterpretationen bei der Zeichenerkennung auftreten.
+Dies verbessert die Genauigkeit deutlich, da das Modell länderspezifische Kennzeichenformate priorisiert und so die Wahrscheinlichkeit von Fehlinterpretationen bei der Zeichenerkennung verringert wird.

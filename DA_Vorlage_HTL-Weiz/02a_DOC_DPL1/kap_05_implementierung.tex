@@ -187,7 +187,7 @@ Dies erhöht die Robustheit des Systems, da kurzzeitige Ausfälle der ALPR-Kompo
 Der Parameter \texttt{regions} schränkt die Erkennung auf die relevanten Regionen ein, für diese Diplomarbeit wurden aufgrund der Lage der Zotter Schokolade GmbH, Österreich, Ungarn, Slowenien und Deutschland gewählt.
 Dies verbessert die Erkennungsgenauigkeit, da das Modell die länderspezifischen Kennzeichenformate dieser Regionen priorisiert \cite{platerecognizer_api}.
 Über den Parameter \texttt{mmc} (Make, Model, Color) wird die erweiterte Fahrzeugerkennung aktiviert, durch \texttt{direction} wird die Fahrtrichtung anhand der Fahrzeugorientierung angefordert.
-Die Bilddaten werden als \texttt{BytesIO}-Objekt übergeben, also als im Arbeitsspeicher gehaltener Byte-Stream.
+Die Bilddaten werden als \texttt{BytesIO}-Objekt übergeben (ein im Arbeitsspeicher gehaltener Byte-Stream).
 
 
 \subsubsection{Datenverarbeitung und Enrichment-Schleife}

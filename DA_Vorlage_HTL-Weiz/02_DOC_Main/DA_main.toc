@@ -124,6 +124,8 @@
 \contentsline {subsubsection}{\numberline {7.1.2}Integrationstests}{58}{subsubsection.7.1.2}%
 \contentsline {subsubsection}{\numberline {7.1.3}Testisolation und Datenbankstrategie}{58}{subsubsection.7.1.3}%
 \contentsline {subsection}{\numberline {7.2}Qualitätssicherung der Kennzeichenerkennung}{60}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}Herausforderungen und Umgebungseinflüsse}{60}{subsubsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2}Implementierte Maßnahmen zur Datenoptimierung}{60}{subsubsection.7.2.2}%
 \contentsline {section}{\numberline {8}Fazit und Ausblick}{61}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Zusammenfassung der Ergebnisse}{61}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2}Ausblick}{62}{subsection.8.2}%
