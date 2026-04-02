@@ -20,8 +20,8 @@
 \contentsline {figure}{\numberline {19}{\ignorespaces Action-Rule für die Erkennung von Fahrzeugen}}{35}{figure.caption.76}%
 \contentsline {figure}{\numberline {20}{\ignorespaces Grafana Dashboard}}{45}{figure.caption.99}%
 \contentsline {figure}{\numberline {21}{\ignorespaces Laufender Container-Stack in Portainer}}{50}{figure.caption.104}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Backup Flow}}{54}{figure.caption.105}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Restore Flow}}{55}{figure.caption.106}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Entwicklerdokumentation mittels MkDocs}}{56}{figure.caption.107}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Data Collection Flow}}{64}{figure.25}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Datenbank Backup Flow}}{54}{figure.caption.105}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Datenbank Restore Flow}}{55}{figure.caption.106}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Entwicklerdokumentation mittels MkDocs}}{57}{figure.caption.107}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Data Collection Flow}}{66}{figure.25}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

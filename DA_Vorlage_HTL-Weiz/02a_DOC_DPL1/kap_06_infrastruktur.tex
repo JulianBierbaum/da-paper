@@ -242,7 +242,7 @@ Falls die Variable nicht gesetzt wurde, werden automatische Backups deaktiviert 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\textwidth]{backup_flow.png}
-  \caption{Backup Flow}
+  \caption{Datenbank Backup Flow}
   \label{fig:backup_flow}
 \end{figure}
 
@@ -265,8 +265,8 @@ Für die Wiederherstellung existiert ebenfalls ein Script, welches einen vollst�
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=1.1\textwidth]{restore_flow.png}
-  \caption{Restore Flow}
+  \includegraphics[width=\textwidth]{restore_flow.png}
+  \caption{Datenbank Restore Flow}
   \label{fig:restore_flow}
 \end{figure}
 
@@ -275,6 +275,7 @@ Anschließend werden alle aktiven Datenbankverbindungen terminiert, die bestehen
 
 Das Recovery Point Objective (RPO) entspricht dem konfigurierten Backup-Intervall (standardmäßig 24 Stunden), das Recovery Time Objective (RTO) beträgt einige Sekunden bis wenige Minuten und ist primär durch die Größe des Backups bestimmt.
 
+\newpage
 \subsection{Documentation as Code (MkDocs)}
 
 Die Entwicklerdokumentation wird im Repository gepflegt und automatisiert, mithilfe von GitHub Pages \cite{github_pages}, veröffentlicht.
@@ -290,6 +291,7 @@ Die Dokumentation ist in sechs Hauptbereiche gegliedert:
   \item Reference: Script-Referenzen, Docker-Compose-Dokumentation, API-Dokumentation und Data-Collection-Flow
 \end{itemize}
 
+\newpage
 Die Veröffentlichung von Änderungen erfolgt automatisiert über einen eigenen GitHub-Actions-Workflow.
 Im Falle eines Pushes wird die Dokumentation neu gebaut und auf GitHub Pages veröffentlicht.
 Dadurch ist die Dokumentation stets synchron mit dem aktuellen Stand des Codes und unter einer permanenten, öffentlichen URL erreichbar.

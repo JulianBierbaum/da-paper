@@ -104,17 +104,23 @@ Die folgenden Erkenntnisse basieren daher auf Beobachtungen während des Betrieb
 
 \subsubsection{Herausforderungen und Umgebungseinflüsse}
 
-Mehrere Umgebungsfaktoren beeinflussen die Erkennungsqualität im täglichen Betrieb maßgeblich.
-Da die Zufahrt nach Süden ausgerichtet ist, ergeben sich bei tiefem Sonnenstand (insbesondere in den Morgen- und Abendstunden sowie im Winter) Gegenlichtbedingungen, welche die Kennzeichenlesbarkeit beeinträchtigen können.
-Bei starkem Regen, Schneefall oder Nebel ist ebenfalls mit einer reduzierten Erkennungsrate zu rechnen, da die Sichtbarkeit der Kennzeichen physisch eingeschränkt ist.
-Nächtliche Erkennungen profitieren hingegen von der integrierten Infrarot-Beleuchtung der Kamera, die Kennzeichen auch bei vollständiger Dunkelheit ausreichend beleuchtet und lesbar macht.
+Mehrere Umgebungsfaktoren beeinflussen die Erkennungsqualität im täglichen Betrieb maßgeblich:
 
+\begin{itemize}
+    \item \textbf{Lichtverhältnisse:} Da die Zufahrt nach Süden ausgerichtet ist, ergeben sich bei tiefem Sonnenstand (insbesondere in den Morgen- und Abendstunden sowie im Winter) Gegenlichtbedingungen, welche die Kennzeichenlesbarkeit beeinträchtigen können.
+    \item \textbf{Witterungseinflüsse:} Bei starkem Regen, Schneefall oder Nebel ist mit einer reduzierten Erkennungsrate zu rechnen, da die Sichtbarkeit der Kennzeichen physisch eingeschränkt ist.
+    \item \textbf{Nachtbetrieb:} Nächtliche Erkennungen profitieren von der integrierten Infrarot-Beleuchtung der Kamera, die Kennzeichen auch bei vollständiger Dunkelheit ausreichend beleuchtet und lesbar macht.
+\end{itemize}
+
+\newpage
 \subsubsection{Implementierte Maßnahmen zur Datenoptimierung}
 
-Zur Sicherung der Datenqualität im Praxisbetrieb wurden zwei zentrale Strategien implementiert, um Fehlinterpretationen und Datenredundanz zu minimieren:
+Zur Sicherung der Datenqualität im Praxisbetrieb wurden zwei zentrale Strategien angewandt, um Fehlinterpretationen und Datenredundanz zu minimieren:
 
-Zunächst eliminiert die zeitfensterbasierte Duplikatserkennung Mehrfacherkennungen desselben Fahrzeugs bei langsamer Durchfahrt oder wiederholter Bewegung im Erkennungsbereich.
-Der konfigurierbare Intervall-Filter, wie in der Implementierung (Abschnitt~\ref{sec:duplikatpruefung}) beschrieben, verhindert, dass ein Fahrzeug, das beispielsweise anhält und erneut anfährt, fälschlicherweise als separate Erkennung gezählt wird.
+\paragraph{Zeitfensterbasierte Duplikatserkennung}
+Wie in Abschnitt~\ref{sec:duplikatpruefung} beschrieben, verhindert ein konfigurierbarer Intervall-Filter Mehrfacherkennungen desselben Fahrzeugs (z. B. bei langsamer Durchfahrt oder kurzem Stopp im Erkennungsbereich). Dies stellt sicher, dass ein Fahrzeug innerhalb eines logischen Zeitrahmens nur einmal gewertet wird.
 
-Weiters beschränkt die Regionseinschränkung bei der ALPR-Erkennung die Analyse auf die vier relevanten Länder (AT, HU, SI, DE).
-Dies verbessert die Genauigkeit deutlich, da das Modell länderspezifische Kennzeichenformate priorisiert und so die Wahrscheinlichkeit von Fehlinterpretationen bei der Zeichenerkennung verringert wird.
+\paragraph{Regionale Einschränkung (Ländercodes)}
+Die ALPR-Analyse wurde gezielt auf die vier relevanten Länder (AT, HU, SI, DE) beschränkt. Dies verbessert die Genauigkeit signifikant, da das Modell länderspezifische Kennzeichenformate priorisiert und so die Wahrscheinlichkeit von Verwechslungen bei ähnlichen Schriftarten verringert.
+
+Durch diese kombinierten Maßnahmen wird eine für den statistischen Anwendungszweck ausreichend hohe Datenqualität erreicht, welche die beschriebenen physikalischen Limitationen der optischen Erkennung effektiv kompensiert.

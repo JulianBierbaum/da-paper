@@ -24,10 +24,10 @@ Im Zuge der Entwicklung wurden nicht alle der im folgenden Kapitel erwähnten Ko
     \label{fig:architektur}
 \end{figure}
 
-Wie in der Abbildung (Abb. \ref{fig:architektur}) erkenntlich besteht diese Diplomarbeit aus Komponenten, welche sich in drei primäre Kategorien einteilen lassen: Backend-, Frontend- und Infrastruktur-Services.
-
 \newpage
-Darüber hinaus bestehen Anbindungen an externe Services (wie etwa die Plate Recognizer SDK).
+Wie in der Abbildung (Abb. \ref{fig:architektur}) erkenntlich besteht diese Diplomarbeit aus Komponenten, welche sich in drei primäre Kategorien einteilen lassen: Backend- (Cyan), Frontend- (Violett) und Infrastruktur-Services (Rot). \\
+
+Darüber hinaus bestehen Anbindungen an externe Services (Grau), wie etwa die Plate Recognizer SDK.
 Sofern diese implementiert wurden, werden sie im Kapitel Implementierung (Abschnitt~\ref{sec:implementierung}) beim jeweiligen Dienst im Detail erläutert.
 Die Architektur folgt bewusst keinem API-Gateway Ansatz, wie es oft bei Microservice-Ansätzen typisch ist, da die Services primär intern kommunizieren und nur wenige Endpunkte nach außen hin offen zugänglich sind.
 
@@ -45,14 +45,13 @@ Der eben erwähnte Analytics Service (Auswertungsservice) wurde konzipiert, um a
 
 Der Auth Service soll laut Konzeption Benutzer der Web-Oberfläche gegen das unternehmensinterne Active Directory authentifizieren, um eine nahtlose Integration in die bestehende Unternehmensinfrastruktur zu ermöglichen.
 
-
+\newpage
 \subsubsection{Frontend}
 
 Als Benutzeroberfläche sollte primär der Web Service, eine mit Next.js \cite{nextjs} realisierte Web-Applikation dienen.
 Diese wurde als zentrale Oberfläche für Konfiguration und Verwaltung von Benachrichtigungen konzipiert und kommuniziert ausschließlich über REST-APIs mit den Backend-Services.
 Als Übergangslösung und zweite Visualisierungsplatform dient Grafana, in Form eines Dashboards für diverse Statistiken.
 
-\newpage
 \subsubsection{Infrastruktur-Services}
 
 Die Infrastruktur-Ebene umfasst mehrere Stützkomponenten, die den Betrieb des Gesamtsystems ermöglichen.
