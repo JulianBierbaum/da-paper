@@ -146,7 +146,7 @@ Mit der ermittelten Kamera-ID wird über die \texttt{GetSnapshot}-Methode der Sy
 Die Bilddaten werden als Byte-Stream im Arbeitsspeicher gehalten, ohne auf die Festplatte geschrieben zu werden, um personenbezogene Bilddaten nicht persistent zu speichern.
 Optional kann im Debug-Modus, welcher über eine Umgebungsvariable aktiviert wird, das Bild zu Diagnosezwecken auf die Festplatte geschrieben werden.
 
-Jeder der drei Schritte ist durch spezifische Exceptions (\texttt{AuthenticationError}, \texttt{CameraDataError}, \texttt{SnapshotError}) abgesichert, die im Fehlerfall die Verarbeitungskette kontrolliert abbrechen.
+Jeder der drei Schritte ist durch spezifische Exceptions (\texttt{AuthenticationError}, \\ \texttt{CameraDataError}, \texttt{SnapshotError}) abgesichert, die im Fehlerfall die Verarbeitungskette kontrolliert abbrechen.
 
 
 \subsubsection{Plate Recognizer Integration (PlateRecognizerHandler)}

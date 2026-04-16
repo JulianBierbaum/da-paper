@@ -118,6 +118,7 @@
 \contentsline {subsubsection}{\numberline {6.5.1}Automatisiertes Backup}{54}{subsubsection.6.5.1}%
 \contentsline {subsubsection}{\numberline {6.5.2}Manuelles Backup und Wiederherstellung}{55}{subsubsection.6.5.2}%
 \contentsline {subsection}{\numberline {6.6}Documentation as Code (MkDocs)}{56}{subsection.6.6}%
+\contentsline {paragraph}{\nonumberline Veröffentlichung und Verwaltung}{57}{paragraph*.108}%
 \contentsline {section}{\numberline {7}Qualitätssicherung und Tests}{58}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Teststrategie}{58}{subsection.7.1}%
 \contentsline {subsubsection}{\numberline {7.1.1}Unit-Tests}{58}{subsubsection.7.1.1}%
@@ -126,8 +127,8 @@
 \contentsline {subsection}{\numberline {7.2}Qualitätssicherung der Kennzeichenerkennung}{61}{subsection.7.2}%
 \contentsline {subsubsection}{\numberline {7.2.1}Herausforderungen und Umgebungseinflüsse}{61}{subsubsection.7.2.1}%
 \contentsline {subsubsection}{\numberline {7.2.2}Implementierte Maßnahmen zur Datenoptimierung}{62}{subsubsection.7.2.2}%
-\contentsline {paragraph}{\nonumberline Zeitfensterbasierte Duplikatserkennung}{62}{paragraph*.109}%
-\contentsline {paragraph}{\nonumberline Regionale Einschränkung (Ländercodes)}{62}{paragraph*.111}%
+\contentsline {paragraph}{\nonumberline Zeitfensterbasierte Duplikatserkennung}{62}{paragraph*.111}%
+\contentsline {paragraph}{\nonumberline Regionale Einschränkung (Ländercodes)}{62}{paragraph*.113}%
 \contentsline {section}{\numberline {8}Fazit und Ausblick}{63}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Zusammenfassung der Ergebnisse}{63}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2}Ausblick}{64}{subsection.8.2}%
@@ -137,8 +138,8 @@
 \contentsline {subsection}{\numberline {9.3}Vollständige Verarbeitungsmethode (process\_vehicle\_detection)}{68}{subsection.9.3}%
 \contentsline {subsection}{\numberline {9.4}Datenbank-Initialisierungsskript (init.sql)}{70}{subsection.9.4}%
 \contentsline {subsection}{\numberline {9.5}Stundenmitschrift}{72}{subsection.9.5}%
-\contentsline {section}{\nonumberline Abbildungen}{74}{section*.112}%
-\contentsline {section}{\nonumberline Codeverzeichnis}{75}{section*.113}%
-\contentsline {section}{Abkürzungsverzeichnis}{76}{section*.114}%
-\contentsline {section}{\nonumberline Literaturverzeichnis}{78}{section*.117}%
+\contentsline {section}{\nonumberline Abbildungen}{74}{section*.114}%
+\contentsline {section}{\nonumberline Codeverzeichnis}{75}{section*.115}%
+\contentsline {section}{Abkürzungsverzeichnis}{76}{section*.116}%
+\contentsline {section}{\nonumberline Literaturverzeichnis}{78}{section*.119}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
